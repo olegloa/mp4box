@@ -206,14 +206,6 @@ gpac/applications/v4studio/V4TimeLine/V4TimeLineHdr.h -text
 gpac/applications/v4studio/V4TimeLine/V4TimeLineLine.cpp -text
 gpac/applications/v4studio/V4TimeLine/V4TimeLineLine.h -text
 gpac/applications/v4studio/install.txt -text
-gpac/applications/v4studio/rc/RCa00236 -text svneol=unset#unset
-gpac/applications/v4studio/rc/RCa01400 -text svneol=unset#unset
-gpac/applications/v4studio/rc/RCa01688 -text svneol=unset#unset
-gpac/applications/v4studio/rc/RCa02540 -text svneol=unset#unset
-gpac/applications/v4studio/rc/RCa03128 -text svneol=unset#unset
-gpac/applications/v4studio/rc/RCa03200 -text svneol=unset#unset
-gpac/applications/v4studio/rc/RCa03776 -text svneol=unset#unset
-gpac/applications/v4studio/rc/RCa03836 -text svneol=unset#unset
 gpac/applications/v4studio/rc/V4Studio.aps -text
 gpac/applications/v4studio/rc/V4Studio.rc -text
 gpac/applications/v4studio/rc/appearance.bmp -text
