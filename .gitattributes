@@ -159,7 +159,7 @@ gpac/applications/osmozilla/npp_gate.cpp -text
 gpac/applications/osmozilla/npplat.h -text
 gpac/applications/osmozilla/nsIOsmozilla.h -text
 gpac/applications/osmozilla/nsIOsmozilla.idl -text
-gpac/applications/osmozilla/nsIOsmozilla.xpt -text
+gpac/applications/osmozilla/nsIOsmozilla.xpt -text svneol=unset#unset
 gpac/applications/osmozilla/osmozilla.cpp -text
 gpac/applications/osmozilla/osmozilla.def -text
 gpac/applications/osmozilla/osmozilla.h -text
