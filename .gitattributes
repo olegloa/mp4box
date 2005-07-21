@@ -871,6 +871,10 @@ gpac/modules/timedtext/timedtext_in.c -text
 gpac/modules/wav_out/Makefile -text
 gpac/modules/wav_out/wav_out.c -text
 gpac/modules/wav_out/wav_out.def -text
+gpac/modules/x11_out/Makefile -text
+gpac/modules/x11_out/x11_out.c -text
+gpac/modules/x11_out/x11_out.h -text
+gpac/modules/x11_out/x11_softstretch.c -text
 gpac/modules/xvid_dec/Makefile -text
 gpac/modules/xvid_dec/xvid_dec.c -text
 gpac/modules/xvid_dec/xvid_dec.def -text
