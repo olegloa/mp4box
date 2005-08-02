@@ -135,6 +135,9 @@ gpac/applications/osmo4_wce/newres.h -text
 gpac/applications/osmo4_wce/res/Cmdbar.bmp -text
 gpac/applications/osmo4_wce/res/Osmo4.ico -text
 gpac/applications/osmo4_wce/res/Osmo4.rc2 -text
+gpac/applications/osmo4_wx/Darwin.Info.plist -text
+gpac/applications/osmo4_wx/Darwin.InfoPlist.strings -text
+gpac/applications/osmo4_wx/Darwin.Osmo.icns -text
 gpac/applications/osmo4_wx/Makefile -text
 gpac/applications/osmo4_wx/Playlist.cpp -text
 gpac/applications/osmo4_wx/Playlist.h -text
