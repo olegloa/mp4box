@@ -41,7 +41,6 @@ gpac/applications/generators/SVG/Tiny-1.2-NG/Tiny-1.2.rng -text
 gpac/applications/generators/SVG/Tiny-1.2-NG/animate.rng -text
 gpac/applications/generators/SVG/Tiny-1.2-NG/animation-element.rng -text
 gpac/applications/generators/SVG/Tiny-1.2-NG/audio.rng -text
-gpac/applications/generators/SVG/Tiny-1.2-NG/completerng_props.xml -text
 gpac/applications/generators/SVG/Tiny-1.2-NG/conditional.rng -text
 gpac/applications/generators/SVG/Tiny-1.2-NG/contenttype-attrib.rng -text
 gpac/applications/generators/SVG/Tiny-1.2-NG/coordinate-attrib.rng -text
