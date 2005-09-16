@@ -154,6 +154,12 @@ gpac/applications/osmo4_wx/wxGPACControl.h -text
 gpac/applications/osmo4_wx/wxOsmo4.cpp -text
 gpac/applications/osmo4_wx/wxOsmo4.h -text
 gpac/applications/osmo4_wx/wxOsmo4.rc -text
+gpac/applications/osmophone/Osmo4.ico -text
+gpac/applications/osmophone/main.cpp -text
+gpac/applications/osmophone/newres.h -text
+gpac/applications/osmophone/openfile.cpp -text
+gpac/applications/osmophone/osmophone.rc -text
+gpac/applications/osmophone/resource.h -text
 gpac/applications/osmozilla/Makefile -text
 gpac/applications/osmozilla/np_entry.cpp -text
 gpac/applications/osmozilla/npn_gate.cpp -text
@@ -286,6 +292,31 @@ gpac/build/msevc3/svg_loader.vcp -text
 gpac/build/msevc3/timedtext.vcp -text
 gpac/build/msevc3/wav_out.vcp -text
 gpac/build/msevc3/xvid_dec.vcp -text
+gpac/build/msevc4/GPAC.VCW -text
+gpac/build/msevc4/Osmo4.vcp -text
+gpac/build/msevc4/aac_in.vcp -text
+gpac/build/msevc4/amr_dec.vcp -text
+gpac/build/msevc4/bifs_dec.vcp -text
+gpac/build/msevc4/ctx_load.vcp -text
+gpac/build/msevc4/dummy_in.vcp -text
+gpac/build/msevc4/ffmpeg_in.vcp -text
+gpac/build/msevc4/ft_font.vcp -text
+gpac/build/msevc4/gapi.vcp -text
+gpac/build/msevc4/img_in.vcp -text
+gpac/build/msevc4/isom_in.vcp -text
+gpac/build/msevc4/libgpac.vcp -text
+gpac/build/msevc4/libgpac_dll.vcp -text
+gpac/build/msevc4/mp3_in.vcp -text
+gpac/build/msevc4/odf_dec.vcp -text
+gpac/build/msevc4/osmophone.vcp -text
+gpac/build/msevc4/render2d.vcp -text
+gpac/build/msevc4/render3d.vcp -text
+gpac/build/msevc4/rtp_in.vcp -text
+gpac/build/msevc4/soft_rast.vcp -text
+gpac/build/msevc4/svg_loader.vcp -text
+gpac/build/msevc4/timedtext.vcp -text
+gpac/build/msevc4/wav_out.vcp -text
+gpac/build/msevc4/xvid_dec.vcp -text
 gpac/build/msvc6/Osmo4.dsp -text
 gpac/build/msvc6/V4Studio.dsp -text
 gpac/build/msvc6/aac_in.dsp -text
@@ -617,6 +648,7 @@ gpac/include/gpac/base_coding.h -text
 gpac/include/gpac/bifs.h -text
 gpac/include/gpac/bifsengine.h -text
 gpac/include/gpac/bitstream.h -text
+gpac/include/gpac/color.h -text
 gpac/include/gpac/config.h -text
 gpac/include/gpac/constants.h -text
 gpac/include/gpac/crypt.h -text
@@ -670,7 +702,6 @@ gpac/include/gpac/tools.h -text
 gpac/include/gpac/user.h -text
 gpac/include/gpac/utf.h -text
 gpac/include/gpac/xml.h -text
-gpac/include/gpac/yuv.h -text
 gpac/modules/Makefile -text
 gpac/modules/aac_in/Makefile -text
 gpac/modules/aac_in/aac_in.c -text
@@ -696,6 +727,7 @@ gpac/modules/dummy_in/Makefile -text
 gpac/modules/dummy_in/dummy_in.c -text
 gpac/modules/dummy_in/dummy_in.def -text
 gpac/modules/dx_hw/Makefile -text
+gpac/modules/dx_hw/copy_pixels.c -text
 gpac/modules/dx_hw/dx_2d.c -text
 gpac/modules/dx_hw/dx_audio.c -text
 gpac/modules/dx_hw/dx_hw.def -text
@@ -716,8 +748,6 @@ gpac/modules/ft_font/Makefile -text
 gpac/modules/ft_font/ft_font.c -text
 gpac/modules/ft_font/ft_font.def -text
 gpac/modules/ft_font/ft_font.h -text
-gpac/modules/gapi/ColorTools.c -text
-gpac/modules/gapi/ColorTools.h -text
 gpac/modules/gapi/gapi.cpp -text
 gpac/modules/gapi/gapi.def -text
 gpac/modules/gapi/gapi.h -text
@@ -764,7 +794,6 @@ gpac/modules/raw_out/raw_out.def -text
 gpac/modules/raw_out/raw_video.c -text
 gpac/modules/render2d/Makefile -text
 gpac/modules/render2d/background2d.c -text
-gpac/modules/render2d/copy_pixels.c -text
 gpac/modules/render2d/drawable.c -text
 gpac/modules/render2d/drawable.h -text
 gpac/modules/render2d/form.c -text
@@ -850,7 +879,6 @@ gpac/modules/sdl_out/cursors.c -text
 gpac/modules/sdl_out/sdl_out.c -text
 gpac/modules/sdl_out/sdl_out.def -text
 gpac/modules/sdl_out/sdl_out.h -text
-gpac/modules/sdl_out/soft_stretch.c -text
 gpac/modules/sdl_out/video.c -text
 gpac/modules/sdl_out/video2d.c -text
 gpac/modules/soft_raster/Makefile -text
@@ -879,7 +907,6 @@ gpac/modules/wav_out/wav_out.def -text
 gpac/modules/x11_out/Makefile -text
 gpac/modules/x11_out/x11_out.c -text
 gpac/modules/x11_out/x11_out.h -text
-gpac/modules/x11_out/x11_softstretch.c -text
 gpac/modules/xvid_dec/Makefile -text
 gpac/modules/xvid_dec/xvid_dec.c -text
 gpac/modules/xvid_dec/xvid_dec.def -text
@@ -1086,6 +1113,7 @@ gpac/src/terminal/terminal.c -text
 gpac/src/utils/Makefile -text
 gpac/src/utils/base_encoding.c -text
 gpac/src/utils/bitstream.c -text
+gpac/src/utils/color.c -text
 gpac/src/utils/configfile.c -text
 gpac/src/utils/downloader.c -text
 gpac/src/utils/error.c -text
@@ -1111,4 +1139,3 @@ gpac/src/utils/wce/os_module.c -text
 gpac/src/utils/wce/os_net.c -text
 gpac/src/utils/wce/os_thread.c -text
 gpac/src/utils/xml_parser.c -text
-gpac/src/utils/yuv_to_rgb.c -text
