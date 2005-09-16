@@ -864,6 +864,7 @@ gpac/modules/soft_raster/raster_rgb.c -text
 gpac/modules/soft_raster/stencil.c -text
 gpac/modules/soft_raster/surface.c -text
 gpac/modules/svg_loader/Makefile -text
+gpac/modules/svg_loader/lsr_parser.c -text
 gpac/modules/svg_loader/svg_loader.c -text
 gpac/modules/svg_loader/svg_loader.def -text
 gpac/modules/svg_loader/svg_parser.c -text
