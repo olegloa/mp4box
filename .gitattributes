@@ -362,6 +362,7 @@ gpac/build/msvc6/xvid_dec.dsp -text
 gpac/configure -text
 gpac/doc/CODING_STYLE -text
 gpac/doc/INSTALL.gcc -text
+gpac/doc/INSTALL.gpe -text
 gpac/doc/INSTALL.w32 -text
 gpac/doc/INSTALL.wCE -text
 gpac/doc/ISO[!!-~]639-2[!!-~]codes.txt -text
