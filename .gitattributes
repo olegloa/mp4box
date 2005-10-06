@@ -265,9 +265,13 @@ gpac/applications/v4studio/treeIcon5.xpm -text
 gpac/applications/v4studio/wxGPACPanel.cpp -text
 gpac/applications/v4studio/wxGPACPanel.h -text
 gpac/bin/arm_ppc02_rel/install/do.bat -text
-gpac/bin/arm_ppc02_rel/install/osmo4.inf -text
-gpac/bin/arm_ppc02_rel/install/osmo4.ini -text
+gpac/bin/arm_ppc02_rel/install/gpac.inf -text
+gpac/bin/arm_ppc02_rel/install/gpac.ini -text
 gpac/bin/arm_ppc02_rel/install/readme.txt -text
+gpac/bin/arm_ppc03_rel/install/do.bat -text
+gpac/bin/arm_ppc03_rel/install/gpac.inf -text
+gpac/bin/arm_ppc03_rel/install/gpac.ini -text
+gpac/bin/arm_ppc03_rel/install/readme.txt -text
 gpac/bin/w32_rel/Osmo4.ico -text
 gpac/bin/w32_rel/nsis_install/gpac_installer.nsi -text
 gpac/build/msevc3/GPAC.VCW -text
