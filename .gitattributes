@@ -374,6 +374,7 @@ gpac/doc/man/gpac.1 -text
 gpac/doc/man/mp42avi.1 -text
 gpac/doc/man/mp4box.1 -text
 gpac/doc/man/mp4client.1 -text
+gpac/doc/osmo4_svg1.1tiny-status-gpac2draster.xml -text
 gpac/extra_lib/include/faad/faad.h -text
 gpac/extra_lib/include/faad/neaacdec.h -text
 gpac/extra_lib/include/ffmpeg/avcodec.h -text
