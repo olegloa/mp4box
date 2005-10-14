@@ -902,6 +902,8 @@ gpac/modules/svg_loader/Makefile -text
 gpac/modules/svg_loader/lsr_parser.c -text
 gpac/modules/svg_loader/svg_loader.c -text
 gpac/modules/svg_loader/svg_loader.def -text
+gpac/modules/svg_loader/svg_parse_attributes.c -text
+gpac/modules/svg_loader/svg_parse_attributes.h -text
 gpac/modules/svg_loader/svg_parser.c -text
 gpac/modules/svg_loader/svg_parser.h -text
 gpac/modules/timedtext/Makefile -text
