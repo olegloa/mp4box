@@ -1092,6 +1092,7 @@ gpac/src/scenegraph/mpeg4_animators.c -text
 gpac/src/scenegraph/mpeg4_nodes.c -text
 gpac/src/scenegraph/mpeg4_valuator.c -text
 gpac/src/scenegraph/svg_nodes.c -text
+gpac/src/scenegraph/svg_smjs.c -text
 gpac/src/scenegraph/svg_tools.c -text
 gpac/src/scenegraph/svg_types.c -text
 gpac/src/scenegraph/vrml_interpolators.c -text
