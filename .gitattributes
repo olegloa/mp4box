@@ -1078,6 +1078,7 @@ gpac/src/scene_manager/encode_isom.c -text
 gpac/src/scene_manager/loader_bt.c -text
 gpac/src/scene_manager/loader_isom.c -text
 gpac/src/scene_manager/loader_qt.c -text
+gpac/src/scene_manager/loader_svg.c -text
 gpac/src/scene_manager/loader_xmta.c -text
 gpac/src/scene_manager/scene_dump.c -text
 gpac/src/scene_manager/scene_manager.c -text
