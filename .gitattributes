@@ -293,6 +293,7 @@ gpac/build/msevc3/ogg.vcp -text
 gpac/build/msevc3/render2d.vcp -text
 gpac/build/msevc3/rtp_in.vcp -text
 gpac/build/msevc3/soft_raster.vcp -text
+gpac/build/msevc3/svg_in.vcp -text
 gpac/build/msevc3/svg_loader.vcp -text
 gpac/build/msevc3/timedtext.vcp -text
 gpac/build/msevc3/wav_out.vcp -text
@@ -318,6 +319,7 @@ gpac/build/msevc4/render2d.vcp -text
 gpac/build/msevc4/render3d.vcp -text
 gpac/build/msevc4/rtp_in.vcp -text
 gpac/build/msevc4/soft_rast.vcp -text
+gpac/build/msevc4/svg_in.vcp -text
 gpac/build/msevc4/svg_loader.vcp -text
 gpac/build/msevc4/timedtext.vcp -text
 gpac/build/msevc4/wav_out.vcp -text
