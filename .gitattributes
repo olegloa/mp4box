@@ -671,6 +671,7 @@ gpac/include/gpac/internal/bifs_tables.h -text
 gpac/include/gpac/internal/crypt_dev.h -text
 gpac/include/gpac/internal/ietf_dev.h -text
 gpac/include/gpac/internal/isomedia_dev.h -text
+gpac/include/gpac/internal/laser_dev.h -text
 gpac/include/gpac/internal/media_dev.h -text
 gpac/include/gpac/internal/odf_dev.h -text
 gpac/include/gpac/internal/ogg.h -text
@@ -680,6 +681,7 @@ gpac/include/gpac/internal/swf_dev.h -text
 gpac/include/gpac/internal/terminal_dev.h -text
 gpac/include/gpac/ismacryp.h -text
 gpac/include/gpac/isomedia.h -text
+gpac/include/gpac/laser.h -text
 gpac/include/gpac/list.h -text
 gpac/include/gpac/math.h -text
 gpac/include/gpac/media_tools.h -text
@@ -783,6 +785,9 @@ gpac/modules/isom_in/isom_in.h -text
 gpac/modules/isom_in/load.c -text
 gpac/modules/isom_in/read.c -text
 gpac/modules/isom_in/read_ch.c -text
+gpac/modules/laser_dec/Makefile -text
+gpac/modules/laser_dec/laser_dec.c -text
+gpac/modules/laser_dec/laser_dec.def -text
 gpac/modules/mp3_in/Makefile -text
 gpac/modules/mp3_in/mad_dec.c -text
 gpac/modules/mp3_in/mp3_in.c -text
@@ -1025,6 +1030,9 @@ gpac/src/isomedia/stbl_read.c -text
 gpac/src/isomedia/stbl_write.c -text
 gpac/src/isomedia/track.c -text
 gpac/src/isomedia/tx3g.c -text
+gpac/src/laser/Makefile -text
+gpac/src/laser/lsr_dec.c -text
+gpac/src/laser/lsr_enc.c -text
 gpac/src/libgpac.def -text
 gpac/src/libgpac_ce.def -text
 gpac/src/mcrypt/Makefile -text
