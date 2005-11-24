@@ -1029,6 +1029,7 @@ gpac/src/isomedia/tx3g.c -text
 gpac/src/laser/Makefile -text
 gpac/src/laser/lsr_dec.c -text
 gpac/src/laser/lsr_enc.c -text
+gpac/src/laser/lsr_tables.c -text
 gpac/src/libgpac.def -text
 gpac/src/libgpac_ce.def -text
 gpac/src/mcrypt/Makefile -text
