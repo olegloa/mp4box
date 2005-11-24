@@ -826,13 +826,10 @@ gpac/modules/render2d/render2d.def -text
 gpac/modules/render2d/render2d.h -text
 gpac/modules/render2d/render2d_nodes.c -text
 gpac/modules/render2d/sensor_stacks.c -text
-gpac/modules/render2d/smil/smil_animation.c -text
-gpac/modules/render2d/smil/smil_stacks.h -text
 gpac/modules/render2d/sound.c -text
 gpac/modules/render2d/stacks2d.h -text
 gpac/modules/render2d/svg/render_svg_nodes.c -text
 gpac/modules/render2d/svg/render_svg_text.c -text
-gpac/modules/render2d/svg/svg_animation.c -text
 gpac/modules/render2d/svg/svg_media.c -text
 gpac/modules/render2d/svg/svg_stacks.h -text
 gpac/modules/render2d/text.c -text
@@ -914,8 +911,6 @@ gpac/modules/svg_loader/Makefile -text
 gpac/modules/svg_loader/lsr_parser.c -text
 gpac/modules/svg_loader/svg_loader.c -text
 gpac/modules/svg_loader/svg_loader.def -text
-gpac/modules/svg_loader/svg_parse_attributes.c -text
-gpac/modules/svg_loader/svg_parse_attributes.h -text
 gpac/modules/svg_loader/svg_parser.c -text
 gpac/modules/svg_loader/svg_parser.h -text
 gpac/modules/timedtext/Makefile -text
@@ -1106,8 +1101,11 @@ gpac/src/scenegraph/commands.c -text
 gpac/src/scenegraph/mpeg4_animators.c -text
 gpac/src/scenegraph/mpeg4_nodes.c -text
 gpac/src/scenegraph/mpeg4_valuator.c -text
+gpac/src/scenegraph/smil_anim.c -text
+gpac/src/scenegraph/smil_timing.c -text
 gpac/src/scenegraph/svg_attributes.c -text
 gpac/src/scenegraph/svg_nodes.c -text
+gpac/src/scenegraph/svg_properties.c -text
 gpac/src/scenegraph/svg_smjs.c -text
 gpac/src/scenegraph/svg_tools.c -text
 gpac/src/scenegraph/svg_types.c -text
