@@ -296,6 +296,7 @@ gpac/build/msevc3/odf_dec.vcp -text
 gpac/build/msevc3/ogg.vcp -text
 gpac/build/msevc3/render2d.vcp -text
 gpac/build/msevc3/rtp_in.vcp -text
+gpac/build/msevc3/saf_in.vcp -text
 gpac/build/msevc3/soft_raster.vcp -text
 gpac/build/msevc3/svg_in.vcp -text
 gpac/build/msevc3/svg_loader.vcp -text
@@ -323,6 +324,7 @@ gpac/build/msevc4/osmophone.vcp -text
 gpac/build/msevc4/render2d.vcp -text
 gpac/build/msevc4/render3d.vcp -text
 gpac/build/msevc4/rtp_in.vcp -text
+gpac/build/msevc4/saf_in.vcp -text
 gpac/build/msevc4/soft_rast.vcp -text
 gpac/build/msevc4/svg_in.vcp -text
 gpac/build/msevc4/svg_loader.vcp -text
@@ -894,6 +896,9 @@ gpac/modules/rtp_in/rtp_signaling.c -text
 gpac/modules/rtp_in/rtp_stream.c -text
 gpac/modules/rtp_in/sdp_fetch.c -text
 gpac/modules/rtp_in/sdp_load.c -text
+gpac/modules/saf_in/Makefile -text
+gpac/modules/saf_in/saf_in.c -text
+gpac/modules/saf_in/saf_in.def -text
 gpac/modules/sdl_out/Makefile -text
 gpac/modules/sdl_out/audio.c -text
 gpac/modules/sdl_out/cursors.c -text
@@ -1391,6 +1396,7 @@ gpac/src/media_tools/media_export.c -text
 gpac/src/media_tools/media_import.c -text
 gpac/src/media_tools/mpeg2_ps.c -text
 gpac/src/media_tools/mpeg2_ps.h -text
+gpac/src/media_tools/saf.c -text
 gpac/src/media_tools/text_import.c -text
 gpac/src/odf/Makefile -text
 gpac/src/odf/desc_private.c -text
