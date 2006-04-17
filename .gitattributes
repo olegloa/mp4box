@@ -187,6 +187,8 @@ gpac/applications/testapps/beng_test/rect.bt -text
 gpac/applications/testapps/largefile/largefile.dsp -text
 gpac/applications/testapps/largefile/largefile.dsw -text
 gpac/applications/testapps/largefile/main.c -text
+gpac/applications/testapps/mpeg2ts/main.c -text
+gpac/applications/testapps/mpeg2ts/mpeg2ts.dsp -text
 gpac/applications/v4studio/V4CommandPanel.cpp -text
 gpac/applications/v4studio/V4CommandPanel.h -text
 gpac/applications/v4studio/V4FieldList.cpp -text
@@ -354,6 +356,7 @@ gpac/build/msvc6/mp3_in.dsp -text
 gpac/build/msvc6/mp42avi.dsp -text
 gpac/build/msvc6/mp4box.dsp -text
 gpac/build/msvc6/mp4client.dsp -text
+gpac/build/msvc6/mpegts_in.dsp -text
 gpac/build/msvc6/odf_dec.dsp -text
 gpac/build/msvc6/ogg.dsp -text
 gpac/build/msvc6/osmozilla.dsp -text
@@ -705,6 +708,7 @@ gpac/include/gpac/modules/raster2d.h -text
 gpac/include/gpac/modules/service.h -text
 gpac/include/gpac/modules/video_out.h -text
 gpac/include/gpac/mpeg4_odf.h -text
+gpac/include/gpac/mpegts.h -text
 gpac/include/gpac/network.h -text
 gpac/include/gpac/nodes_mpeg4.h -text
 gpac/include/gpac/nodes_svg.h -text
@@ -803,6 +807,9 @@ gpac/modules/mp3_in/Makefile -text
 gpac/modules/mp3_in/mad_dec.c -text
 gpac/modules/mp3_in/mp3_in.c -text
 gpac/modules/mp3_in/mp3_in.def -text
+gpac/modules/mpegts_in/Makefile -text
+gpac/modules/mpegts_in/mpegts_in.c -text
+gpac/modules/mpegts_in/mpegts_in.def -text
 gpac/modules/odf_dec/Makefile -text
 gpac/modules/odf_dec/odf_dec.c -text
 gpac/modules/odf_dec/odf_dec.def -text
@@ -1396,6 +1403,7 @@ gpac/src/media_tools/media_export.c -text
 gpac/src/media_tools/media_import.c -text
 gpac/src/media_tools/mpeg2_ps.c -text
 gpac/src/media_tools/mpeg2_ps.h -text
+gpac/src/media_tools/mpegts.c -text
 gpac/src/media_tools/saf.c -text
 gpac/src/media_tools/text_import.c -text
 gpac/src/odf/Makefile -text
