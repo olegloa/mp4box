@@ -693,6 +693,7 @@ gpac/include/gpac/internal/renderer_dev.h -text
 gpac/include/gpac/internal/scenegraph_dev.h -text
 gpac/include/gpac/internal/swf_dev.h -text
 gpac/include/gpac/internal/terminal_dev.h -text
+gpac/include/gpac/internal/vobsub.h -text
 gpac/include/gpac/ismacryp.h -text
 gpac/include/gpac/iso639.h -text
 gpac/include/gpac/isomedia.h -text
@@ -1407,6 +1408,7 @@ gpac/src/media_tools/mpeg2_ps.h -text
 gpac/src/media_tools/mpegts.c -text
 gpac/src/media_tools/saf.c -text
 gpac/src/media_tools/text_import.c -text
+gpac/src/media_tools/vobsub.c -text
 gpac/src/odf/Makefile -text
 gpac/src/odf/desc_private.c -text
 gpac/src/odf/descriptors.c -text
