@@ -58,6 +58,7 @@ gpac/applications/generators/SVG/Tiny-1.2-NG/handler.rng -text
 gpac/applications/generators/SVG/Tiny-1.2-NG/headers.rng -text
 gpac/applications/generators/SVG/Tiny-1.2-NG/hyperlink.rng -text
 gpac/applications/generators/SVG/Tiny-1.2-NG/image.rng -text
+gpac/applications/generators/SVG/Tiny-1.2-NG/laser-ext.rng -text
 gpac/applications/generators/SVG/Tiny-1.2-NG/media-attrib.rng -text
 gpac/applications/generators/SVG/Tiny-1.2-NG/opacity-attrib-tiny.rng -text
 gpac/applications/generators/SVG/Tiny-1.2-NG/paint-attrib-tiny.rng -text
