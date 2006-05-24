@@ -758,6 +758,7 @@ gpac/modules/dummy_in/Makefile -text
 gpac/modules/dummy_in/dummy_in.c -text
 gpac/modules/dummy_in/dummy_in.def -text
 gpac/modules/dx_hw/Makefile -text
+gpac/modules/dx_hw/collide.cur -text
 gpac/modules/dx_hw/copy_pixels.c -text
 gpac/modules/dx_hw/dx_2d.c -text
 gpac/modules/dx_hw/dx_audio.c -text
@@ -766,6 +767,7 @@ gpac/modules/dx_hw/dx_hw.h -text
 gpac/modules/dx_hw/dx_hw.rc -text
 gpac/modules/dx_hw/dx_video.c -text
 gpac/modules/dx_hw/dx_window.c -text
+gpac/modules/dx_hw/hand.cur -text
 gpac/modules/dx_hw/resource.h -text
 gpac/modules/ffmpeg_in/Makefile -text
 gpac/modules/ffmpeg_in/ffmpeg_decode.c -text
