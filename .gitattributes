@@ -1070,7 +1070,6 @@ gpac/regression_tests/bifs-2D-positioning-layout-vert-ttb-wrap-ltr.bt -text
 gpac/regression_tests/bifs-2D-positioning-layout-vert-ttb-wrap-rtl.bt -text
 gpac/regression_tests/bifs-2D-positioning-orderedgroup.bt -text
 gpac/regression_tests/bifs-2D-positioning-pathlayout.bt -text
-gpac/regression_tests/bifs-2D-positioning-transform.bt -text
 gpac/regression_tests/bifs-2D-positioning-transform2D.bt -text
 gpac/regression_tests/bifs-2D-positioning-transformmatrix2D.bt -text
 gpac/regression_tests/bifs-2D-shapes-all.bt -text
@@ -1114,6 +1113,7 @@ gpac/regression_tests/bifs-3D-positioning-gravity.bt -text
 gpac/regression_tests/bifs-3D-positioning-layer3D-views.bt -text
 gpac/regression_tests/bifs-3D-positioning-layer3D.bt -text
 gpac/regression_tests/bifs-3D-positioning-lod.bt -text
+gpac/regression_tests/bifs-3D-positioning-transform.bt -text
 gpac/regression_tests/bifs-3D-shapes-box-transparent.bt -text
 gpac/regression_tests/bifs-3D-shapes-box.bt -text
 gpac/regression_tests/bifs-3D-shapes-cone.bt -text
