@@ -1006,11 +1006,6 @@ gpac/regression_tests/auxiliary_files/sky.jpg -text
 gpac/regression_tests/auxiliary_files/subtitle.srt -text
 gpac/regression_tests/auxiliary_files/subtitle_fr.srt -text
 gpac/regression_tests/auxiliary_files/svg2html.xslt -text
-gpac/regression_tests/auxiliary_files/t_info.xml -text
-gpac/regression_tests/auxiliary_files/test.3gp -text
-gpac/regression_tests/auxiliary_files/test.nhml -text
-gpac/regression_tests/auxiliary_files/test_track1.info -text
-gpac/regression_tests/auxiliary_files/test_track1.media -text
 gpac/regression_tests/auxiliary_files/video_small.info -text
 gpac/regression_tests/auxiliary_files/video_small.media -text
 gpac/regression_tests/auxiliary_files/video_small.nhnt -text
@@ -1185,6 +1180,8 @@ gpac/regression_tests/bifs-externproto-nood.bt -text
 gpac/regression_tests/bifs-externproto-simple-lib.bt -text
 gpac/regression_tests/bifs-externproto-simple.bt -text
 gpac/regression_tests/bifs-game-arrange.bt -text
+gpac/regression_tests/bifs-game-breakout.bt -text
+gpac/regression_tests/bifs-game-minesweeper.bt -text
 gpac/regression_tests/bifs-game-othello.bt -text
 gpac/regression_tests/bifs-interpolation-colorinterpolator.bt -text
 gpac/regression_tests/bifs-interpolation-coordinateinterpolator2D.bt -text
@@ -1240,6 +1237,8 @@ gpac/regression_tests/bifs-misc-hc-proto-planarextrusion.bt -text
 gpac/regression_tests/bifs-misc-hc-proto-planeclipper.bt -text
 gpac/regression_tests/bifs-misc-non-linear-parsing-conditional.bt -text
 gpac/regression_tests/bifs-misc-non-linear-parsing-use.bt -text
+gpac/regression_tests/bifs-misc-srt-import-3gpp-control-share-ocr.bt -text
+gpac/regression_tests/bifs-misc-srt-import-3gpp-control.bt -text
 gpac/regression_tests/bifs-misc-srt-import-3gpp.bt -text
 gpac/regression_tests/bifs-misc-srt-import.bt -text
 gpac/regression_tests/bifs-od-remove-esd.bt -text
