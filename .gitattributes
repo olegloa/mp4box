@@ -188,6 +188,7 @@ gpac/applications/testapps/beng_test/rect.bt -text
 gpac/applications/testapps/largefile/largefile.dsp -text
 gpac/applications/testapps/largefile/largefile.dsw -text
 gpac/applications/testapps/largefile/main.c -text
+gpac/applications/testapps/loadcompare/Makefile -text
 gpac/applications/testapps/loadcompare/loadcompare.c -text
 gpac/applications/testapps/mpeg2ts/main.c -text
 gpac/applications/testapps/mpeg2ts/mpeg2ts.dsp -text
