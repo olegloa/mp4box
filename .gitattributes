@@ -1065,6 +1065,8 @@ gpac/regression_tests/bifs-2D-positioning-layout-horiz-rtl-wrap-ttb.bt -text
 gpac/regression_tests/bifs-2D-positioning-layout-horiz-text.bt -text
 gpac/regression_tests/bifs-2D-positioning-layout-scroll-child.bt -text
 gpac/regression_tests/bifs-2D-positioning-layout-scroll-full.bt -text
+gpac/regression_tests/bifs-2D-positioning-layout-scroll-modes-horiz.bt -text
+gpac/regression_tests/bifs-2D-positioning-layout-scroll-modes-vert.bt -text
 gpac/regression_tests/bifs-2D-positioning-layout-scroll-on-off.bt -text
 gpac/regression_tests/bifs-2D-positioning-layout-vert-btt-nowrap.bt -text
 gpac/regression_tests/bifs-2D-positioning-layout-vert-btt-wrap-ltr.bt -text
