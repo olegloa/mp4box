@@ -1049,13 +1049,16 @@ gpac/regression_tests/bifs-2D-interactivity-nested-sensors.bt -text
 gpac/regression_tests/bifs-2D-interactivity-planesensor2D.bt -text
 gpac/regression_tests/bifs-2D-interactivity-proximitysensor2D.bt -text
 gpac/regression_tests/bifs-2D-interactivity-stringsensor.bt -text
+gpac/regression_tests/bifs-2D-interactivity-touchsensor-4states.bt -text
 gpac/regression_tests/bifs-2D-interactivity-touchsensor-hitpoint.bt -text
 gpac/regression_tests/bifs-2D-interactivity-touchsensor-isactive-exposedfield.bt -text
 gpac/regression_tests/bifs-2D-interactivity-touchsensor-isactive.bt -text
 gpac/regression_tests/bifs-2D-interactivity-touchsensor-isover.bt -text
+gpac/regression_tests/bifs-2D-interactivity-touchsensor-move_over.bt -text
 gpac/regression_tests/bifs-2D-painting-colortransform-alpha.bt -text
 gpac/regression_tests/bifs-2D-painting-colortransform-bitmap.bt -text
 gpac/regression_tests/bifs-2D-painting-colortransform-color.bt -text
+gpac/regression_tests/bifs-2D-painting-lineproperties.bt -text
 gpac/regression_tests/bifs-2D-painting-material2D.bt -text
 gpac/regression_tests/bifs-2D-painting-xlineproperties-cap.bt -text
 gpac/regression_tests/bifs-2D-painting-xlineproperties-compositetexture2D.bt -text
@@ -1176,7 +1179,6 @@ gpac/regression_tests/bifs-command-delete-route.bt -text
 gpac/regression_tests/bifs-command-global-qp.bt -text
 gpac/regression_tests/bifs-command-insert-index.bt -text
 gpac/regression_tests/bifs-command-insert-node.bt -text
-gpac/regression_tests/bifs-command-insert-node2.bt -text
 gpac/regression_tests/bifs-command-insert-nodedef.bt -text
 gpac/regression_tests/bifs-command-insert-route.bt -text
 gpac/regression_tests/bifs-command-multiple-replace-field.bt -text
