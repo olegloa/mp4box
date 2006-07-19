@@ -359,6 +359,7 @@ gpac/build/msevc4/svg_loader.vcp -text
 gpac/build/msevc4/timedtext.vcp -text
 gpac/build/msevc4/wav_out.vcp -text
 gpac/build/msevc4/xvid_dec.vcp -text
+gpac/build/msvc6/GPAX.dsp -text
 gpac/build/msvc6/Osmo4.dsp -text
 gpac/build/msvc6/V4Studio.dsp -text
 gpac/build/msvc6/aac_in.dsp -text
