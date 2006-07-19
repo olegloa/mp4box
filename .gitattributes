@@ -1211,6 +1211,7 @@ gpac/regression_tests/bifs-externproto-simple-lib.bt -text
 gpac/regression_tests/bifs-externproto-simple.bt -text
 gpac/regression_tests/bifs-game-arrange.bt -text
 gpac/regression_tests/bifs-game-breakout.bt -text
+gpac/regression_tests/bifs-game-bubble.bt -text
 gpac/regression_tests/bifs-game-minesweeper.bt -text
 gpac/regression_tests/bifs-game-othello.bt -text
 gpac/regression_tests/bifs-interpolation-colorinterpolator.bt -text
