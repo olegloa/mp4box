@@ -22,12 +22,15 @@ gpac/TODO -text
 gpac/applications/GPAX/GPAX.cpp -text
 gpac/applications/GPAX/GPAX.def -text
 gpac/applications/GPAX/GPAX.dsp -text
+gpac/applications/GPAX/GPAX.h -text
 gpac/applications/GPAX/GPAX.idl -text
 gpac/applications/GPAX/GPAX.rc -text
 gpac/applications/GPAX/GPAX.rgs -text
 gpac/applications/GPAX/GPAX.tlb -text
 gpac/applications/GPAX/GPAXPlugin.cpp -text
 gpac/applications/GPAX/GPAXPlugin.h -text
+gpac/applications/GPAX/GPAX_i.c -text
+gpac/applications/GPAX/GPAX_p.c -text
 gpac/applications/GPAX/GPAXps.def -text
 gpac/applications/GPAX/GPAXps.mk -text
 gpac/applications/GPAX/StdAfx.cpp -text
@@ -35,7 +38,6 @@ gpac/applications/GPAX/StdAfx.h -text
 gpac/applications/GPAX/dlldata.c -text
 gpac/applications/GPAX/gpax.bmp -text
 gpac/applications/GPAX/resource.h -text
-gpac/applications/GPAX/test_mozilla_ie.html -text
 gpac/applications/Makefile -text
 gpac/applications/generators/MPEG4/MPEG4Gen.dsp -text
 gpac/applications/generators/MPEG4/MPEG4Gen.dsw -text
