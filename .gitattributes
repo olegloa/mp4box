@@ -691,6 +691,8 @@ gpac/extra_lib/include/zlib/zconf.h -text
 gpac/extra_lib/include/zlib/zlib.h -text
 gpac/extra_lib/lib/arm_ppc02_deb/dummy -text
 gpac/extra_lib/lib/arm_ppc02_rel/dummy -text
+gpac/extra_lib/lib/arm_ppc03_deb/dummy -text
+gpac/extra_lib/lib/arm_ppc03_rel/dummy -text
 gpac/extra_lib/lib/gcc/dummy -text
 gpac/extra_lib/lib/w32_deb/dummy -text
 gpac/extra_lib/lib/w32_rel/dummy -text
