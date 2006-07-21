@@ -25,6 +25,7 @@ gpac/applications/GPAX/GPAX.dsp -text
 gpac/applications/GPAX/GPAX.idl -text
 gpac/applications/GPAX/GPAX.rc -text
 gpac/applications/GPAX/GPAX.rgs -text
+gpac/applications/GPAX/GPAX.tlb -text
 gpac/applications/GPAX/GPAXPlugin.cpp -text
 gpac/applications/GPAX/GPAXPlugin.h -text
 gpac/applications/GPAX/GPAXps.def -text
@@ -1017,6 +1018,10 @@ gpac/modules/xvid_dec/xvid_wce/vlc_codes.h -text
 gpac/modules/xvid_dec/xvid_wce/xvid.cpp -text
 gpac/modules/xvid_dec/xvid_wce/xvid.h -text
 gpac/modules/xvid_dec/xvid_wce/xvid_ppc.asm -text
+gpac/regression_tests/_mozilla_ie_action.html -text
+gpac/regression_tests/_mozilla_ie_simple.html -text
+gpac/regression_tests/_ppc_action.html -text
+gpac/regression_tests/_ppc_simple.html -text
 gpac/regression_tests/auxiliary_files/count_arabic.mp3 -text
 gpac/regression_tests/auxiliary_files/count_english.mp3 -text
 gpac/regression_tests/auxiliary_files/count_french.mp3 -text
