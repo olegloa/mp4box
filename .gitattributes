@@ -335,6 +335,7 @@ gpac/build/msevc3/timedtext.vcp -text
 gpac/build/msevc3/wav_out.vcp -text
 gpac/build/msevc3/xvid_dec.vcp -text
 gpac/build/msevc4/GPAC.VCW -text
+gpac/build/msevc4/GPAX.VCP -text
 gpac/build/msevc4/Osmo4.vcp -text
 gpac/build/msevc4/aac_in.vcp -text
 gpac/build/msevc4/amr_dec.vcp -text
