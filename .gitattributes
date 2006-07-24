@@ -26,7 +26,6 @@ gpac/applications/GPAX/GPAX.h -text
 gpac/applications/GPAX/GPAX.idl -text
 gpac/applications/GPAX/GPAX.rc -text
 gpac/applications/GPAX/GPAX.rgs -text
-gpac/applications/GPAX/GPAX.tlb -text
 gpac/applications/GPAX/GPAXPlugin.cpp -text
 gpac/applications/GPAX/GPAXPlugin.h -text
 gpac/applications/GPAX/GPAX_i.c -text
