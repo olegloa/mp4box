@@ -869,6 +869,8 @@ gpac/modules/render2d/grouping.h -text
 gpac/modules/render2d/grouping_stacks.c -text
 gpac/modules/render2d/ifs2d.c -text
 gpac/modules/render2d/ils2d.c -text
+gpac/modules/render2d/laser_base.c -text
+gpac/modules/render2d/laser_stacks.h -text
 gpac/modules/render2d/layout.c -text
 gpac/modules/render2d/path_layout.c -text
 gpac/modules/render2d/render2d.c -text
