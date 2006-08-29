@@ -413,6 +413,7 @@ gpac/doc/ISO[!!-~]639-2[!!-~]codes.txt -text
 gpac/doc/SceneGenerators -text
 gpac/doc/configuration.html -text
 gpac/doc/doxyfile -text
+gpac/doc/gpac.mp4 -text
 gpac/doc/ipmpx_syntax.bt -text
 gpac/doc/man/gpac.1 -text
 gpac/doc/man/mp42avi.1 -text
