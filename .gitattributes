@@ -325,6 +325,7 @@ gpac/build/msevc3/mp3_in.vcp -text
 gpac/build/msevc3/odf_dec.vcp -text
 gpac/build/msevc3/ogg.vcp -text
 gpac/build/msevc3/render2d.vcp -text
+gpac/build/msevc3/render3d.vcp -text
 gpac/build/msevc3/rtp_in.vcp -text
 gpac/build/msevc3/saf_in.vcp -text
 gpac/build/msevc3/soft_raster.vcp -text
