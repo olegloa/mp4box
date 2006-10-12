@@ -1533,6 +1533,7 @@ gpac/src/terminal/media_sensor.c -text
 gpac/src/terminal/network_service.c -text
 gpac/src/terminal/object_browser.c -text
 gpac/src/terminal/object_manager.c -text
+gpac/src/terminal/svg_external.c -text
 gpac/src/terminal/term_node_init.c -text
 gpac/src/terminal/terminal.c -text
 gpac/src/utils/Makefile -text
