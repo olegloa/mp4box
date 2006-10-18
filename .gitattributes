@@ -711,6 +711,7 @@ gpac/include/gpac/config.h -text
 gpac/include/gpac/constants.h -text
 gpac/include/gpac/crypt.h -text
 gpac/include/gpac/download.h -text
+gpac/include/gpac/events.h -text
 gpac/include/gpac/ietf.h -text
 gpac/include/gpac/internal/avilib.h -text
 gpac/include/gpac/internal/bifs_dev.h -text
