@@ -92,7 +92,12 @@ gpac/applications/generators/SVG/Tiny-1.2-NG/video.rng -text
 gpac/applications/generators/SVG/Tiny-1.2-NG/viewport-attrib-tiny.rng -text
 gpac/applications/generators/SVG/Tiny-1.2-NG/xlink-attrib.rng -text
 gpac/applications/generators/SVG/Tiny-1.2-NG/xml-events.rng -text
+gpac/applications/generators/SVG/html.c -text
+gpac/applications/generators/SVG/laser.c -text
 gpac/applications/generators/SVG/main.c -text
+gpac/applications/generators/SVG/svggen.h -text
+gpac/applications/generators/SVG/v1.c -text
+gpac/applications/generators/SVG/v2.c -text
 gpac/applications/generators/X3D/Makefile -text
 gpac/applications/generators/X3D/X3DGen.dsp -text
 gpac/applications/generators/X3D/X3DGen.dsw -text
