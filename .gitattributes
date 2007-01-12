@@ -480,7 +480,12 @@ gpac/extra_lib/include/faad/neaacdec.h -text
 gpac/extra_lib/include/ffmpeg/avcodec.h -text
 gpac/extra_lib/include/ffmpeg/avformat.h -text
 gpac/extra_lib/include/ffmpeg/avio.h -text
+gpac/extra_lib/include/ffmpeg/avutil.h -text
 gpac/extra_lib/include/ffmpeg/common.h -text
+gpac/extra_lib/include/ffmpeg/integer.h -text
+gpac/extra_lib/include/ffmpeg/intfloat_readwrite.h -text
+gpac/extra_lib/include/ffmpeg/log.h -text
+gpac/extra_lib/include/ffmpeg/mathematics.h -text
 gpac/extra_lib/include/ffmpeg/rational.h -text
 gpac/extra_lib/include/freetype/freetype/cache/ftccache.h -text
 gpac/extra_lib/include/freetype/freetype/cache/ftccmap.h -text
