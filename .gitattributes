@@ -883,6 +883,7 @@ gpac/modules/img_in/img_dec.c -text
 gpac/modules/img_in/img_in.c -text
 gpac/modules/img_in/img_in.def -text
 gpac/modules/img_in/img_in.h -text
+gpac/modules/img_in/jp2_dec.c -text
 gpac/modules/img_in/jpeg_dec.c -text
 gpac/modules/img_in/png_dec.c -text
 gpac/modules/isom_in/Makefile -text
