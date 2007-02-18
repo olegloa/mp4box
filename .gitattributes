@@ -873,6 +873,9 @@ gpac/modules/dx_hw/dx_video.c -text
 gpac/modules/dx_hw/dx_window.c -text
 gpac/modules/dx_hw/hand.cur -text
 gpac/modules/dx_hw/resource.h -text
+gpac/modules/epoc_hw/epoc_aout.cpp -text
+gpac/modules/epoc_hw/epoc_codec.cpp -text
+gpac/modules/epoc_hw/epoc_vout.cpp -text
 gpac/modules/ffmpeg_in/Makefile -text
 gpac/modules/ffmpeg_in/ffmpeg_decode.c -text
 gpac/modules/ffmpeg_in/ffmpeg_demux.c -text
