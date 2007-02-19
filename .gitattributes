@@ -1619,6 +1619,7 @@ gpac/src/utils/color.c -text
 gpac/src/utils/configfile.c -text
 gpac/src/utils/downloader.c -text
 gpac/src/utils/error.c -text
+gpac/src/utils/gzio.cpp -text
 gpac/src/utils/list.c -text
 gpac/src/utils/math.c -text
 gpac/src/utils/module.c -text
