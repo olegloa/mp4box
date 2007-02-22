@@ -755,6 +755,7 @@ gpac/extra_lib/include/js/jsxdrapi.h -text
 gpac/extra_lib/include/mad/mad.h -text
 gpac/extra_lib/include/ogg/ogg.h -text
 gpac/extra_lib/include/ogg/os_types.h -text
+gpac/extra_lib/include/openjpeg/openjpeg.h -text
 gpac/extra_lib/include/png/png.h -text
 gpac/extra_lib/include/png/pngconf.h -text
 gpac/extra_lib/include/theora/theora.h -text
