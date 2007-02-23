@@ -238,6 +238,8 @@ gpac/applications/testapps/broadcaster/france.mp4 -text
 gpac/applications/testapps/broadcaster/meteo_local.xmt -text
 gpac/applications/testapps/broadcaster/sdp_generator.c -text
 gpac/applications/testapps/broadcaster/sdp_generator.h -text
+gpac/applications/testapps/dmbrs/dmbrs.dsp -text
+gpac/applications/testapps/dmbrs/main.c -text
 gpac/applications/testapps/largefile/largefile.dsp -text
 gpac/applications/testapps/largefile/largefile.dsw -text
 gpac/applications/testapps/largefile/main.c -text
