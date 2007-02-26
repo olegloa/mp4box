@@ -246,12 +246,17 @@ gpac/applications/testapps/largefile/main.c -text
 gpac/applications/testapps/loadcompare/LoadCompare.dsp -text
 gpac/applications/testapps/loadcompare/Makefile -text
 gpac/applications/testapps/loadcompare/loadcompare.c -text
+gpac/applications/testapps/mp42ts/main.c -text
+gpac/applications/testapps/mp42ts/mp42ts.c -text
+gpac/applications/testapps/mp42ts/mp42ts.dsp -text
 gpac/applications/testapps/mp4_streamer/Makefile -text
 gpac/applications/testapps/mp4_streamer/configuration.cfg -text
 gpac/applications/testapps/mp4_streamer/main.c -text
 gpac/applications/testapps/mp4_streamer/mp4_streamer.dsp -text
 gpac/applications/testapps/mpeg2ts/main.c -text
 gpac/applications/testapps/mpeg2ts/mpeg2ts.dsp -text
+gpac/applications/testapps/svg2bifs/main.c -text
+gpac/applications/testapps/svg2bifs/svg2bifs.dsp -text
 gpac/applications/v4studio/V4CommandPanel.cpp -text
 gpac/applications/v4studio/V4CommandPanel.h -text
 gpac/applications/v4studio/V4FieldList.cpp -text
