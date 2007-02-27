@@ -249,6 +249,7 @@ gpac/applications/testapps/loadcompare/loadcompare.c -text
 gpac/applications/testapps/mp42ts/main.c -text
 gpac/applications/testapps/mp42ts/mp42ts.c -text
 gpac/applications/testapps/mp42ts/mp42ts.dsp -text
+gpac/applications/testapps/mp42ts/mp42ts.h -text
 gpac/applications/testapps/mp4_streamer/Makefile -text
 gpac/applications/testapps/mp4_streamer/configuration.cfg -text
 gpac/applications/testapps/mp4_streamer/main.c -text
