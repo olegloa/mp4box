@@ -791,6 +791,7 @@ gpac/include/gpac/config.h -text
 gpac/include/gpac/constants.h -text
 gpac/include/gpac/crypt.h -text
 gpac/include/gpac/download.h -text
+gpac/include/gpac/esi.h -text
 gpac/include/gpac/events.h -text
 gpac/include/gpac/ietf.h -text
 gpac/include/gpac/internal/avilib.h -text
@@ -1470,6 +1471,7 @@ gpac/src/dir_info -text
 gpac/src/ietf/Makefile -text
 gpac/src/ietf/rtcp.c -text
 gpac/src/ietf/rtp.c -text
+gpac/src/ietf/rtp_depacketizer.c -text
 gpac/src/ietf/rtp_packetizer.c -text
 gpac/src/ietf/rtp_pck_3gpp.c -text
 gpac/src/ietf/rtp_pck_mpeg12.c -text
