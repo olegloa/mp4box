@@ -824,6 +824,7 @@ gpac/include/gpac/module.h -text
 gpac/include/gpac/modules/audio_out.h -text
 gpac/include/gpac/modules/codec.h -text
 gpac/include/gpac/modules/font.h -text
+gpac/include/gpac/modules/ipmp.h -text
 gpac/include/gpac/modules/raster2d.h -text
 gpac/include/gpac/modules/service.h -text
 gpac/include/gpac/modules/video_out.h -text
@@ -917,6 +918,9 @@ gpac/modules/img_in/img_in.h -text
 gpac/modules/img_in/jp2_dec.c -text
 gpac/modules/img_in/jpeg_dec.c -text
 gpac/modules/img_in/png_dec.c -text
+gpac/modules/ismacryp/Makefile -text
+gpac/modules/ismacryp/ismacryp.c -text
+gpac/modules/ismacryp/ismacryp.def -text
 gpac/modules/isom_in/Makefile -text
 gpac/modules/isom_in/cache.c -text
 gpac/modules/isom_in/isom_in.def -text
@@ -1529,6 +1533,7 @@ gpac/src/mcrypt/ofb.c -text
 gpac/src/mcrypt/rijndael-128.c -text
 gpac/src/mcrypt/rijndael-192.c -text
 gpac/src/mcrypt/rijndael-256.c -text
+gpac/src/mcrypt/sha1.c -text
 gpac/src/mcrypt/stream.c -text
 gpac/src/mcrypt/tripledes.c -text
 gpac/src/media_tools/Makefile -text
