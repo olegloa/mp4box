@@ -856,6 +856,8 @@ gpac/modules/aac_in/Makefile -text
 gpac/modules/aac_in/aac_in.c -text
 gpac/modules/aac_in/aac_in.def -text
 gpac/modules/aac_in/faad_dec.c -text
+gpac/modules/alsa/Makefile -text
+gpac/modules/alsa/alsa.c -text
 gpac/modules/amr_dec/Makefile -text
 gpac/modules/amr_dec/amr_dec.c -text
 gpac/modules/amr_dec/amr_dec.def -text
@@ -1457,7 +1459,6 @@ gpac/regression_tests/x3d-misc-HatchStyle.x3dv -text
 gpac/regression_tests/x3d-misc-KeySensor.x3dv -text
 gpac/regression_tests/x3d-misc-StringSensor.x3dv -text
 gpac/src/Makefile -text
-gpac/src/bifs/Makefile -text
 gpac/src/bifs/arith_decoder.c -text
 gpac/src/bifs/bifs_codec.c -text
 gpac/src/bifs/bifs_node_tables.c -text
@@ -1475,7 +1476,6 @@ gpac/src/bifs/script_dec.c -text
 gpac/src/bifs/script_enc.c -text
 gpac/src/bifs/unquantize.c -text
 gpac/src/dir_info -text
-gpac/src/ietf/Makefile -text
 gpac/src/ietf/rtcp.c -text
 gpac/src/ietf/rtp.c -text
 gpac/src/ietf/rtp_depacketizer.c -text
@@ -1488,7 +1488,6 @@ gpac/src/ietf/rtsp_common.c -text
 gpac/src/ietf/rtsp_response.c -text
 gpac/src/ietf/rtsp_session.c -text
 gpac/src/ietf/sdp.c -text
-gpac/src/isomedia/Makefile -text
 gpac/src/isomedia/avc_ext.c -text
 gpac/src/isomedia/box_code_3gpp.c -text
 gpac/src/isomedia/box_code_apple.c -text
@@ -1514,13 +1513,11 @@ gpac/src/isomedia/stbl_read.c -text
 gpac/src/isomedia/stbl_write.c -text
 gpac/src/isomedia/track.c -text
 gpac/src/isomedia/tx3g.c -text
-gpac/src/laser/Makefile -text
 gpac/src/laser/lsr_dec.c -text
 gpac/src/laser/lsr_enc.c -text
 gpac/src/laser/lsr_tables.c -text
 gpac/src/libgpac.def -text
 gpac/src/libgpac_ce.def -text
-gpac/src/mcrypt/Makefile -text
 gpac/src/mcrypt/cbc.c -text
 gpac/src/mcrypt/cfb.c -text
 gpac/src/mcrypt/ctr.c -text
@@ -1536,7 +1533,6 @@ gpac/src/mcrypt/rijndael-256.c -text
 gpac/src/mcrypt/sha1.c -text
 gpac/src/mcrypt/stream.c -text
 gpac/src/mcrypt/tripledes.c -text
-gpac/src/media_tools/Makefile -text
 gpac/src/media_tools/av_parsers.c -text
 gpac/src/media_tools/avilib.c -text
 gpac/src/media_tools/gpac_ogg.c -text
@@ -1551,7 +1547,6 @@ gpac/src/media_tools/mpegts.c -text
 gpac/src/media_tools/saf.c -text
 gpac/src/media_tools/text_import.c -text
 gpac/src/media_tools/vobsub.c -text
-gpac/src/odf/Makefile -text
 gpac/src/odf/desc_private.c -text
 gpac/src/odf/descriptors.c -text
 gpac/src/odf/ipmpx_code.c -text
@@ -1565,7 +1560,6 @@ gpac/src/odf/odf_dump.c -text
 gpac/src/odf/odf_parse.c -text
 gpac/src/odf/qos.c -text
 gpac/src/odf/slc.c -text
-gpac/src/renderer/Makefile -text
 gpac/src/renderer/audio_input.c -text
 gpac/src/renderer/audio_mixer.c -text
 gpac/src/renderer/audio_render.c -text
@@ -1575,7 +1569,6 @@ gpac/src/renderer/common_stacks.c -text
 gpac/src/renderer/common_stacks.h -text
 gpac/src/renderer/renderer.c -text
 gpac/src/renderer/texturing.c -text
-gpac/src/scene_manager/Makefile -text
 gpac/src/scene_manager/encode_cbk.c -text
 gpac/src/scene_manager/encode_isom.c -text
 gpac/src/scene_manager/loader_bt.c -text
@@ -1589,7 +1582,6 @@ gpac/src/scene_manager/scene_stats.c -text
 gpac/src/scene_manager/swf_parse.c -text
 gpac/src/scene_manager/swf_shape.c -text
 gpac/src/scene_manager/text_to_bifs.c -text
-gpac/src/scenegraph/Makefile -text
 gpac/src/scenegraph/base_scenegraph.c -text
 gpac/src/scenegraph/commands.c -text
 gpac/src/scenegraph/dom_events.c -text
@@ -1611,7 +1603,6 @@ gpac/src/scenegraph/vrml_script.c -text
 gpac/src/scenegraph/vrml_smjs.c -text
 gpac/src/scenegraph/vrml_tools.c -text
 gpac/src/scenegraph/x3d_nodes.c -text
-gpac/src/terminal/Makefile -text
 gpac/src/terminal/channel.c -text
 gpac/src/terminal/clock.c -text
 gpac/src/terminal/decoder.c -text
@@ -1631,7 +1622,6 @@ gpac/src/terminal/object_manager.c -text
 gpac/src/terminal/svg_external.c -text
 gpac/src/terminal/term_node_init.c -text
 gpac/src/terminal/terminal.c -text
-gpac/src/utils/Makefile -text
 gpac/src/utils/base_encoding.c -text
 gpac/src/utils/bitstream.c -text
 gpac/src/utils/color.c -text
