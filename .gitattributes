@@ -832,7 +832,9 @@ gpac/include/gpac/mpeg4_odf.h -text
 gpac/include/gpac/mpegts.h -text
 gpac/include/gpac/network.h -text
 gpac/include/gpac/nodes_mpeg4.h -text
-gpac/include/gpac/nodes_svg.h -text
+gpac/include/gpac/nodes_svg_da.h -text
+gpac/include/gpac/nodes_svg_sa.h -text
+gpac/include/gpac/nodes_svg_sani.h -text
 gpac/include/gpac/nodes_x3d.h -text
 gpac/include/gpac/options.h -text
 gpac/include/gpac/path2d.h -text
@@ -1594,10 +1596,14 @@ gpac/src/scenegraph/mpeg4_valuator.c -text
 gpac/src/scenegraph/smil_anim.c -text
 gpac/src/scenegraph/smil_timing.c -text
 gpac/src/scenegraph/svg_attributes.c -text
-gpac/src/scenegraph/svg_nodes.c -text
+gpac/src/scenegraph/svg_nodes_da.c -text
+gpac/src/scenegraph/svg_nodes_sa.c -text
+gpac/src/scenegraph/svg_nodes_sani.c -text
 gpac/src/scenegraph/svg_properties.c -text
 gpac/src/scenegraph/svg_smjs.c -text
-gpac/src/scenegraph/svg_tools.c -text
+gpac/src/scenegraph/svg_tools_da.c -text
+gpac/src/scenegraph/svg_tools_sa.c -text
+gpac/src/scenegraph/svg_tools_sani.c -text
 gpac/src/scenegraph/svg_types.c -text
 gpac/src/scenegraph/vrml_interpolators.c -text
 gpac/src/scenegraph/vrml_proto.c -text
