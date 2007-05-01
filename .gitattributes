@@ -844,6 +844,7 @@ gpac/include/gpac/scenegraph.h -text
 gpac/include/gpac/scenegraph_svg.h -text
 gpac/include/gpac/scenegraph_vrml.h -text
 gpac/include/gpac/setup.h -text
+gpac/include/gpac/svg_types.h -text
 gpac/include/gpac/sync_layer.h -text
 gpac/include/gpac/term_info.h -text
 gpac/include/gpac/terminal.h -text
