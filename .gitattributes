@@ -246,6 +246,7 @@ gpac/applications/testapps/largefile/main.c -text
 gpac/applications/testapps/loadcompare/LoadCompare.dsp -text
 gpac/applications/testapps/loadcompare/Makefile -text
 gpac/applications/testapps/loadcompare/loadcompare.c -text
+gpac/applications/testapps/mp42ts/Makefile -text
 gpac/applications/testapps/mp42ts/main.c -text
 gpac/applications/testapps/mp42ts/mp42ts.c -text
 gpac/applications/testapps/mp42ts/mp42ts.dsp -text
