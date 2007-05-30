@@ -391,6 +391,7 @@ gpac/build/msevc4/ffmpeg_in.vcp -text
 gpac/build/msevc4/ft_font.vcp -text
 gpac/build/msevc4/gapi.vcp -text
 gpac/build/msevc4/img_in.vcp -text
+gpac/build/msevc4/ismacryp.vcp -text
 gpac/build/msevc4/isom_in.vcp -text
 gpac/build/msevc4/laser_dec.vcp -text
 gpac/build/msevc4/libgpac.vcp -text
