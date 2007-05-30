@@ -458,9 +458,11 @@ gpac/build/symbian/bld.inf -text
 gpac/build/symbian/ctx_load.mmp -text
 gpac/build/symbian/dummy_in.mmp -text
 gpac/build/symbian/epoc_hw.mmp -text
+gpac/build/symbian/ffmpeg_in.mmp -text
 gpac/build/symbian/ft_font.mmp -text
 gpac/build/symbian/gpac_module_symbianU.def -text
 gpac/build/symbian/img_in.mmp -text
+gpac/build/symbian/ismacryp.mmp -text
 gpac/build/symbian/isom_in.mmp -text
 gpac/build/symbian/laser_dec.mmp -text
 gpac/build/symbian/libgpac.mmp -text
