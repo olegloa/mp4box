@@ -1255,6 +1255,7 @@ gpac/regression_tests/auxiliary_files/enst_audio.aac -text
 gpac/regression_tests/auxiliary_files/enst_video.h264 -text
 gpac/regression_tests/auxiliary_files/index2batch.xslt -text
 gpac/regression_tests/auxiliary_files/index2html.xslt -text
+gpac/regression_tests/auxiliary_files/index2sh.xslt -text
 gpac/regression_tests/auxiliary_files/logo.jpg -text
 gpac/regression_tests/auxiliary_files/logo.png -text
 gpac/regression_tests/auxiliary_files/nefertiti.wrl -text
@@ -1555,6 +1556,7 @@ gpac/regression_tests/bifs-timeline-mediacontrol-videospeed.bt -text
 gpac/regression_tests/bifs-timeline-mediasensor-segment-switch.bt -text
 gpac/regression_tests/bifs-timeline-mediasensor-segment.bt -text
 gpac/regression_tests/bifs-timeline-mediasensor.bt -text
+gpac/regression_tests/build-navigator-sh -text
 gpac/regression_tests/build-navigator-w32.bat -text
 gpac/regression_tests/build-shell -text
 gpac/regression_tests/build-w32.bat -text
