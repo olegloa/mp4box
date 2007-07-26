@@ -13,4 +13,5 @@ The following tutorial has been written for ENST's student in 2002, and has slow
 </p>
 
 			</div>
-	</div><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  --></div></body></html>
+	</div>
+<?php $mod_date="\$Date: 2007-07-26 13:43:28 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  --></div></body></html>

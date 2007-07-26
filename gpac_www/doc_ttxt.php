@@ -336,8 +336,8 @@ Download GPAC TTXT sample streams <a href="downloads/ttxt_sample_streams.zip">.z
 
  		</div>
 	</div>
-<?php include_once("bas.php"); ?>
-<!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+
+<?php $mod_date="\$Date: 2007-07-26 13:43:29 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

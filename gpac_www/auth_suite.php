@@ -3,4 +3,5 @@
 Your browser does not support inline frames. You may check out the test suite <a href="test_suite/index.html">here</a>
 </object>
 
-	</div><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  --></div></body></html>
+	</div>
+<?php $mod_date="\$Date: 2007-07-26 13:43:28 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  --></div></body></html>

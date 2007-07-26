@@ -78,8 +78,8 @@
         <p><img src="img/osmo4_3dswitch.png" width="279" height="25"/>An important point to note is that the rendering engine used for 3D graphics is (currently) different from the 2D graphics rendering engine and the switch between engines is not automatic. Therefore, before playing 3D content, one needs to make sure the selector in the main tool bar is in the right position as shown.</p>
 		</div>
 	</div>
-<?php include_once("bas.php"); ?>
-<!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+
+<?php $mod_date="\$Date: 2007-07-26 13:43:29 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

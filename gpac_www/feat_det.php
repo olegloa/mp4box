@@ -222,8 +222,8 @@ The GPAC framework heavily relies on plugins for most tasks (stream input, file 
 				</div>
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
-<?php include_once("bas.php"); ?>
-</div>
+
+<?php $mod_date="\$Date: 2007-07-26 13:43:29 $"; ?><?php include_once("bas.php"); ?></div>
 </body>
 </html>
 

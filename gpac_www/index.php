@@ -69,9 +69,8 @@
 			</div>
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
-	<div id="Bas">
-		<p>(C) 2000-05 JLF / (C) 2005-0X ENST - $Date: 2007-07-26 13:20:18 $ - <a href="mailto:jeanlf@users.sourceforge.net">Webmaster</a></p>
-	</div>
+
+<?php $mod_date="\$Date: 2007-07-26 13:43:29 $"; ?><?php include_once("bas.php"); ?>
 </div>
 </body>
 </html>

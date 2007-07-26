@@ -66,4 +66,5 @@ To play the following RTSP presentations, copy and paste the URL in GPAC (Osmo4 
 <li><a href="rtsp://a463.q.kamai.net/7/463/1416/3ce0984/neo.qtv.apple.com/secure/may/preview/pacific_300.mp4">Pacific Grove Coast</a></li>
 <li><a href="rtsp://a1749.q.kamai.net/7/1749/1416/3c964c64/neo.qtv.apple.com/secure/may/preview/civ3_700.mp4">Civilization III trailer</a></li>
 </ul>
-	</div><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  --></div></body></html>
+	</div>
+<?php $mod_date="\$Date: 2007-07-26 13:43:28 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  --></div></body></html>

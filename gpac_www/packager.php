@@ -116,8 +116,8 @@ to an SVG file:
     </ul>
     </div>
 	</div>
-<?php include_once("bas.php"); ?>
-<!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+
+<?php $mod_date="\$Date: 2007-07-26 13:43:29 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

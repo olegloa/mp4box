@@ -3,4 +3,5 @@
 Votre navigateur ne supporte pas les pages enfants. Vous pouvez consulter le tutoriel <a href="tutorial/bifs_part1.htm">ici</a>
 </object>
 
-	</div><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  --></div></body></html>
+	</div>
+<?php $mod_date="\$Date: 2007-07-26 13:43:28 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  --></div></body></html>
