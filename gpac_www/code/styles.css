@@ -1,14 +1,568 @@
-body {	background-color:#FFFFFF;	border: 0; margin: 0; padding: 0;	behavior:url(csshover.htc);	font-family: Verdana, Arial, Helvetica, sans-serif;  font-size: 12px; 	}a {	text-decoration:none; }img { border: none; }h1 {   font-size: 16px;   font-weight:bold;}h2 {   font-size: 14px;   font-weight:bold;}#spacer {	float: left;	width: 0;height: 95%;	padding: 0;margin: 0;	font-size: 1px; /* to make sure width is not overridden */}div#fond {  display: block;   position: relative;	margin: 7px auto; 	padding: 0;	width: 945px;  height: 100%; 		background-color:#E8E5E5;   border: 1px solid #333333;}div#fond:after {   content: ".";   visibility: hidden;   height: 0;  display: block;  clear: both; }/*====================================== ZONE ENTETE LOGO GPAC ===========================================*/div#fond_entete {	width:100%;   	height: 76px;  display:block;   position:relative;	background-color:#A51129;   border-bottom: 1px solid #7A7A7A;	background-image:url(../img/Logo.gif);	background-repeat:no-repeat;  z-index:3; }div#fond_entete h1{  display: block;  position:relative;	top: 15px;	left: 705px;	width: 152px;   height: 15px;	color:#FFFFFF;	  padding: 0;  margin: 0;}div#menu_shortcuts {  display:block;   position:relative;  top: 20px;	left: 705px;	margin: 0;	padding: 0;  width:153px;   height:13px;	border: 1px solid #BEB9E7;	background-color:#F1F1F1; 	color:#333333;   font-size:10px; 	line-height:13px;}div#menu_shortcuts a{  display:block;   position:relative;	width:153px;   height:13px;	border: 1px solid #BEB9E7;	color:#333333;   font-size:10px; 	line-height:15px;	margin: 0;}div#menu_shortcuts ul {  display:none;   position:relative;  padding: 0;	margin: 0;	list-style: none; }div#menu_shortcuts ul li a{  position:relative;	display:block;  width:151px;   height:15px;	background-color:#F1F1F1;   border: 1px solid #F1F1F1;	padding:0px 0px 0px 2.5px;	margin: 0;}div#menu_shortcuts ul li a:hover{  position:relative;	background-color:#BEB9E7;   padding: 0;	margin: 0;  border: 1px solid #BEB9E7;}div#menu_shortcuts:hover ul {   display:block; }/*======================================  ZONE MENU ========================================*/div#menu_principal{  display:block;	  position:relative;	width:100%;	height:32px;	margin: 0px; 	z-index: 2;}div#menu_principal ul {	margin: 0px;	padding: 0px;  font-size:12px;   font-weight:bold;}div#menu_principal li {  display:block;	  position:relative;   float:left;	top: 0px;	height: 32px;	margin: 0px;  list-style: none; }div#menu_principal ul li a {  display:block;	  position:relative;   float:left;	height: 24px;	padding: 9px 0px 0px 20px;	color: #FFFFFF;}/*============= ITEMS GENERIQUES DU MENU PRINCIPAL ===============*/div#menu_principal ul li { 	background: #fff url(../img/MenuBackground.gif) repeat-x top; }div#menu_principal ul li a {   height:16px;   padding-top: 8px;  padding-left: 20px;  padding-bottom: 8px;}div#menu_principal ul li a:hover {   color:#A51129; 	background: #fff url(../img/MenuBackgroundRoll.gif) repeat-x top; }div#menu_principal ul li ul {	display:none; 	top:32px;  height:auto;}div#menu_principal ul li ul li a{	display:block;  position:relative;   height:auto; 	padding: 8px 0px 8px 12px;	line-height: 18px;	background: #fff url(../img/MenuBackgroundSRoll.gif) repeat-x top; }div#menu_principal ul li ul li a:hover {   color:#A51129; 	background: #fff url(../img/MenuBackgroundRoll.gif) repeat-x top; }/*============= MENU HOME  ===============*/div#menu_principal ul li#menu1 {   width:141px; }div#menu_principal ul li#menu1 a {   width:121px;}div#menu_principal ul li#menu1 ul {	width:121px; }div#menu_principal ul li#menu1 ul li a{	width:129px;}div#menu_principal ul li#menu1:hover ul {   display:block; }/*=========== MENU MP4BOX   ================*/div#menu_principal ul li#menu2 {   width:187px; }div#menu_principal ul li#menu2 a {   width:167px; }div#menu_principal ul li#menu2 ul {	width:175px; }div#menu_principal ul li#menu2 ul li a{	width:175px;}div#menu_principal ul li#menu2:hover ul {   display:block; }/*============= MENU OSMO   ============*/div#menu_principal ul li#menu3 {   width:166px; }div#menu_principal ul li#menu3 a {   width:146px; }div#menu_principal ul li#menu3 ul {	width:146px; }div#menu_principal ul li#menu3 ul li a {	width:154px; }div#menu_principal ul li#menu3:hover ul {   display:block; }/*=============== MENU AUTEURS   ===============*/div#menu_principal ul li#menu4 {   width:186px; }div#menu_principal ul li#menu4 a {   width:166px; }div#menu_principal ul li#menu4 ul {	width:166px; }div#menu_principal ul li#menu4 ul li a {	width:174px;}div#menu_principal ul li#menu4:hover ul {   display:block; }/*=============== MENU VIDE  ===============*/div#menu_principal ul li#menu5 {   width: 265px; }div#menu_principal ul li#menu5 a {   width: 245px; }/*====================================== ZONE SOUS MENU ========================================*/div#sous_menu ul {  display:block;   position:relative;		padding: 0;	width:100%;   height:20px;	margin:0;	background-color:#3C3C3C;   border-top: 1px solid #7A7A7A;   border-bottom: 1px solid #7A7A7A;  font-size:10px;   font-weight:bold;   list-style: none;   z-index:1; }div#sous_menu ul li {	display:block;	  position:relative;   float:right;	height:15px;	margin-top: 5px; 	margin-right: 5px;	margin-left: 5px;}div#sous_menu ul li a { color:#FFFFFF; }div#sous_menu ul li a:hover  {  color:#BEB9E7;  }/*======================================ZONE IMAGE ENTETE ========================================*/div#Chapeau, div#Chapeau_court {	display:block;   position:relative; 	width:100%; 	background-repeat:no-repeat;  border-bottom: 1px solid #666666;}div#Chapeau {  height:154px;	background-image:url(../img/FondBig.gif); }div#Chapeau_court {  height:77px;	background-image:url(../img/FondSmall.gif); }div#Chapeau h1, div#Chapeau_court h1 {	display:block;   position:relative; 	color:#000000;   font-weight:bold;	line-height:24px;	margin: 0;}div#Chapeau h1 {	width:75%;   height:128px;	padding:10px 0px 0px 25px;}div#Chapeau_court h1 {	width:95%;   height:60px;	padding:5px 0px 0px 25px;}div#Chapeau a, div#Chapeau_court a {   color:#44398F;   text-decoration:underline; }/*====================================== ZONE CENTRE HOME  ====================================================*/div#Centre {   display:block;   position:relative;   width:100%;}div#Centre p { 	color:#000000;    	line-height:14px;	text-align:justify; }/*================= COLONNE GAUCHE (1/3 de la largeur) ==============*/div.Col1 {	display:block;   position:relative;  float:left;	width:30%;  }div.Col1 h2 {	width:95%; 	color:#FFFFFF; 	padding-left: 20px;	margin-left: 10px;	background: #3C3C3C url(../img/MJauneButton.gif) no-repeat top left;}
-div.Col1 h2.FAQ {	width:95%; 	color:#000000; 	padding-left: 20px;	margin-left: 10px;
-	background: none;}div.Col1 h2 a {   display:block;   width:195px;   padding:0;   color:#FFFFFF;}
+body {
+	background-color:#FFFFFF;
+	border: 0; margin: 0; padding: 0;
+	behavior:url(csshover.htc);
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px; 	
+}
 
-div.Col1 h2.FAQ a {   display:block;   width:195px;   padding:0;   color:black;}div.Col1 h3 {	color:#FFFFFF; 	margin-left: 10px;  background-color:#A51129;   text-align: center;}div.Col1 h3 a {   display:block;   padding:0;   color:#FFFFFF;}div.Col1 p {   width:95%;   padding: 0;  margin-top:10px;   margin-left:10px; }div.colonne_moitie_gauche {	display:block;   position:relative;  float:left;	width:48%;  }div.colonne_moitie_gauche h1 {  margin-left: 10px;}/*================= COLONE DROITE ==============*/div.Col2 {	display:block;   position:relative;  float:right;	width:66%;   height:100%;	border-left: 1px solid #999999;}div.Col2 h1 {	color:#000000;   font-weight:bold;	margin-left: 23px;	border-bottom: 1px solid black;}div.Col2 h2 {	color:#000000;   font-weight:bold;  width:95%; 	margin-left: 10px;	/*border-bottom: 1px solid black;*/}div.Col2 h3 {	color:#000000;   font-weight:bold;  width:95%; 	margin-left: 20px;}div.Col2 img {   float:left;   margin-left:25px;   margin-right:15px;   margin-bottom:7px; }div.Col2 p {   height:auto;   margin:10px; }div.Col2 ul {   height:auto;   margin:10px; }div.Col2 a {   color:#44398F;   text-decoration:underline; }div.Col2 div.Col2_2cols {  text-align:justify;   height:auto;   margin:10px;   }div#Centre div.Col2 div.Col2_2cols img {   float:left;   margin-left: 0;}div.colonne_moitie_droite {	display:block;   position:relative;  float:right;	width:48%;  }div.colonne_moitie_gauche h1 {  margin-left: 10px;}.screenshot_item{  padding-bottom: 10px;  height: 160px;}.screenshot_legend {  float: left;   width: 40%;   margin-left: 5%;}.screenshot_legend h2 {  margin: 0;  padding: 0;  border-bottom: 1px solid black;}.screenshot_image {  float: right;  margin-right: 10%;   margin-left: 0;   padding: 0;}/*====================================== ZONE PIED DE PAGE ====================================================*/div#Bas {   clear: both;  margin: 0;  padding-bottom: 15px;  padding-top: 15px;}div#Bas p {	color:#666666;   text-align: center;	margin: 0;	padding: 0;}div#Bas p a{   color:#666666;}div#Bas p a:hover {   color:#44398F; }
+a {	text-decoration:none; }
+img { border: none; }
+h1 { 
+  font-size: 16px; 
+  font-weight:bold;
+}
+h2 { 
+  font-size: 14px; 
+  font-weight:bold;
+}
 
-/*====================================== STYLES DIVERS ====================================================*/.xml_app {
+#spacer {
+	float: left;
+	width: 0;height: 95%;
+	padding: 0;margin: 0;
+	font-size: 1px; /* to make sure width is not overridden */
+}
+
+div#fond {
+  display: block; 
+  position: relative;
+	margin: 7px auto; 
+	padding: 0;
+	width: 945px;
+  height: 100%; 
+	
+	background-color:#E8E5E5; 
+  border: 1px solid #333333;
+}
+
+div#fond:after { 
+  content: "."; 
+  visibility: hidden; 
+  height: 0;
+  display: block;
+  clear: both; 
+}
+
+/*====================================== ZONE ENTETE LOGO GPAC ===========================================*/
+div#fond_entete {
+	width:100%;   
+	height: 76px;
+  display:block; 
+  position:relative;
+	background-color:#A51129; 
+  border-bottom: 1px solid #7A7A7A;
+	background-image:url(../img/Logo.gif);
+	background-repeat:no-repeat;
+  z-index:3; 
+}
+
+div#fond_entete h1{
+  display: block;
+  position:relative;
+	top: 15px;
+	left: 705px;
+	width: 152px; 
+  height: 15px;
+	color:#FFFFFF;	
+  padding: 0;
+  margin: 0;
+}
+
+div#menu_shortcuts {
+  display:block; 
+  position:relative;
+  top: 20px;
+	left: 705px;
+	margin: 0;
+	padding: 0;
+  width:153px; 
+  height:13px;
+	border: 1px solid #BEB9E7;
+	background-color:#F1F1F1; 
+	color:#333333; 
+  font-size:10px; 
+	line-height:13px;
+}
+
+
+div#menu_shortcuts a{
+  display:block; 
+  position:relative;
+	width:153px; 
+  height:13px;
+	border: 1px solid #BEB9E7;
+	color:#333333; 
+  font-size:10px; 
+	line-height:15px;
+	margin: 0;
+}
+
+div#menu_shortcuts ul {
+  display:none; 
+  position:relative;
+  padding: 0;
+	margin: 0;
+	list-style: none; 
+}
+
+div#menu_shortcuts ul li a{
+  position:relative;
+	display:block;
+  width:151px; 
+  height:15px;
+	background-color:#F1F1F1; 
+  border: 1px solid #F1F1F1;
+	padding:0px 0px 0px 2.5px;
+	margin: 0;
+
+}
+
+div#menu_shortcuts ul li a:hover{
+  position:relative;
+	background-color:#BEB9E7; 
+  padding: 0;
+	margin: 0;
+  border: 1px solid #BEB9E7;
+}
+
+div#menu_shortcuts:hover ul { 
+  display:block; 
+}
+
+/*======================================  ZONE MENU ========================================*/
+div#menu_principal{
+  display:block;	
+  position:relative;
+	width:100%;
+	height:32px;
+	margin: 0px; 
+	z-index: 2;
+}
+div#menu_principal ul {
+	margin: 0px;
+	padding: 0px;
+  font-size:12px; 
+  font-weight:bold;
+}
+div#menu_principal li {
+  display:block;	
+  position:relative; 
+  float:left;
+	top: 0px;
+	height: 32px;
+	margin: 0px;
+  list-style: none; 
+}
+div#menu_principal ul li a {
+  display:block;	
+  position:relative; 
+  float:left;
+	height: 24px;
+	padding: 9px 0px 0px 20px;
+	color: #FFFFFF;
+}
+
+/*============= ITEMS GENERIQUES DU MENU PRINCIPAL ===============*/
+div#menu_principal ul li { 
+	background: #fff url(../img/MenuBackground.gif) repeat-x top; 
+}
+
+div#menu_principal ul li a { 
+  height:16px; 
+  padding-top: 8px;
+  padding-left: 20px;
+  padding-bottom: 8px;
+}
+
+div#menu_principal ul li a:hover { 
+  color:#A51129; 
+	background: #fff url(../img/MenuBackgroundRoll.gif) repeat-x top; 
+}
+
+div#menu_principal ul li ul {
+	display:none; 
+	top:32px;
+  height:auto;
+}
+
+div#menu_principal ul li ul li a{
+	display:block;
+  position:relative; 
+  height:auto; 
+	padding: 8px 0px 8px 12px;
+	line-height: 18px;
+	background: #fff url(../img/MenuBackgroundSRoll.gif) repeat-x top; 
+}
+
+div#menu_principal ul li ul li a:hover { 
+  color:#A51129; 
+	background: #fff url(../img/MenuBackgroundRoll.gif) repeat-x top; 
+}
+/*============= MENU HOME  ===============*/
+div#menu_principal ul li#menu1 { 
+  width:141px; 
+}
+
+div#menu_principal ul li#menu1 a { 
+  width:121px;
+}
+
+div#menu_principal ul li#menu1 ul {
+	width:121px; 
+}
+
+div#menu_principal ul li#menu1 ul li a{
+	width:129px;
+}
+
+div#menu_principal ul li#menu1:hover ul { 
+  display:block; 
+}
+
+/*=========== MENU MP4BOX   ================*/
+div#menu_principal ul li#menu2 { 
+  width:187px; 
+}
+div#menu_principal ul li#menu2 a { 
+  width:167px; 
+}
+div#menu_principal ul li#menu2 ul {
+	width:175px; 
+}
+div#menu_principal ul li#menu2 ul li a{
+	width:175px;
+}
+div#menu_principal ul li#menu2:hover ul { 
+  display:block; 
+}
+
+/*============= MENU OSMO   ============*/
+div#menu_principal ul li#menu3 { 
+  width:166px; 
+}
+div#menu_principal ul li#menu3 a { 
+  width:146px; 
+}
+
+div#menu_principal ul li#menu3 ul {
+	width:146px; 
+}
+div#menu_principal ul li#menu3 ul li a {
+	width:154px; 
+}
+div#menu_principal ul li#menu3:hover ul { 
+  display:block; 
+}
+/*=============== MENU AUTEURS   ===============*/
+div#menu_principal ul li#menu4 { 
+  width:186px; 
+}
+div#menu_principal ul li#menu4 a { 
+  width:166px; 
+}
+div#menu_principal ul li#menu4 ul {
+	width:166px; 
+}
+div#menu_principal ul li#menu4 ul li a {
+	width:174px;
+}
+div#menu_principal ul li#menu4:hover ul { 
+  display:block; 
+}
+
+/*=============== MENU VIDE  ===============*/
+div#menu_principal ul li#menu5 { 
+  width: 265px; 
+}
+div#menu_principal ul li#menu5 a { 
+  width: 245px; 
+}
+
+/*====================================== ZONE SOUS MENU ========================================*/
+div#sous_menu ul {
+  display:block; 
+  position:relative;	
+	padding: 0;
+	width:100%; 
+  height:20px;
+	margin:0;
+	background-color:#3C3C3C; 
+  border-top: 1px solid #7A7A7A; 
+  border-bottom: 1px solid #7A7A7A;
+  font-size:10px; 
+  font-weight:bold; 
+  list-style: none; 
+  z-index:1; 
+}
+
+div#sous_menu ul li {
+	display:block;	
+  position:relative; 
+  float:right;
+	height:15px;
+	margin-top: 5px; 
+	margin-right: 5px;
+	margin-left: 5px;
+}
+div#sous_menu ul li a { color:#FFFFFF; }
+div#sous_menu ul li a:hover  {  color:#BEB9E7;  }
+
+/*======================================ZONE IMAGE ENTETE ========================================*/
+div#Chapeau, div#Chapeau_court {
+	display:block; 
+  position:relative; 
+	width:100%; 
+	background-repeat:no-repeat;
+  border-bottom: 1px solid #666666;
+}
+div#Chapeau {
+  height:154px;
+	background-image:url(../img/FondBig.gif); 
+}
+
+div#Chapeau_court {
+  height:77px;
+	background-image:url(../img/FondSmall.gif); 
+}
+
+div#Chapeau h1, div#Chapeau_court h1 {
+	display:block; 
+  position:relative; 
+	color:#000000; 
+  font-weight:bold;
+	line-height:24px;
+	margin: 0;
+}
+
+div#Chapeau h1 {
+	width:75%; 
+  height:128px;
+	padding:10px 0px 0px 25px;
+}
+
+div#Chapeau_court h1 {
+	width:95%; 
+  height:60px;
+	padding:5px 0px 0px 25px;
+}
+
+
+div#Chapeau a, div#Chapeau_court a { 
+  color:#44398F; 
+  text-decoration:underline; 
+}
+
+/*====================================== ZONE CENTRE HOME  ====================================================*/
+div#Centre { 
+  display:block; 
+  position:relative;
+  margin-left: 10px; 
+  margin-right: 10px;
+}
+
+div#Centre p { 
+	color:#000000;    
+	line-height:14px;
+	text-align:justify; 
+}
+
+
+/*================= COLONNE GAUCHE (1/3 de la largeur) ==============*/
+div.Col1 {
+	display:block; 
+  position:relative;
+  float:left;
+	width:30%;  
+}
+div.Col1 h2 {
+	width:95%; 
+	color:#FFFFFF; 
+	padding-left: 20px;
+	margin-left: 10px;
+	background: #3C3C3C url(../img/MJauneButton.gif) no-repeat top left;
+}
+
+div.Col1 h2.FAQ {
+	width:95%; 
+	color:#000000; 
+	padding-left: 20px;
+	margin-left: 10px;
+	background: none;
+}
+
+div.Col1 h2 a { 
+  display:block; 
+  width:195px; 
+  padding:0; 
+  color:#FFFFFF;
+}
+
+div.Col1 h2.FAQ a { 
+  display:block; 
+  width:195px; 
+  padding:0; 
+  color:black;
+}
+
+div.Col2 h2.download_section {
+  color:#FFFFFF; 
+  margin-left: 10px; 
+  padding: 10px; 
+  background-color:#A51129; 
+  text-align: center; 
+  position: relative;
+  left: 10%; 
+  width: 70%;
+}
+
+div.Col2 a.download_link { 
+  display:inline;  
+  padding:0; 
+  color:#FFFFFF;
+}
+
+div.Col1 p { 
+  width:95%; 
+  padding: 0;
+  margin-top:10px; 
+  margin-left:10px; 
+}
+
+div.colonne_moitie_gauche {
+	display:block; 
+  position:relative;
+  float:left;
+	width:48%;  
+}
+
+div.colonne_moitie_gauche h1 {
+  margin-left: 10px;
+}
+
+
+/*================= COLONE DROITE ==============*/
+div.Col2 {
+	display:block; 
+  position:relative;
+  float:right;
+	width:66%; 
+  height:100%;
+	border-left: 1px solid #999999;
+}
+div.Col2 h1 {
+	color:#000000; 
+  font-weight:bold;
+	margin-left: 23px;
+	border-bottom: 1px solid black;
+}
+div.Col2 h2 {
+	color:#000000; 
+  font-weight:bold;
+  width:95%; 
+	margin-left: 10px;
+	/*border-bottom: 1px solid black;*/
+}
+div.Col2 h3 {
+	color:#000000; 
+  font-weight:bold;
+  width:95%; 
+	margin-left: 20px;
+}
+div.Col2 img { 
+  float:left; 
+  margin-left:25px; 
+  margin-right:15px; 
+  margin-bottom:7px; 
+}
+div.Col2 p { 
+  height:auto; 
+  margin:10px; 
+}
+div.Col2 ul { 
+  height:auto; 
+  margin:10px; 
+}
+div.Col2 a { 
+  color:#44398F; 
+  text-decoration:underline; 
+}
+
+div.Col2 div.Col2_2cols {
+  text-align:justify; 
+  height:auto; 
+  margin:10px;   
+}
+
+div#Centre div.Col2 div.Col2_2cols img { 
+  float:left; 
+  margin-left: 0;
+}
+
+div.colonne_moitie_droite {
+	display:block; 
+  position:relative;
+  float:right;
+	width:48%;  
+}
+
+div.colonne_moitie_gauche h1 {
+  margin-left: 10px;
+}
+
+
+.screenshot_item{
+  padding-bottom: 10px;
+  height: 160px;
+}
+
+.screenshot_legend {
+  float: left; 
+  width: 40%; 
+  margin-left: 5%;
+}
+
+.screenshot_legend h2 {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid black;
+}
+
+.screenshot_image {
+  float: right;
+  margin-right: 10%; 
+  margin-left: 0; 
+  padding: 0;
+}
+
+/*====================================== ZONE PIED DE PAGE ====================================================*/
+div#Bas { 
+  clear: both;
+  margin: 0;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+div#Bas p {
+	color:#666666; 
+  text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+div#Bas p a{ 
+  color:#666666;
+}
+div#Bas p a:hover { 
+  color:#44398F; 
+}
+
+/*====================================== STYLES DIVERS ====================================================*/
+.xml_app {
  background: #FFFFFF;
  border: 1px solid #C9D1D7;
  width: 100%;
 	font-family: monospace;
  margin-top: 8px;
 }
+
 
