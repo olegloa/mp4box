@@ -1,0 +1,357 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<TITLE>MPEG-4 Systems Tutorial - Part 1</TITLE>
+</HEAD>
+
+<BODY>
+
+<CENTER>
+<P>
+<TABLE BORDER="0" WIDTH="100%" HEIGHT="165">
+	<TR>
+		<TD WIDTH="23%" HEIGHT="157">
+			<P ALIGN="CENTER"><IMG SRC="files/logo1.jpg" WIDTH="100" HEIGHT="100" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+		<TD WIDTH="50%" HEIGHT="157">
+			<H1 ALIGN="CENTER">BIFS Tutorial - Part I</H1>
+
+			<H1 ALIGN="CENTER">Very simple scenes
+		</TD>
+		<TD WIDTH="27%" HEIGHT="157">
+			<P ALIGN="CENTER"><IMG SRC="files/logo2.jpg" WIDTH="100" HEIGHT="99" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+	</TR>
+</TABLE>
+</P>
+</CENTER>
+<P>In this first part, we will explain the MPEG-4 Scene structure and show how to create very simple scenes with
+basic geometric shapes such as rectangles, circles.</P>
+<H4>
+<HR ALIGN="CENTER">
+<A NAME="initialScene"></A>Empty Initial Scene:</H4>
+
+<BLOCKQUOTE>
+	<P>Here is an empty MPEG4 document (<A HREF="samples/vide.xmt">vide.xmt</A>, <A HREF="samples/vide.bt">vide.bt</A>)
+	where you will have to, throughout the tutorial:</P>
+</BLOCKQUOTE>
+
+
+<UL>
+	<UL>
+		<LI>change <FONT FACE="Courier New, Courier">pixelWidth</FONT> and <FONT FACE="Courier New, Courier">pixelHeight</FONT>
+		values to modify the scene size in pixels.
+		<LI>insert scene fragments as we create them.
+	</UL>
+</UL>
+
+
+<BLOCKQUOTE>
+	<P>The content of the document will be explained while stepping through this tutorial.</P>
+</BLOCKQUOTE>
+
+<H4>
+<HR ALIGN="CENTER">
+Define a 2D graphical context for the scene:</H4>
+
+<BLOCKQUOTE>
+	<P>Simply said, a BIFS scene is described as a tree in which leaves are media object (text, 2D/3D objects, video,
+	audio) and intermediate nodes define groups of objects, sub-tree transformation rules (2D space, 3D space, color,
+	...). The root of this tree defines the graphical context of the presentation, either a 2D world or a 3D world.
+	We will only consider 2D scenes in this tutorial, hence the root node shall be <FONT FACE="Courier New, Courier">Layer2D</FONT>
+	or <FONT FACE="Courier New, Courier">OrderedGroup</FONT> node. We will first use the <FONT FACE="Courier New, Courier">OrderedGroup</FONT>
+	node. This node allows grouping and ordered rendering of child nodes in the 2D plane. By default children appear
+	in their declaration order: the first child is drawn in the background, the last on top of all others. The <FONT
+	FACE="Courier New, Courier">OrderedGroup.order</FONT> field is used to modify this behavior. The XMT-A syntax is
+	:</P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;OrderedGroup order=&quot;0 1 2 3&quot;&gt;</FONT></P>
+		<BLOCKQUOTE>
+			<P><FONT FACE="Courier New, Courier">&lt;children&gt; ... &lt;/children&gt;</FONT></P>
+		</BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;/OrderedGroup&gt;</FONT></P>
+	</BLOCKQUOTE>
+</BLOCKQUOTE>
+
+<H4>
+<HR ALIGN="CENTER">
+Some vocabulary:</H4>
+
+<BLOCKQUOTE>
+	<P>Nodes in the scene may have properties, called <B>fields</B>, that can be modified at run time. In XMT-A, a
+	node is described by an XML element, and a field is described by an XML element or attribute, depending on the
+	type of the field (elements for fields that can contain nodes, attributes otherwise). More info on this can be
+	found in the VRML 2.0 standard. In this tutorial, we will use the <FONT FACE="Courier New, Courier">N.c</FONT>
+	syntax to address field c in node N.</P>
+</BLOCKQUOTE>
+
+<H4>
+<HR ALIGN="CENTER">
+Adding a graphical primitive:</H4>
+
+<BLOCKQUOTE>
+	<P>Let's add a 2D shape to our empty scene. The node used to describe a shape (2D or 3D) is the <FONT FACE="Courier New, Courier">Shape</FONT>
+	node. This node has two fields, <FONT FACE="Courier New, Courier">Shape.geometry</FONT> used to define the shape
+	itself, and <FONT FACE="Courier New, Courier">Shape.appearance</FONT> used to define its visual aspect (3D lightening,
+	texture, color, striking, ...). To insert a rectangle 50x40 pixels centered in the scene, the following XMT code
+	must be inserted in <FONT FACE="Courier New, Courier">OrderedGroup.children</FONT>:</P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;Shape&gt;<BR>
+		&lt;geometry&gt;<BR>
+		&lt;Rectangle size=&quot;50 40&quot;/&gt;<BR>
+		&lt;/geometry&gt;<BR>
+		&lt;/Shape&gt;</FONT></P>
+	</BLOCKQUOTE>
+	<P>The resulting file is <A HREF="samples/rect.xmt">rect.xmt</A>,<A HREF="samples/rect.bt"> rect.bt</A>, compiled
+	in <A HREF="samples/rect.mp4">rect.mp4</A>, the resulting scene is 100 pixels wide, 100 pixels heigh with the rectangle
+	in its center. The rectangle is not filled, and has a light grey line of 1 pixel width. These values are the default
+	values for any 2D shape.</P>
+	<P><U><FONT SIZE="2">Note :</FONT></U></P>
+	<P><FONT SIZE="2">As any XML language, an XMT document can become quite large on disk. The compilation step (BIFS
+	is BInary Format for Scene) significantly reduces the file size: the previous XML file is 1237 bytes, the compiled
+	mp4 file is 614 bytes and the BIFS stream itself is 63 octets. We will explain later on why the overhead of mp4
+	and how to reduce the data rates for small bandwidth.</FONT></P>
+</BLOCKQUOTE>
+
+<H4>
+<HR ALIGN="CENTER">
+Note on coordinate systems:</H4>
+<P>
+<TABLE BORDER="0" WIDTH="100%">
+	<TR>
+		<TD WIDTH="50%">
+			<BLOCKQUOTE>
+				<P>The 2D system defined by BIFS or World Coordinate System, is centered in the middle of the parent 2D plane (the
+				main scene for 2D scenes), with Y-axis towards the top of the scene and X-axis towards the right of the scene.
+				Measure Unit is in pixel or in meter, but we will only use pixel metrics with our 2D scenes. Each graphical object
+				has its own coordinate system, or Local Coordinate System, which can be transformed through dedicated nodes.
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="50%">
+			<P ALIGN="CENTER"><IMG SRC="files/lcs.jpg" WIDTH="125" HEIGHT="123" ALIGN="BOTTOM" BORDER="0"></P>
+
+			<P ALIGN="CENTER">Syst&egrave;mes de coordoon&eacute;es Monde et Local
+		</TD>
+	</TR>
+</TABLE>
+</P>
+<P>
+<HR ALIGN="CENTER">
+<A NAME="Filling"></A><B>Filling and striking:</B>
+
+<BLOCKQUOTE>
+	<P>Let's change the previous scene by filling the rectangle and changing the strike width and color:.</P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;Shape&gt;<BR>
+		&lt;geometry&gt;&lt;Rectangle size=&quot;50 40&quot;/&gt;&lt;/geometry&gt;<BR>
+		&lt;appearance&gt;<BR>
+		&lt;Appearance&gt;<BR>
+		&lt;material&gt;<BR>
+		&lt;Material2D emissiveColor=&quot;1 0 0&quot; filled=&quot;true&quot;&gt;<BR>
+		&lt;lineProps&gt;&lt;LineProperties lineColor=&quot;1 1 0&quot; width=&quot;2&quot;/&gt;&lt;/lineProps&gt;<BR>
+		&lt;/Material2D&gt;<BR>
+		&lt;/material&gt;<BR>
+		&lt;/Appearance&gt;<BR>
+		&lt;/appearance&gt;<BR>
+		&lt;/Shape&gt;</FONT></P>
+	</BLOCKQUOTE>
+	<P>Here is the resulting scene: <A HREF="samples/rect2.xmt">rect2.xmt</A>, <A HREF="samples/rect2.bt">rect2.bt</A>,
+	<A HREF="samples/rect2.mp4">rect2.mp4</A>.</P>
+	<P>The aspect of the shape is controled by the <FONT FACE="Courier New, Courier">Shape.appearance</FONT> field.
+	This field may be empty (previous example) or may contain an <FONT FACE="Courier New, Courier">Appearance</FONT>
+	node.</P>
+	<P>The <FONT FACE="Courier New, Courier">Appearance</FONT> node has 3 fields describing its aspect (<FONT FACE="Courier New, Courier">Appearance.material</FONT>),
+	potential texturing to apply (<FONT FACE="Courier New, Courier">Appearance.texture</FONT>) and potential transformations
+	to apply to the texture (<FONT FACE="Courier New, Courier">Appearance.textureTransform</FONT>). We will look at
+	texturing later on in this tutorial. For a 2D shape, the <FONT FACE="Courier New, Courier">Appearance.material</FONT>
+	field usually contain a <FONT FACE="Courier New, Courier">Material2D</FONT> node. This node allows specifying aspect
+	through 4 fields:</P>
+</BLOCKQUOTE>
+
+
+<UL>
+	<UL>
+		<LI><FONT FACE="Courier New, Courier">filled</FONT> indicates whether the shape is filled or not,
+		<LI><FONT FACE="Courier New, Courier">emissiveColor</FONT> indicates filling color,
+		<LI><FONT FACE="Courier New, Courier">transparency</FONT> indicates transparency level for the shape (0.0 is opaque,
+		1.0 is completely transparent) and
+		<LI><FONT FACE="Courier New, Courier">lineProps</FONT> describes how the striking of the shape is done.
+	</UL>
+</UL>
+
+
+<BLOCKQUOTE>
+	<P>The detailed rules for filling and striking shapes can be found <A HREF="rules.htm">here</A>.</P>
+	<P><U>Note :</U> Colors are described as Red, Green, Blue levels in the interval [0, 1] (hence &quot;0 0 0&quot;
+	is black and &quot;1 1 1&quot; is white).</P>
+	<P>
+</BLOCKQUOTE>
+
+<H3>
+<HR ALIGN="CENTER">
+Adding a background:</H3>
+
+<BLOCKQUOTE>
+	<P>A default color for the scene background can be specified by using the <FONT FACE="Courier New, Courier">Background2D</FONT>
+	node. This node is a bindable node (cf <A HREF="http://www.web3d.org/x3d/specifications/vrml/ISO-IEC-14772-IS-VRML97WithAmendment1/"
+target="_blank">VRML</A>), hence the position of its declaration doesn't really matter, the
+	first <FONT FACE="Courier New, Courier">Background2D</FONT> node found in the scene will be &quot;bound&quot;,
+	that is will be used to select the background color. The <FONT FACE="Courier New, Courier">Background2D</FONT>
+	node can also be used to specify an image in the background rather than a color, we will explain how to use images
+	in BIFS later on. For now let's just add a blue background:</P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;Background2D backColor=&quot;0 0 0.7&quot; /&gt;</FONT></P>
+	</BLOCKQUOTE>
+	<P>Here is the resulting scene: <A HREF="samples/rect3.xmt">rect3.xmt</A>, <A HREF="samples/rect3.bt">rect3.bt</A>,
+	<A HREF="samples/rect3.mp4">rect3.mp4</A></P>
+</BLOCKQUOTE>
+
+<H3>
+<HR ALIGN="CENTER">
+<A NAME="Complex"></A>Complex graphical shapes:</H3>
+
+<BLOCKQUOTE>
+	<P>BIFS defines the following 2D graphical primitives: <FONT FACE="Courier New, Courier">Rectangle</FONT>, <FONT
+	FACE="Courier New, Courier">Circle</FONT>, <FONT FACE="Courier New, Courier">IndexedFaceSet2D</FONT>, <FONT FACE="Courier New, Courier">IndexedLineSet2D</FONT>,
+	<FONT FACE="Courier New, Courier">PointSet2D</FONT>, <FONT FACE="Courier New, Courier">Curve2D</FONT>, <FONT FACE="Courier New, Courier">Bitmap</FONT>
+	and <FONT FACE="Courier New, Courier">Text</FONT>. We have just seen the <FONT FACE="Courier New, Courier">Rectangle</FONT>
+	one, <FONT FACE="Courier New, Courier">Circle</FONT> is roughly the same. <FONT FACE="Courier New, Courier">Bitmap</FONT>
+	is used for still images and video display, and <FONT FACE="Courier New, Courier">Text</FONT> for ... text. Let's
+	have a look at the other ones..</P>
+</BLOCKQUOTE>
+
+<H4>PointSet2D, IndexedLineSet2D and IndexedFaceSet2D, Curve2D :</H4>
+
+<BLOCKQUOTE>
+	<P>These primitives all use a set of 2D coordinates (points) described in the <FONT FACE="Courier New, Courier">Coordinate2D</FONT>
+	node. The first three ones may be colored on a point/line/face basis through a <FONT FACE="Courier New, Courier">Color</FONT>
+	node.</P>
+	<P>The syntax defining 5 points with a <FONT FACE="Courier New, Courier">Coordinate2D</FONT> node is :</P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;Coordinate2D point=&quot;0 0 10 -10 20 +33 -30 -20 +50 -60&quot;/&gt;</FONT></P>
+	</BLOCKQUOTE>
+	<P>The point (0,0) is the center of the local coordinate system.</P>
+	<P>The syntax defining 5 colorswith a <FONT FACE="Courier New, Courier">Color</FONT> node is :</P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;Color color=&quot;1 1 1 0.5 1 1 1 0.5 1 1 1 0.5 0.5 0.5 0.5&quot;/&gt;</FONT></P>
+	</BLOCKQUOTE>
+	<P>The differences between these primitives is how points and colors are interpreted to define the shape.</P>
+</BLOCKQUOTE>
+
+<P>
+<TABLE BORDER="1" WIDTH="100%">
+	<TR>
+		<TD WIDTH="50%">
+			<P ALIGN="CENTER"><I>Description</I>
+		</TD>
+		<TD WIDTH="50%">
+			<P ALIGN="CENTER"><I>Examples</I>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="50%">
+			<BLOCKQUOTE>
+				<P>The <FONT FACE="Courier New, Courier">PointSet2D</FONT> primitive places points descibed in the <FONT FACE="Courier New, Courier">Coordinate2D</FONT>
+				node in the scene and draw them with colors described in the <FONT FACE="Courier New, Courier">Color</FONT> node.
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="50%"><A HREF="samples/point.xmt">point.xmt</A>, <A HREF="samples/point.bt">point.bt</A>, <A HREF="samples/point.mp4">point.mp4</A></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="50%">
+			<BLOCKQUOTE>
+				<P>The <FONT FACE="Courier New, Courier">IndexedLineSet2D</FONT> primitive displays line segments. The point list
+				to be used is given by the <FONT FACE="Courier New, Courier">coordIndex</FONT> field. Index <FONT FACE="Courier New, Courier">-1</FONT>
+				indicates the end of a line sequence. The color to be used for the line is given by the <FONT FACE="Courier New, Courier">colorIndex</FONT>
+				field.
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="50%"><A HREF="samples/line.xmt">line.xmt</A>, <A HREF="samples/line.bt">line.bt</A>, <A HREF="samples/line.mp4">line.mp4</A>&nbsp;</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="50%">
+			<BLOCKQUOTE>
+				<P>The <FONT FACE="Courier New, Courier">IndexedFaceSet2D</FONT> primitive displays closed polygons (filled or
+				unfilled). The point list to be used is given by the <FONT FACE="Courier New, Courier">coordIndex</FONT> field.
+				Index <FONT FACE="Courier New, Courier">-1</FONT> indicates the end of a polygon.The color to be used for strike/fill
+				is given by indexes in the <FONT FACE="Courier New, Courier">colorIndex</FONT> field.
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="50%"><A HREF="samples/face.xmt">face.xmt</A>, <A HREF="samples/face.bt">face.bt</A>, <A HREF="samples/face.mp4">face.mp4</A></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="50%">
+			<BLOCKQUOTE>
+				<P>The <FONT FACE="Courier New, Courier">Curve2D</FONT> primitive displays lines and bezier curves. The point list
+				to be used is given by a <FONT FACE="Courier New, Courier">Coordinate2D</FONT> node in the <FONT FACE="Courier New, Courier">point</FONT>
+				field and the type of the curve segment is given in order in the <FONT FACE="Courier New, Courier">type</FONT>
+				field (move, line, Cubic Bezier)
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="50%"><A HREF="samples/curve.xmt">curve.xmt</A>, <A HREF="samples/curve.bt">curve.bt</A>, <A HREF="samples/curve.mp4">curve.mp4</A></TD>
+	</TR>
+</TABLE>
+</P>
+
+<BLOCKQUOTE>
+	<P>More details on these nodes can be found <A HREF="2Dgeometry.htm">here</A>.</P>
+</BLOCKQUOTE>
+
+<H2>
+<HR ALIGN="CENTER">
+Exercises:</H2>
+<P><U><FONT COLOR="#CC0000">Exercise 1 :</FONT></U> Based on rect.xmt example, change the scene size and the rectangle
+size. Check that world coordinate system and local coordinate system of the rectangle match.</P>
+<P><U><FONT COLOR="#CC0000">Exercise 2 :</FONT></U> Based on rect.xmt example, change the pen width, color and
+type.</P>
+<P><U><FONT COLOR="#CC0000">Exercise 3 :</FONT></U> Based on rect2.xmt example, change the fill color and strike
+properties.</P>
+<P><U><FONT COLOR="#CC0000">Exercise 4 :</FONT></U> Repeat previous exercises and change the Rectangle into a circle
+(radius of the circle is given by the field <FONT FACE="Courier New, Courier">Circle.radius</FONT>).</P>
+<P><U><FONT COLOR="#CC0000">Exercise 5 :</FONT></U> Use previous examples to draw the following picture:</P>
+
+<BLOCKQUOTE>
+	<BLOCKQUOTE>
+		<P><IMG SRC="files/snapshot003.jpg" WIDTH="175" HEIGHT="167" ALIGN="BOTTOM" BORDER="0"></P>
+	</BLOCKQUOTE>
+</BLOCKQUOTE>
+
+<H2>
+<HR ALIGN="CENTER">
+Conclusion</H2>
+<P>
+<TABLE BORDER="0" WIDTH="100%">
+	<TR>
+		<TD WIDTH="49%" VALIGN="TOP">In this part we have seen common 2D primitives used in BIFS. Of course this is only an overview and you should
+			exercise these primitives a bit more, but using these you can already achieve nice vectorial drawings such as the
+			following images.</TD>
+		<TD WIDTH="1%"><IMG SRC="files/snapshot000.jpg" WIDTH="180" HEIGHT="180" ALIGN="BOTTOM" BORDER="0"></TD>
+		<TD WIDTH="15%"><IMG SRC="files/snapshot001.jpg" WIDTH="180" HEIGHT="180" ALIGN="BOTTOM" BORDER="0"></TD>
+		<TD><IMG SRC="files/snapshot002.jpg" WIDTH="141" HEIGHT="181" ALIGN="BOTTOM" BORDER="0"></TD>
+	</TR>
+</TABLE>
+</P>
+
+<P>
+<HR ALIGN="CENTER">
+
+<TABLE BORDER="0" WIDTH="100%">
+<TBODY>
+  																																																<TR>
+		<TD WIDTH="100%">
+			<P ALIGN="CENTER">[ <A HREF="http://gpac.sourceforge.net"><FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">Home</FONT></A>
+			]&nbsp;[ <FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">Very Simple Scenes</FONT>]&nbsp;[ <A HREF="bifs_part2.htm"><FONT
+			FACE="Verdana, Arial, Helvetica, Sans-Serif">Some Animation</FONT></A> ]
+		</TD>
+	</TR>
+</TBODY></TABLE>
+
+<HR ALIGN="CENTER">
+Last Modified: 02/04/2005<BR>
+Cyril Concolato & Jean Le Feuvre &copy; 2002-2005
+
+</BODY>
+
+</HTML>

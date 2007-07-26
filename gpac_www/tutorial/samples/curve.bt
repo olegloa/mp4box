@@ -1,0 +1,50 @@
+InitialObjectDescriptor {
+ objectDescriptorID 1
+ audioProfileLevelIndication 254
+ visualProfileLevelIndication 254
+ sceneProfileLevelIndication 254
+ graphicsProfileLevelIndication 254
+ ODProfileLevelIndication 254
+ esDescr [
+  ES_Descriptor {
+   ES_ID 1
+   decConfigDescr DecoderConfigDescriptor {
+    objectTypeIndication 1
+    streamType 3
+    decSpecificInfo BIFSConfig {
+     isCommandStream true
+     pixelMetric true
+     pixelWidth 100
+     pixelHeight 100
+    }
+   }
+  }
+ ]
+}
+
+OrderedGroup {
+ children [
+  Background2D {
+   backColor 0 0 0.7
+  }
+  Shape {
+   appearance Appearance {
+    material Material2D {
+     emissiveColor 0 1 0
+     filled TRUE
+     lineProps LineProperties {
+      width 2
+     }
+    }
+   }
+   geometry Curve2D {
+    type [2 3 0 1]
+    point Coordinate2D {
+     point [0 0 10 -10 20 33 -30 -20 45 -45 0 0 -30 -30 -30 20]
+    }
+   }
+  }
+ ]
+}
+
+

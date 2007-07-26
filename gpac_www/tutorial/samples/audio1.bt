@@ -1,0 +1,72 @@
+InitialObjectDescriptor {
+ objectDescriptorID 1
+ audioProfileLevelIndication 254
+ visualProfileLevelIndication 254
+ sceneProfileLevelIndication 254
+ graphicsProfileLevelIndication 254
+ ODProfileLevelIndication 254
+ esDescr [
+ 	#BIFS stream
+  ES_Descriptor {
+   ES_ID 2
+   decConfigDescr DecoderConfigDescriptor {
+    streamType 3
+    decSpecificInfo BIFSConfig {
+     isCommandStream true
+     pixelMetric true
+     pixelWidth 100
+     pixelHeight 100
+    }
+   }
+  }
+ 	#OD stream
+  ES_Descriptor {
+   ES_ID 1
+   decConfigDescr DecoderConfigDescriptor {
+    streamType 1
+   }
+  }
+ ]
+}
+
+OrderedGroup {
+ children [
+  Sound2D {
+   source AudioSource {
+    url [od:11]
+   }
+  }
+  Shape {
+   appearance Appearance {
+    material Material2D {
+     filled TRUE
+    }
+    texture ImageTexture {
+     url [od:10]
+    }
+   }
+   geometry Rectangle {
+    size 80 80
+   }
+  }
+ ]
+}
+
+
+RAP AT 0 {
+  UPDATE OD [
+   ObjectDescriptor {
+    objectDescriptorID 11
+    esDescr [
+     ES_Descriptor {
+      ES_ID 3
+      #audio (NHNT) import - MP4Box will take care of setting up the stream
+      muxInfo MuxInfo {
+       fileName "audio.media"
+      }
+     }
+    ]
+   }
+  ]
+}
+

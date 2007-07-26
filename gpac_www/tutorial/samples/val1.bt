@@ -1,0 +1,73 @@
+InitialObjectDescriptor {
+ objectDescriptorID 1
+ audioProfileLevelIndication 254
+ visualProfileLevelIndication 254
+ sceneProfileLevelIndication 254
+ graphicsProfileLevelIndication 254
+ ODProfileLevelIndication 254
+ esDescr [
+  ES_Descriptor {
+   ES_ID 1
+   decConfigDescr DecoderConfigDescriptor {
+    streamType 3
+    decSpecificInfo BIFSConfig {
+     isCommandStream true
+     pixelMetric true
+     pixelWidth 400
+     pixelHeight 400
+    }
+   }
+  }
+ ]
+}
+
+OrderedGroup {
+ children [
+  Background2D {
+   backColor 1 1 1
+  }
+  Transform2D {
+   translation 100 0
+   children [
+    DEF TS1 TouchSensor {}
+    Shape {
+     appearance Appearance {
+      material Material2D {
+       emissiveColor 1 0 0
+       filled TRUE
+       lineProps LineProperties {
+        lineColor 1 1 0
+        width 2
+       }
+      }
+     }
+     geometry Rectangle {
+      size 50 40
+     }
+    }
+   ]
+  }
+  Transform2D {
+   children [
+    Shape {
+     appearance Appearance {
+      material DEF M1 Material2D {
+       emissiveColor 1 0 1
+       filled TRUE
+      }
+     }
+     geometry Rectangle {
+      size 50 40
+     }
+    }
+   ]
+  }
+  DEF V1 Valuator {
+   Factor1 0.5
+  }
+ ]
+}
+
+ROUTE TS1.isActive TO V1.inSFBool
+ROUTE V1.outSFColor TO M1.emissiveColor
+

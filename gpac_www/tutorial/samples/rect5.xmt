@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMT-A xmlns="urn:mpeg:mpeg4:xmta:schema:2002" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mpeg:mpeg4:xmta:schema:2002 xmt-a.xsd">
+ <Header>
+ <InitialObjectDescriptor objectDescriptorID="od1" binaryID="1" >
+  <Profiles audioProfileLevelIndication="254" visualProfileLevelIndication="254" sceneProfileLevelIndication="254" graphicsProfileLevelIndication="254" ODProfileLevelIndication="254" />
+  <Descr>
+   <esDescr>
+    <ES_Descriptor ES_ID="es1" binaryID="1" >
+     <decConfigDescr>
+      <DecoderConfigDescriptor streamType="3" >
+       <decSpecificInfo>
+        <BIFSConfig >
+          <commandStream pixelMetric="true" >
+           <size pixelWidth="100" pixelHeight="100" />
+          </commandStream>
+        </BIFSConfig>
+       </decSpecificInfo>
+      </DecoderConfigDescriptor>
+     </decConfigDescr>
+    </ES_Descriptor>
+   </esDescr>
+  </Descr>
+ </InitialObjectDescriptor>
+ </Header>
+ <Body>
+<Replace>
+<Scene>
+<OrderedGroup>
+<children>
+<Background2D backColor="0 0 0.7"/>
+<Transform2D rotationAngle="0.785398">
+<children>
+<Shape>
+<appearance>
+<Appearance>
+<material>
+<Material2D emissiveColor="1 0 0" filled="TRUE">
+<lineProps>
+<LineProperties lineColor="1 1 0" width="2"/>
+</lineProps>
+</Material2D>
+</material>
+</Appearance>
+</appearance>
+<geometry>
+<Rectangle size="50 40"/>
+</geometry>
+</Shape>
+</children>
+</Transform2D>
+</children>
+</OrderedGroup>
+</Scene>
+</Replace>
+ </Body>
+</XMT-A>

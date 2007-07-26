@@ -1,0 +1,811 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<TITLE>MPEG-4 Systems Tutorial - Part 2</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1 ALIGN="CENTER"></H1>
+<CENTER>
+<P>
+<TABLE BORDER="0" WIDTH="100%" HEIGHT="165">
+	<TR>
+		<TD WIDTH="23%" HEIGHT="157">
+			<P ALIGN="CENTER"><IMG SRC="files/logo1.jpg" WIDTH="100" HEIGHT="100" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+		<TD WIDTH="49%" HEIGHT="157">
+			<H1 ALIGN="CENTER">BIFS Tutorial - Part II</H1>
+
+			<H1 ALIGN="CENTER">Animation
+		</TD>
+		<TD WIDTH="28%" HEIGHT="157">
+			<P ALIGN="CENTER"><IMG SRC="files/logo2.jpg" WIDTH="100" HEIGHT="99" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+	</TR>
+</TABLE>
+
+</CENTER>
+<H1 ALIGN="CENTER"></H1>
+<P>We will now introduce animation to bring some life in the scene. BIFS offers two ways of animating a scene:
+using value <A HREF="#interpolator">interpolators</A> and events generators as in <A HREF="http://www.web3d.org/x3d/specifications/vrml/ISO-IEC-14772-IS-VRML97WithAmendment1/"
+target="_blank">VRML</A>,
+or using <A HREF="#updates">live modifications</A> by adding, removing or updating nodes in the tree through command
+or animation frames (encoded in a file, sent by a server).</P>
+<H3>
+<HR ALIGN="CENTER">
+<A NAME="Interpolator"></A>Interpolator based animation:</H3>
+
+<BLOCKQUOTE>
+	<P>In order to animate a value with an interpolator, we need 3 nodes: a target node to be animated (here we will
+	use a <FONT FACE="Courier New, Courier">Transform2D</FONT> node), a node generating events (<FONT FACE="Courier New, Courier">TimeSensor</FONT>),
+	an interpolator node (<FONT FACE="Courier New, Courier">XXXXXInterpolator</FONT>) and links between these three
+	nodes (<FONT FACE="Courier New, Courier">Route</FONT>).</P>
+</BLOCKQUOTE>
+
+<H4>
+<HR ALIGN="CENTER">
+Transform2D Node:</H4>
+
+<BLOCKQUOTE>
+	<P>The <FONT FACE="Courier New, Courier">Transform2D</FONT> node is the most commonly used transformation node
+	in 2D scenes.Here is its syntax:</P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;Transform2D center=&quot;0 0&quot; rotationAngle=&quot;0.0&quot; scale=&quot;1
+		1&quot; scaleOrientation=&quot;0.0&quot; translation=&quot;0 0&quot;&gt;</FONT>
+		<BLOCKQUOTE>
+			<P><FONT FACE="Courier New, Courier">&lt;children&gt;... graphical primitives, other nodes ...&lt;/children&gt;</FONT></P>
+		</BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;/Transform2D&gt;</FONT></P>
+	</BLOCKQUOTE>
+	<P>These node is quite simple and powerfull. It applies an affine transformation to the visual nodes in sub-trees
+	and nodes listed in the <FONT FACE="Courier New, Courier">children</FONT> field:</P>
+</BLOCKQUOTE>
+
+
+<UL>
+	<UL>
+		<LI><FONT FACE="Courier New, Courier">Tranform2D.translation</FONT>: XY translation of the coordinate system (real
+		numbers),
+		<LI><FONT FACE="Courier New, Courier">Tranform2D.scale: </FONT>Scaling factor in the X and Y direction (real numbers).
+		Eventually a rotation can be specified before scaling is applied through the <FONT FACE="Courier New, Courier">scaleOrientation</FONT>
+		field (real number in radian), and the inverse rottion will be applied after scaling.
+		<LI><FONT FACE="Courier New, Courier">Tranform2D.center</FONT> (real numbers) and <FONT FACE="Courier New, Courier">Tranform2D.rotationAngle</FONT>
+		(real number in radian): rotation with a given center
+	</UL>
+</UL>
+
+
+<BLOCKQUOTE>
+	<P>The transformations are applied in the following order: scaling, rotation and translation.</P>
+	<P>Let's use the previous rectangle example and transform it.</P>
+</BLOCKQUOTE>
+
+<P>
+<TABLE BORDER="1" WIDTH="100%">
+	<TR>
+		<TD WIDTH="50%">
+			<P ALIGN="CENTER"><I>Transformation type</I>
+		</TD>
+		<TD WIDTH="50%">
+			<P ALIGN="CENTER"><I>Example</I>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="50%">
+			<BLOCKQUOTE>
+				<P>A simple translation
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="50%"><A HREF="samples/rect4.xmt">rect4.xmt</A>, <A HREF="samples/rect4.bt">rect4.bt</A>, <A HREF="samples/rect4.mp4"
+			type="video/mp4">rect4.mp4</A></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="50%">
+			<BLOCKQUOTE>
+				<P>Rotation
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="50%"><A HREF="samples/rect5.xmt">rect5.xmt</A>, <A HREF="samples/rect5.bt">rect5.bt</A>, <A HREF="samples/rect5.mp4">rect5.mp4</A></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="50%">
+			<BLOCKQUOTE>
+				<P>Scaling
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="50%"><A HREF="samples/rect6.xmt">rect6.xmt</A>, <A HREF="samples/rect6.bt">rect6.bt</A>, <A HREF="samples/rect6.mp4">rect6.mp4</A></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="50%">
+			<BLOCKQUOTE>
+				<P>Combined transform to get a skewing effect
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="50%"><A HREF="samples/rect7.xmt">rect7.xmt</A>, <A HREF="samples/rect7.bt">rect7.bt</A>, <A HREF="samples/rect7.mp4">rect7.mp4</A></TD>
+	</TR>
+</TABLE>
+</P>
+<H4>
+<HR ALIGN="CENTER">
+Routes and Events :</H4>
+
+<BLOCKQUOTE>
+	<P>Events and routes are the key elements when building interpolator-based animations. Events are usually generated
+	(<FONT FACE="Courier New, Courier">eventOut</FONT>) by sensor nodes (click, drag, periodic events, ..) and shall
+	be connected to event listener (<FONT FACE="Courier New, Courier">eventIn</FONT>) in order to modify the scene:
+	this connection is called a <FONT FACE="Courier New, Courier">Route</FONT>. To fully understand these concepts,
+	let's get back on the notion of field. In the nodes we have seen, we have found several types of fields (<FONT
+	FACE="Courier New, Courier">order, emissiveColor, translation, size</FONT> ...) with different types (real, integers,
+	boolean, ...). These types are called f<FONT FACE="Courier New, Courier">ieldType</FONT> and define what type of
+	numerical value the field is. A field also has a type for the kind of event it accepts or generates, called the
+	<FONT FACE="Courier New, Courier">eventType</FONT>. A field can generate events (<FONT FACE="Courier New, Courier">eventOut</FONT>),
+	accept event as an input ( <FONT FACE="Courier New, Courier">eventin</FONT>), do both ( <FONT FACE="Courier New, Courier">exposedField)</FONT>
+	or none (<FONT FACE="Courier New, Courier">field</FONT>). Events are passed from emitters (eventOut or exposedField)
+	to recievers (exposedField or eventIn) of a same value type. BIFS defines 22 f<FONT FACE="Courier New, Courier">ieldTypes</FONT>
+	:</P>
+</BLOCKQUOTE>
+
+<CENTER>
+<P>
+<TABLE BORDER="1" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+	<CAPTION ALIGN="BOTTOM"></CAPTION>
+<TBODY>
+  																																									<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><B>field type</B>
+		</TD>
+		<TD WIDTH="81%">
+			<P ALIGN="CENTER"><B>Semantics</B>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">SFBool</FONT>
+		</TD>
+		<TD WIDTH="81%">Boolean (TimeSensor.enabled, IndexedLineSet2D.colorPerVertex)</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">SFFloat</FONT>
+		</TD>
+		<TD WIDTH="81%">Real (LineProperties.lineWidth, Transform2D.rotationAngle)</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">SFTime</FONT>
+		</TD>
+		<TD WIDTH="81%">Double number for timing information only (TimeSensor.cycleInterval)</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">SFInt32</FONT>
+		</TD>
+		<TD WIDTH="81%">Signed integer (LineProperties.lineStyle)</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">SFString</FONT>
+		</TD>
+		<TD WIDTH="81%">Character string</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">SFVec3f</FONT>
+		</TD>
+		<TD WIDTH="81%">3D coordinate for points or vectors (real numbers)</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">SFVec2f</FONT>
+		</TD>
+		<TD WIDTH="81%">2D coordinate for points or vectors (real numbers)</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">SFColor</FONT>
+		</TD>
+		<TD WIDTH="81%">RGB values of a color. Each component is a real number in the interval [0, 1] (Material2D.emissiveColor)</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">SFRotation</FONT>
+		</TD>
+		<TD WIDTH="81%">Rotation givan by a 3D vector (rotation axis, as in SFVec3f) and a rotation angle in radians</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">SFImage</FONT>
+		</TD>
+		<TD WIDTH="81%">Pixel array, only used for small textures used by <FONT FACE="Courier New, Courier">PixelTexture </FONT>node</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">SFNode</FONT>
+		</TD>
+		<TD WIDTH="81%">Field is of type node and may accept a node as a value (IndexedFaceSet2D.color, Shape.material)</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">MFBool</FONT>
+		</TD>
+		<TD WIDTH="81%">SFBool Array</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">MFFloat</FONT>
+		</TD>
+		<TD WIDTH="81%">SFFloat Array</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">MFTime</FONT>
+		</TD>
+		<TD WIDTH="81%">SFTime Array</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">MFInt32</FONT>
+		</TD>
+		<TD WIDTH="81%">SFInt32 Array (IndexedFaceSet2D.colorIndex, OrderedGroup.order)</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">MFString</FONT>
+		</TD>
+		<TD WIDTH="81%">SFString Array</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">MFVec3f</FONT>
+		</TD>
+		<TD WIDTH="81%">SFVec3F Array</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">MFVec2f</FONT>
+		</TD>
+		<TD WIDTH="81%">SFVec2F Array (Coordinate2D.point)</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">MFColor</FONT>
+		</TD>
+		<TD WIDTH="81%">SFColor Array (Color.color)</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">MFRotation</FONT>
+		</TD>
+		<TD WIDTH="81%">SFRotation Array</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">MFImage</FONT>
+		</TD>
+		<TD WIDTH="81%">SFImage Array (never used by native nodes)</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="19%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">MFNode</FONT>
+		</TD>
+		<TD WIDTH="81%">SFNode Array (OrderedGroup.children, Transform2D.children)</TD>
+	</TR>
+</TBODY></TABLE>
+</P>
+</CENTER>
+
+<BLOCKQUOTE>
+	<P>In order to declare a route between 2 fields of 2 nodes, we need a way to identify these nodes so that the player
+	understands how to dispatch (route) events. The mechanism used is the <B>DEF/USE</B> one, which allows to assign
+	a usage name to a node (<B>DEF</B>)<B> </B>and reuse the node (<B>USE</B>) anywhere in the scene. The XMT syntax
+	for the DEF mechanism is simple:</P>
+	<P><U>Examples :</U></P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;Transform2D scale=&quot;1 2&quot; DEF=&quot;Y-Scaling&quot;&gt;...&lt;/Transform2D&gt;<BR>
+		&lt;Shape DEF=&quot;ASquare&quot;&gt;...&lt;/Shape&gt;</FONT><BR>
+		<FONT FACE="Courier New, Courier">&lt;IndexedLineSet2D DEF=&quot;Line1&quot; colorPerVertex=&quot;false&quot;&gt;...&lt;/IndexedLineSet2D&gt;</FONT></P>
+	</BLOCKQUOTE>
+	<P>The XMT syntax for <FONT FACE="Courier New, Courier">Route</FONT> is:</P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;Route fromNode=&quot;Node1&quot; fromField=&quot;field1&quot; toNode=&quot;Node2&quot;
+		toField=&quot;field2&quot;/&gt;</FONT></P>
+	</BLOCKQUOTE>
+	<P>In this syntax, 'Node1' is the same character string as the DEF one of the node owning the emitter field ('field1'),
+	'Node2' the same character string as the DEF one of the node owning the reciever field ('field2'). Names 'Node1'
+	and 'Node2' are defined by the author, whereas names 'field1' et 'field2' are define by the node syntax (BIFS built-in
+	nodes or prototypes).</P>
+</BLOCKQUOTE>
+
+<H4>
+<HR ALIGN="CENTER">
+The TimeSensor node:</H4>
+
+<BLOCKQUOTE>
+	<P>The <FONT FACE="Courier New, Courier">TimeSensor</FONT> node is used to generate periodic time events. The period
+	is given in seconds by the <FONT FACE="Courier New, Courier">cycleInterval</FONT> field. The <FONT FACE="Courier New, Courier">startTime</FONT>
+	field specifies when the node shall start the event generation; it is expressed in seconds and relative to the
+	scene simulation time. For now we will use it with its value to default (0), meaning it is active as soon as the
+	scene is loaded. The <FONT FACE="Courier New, Courier">stopTime</FONT> field specifies when the node shall stop
+	generating events; it is expressed in seconds and relative to the scene simulation time. We will use it with its
+	value to default (-1), meaning the sensor is always active. The <FONT FACE="Courier New, Courier">loop</FONT> field
+	indicates whether generation ends at the end of a cycle of <FONT FACE="Courier New, Courier">cycleInterval</FONT>
+	seconds or not. The node can be disbaled (not sending events) by modifiying the <FONT FACE="Courier New, Courier">enabled</FONT>
+	field.</P>
+	<P>The <FONT FACE="Courier New, Courier">TimeSensor</FONT> node generates 4 distinct events: <FONT FACE="Courier New, Courier">cycleTime</FONT>,
+	<FONT FACE="Courier New, Courier">isActive</FONT>, <FONT FACE="Courier New, Courier">fraction_changed</FONT> and
+	<FONT FACE="Courier New, Courier">time</FONT>. For interpolator-based animation, the most important event is the
+	<FONT FACE="Courier New, Courier">fraction_changed</FONT> one. The <FONT FACE="Courier New, Courier">fraction_changed</FONT>
+	field is an <FONT FACE="Courier New, Courier">eventOut</FONT> of type <FONT FACE="Courier New, Courier">SFFloat</FONT>;
+	this real is in the interval [0, 1] and indicates the fraction of the current cycle since the start of the cycle.
+	If the cycle starts at t and the current time is t+dt with a <FONT FACE="Courier New, Courier">cycleInterval</FONT>
+	of T then <FONT FACE="Courier New, Courier">fraction_changed</FONT> is dt/T.</P>
+	<P>The XMT syntax is:</P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;TimeSensor cycleInterval=&quot;1&quot;/&gt;</FONT></P>
+	</BLOCKQUOTE>
+</BLOCKQUOTE>
+
+<H4>
+<HR ALIGN="CENTER">
+Interpolators :</H4>
+
+<BLOCKQUOTE>
+	<P>BIFS has many interpolator nodes for many field types: 3D coordinate (<FONT FACE="Courier New, Courier">CoordinateInterpolator</FONT>),
+	3D orientation (<FONT FACE="Courier New, Courier">OrientationInterpolator</FONT>), 3D normal (<FONT FACE="Courier New, Courier">NormalInterpolator)</FONT>,
+	3D position (<FONT FACE="Courier New, Courier">PositionInterpolator</FONT>), 2D coordinate (<FONT FACE="Courier New, Courier">CoordinateInterpolator2D)</FONT>,
+	2D position (<FONT FACE="Courier New, Courier">PositionInterpolator2D</FONT>), scalar (<FONT FACE="Courier New, Courier">ScalarInterpolator)</FONT>and
+	color (<FONT FACE="Courier New, Courier">ColorInterpolator)</FONT>. All interpolators have 4 common fields: 2 <FONT
+	FACE="Courier New, Courier">exposedfields</FONT> called <FONT FACE="Courier New, Courier">key</FONT> (<FONT FACE="Courier New, Courier">MFFloat</FONT>
+	type), and <FONT FACE="Courier New, Courier">keyValue</FONT> (type depending on the interpolator type), an <FONT
+	FACE="Courier New, Courier">eventIn</FONT> called <FONT FACE="Courier New, Courier">set_fraction</FONT> (<FONT
+	FACE="Courier New, Courier">SFFloat</FONT> type) and an <FONT FACE="Courier New, Courier">eventOut</FONT> called
+	<FONT FACE="Courier New, Courier">value_changed</FONT> (type depending on the interpolator type). Interpolators
+	used in 2D are as follows:</P>
+</BLOCKQUOTE>
+
+<CENTER>
+<P>
+<TABLE BORDER="1" WIDTH="63%" HEIGHT="143">
+<TBODY>
+  																																									<TR>
+		<TD WIDTH="35%">
+			<P ALIGN="CENTER"><B>Interpolator Node</B>
+		</TD>
+		<TD COLSPAN="2">
+			<P ALIGN="CENTER"><B><FONT FACE="Courier New, Courier">keyValue type</FONT></B>
+		</TD>
+		<TD WIDTH="32%">
+			<P ALIGN="CENTER"><B><FONT FACE="Courier New, Courier">value_changed</FONT> type</B>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="35%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">PositionInterpolator2D</FONT>
+		</TD>
+		<TD COLSPAN="2">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">MFVec2F</FONT>
+		</TD>
+		<TD WIDTH="32%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">SFVec2F</FONT>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="35%"><FONT FACE="Courier New, Courier">CoordinateInterpolator2D</FONT></TD>
+		<TD COLSPAN="2">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">MFVec2f</FONT>
+		</TD>
+		<TD WIDTH="32%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">MFVec2f</FONT>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="35%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">ScalarInterpolator</FONT>
+		</TD>
+		<TD COLSPAN="2">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">MFFloat</FONT>
+		</TD>
+		<TD WIDTH="32%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">SFFloat</FONT>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="35%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">ColorInterpolator</FONT>
+		</TD>
+		<TD COLSPAN="2">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">MFColor</FONT>
+		</TD>
+		<TD WIDTH="32%">
+			<P ALIGN="CENTER"><FONT FACE="Courier New, Courier">SFColor</FONT>
+		</TD>
+	</TR>
+</TBODY></TABLE>
+</P>
+</CENTER>
+
+<BLOCKQUOTE>
+	<P>Interpolators perform a piecewise-linear interpolation on the interval (-infinity, +infinity). The interpolation
+	function is defined by the N values of the <FONT FACE="Courier New, Courier">key</FONT> field, called interpolation
+	keys, and the N values of the <FONT FACE="Courier New, Courier">keyValue</FONT> field. Keys must be listed in increasing
+	order but are not restricted to any interval. The interpolator uses the input fraction t recieved in <FONT FACE="Courier New, Courier">set_fraction</FONT>
+	to evaluate the interpolation f(t) and give the result in the output <FONT FACE="Courier New, Courier">value_changed
+	</FONT>field . If there are n keys (t0, t1, t2, ..., tn-1) in the <FONT FACE="Courier New, Courier">key</FONT>
+	field, the interpolation is done on the intervals ]-infinity, t0[, [t0, t1[, [t1, t2[, ... , [tn-1, +infinity[.
+	Let v0, .., vn-1 be the values of the <FONT FACE="Courier New, Courier">keyValue</FONT> field, then f(t) is:</P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Arial, Helvetica">f(t) = v0, if t &lt;= t0,<BR>
+		f(t) = vn-1, if t &gt;= tn-1, </FONT><BR>
+		<FONT FACE="Arial, Helvetica">f(t) = linear interpolation between (ti, vi) and (ti+1, vi+1) for ti&lt;=t &lt;=
+		ti+1</FONT></P>
+	</BLOCKQUOTE>
+	<P>2 following keys may be identical, hence allowing for discontinuities in f(t).</P>
+	<P>The XMT syntax is:</P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;PositionInterpolator2D key=&quot;0 1&quot; keyValue=&quot;0 0 40 40&quot;/&gt;</FONT></P>
+	</BLOCKQUOTE>
+	<P>This interpolator will output the event SFVec2f(30,30) in <FONT FACE="Courier New, Courier">value_changed</FONT>
+	field if it gets the value 0.75 in its <FONT FACE="Courier New, Courier">set_fraction</FONT> field.</P>
+</BLOCKQUOTE>
+
+<H4>
+<HR ALIGN="CENTER">
+A complete animated scene:</H4>
+
+<BLOCKQUOTE>
+	<P>Now that we have all elements to build a simple animation, let's make our rectangle move from position (0,0)
+	to position (40,40) in 10 seconds : <A HREF="samples/anim1.xmt">anim1.xmt</A>, <A HREF="samples/anim1.bt">anim1.bt</A>,
+	<A HREF="samples/anim1.mp4">anim1.mp4</A>.</P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;OrderedGroup&gt;<BR>
+		&lt;children&gt;<BR>
+		&lt;Transform2D DEF=&quot;MoveRec&quot;&gt;<BR>
+		&lt;children&gt;&lt;Shape&gt;&lt;geometry&gt;&lt;Rectangle size=&quot;50 40&quot;/&gt;&lt;/geometry&gt;&lt;/Shape&gt;&lt;/children&gt;<BR>
+		&lt;/Transform2D&gt;<BR>
+		&lt;TimeSensor DEF=&quot;Timer&quot; cycleInterval=&quot;10&quot;/&gt;<BR>
+		&lt;PositionInterpolator2D DEF=&quot;Interp&quot; key=&quot;0 1&quot; keyValue=&quot;0 0 40 40&quot;/&gt;<BR>
+		&lt;/children&gt;<BR>
+		&lt;/OrderedGroup&gt;<BR>
+		&lt;Route fromNode=&quot;Timer&quot; fromField=&quot;fraction_changed&quot; toNode=&quot;Interp&quot; toField=&quot;set_fraction&quot;/&gt;<BR>
+		&lt;Route fromNode=&quot;Interp&quot; fromField=&quot;value_changed&quot; toNode=&quot;MoveRec&quot; toField=&quot;translation&quot;/&gt;</FONT></P>
+	</BLOCKQUOTE>
+</BLOCKQUOTE>
+
+<H3>
+<HR ALIGN="CENTER">
+<A NAME="updates"></A>BIFS-Update based animation:</H3>
+
+<BLOCKQUOTE>
+	<P>One of the fundamentals of BIFS scenes is that the scene may be modified at will through commands. These commands
+	are grouped in a timed entity called Access Unit in MPEG-4 Systems, which can be compared to a video frame.</P>
+	<P>A video is a sequence of images or frames where each frame is given a presentation time (the time at which the
+	frame has to be displayed on the terminal). This indication is called the CompositionTimeStamp in MPEG-4 terminology.
+	The sequence of timed video frames is called a video stream.</P>
+	<P>Similary, a BIFS scene is made of a sequence of BIFS-Commands access units (set of commands and presentation
+	time), hence resulting in a BIFS stream. Playing a BIFS stream consists in applying modification described in the
+	BIFS commands to the scene and displaying the result to the user. As in video, some BIFS commands may describe
+	the entire scene (hence may be decoded without knowledge of previous BIFS commands) much like an I-frame in video
+	coding, while others modify the existing scene much like a P-frame in video coding. In all cases the BIFS commands
+	are called <I>BIFS updates</I>. There are two kinds of BIFS updates: the first one, called BIFS Command frames,
+	consists in modifying node fields or adding or suppressing parts of the scene graph. The second type, called BIFS
+	Animation frames, consists in modifying a pre-defined set of node fields with high compression techniques, and
+	is designed for continuous animation. The BIFS animation frames can be re-written in BIFS command frames with higher
+	bitrate, while the opposite is not true. This tutorial will not talk about BIFS animation frames.</P>
+</BLOCKQUOTE>
+
+<H4>
+<HR ALIGN="CENTER">
+Structure of an XMT document:</H4>
+
+<BLOCKQUOTE>
+	<P>In order to add BIFS updates in an XMT document, we need to have a deeper look at the XMT structure of the <A
+	HREF="samples/vide.xmt">vide.xmt</A> document.</P>
+	<P>An XMT document begins with the XML <FONT FACE="Courier New, Courier">XMT-A</FONT> element. This element is
+	made of the <FONT FACE="Courier New, Courier">header</FONT> element and the <FONT FACE="Courier New, Courier">body</FONT>
+	element. We will come back on the header element later on. until now, the <FONT FACE="Courier New, Courier">body</FONT>
+	element had the following syntax:</P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;body&gt;<BR>
+		&lt;Replace&gt;<BR>
+		&lt;Scene&gt;<BR>
+		&lt;OrderedGroup&gt; The BIFS scene &lt;/OrderedGroup&gt;<BR>
+		... eventually a list of ROUTEs ...<BR>
+		&lt;/Scene&gt;<BR>
+		&lt;/Replace&gt;<BR>
+		&lt;/body&gt;</FONT></P>
+	</BLOCKQUOTE>
+	<P>The <FONT FACE="Courier New, Courier">body</FONT> element indicates the begining of the BIFS stream. The CompositionTimeStamp
+	for this element matches time <FONT FACE="Arial, Helvetica">T = 0</FONT>. The <FONT FACE="Courier New, Courier">Replace</FONT>
+	element indicates that the BIFS command used is a replacement command. Its sub-element <FONT FACE="Courier New, Courier">Scene</FONT>
+	indicates that the whole scene (previously empty) is being replaced by the <FONT FACE="Courier New, Courier">Scene</FONT>
+	element (eg, the top node and the list of <FONT FACE="Courier New, Courier">Routes</FONT>). This implicitly defines
+	a BIFS stream with only one frame at time 0 containing one command.</P>
+	<P>Adding a frame to the BIFS stream in an XMT documant is done by appending the <FONT FACE="Courier New, Courier">par</FONT>
+	element to the <FONT FACE="Courier New, Courier">Replace</FONT> sub-element of the <FONT FACE="Courier New, Courier">body</FONT>
+	element:</P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;par begin=&quot;1.5&quot;&gt; .... &lt;/par&gt;</FONT></P>
+	</BLOCKQUOTE>
+	<P>The <FONT FACE="Courier New, Courier">begin</FONT> attribute indicates the presentation time of the frame in
+	seconds. The content of the <FONT FACE="Courier New, Courier">par</FONT> element is a sequence of BIFS commands
+	that will be applied in order to the scene at time <FONT FACE="Courier New, Courier">begin</FONT>.</P>
+</BLOCKQUOTE>
+
+<H4>
+<HR ALIGN="CENTER">
+BIFS Commands:</H4>
+
+<BLOCKQUOTE>
+	<P>There are three types of BIFS commands: a replacement command (<FONT FACE="Courier New, Courier">Replace</FONT>),
+	an insertion command (<FONT FACE="Courier New, Courier">Insert</FONT>) and a deletion command(<FONT FACE="Courier New, Courier">Delete</FONT>).</P>
+</BLOCKQUOTE>
+
+<H5></H5>
+<H5>
+<HR ALIGN="CENTER">
+The Replace command:</H5>
+
+<BLOCKQUOTE>
+	<P>As seen above, the <FONT FACE="Courier New, Courier">Replace</FONT> command can be used to replace the whole
+	scene by a new one if its content is the <FONT FACE="Courier New, Courier">Scene</FONT> element. It can also be
+	used to replace a defined node, a defined route or a field of a defined node.</P>
+</BLOCKQUOTE>
+
+<P>
+<TABLE BORDER="1" WIDTH="100%">
+	<TR>
+		<TD WIDTH="25%">
+			<P ALIGN="CENTER"><B>Command Meaning</B>
+		</TD>
+		<TD WIDTH="75%">
+			<P ALIGN="CENTER"><B>Syntax</B>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="25%">
+			<BLOCKQUOTE>
+				<P>Node replacement
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="75%"><FONT FACE="Courier New, Courier">&lt;Replace atNode=&quot;Identifier&quot;&gt; <BR>
+			... the new node to replace with ... &lt;/Replace&gt;</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="25%">
+			<BLOCKQUOTE>
+				<P>Route replacement
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="75%"><FONT FACE="Courier New, Courier">&lt;Replace atRoute=&quot;Identifier&quot;&gt; <BR>
+			... the new route to replace with ... <BR>
+			&lt;/Replace&gt;</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="25%">
+			<BLOCKQUOTE>
+				<P>Field replacement for any field types other than <FONT FACE="Courier New, Courier">SFNode</FONT> or <FONT FACE="Courier New, Courier">MFNode</FONT>
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="75%"><FONT FACE="Courier New, Courier">&lt;Replace atNode=&quot;identifier&quot; atField=&quot;Fieldname&quot; value=&quot;NewValue&quot;/&gt;</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="25%">
+			<BLOCKQUOTE>
+				<P>Field replacement of field type <FONT FACE="Courier New, Courier">SFNode</FONT>
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="75%"><FONT FACE="Courier New, Courier">&lt;Replace atNode=&quot;identifier&quot; atField=&quot;FieldName&quot;&gt;<BR>
+			... the new node to replace the field with...<BR>
+			&lt;/Replace&gt;</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="25%">
+			<BLOCKQUOTE>
+				<P>Indexed replacement in a field of type <FONT FACE="Courier New, Courier">MFNode</FONT>
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="75%"><FONT FACE="Courier New, Courier">&lt;Replace atNode=&quot;identifier&quot; atField=&quot;FieldName&quot; position=&quot;FIRST|END|n&quot;&gt;<BR>
+			... remplacement node...<BR>
+			&lt;/Replace&gt;</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="25%">
+			<BLOCKQUOTE>
+				<P>Indexed replacement in an MF field other than MFNode
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="75%"><FONT FACE="Courier New, Courier">&lt;Replace atNode=&quot;identifier&quot; atField=&quot;FieldName&quot; position=&quot;FIRST|END|n&quot;
+			<BR>
+			value=&quot;NewValue&quot;/&gt;</FONT></TD>
+	</TR>
+</TABLE>
+</P>
+
+<BLOCKQUOTE>
+	<P>Let's take our first example (<A HREF="samples/rect.xmt">rect.xmt</A>) and replace after 2 seconds the rectangle
+	by the rectangle used in our second example (<A HREF="samples/rect2.xmt">rect2.xmt</A>).</P>
+	<P>The resulting scene is : <A HREF="samples/update1.xmt">update1.xmt</A>, <A HREF="samples/update1.bt">update1.bt</A>,
+	<A HREF="samples/update1.mp4">update1.mp4</A>.</P>
+	<P>NOTE : Although we have replaced a <FONT FACE="Courier New, Courier">Shape</FONT> node by a new one, the new
+	<FONT FACE="Courier New, Courier">Shape</FONT> node doesn't have any identifier.</P>
+</BLOCKQUOTE>
+
+<H5>
+<HR ALIGN="CENTER">
+The Insert command:</H5>
+
+<BLOCKQUOTE>
+	<P>The <FONT FACE="Courier New, Courier">Insert</FONT> command is used to ... insert a node, a route or an SF value
+	at a given position in an MF field.</P>
+</BLOCKQUOTE>
+
+<P>
+<TABLE BORDER="1" WIDTH="100%">
+	<TR>
+		<TD WIDTH="31%">
+			<P ALIGN="CENTER"><B>Command Meaning</B>
+		</TD>
+		<TD WIDTH="69%">
+			<P ALIGN="CENTER"><B>Syntax</B>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="31%">
+			<BLOCKQUOTE>
+				<P>Node insertion at the first, n-th or last position in a field of type <FONT FACE="Courier New, Courier">MFNode</FONT>
+				:
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="69%"><FONT FACE="Courier New, Courier">&lt;Replace atNode=&quot;identifier&quot; atField=&quot;Fieldname&quot; position=&quot;FIRST|END|n&quot;&gt;</FONT><BR>
+			<FONT FACE="Courier New, Courier">... new node ...</FONT><BR>
+			<FONT FACE="Courier New, Courier">&lt;/Replace&gt;</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="31%">
+			<BLOCKQUOTE>
+				<P>Value insertion at the first, n-th or last position in an field MF other than <FONT FACE="Courier New, Courier">MFNode</FONT>
+				:
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="69%"><FONT FACE="Courier New, Courier">&lt;Replace atNode=&quot;identifier&quot; atField=&quot;FieldName&quot; position=&quot;FIRST|END|n&quot;
+			value=&quot;ValueToInsert&quot;/&gt;</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="31%">
+			<BLOCKQUOTE>
+				<P><FONT FACE="Courier New, Courier">Route</FONT> insertion:
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="69%"><FONT FACE="Courier New, Courier">&lt;Insert&gt; ... route to insert ... &lt;/Insert&gt;</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="31%">
+			<BLOCKQUOTE>
+				<P>Insert a <FONT FACE="Courier New, Courier">Route</FONT> and assign an identifier to this route :
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="69%"><FONT FACE="Courier New, Courier">&lt;Insert atRoute=&quot;identifier&quot;&gt; ... route to insert ... &lt;/Insert&gt;</FONT></TD>
+	</TR>
+</TABLE>
+</P>
+
+<BLOCKQUOTE>
+	<P>Let's take the previous example (<A HREF="samples/update1.xmt">update1.xmt</A>) and insert a circle (radius
+	10 pixels) centered at (20, 0) at time t=5 s. The resulting scene is : <A HREF="samples/update2.xmt">update2.xmt</A>,
+	<A HREF="samples/update2.bt">update2.bt</A>, <A HREF="samples/update2.mp4">update2.mp4</A> .</P>
+</BLOCKQUOTE>
+
+<H5>
+<HR ALIGN="CENTER">
+The Delete command:</H5>
+
+<BLOCKQUOTE>
+	<P>The delete <FONT FACE="Courier New, Courier">Delete</FONT> is used to delete a node, a route or an SF value
+	at a given position in an MF field.</P>
+</BLOCKQUOTE>
+
+<P>
+<TABLE BORDER="1" WIDTH="100%">
+	<TR>
+		<TD WIDTH="50%">
+			<P ALIGN="CENTER"><B>Command Meaning</B>
+		</TD>
+		<TD WIDTH="50%">
+			<P ALIGN="CENTER"><B>Syntax</B>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="50%">
+			<BLOCKQUOTE>
+				<P>Node deletion :
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="50%">
+			<BLOCKQUOTE>
+				<BLOCKQUOTE>
+					<P><FONT FACE="Courier New, Courier">&lt;Delete atNode=&quot;identifier&quot; /&gt;</FONT>
+				</BLOCKQUOTE>
+			</BLOCKQUOTE>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="50%">
+			<BLOCKQUOTE>
+				<P>Deletion of an SF value at first, n-th or last position in an MF field :
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="50%"><FONT FACE="Courier New, Courier">&lt;Delete atNode=&quot;identifier&quot; atField=&quot;FieldName&quot; position=&quot;FIRST|END|n&quot;/&gt;</FONT></TD>
+	</TR>
+	<TR>
+		<TD WIDTH="50%">
+			<BLOCKQUOTE>
+				<P><FONT FACE="Courier New, Courier">Route</FONT> deletion:
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="50%"><FONT FACE="Courier New, Courier">&lt;Delete atRoute=&quot;Identifier&quot; /&gt;</FONT></TD>
+	</TR>
+</TABLE>
+</P>
+
+<BLOCKQUOTE>
+	<P>Let's take the previous example and delete the rectangle at time t = 7 s. The resulting scene is <A HREF="samples/update3.xmt">update3.xmt</A>,
+	<A HREF="samples/update3.bt">update3.bt</A>, <A HREF="samples/update3.mp4">update3.mp4</A>.</P>
+</BLOCKQUOTE>
+
+<H2>
+<HR ALIGN="CENTER">
+Exercises:</H2>
+<P><U><FONT COLOR="#CC0000">Exercise 6 :</FONT></U> Create a scene with a 50-pixel radius circle centered at (0,0),
+a rectangle (100x200 pixels), centered at (20,20) and a square (60x60 pixels) rotated 45&deg; centered at (-20,
+20).</P>
+<P><U><FONT COLOR="#CC0000">Exercise 7 :</FONT></U> take one of the examples and add identifiers to all nodes.</P>
+<P><U><FONT COLOR="#CC0000">Exercise 8 :</FONT></U>
+
+<BLOCKQUOTE>
+	<P>1. Change the <FONT FACE="Courier New, Courier">TimeSensor</FONT> cycle duration and modify the interpolator
+	keys to get a smoother and faster animation.<BR>
+	2. Animate the rotation of a rectangle around its center.<BR>
+	3. Animate the fill color of the rectangle.</P>
+</BLOCKQUOTE>
+
+<P><U><FONT COLOR="#CC0000">Exercise 9 :</FONT></U> Replace at time t=4s the line color of the rectangle (you will
+have to introduce identifiers).</P>
+<P><U><FONT COLOR="#CC0000">Exercise 10 :</FONT></U> Take the <FONT FACE="Courier New, Courier">IndexedLineSet2D</FONT>
+example and add points and colors at time t=3s.</P>
+<P><U><FONT COLOR="#CC0000">Exercise 11 :</FONT></U> Take the interpolator-based example and delete a route while
+animating. Note what's happening.</P>
+<H2>
+<HR ALIGN="CENTER">
+Conclusion</H2>
+
+<BLOCKQUOTE>
+	<P>In this part we have seen how to transform graphical objects and animate the transformations through routes
+	and interpolators, and through BIFS commands. With these simple tools and some practice and patience, you should
+	be able to write a cartoon <A HREF="http://www.comelec.enst.fr/osmo4/#samples">entirely in BIFS</A>.</P>
+</BLOCKQUOTE>
+
+<P>
+<HR ALIGN="CENTER">
+
+<TABLE BORDER="0" WIDTH="100%">
+<TBODY>
+  																																										<TR>
+		<TD WIDTH="1228">
+			<P ALIGN="CENTER">[ <A HREF="http://gpac.sourceforge.net"><FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">Home</FONT></A>
+			] [ <A HREF="bifs_part1.htm"><FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">Very Simple Scenes</FONT></A> ]&nbsp;[
+			<FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">Animation</FONT> ]&nbsp;[ <A HREF="bifs_part3.htm"><FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">Including
+			Media</FONT></A> ]
+		</TD>
+	</TR>
+</TBODY></TABLE>
+
+<HR ALIGN="CENTER">
+Last Modified: 02/04/2005<BR>
+Cyril Concolato & Jean Le Feuvre &copy; 2002-2005
+
+</BODY>
+
+</HTML>

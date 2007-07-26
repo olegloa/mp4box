@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<TITLE>MPEG-4 Systems Tutorial - Part 6</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1 ALIGN="CENTER"></H1>
+<CENTER>
+<P>
+<TABLE BORDER="0" WIDTH="100%" HEIGHT="165">
+	<TR>
+		<TD WIDTH="27%" HEIGHT="157">
+			<P ALIGN="CENTER"><IMG SRC="files/logo1.jpg" WIDTH="100" HEIGHT="100" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+		<TD WIDTH="45%" HEIGHT="157">
+			<H1 ALIGN="CENTER">BIFS Tutorial - Part VI</H1>
+
+			<H1 ALIGN="CENTER">Controling Media Objects
+		</TD>
+		<TD WIDTH="28%" HEIGHT="157">
+			<P ALIGN="CENTER"><IMG SRC="files/logo2.jpg" WIDTH="100" HEIGHT="99" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+	</TR>
+</TABLE>
+</P>
+</CENTER>
+<P>As said in part V, time-dependent nodes cannot be used to seek media objects, that is to start playback at a
+time other than the begining. In order to achieve this primordial functionality, MPEG-4 has introduced nodes interacting
+directly with the OTB of media objects. In VRML, although you know a media is playing, you cannot retrieve the
+exact timing of the playback nor modify media playback origin. MPEG-4 has all the tools needed for that, as well
+as some nice extensions allowing to describe segments of the media in time, much like DVD chapters.</P>
+<H3>
+<HR ALIGN="CENTER">
+MediaControl node:</H3>
+<P>The MediaControl node is a powerfull tool giving interactive control on an object time base. Very few players
+currently implement this node, and almost none of them is able to perform negative speed playback, hence we will
+only focus on regular (positive speed) playback. The syntax of the node is:</P>
+<H4></H4>
+<P>
+<TABLE BORDER="1" WIDTH="100%">
+	<TR>
+		<TD WIDTH="9%">
+			<P ALIGN="CENTER"><B>field</B>
+		</TD>
+		<TD WIDTH="9%">
+			<P ALIGN="CENTER"><B>field type</B>
+		</TD>
+		<TD WIDTH="11%">
+			<P ALIGN="CENTER"><B>event type</B>
+		</TD>
+		<TD WIDTH="11%">
+			<P ALIGN="CENTER"><B>default value</B>
+		</TD>
+		<TD>
+			<P ALIGN="CENTER"><B>description</B>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">mediaStartTime</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFTime</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">exposedField</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">-1</FONT></TD>
+		<TD>media object time playback should start at in seconds</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">mediaStopTime</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFTime</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">exposedField</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">+Infinity</FONT></TD>
+		<TD>media object time playback should stop at in seconds</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">mediaSpeed</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFFloat</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">exposedField</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">1.0</FONT></TD>
+		<TD>media playback speed</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">loop</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFBool</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">exposedField</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">FALSE</FONT></TD>
+		<TD>Indicates whether playback should restart when mediaStopTime is reached</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">url</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">MFString</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">exposedField</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">[]</FONT></TD>
+		<TD>Object Identifier of the media / media segments</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">preRoll</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFBool</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">exposedField</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">TRUE</FONT></TD>
+		<TD>indicates whether the media object should be pre-rolled or not</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">mute</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFBool</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">exposedField</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">FALSE</FONT></TD>
+		<TD>indicates whether media composition should be skipped or not</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">enabled</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFBool</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">exposedField</FONT></TD>
+		<TD WIDTH="11%">TRUE</TD>
+		<TD>indicates whether the node controls the media object or not</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">isPreRolled</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFBool</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">eventOut</FONT></TD>
+		<TD WIDTH="11%">&nbsp;</TD>
+		<TD>Indicates pre-rolling is completed</TD>
+	</TR>
+</TABLE>
+
+<HR ALIGN="CENTER">
+</P>
+<P><FONT FACE="Courier New, Courier">mediaStartTime</FONT> and <FONT FACE="Courier New, Courier">mediaStopTime</FONT>
+indicate the playback interval of the controled media object. Let's explain their action when playing with a positive
+mediaSpeed:</P>
+<P>-<FONT FACE="Courier New, Courier">mediaStartTime</FONT> = -1: the media object shall start from its current
+clock time. If the clock is stoped, this means the media object shall start from the begining, and if the clock
+is paused this means the media object shall resume (play from current clock time).</P>
+<P>-<FONT FACE="Courier New, Courier">mediaStartTime</FONT> &gt;= 0: the media object shall start at this specified
+time. If the time is greater than the object duration, playback won't occur.</P>
+<P>-<FONT FACE="Courier New, Courier">mediaStopTime</FONT> &lt; <FONT FACE="Courier New, Courier">mediaStartTime</FONT>:
+the media object is played until the end.</P>
+<P>-<FONT FACE="Courier New, Courier">mediaStopTime</FONT> &gt;= <FONT FACE="Courier New, Courier">mediaStartTime</FONT>:
+the media object is played until <FONT FACE="Courier New, Courier">mediaStopTime</FONT> is reached.</P>
+<P>If <FONT FACE="Courier New, Courier">mediaSpeed</FONT> is negative, the behavior is the same with inversed roles
+of <FONT FACE="Courier New, Courier">mediaStartTime</FONT> and <FONT FACE="Courier New, Courier">mediaStopTime</FONT>.</P>
+<P>If <FONT FACE="Courier New, Courier">mediaSpeed</FONT> is 0, the playback shall be paused if the media object
+is playing.</P>
+<P>The <FONT FACE="Courier New, Courier">loop</FONT> and <FONT FACE="Courier New, Courier">mediaSpeed</FONT> fields
+over-ride any <FONT FACE="Courier New, Courier">loop</FONT> and <FONT FACE="Courier New, Courier">speed</FONT>
+of nodes using a media object sharing the OTB of the media object being control. For instance, assume we have a
+video object V and an audio object A, and we use the MediaControl node to control object V. The speed and loop
+field of the MovieTexture node using V are ignored, and the loop and speed field of the AudioClip/AudioSource node
+using A ARE ALSO IGNORED. Although this looks quite complicated (and is from an implementation point of view),
+what it means for content authoring is that if you want to control synchronized audio and video objects, you only
+need to control one and the other will automatically be controlled, which greatly simplifies authoring :)</P>
+<P>Although media pre-rolling can be forced through MediaControl, this is more a delivery issue than an authoring
+one and we strongly suggest setting this field to TRUE.</P>
+<P>There can be several media control on the same media object in the scene. However there are some restrictions
+on MediaControl and media objects controled due to the fact that the MediaControl modifies the behavior of the
+OTB: if two objects A and B use the same OTB, and there is one MediaControl node controling object A, then there
+shall not be any MediaControl node controling B or any other media object using the same OTB as A.</P>
+<P>No matter what, given available implementations of this node,</P>
+<P ALIGN="CENTER"><B>THOU SHALL NOT USE MORE THAN ONE MEDIACONTROL PER OTB.</B></P>
+<P>Note 1: There are cases where the media duration is not known, in which case reverse playback or looping is
+not possible. In these cases the related MediaControl fields shall be ignored</P>
+<P>Note 2: there are cases where the media cannot be controled (for instance broadcast / multicast). In these cases
+the MediaControl does nothing.</P>
+<P><B>Example:</B></P>
+<P>Let's take the video example of part III (<A HREF="samples/video1.xmt">video1.xmt</A>), and try to play video
+from scene time 0 to scene time 30 seconds, but only play the video interval [5s, 15s] in the media object. The
+movie texture will now be</P>
+<P><FONT FACE="Courier New, Courier">&lt;texture&gt;&lt;MovieTexture url=&quot;'10'&quot; startTime=&quot;0&quot;
+stopTime=&quot;30&quot;/&gt;&lt;/texture&gt;</FONT></P>
+<P>We will have to introduce a media control, and its syntax will be:</P>
+<P><FONT FACE="Courier New, Courier">&lt;MediaControl url=&quot;'10'&quot; mediaStartTime=&quot;5.0&quot; mediaStopTime=&quot;15.0&quot;
+loop=&quot;true&quot;/&gt;</FONT></P>
+<P>The final scene is <A HREF="samples/video4.xmt">video4.xmt</A>, <A HREF="samples/video4.bt">video4.bt</A>, <A
+HREF="samples/video4.mp4">video4.mp4</A>.</P>
+<P>Note that the declaration's position of the MediaControl node is not important.</P>
+<H3>
+<HR ALIGN="CENTER">
+Media Segments and SegmentDescriptors:</H3>
+<H3></H3>
+<P>Unfortunatelly the encoding tools currently available do not support segment descriptors, this tutorial's section
+will thus be completed later on...</P>
+<H4></H4>
+<P>
+<HR ALIGN="CENTER">
+</P>
+<H3>MediaSensor:</H3>
+<P>The MediaSensor node is used to query timing and other information on the media it watches. It is thus usefull
+to retrieve the media duration and its current playback time, as well as media segments information. Its syntax
+is</P>
+<P><BR>
+
+<TABLE BORDER="1" WIDTH="100%">
+	<TR>
+		<TD WIDTH="9%">
+			<P ALIGN="CENTER"><B>field</B>
+		</TD>
+		<TD WIDTH="9%">
+			<P ALIGN="CENTER"><B>field type</B>
+		</TD>
+		<TD WIDTH="11%">
+			<P ALIGN="CENTER"><B>event type</B>
+		</TD>
+		<TD WIDTH="11%">
+			<P ALIGN="CENTER"><B>default value</B>
+		</TD>
+		<TD>
+			<P ALIGN="CENTER"><B>description</B>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">url</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">MFString</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">exposedField</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">[]</FONT></TD>
+		<TD>Object Identifier of the media / media segments to watch</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">mediaCurrentTime</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFTime</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">eventOut</FONT></TD>
+		<TD WIDTH="11%">&nbsp;</TD>
+		<TD>indicates time ellapsed since absolute time 0 of the media</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">streamObjectStartTime</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFTime</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">eventOut</FONT></TD>
+		<TD WIDTH="11%">&nbsp;</TD>
+		<TD>indicates media time at which the current segment started.</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">mediaDuration</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFTime</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">eventOut</FONT></TD>
+		<TD WIDTH="11%">&nbsp;</TD>
+		<TD>indicates media duration</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">isActive</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFBool</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">eventOut</FONT></TD>
+		<TD WIDTH="11%">&nbsp;</TD>
+		<TD>indicates whether one of the segments watched for is playing</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">info</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">MFString</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">eventOut</FONT></TD>
+		<TD WIDTH="11%">&nbsp;</TD>
+		<TD>conveys information associated with the current segment.</TD>
+	</TR>
+</TABLE>
+</P>
+<P><BR>
+<BR>
+For now we will only look at the MediaSensor without segments. It is less powerfull than when used with segments,
+but it can still be usefull to get some timing information or synchronize the an animation with the media. This
+nodes only generates events, its only field being the identifier of the media object to watch for. Hence the syntax
+of the node is fairly simple:</P>
+<P><FONT FACE="Courier New, Courier">&lt;MediaSensor DEF=&quot;MYSENSOR&quot; url=&quot;'10'&quot;/&gt;</FONT></P>
+<P>We assign an identifier in order to be able to retrieve the node information. The sample scene below based on
+<A HREF="samples/video1.xmt">video1.xmt</A> shows how to get the media time of an object and display it, using
+a valuator and a text node. The final scene is <A HREF="samples/video5.xmt">video5.xmt</A>, <A HREF="samples/video5.bt">video5.bt</A>,
+<A HREF="samples/video5.mp4">video5.mp4</A>.</P>
+<P>
+<H2>
+<HR ALIGN="CENTER">
+Exercises :</H2>
+<P><U><FONT COLOR="#CC0000">Exercise 17 :</FONT></U> With a simple script and a MediaSensor node, try to animate
+a rectangle so that the animation cycle is the same as the media cycle. Then add a MediaControl node to modify
+the media playback interval and make sure the animation is still synchronized with the playback.</P>
+<P><U><FONT COLOR="#CC0000">Exercise 18 :</FONT></U> With a touch sensor, a rectangle and a script , write a seek
+bar that restarts playback from any point in the media object.</P>
+<H2></H2>
+<H2>
+<HR ALIGN="CENTER">
+Conclusion :</H2>
+<P>We have seen in this part how to control a media object interactively and get its timing information. You have
+now all the tools needed to write content with embedded control bars and can start right away working on your next
+interactive presentation with all your latest vacation movies !!</P>
+
+<P>
+<HR ALIGN="CENTER">
+
+<TABLE BORDER="0" WIDTH="99%">
+<TBODY>
+  																														<TR>
+		<TD WIDTH="1228">
+			<P ALIGN="CENTER">[ <A HREF="http://gpac.sourceforge.net"><FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">Home</FONT></A>
+			] [ <A HREF="bifs_part5.htm"><FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">Time-dependent Nodes</FONT></A>]&nbsp;[<FONT
+			FACE="Verdana, Arial, Helvetica, Sans-Serif"> Controling Media Objects </FONT>]&nbsp;[ <FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">To
+			be continued</FONT>...]
+		</TD>
+	</TR>
+</TBODY></TABLE>
+
+<HR ALIGN="CENTER">
+Last Modified: 02/04/2005<BR>
+Cyril Concolato & Jean Le Feuvre &copy; 2002-2005
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMT-A xmlns="urn:mpeg:mpeg4:xmta:schema:2002" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mpeg:mpeg4:xmta:schema:2002 xmt-a.xsd">
+ <Header>
+ <InitialObjectDescriptor objectDescriptorID="od1" binaryID="1" >
+  <Profiles audioProfileLevelIndication="254" visualProfileLevelIndication="254" sceneProfileLevelIndication="254" graphicsProfileLevelIndication="254" ODProfileLevelIndication="254" />
+  <Descr>
+   <esDescr>
+    <ES_Descriptor ES_ID="es1" binaryID="1" >
+     <decConfigDescr>
+      <DecoderConfigDescriptor objectTypeIndication="1" streamType="3" >
+       <decSpecificInfo>
+        <BIFSConfig >
+          <commandStream pixelMetric="true" >
+           <size pixelWidth="400" pixelHeight="400" />
+          </commandStream>
+        </BIFSConfig>
+       </decSpecificInfo>
+      </DecoderConfigDescriptor>
+     </decConfigDescr>
+    </ES_Descriptor>
+   </esDescr>
+  </Descr>
+ </InitialObjectDescriptor>
+ </Header>
+ <Body>
+<Replace>
+<Scene>
+<OrderedGroup>
+<children>
+<Background2D backColor="1 1 1"/>
+<Transform2D translation="100 0">
+<children>
+<TouchSensor DEF="Touch"/>
+<Shape>
+<appearance>
+<Appearance>
+<material>
+<Material2D emissiveColor="1 0 0" filled="TRUE">
+<lineProps>
+<LineProperties lineColor="1 1 0" width="2"/>
+</lineProps>
+</Material2D>
+</material>
+</Appearance>
+</appearance>
+<geometry>
+<Rectangle size="50 40"/>
+</geometry>
+</Shape>
+</children>
+</Transform2D>
+<Transform2D>
+<children>
+<Shape>
+<appearance>
+<Appearance>
+<material>
+<Material2D DEF="MAT" emissiveColor="0 0 0" filled="TRUE"/>
+</material>
+</Appearance>
+</appearance>
+<geometry>
+<Rectangle size="50 40"/>
+</geometry>
+</Shape>
+</children>
+</Transform2D>
+<Transform2D translation="-100 0">
+<children>
+<Shape>
+<appearance>
+<Appearance>
+<material>
+<Material2D emissiveColor="0.5 1 1" filled="TRUE"/>
+</material>
+</Appearance>
+</appearance>
+<geometry>
+<Rectangle size="50 40"/>
+</geometry>
+</Shape>
+</children>
+</Transform2D>
+<Valuator DEF="VAL1" Factor1="0.5"/>
+<Valuator DEF="VAL2" Factor1="0.5" Factor2="0.5"/>
+</children>
+</OrderedGroup>
+<ROUTE fromNode="Touch" fromField="isActive" toNode="VAL1" toField="inSFBool"/>
+<ROUTE fromNode="VAL1" fromField="outSFColor" toNode="MAT" toField="emissiveColor"/>
+<ROUTE fromNode="Touch" fromField="isOver" toNode="VAL2" toField="inSFBool"/>
+<ROUTE fromNode="VAL2" fromField="outSFColor" toNode="MAT" toField="emissiveColor"/>
+</Scene>
+</Replace>
+ </Body>
+</XMT-A>

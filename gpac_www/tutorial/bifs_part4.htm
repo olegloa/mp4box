@@ -1,0 +1,329 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<TITLE>MPEG-4 Systems Tutorial - Part 4</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1 ALIGN="CENTER"></H1>
+<CENTER>
+<P>
+<TABLE BORDER="0" WIDTH="100%" HEIGHT="165">
+	<TR>
+		<TD WIDTH="22%" HEIGHT="157">
+			<P ALIGN="CENTER"><IMG SRC="files/logo1.jpg" WIDTH="100" HEIGHT="100" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+		<TD WIDTH="50%" HEIGHT="157">
+			<H1 ALIGN="CENTER">BIFS Tutorial - Part IV</H1>
+
+			<H1 ALIGN="CENTER">Interactivity
+		</TD>
+		<TD WIDTH="28%" HEIGHT="157">
+			<P ALIGN="CENTER"><IMG SRC="files/logo2.jpg" WIDTH="100" HEIGHT="99" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+	</TR>
+</TABLE>
+</P>
+</CENTER>
+<P>Now that we can declare and modify a complex scene, we really need user interaction to create highly attractive
+content. Interactivity authoring mainly relies on the notions of identifiers, events and routes seen in part II.
+The only add-on is the use of special nodes which generate events when activated, and nodes used for conditional
+execution and computational operations.</P>
+<H3>
+<HR ALIGN="CENTER">
+Events Generation:</H3>
+
+<BLOCKQUOTE>
+	<P>Most nodes generate events upon reception of events emitted by other nodes (Interpolators, Background2D, all
+	nodes with fields of type exposedField). Some nodes however generate events without recieving events from other
+	node, as we have seen with the TimeSensor node. Here is a list of common 2D nodes generating events:</P>
+</BLOCKQUOTE>
+
+<P>
+<TABLE BORDER="1" WIDTH="100%">
+	<TR>
+		<TD WIDTH="13%">
+			<P ALIGN="CENTER"><B>BIFS Node</B>
+		</TD>
+		<TD WIDTH="87%">
+			<P ALIGN="CENTER"><B>Description</B>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="13%">
+			<BLOCKQUOTE>
+				<P>TouchSensor
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="87%">Detects mouse move and button actions and generates position events, time events and state events (over, clicked)</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="13%">
+			<BLOCKQUOTE>
+				<P>DiscSensor
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="87%">Detects mouse move and translates them into rotation events. The rotation center is the origin of the local coordinate
+			system.</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="13%">
+			<BLOCKQUOTE>
+				<P>PlaneSensor2D
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="87%">Detecte mouse move and translates them into relative translation events</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="13%">
+			<BLOCKQUOTE>
+				<P>InputSensor
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="87%">Detects predefined events outside the scene and execute a list of BIFS commands upon reception. The events can
+			be sent by a keyboard, a mouse, a joystick, etc..</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="13%">
+			<BLOCKQUOTE>
+				<P>ProximitySensor2D
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="87%">Detects mouse presence in a virtual rectangle and generates position events, time events and state events (is inside)</TD>
+	</TR>
+</TABLE>
+</P>
+<P>Note 1: all positions and rotations events generated are expressed in the local coordinate system of the shape
+the sensor is attached to.</P>
+<P>Note 2: Depending on the scene tree structures, some interaction events may be ignored - more information on
+this is given by the <A HREF="http://www.web3d.org/x3d/specifications/vrml/ISO-IEC-14772-IS-VRML97WithAmendment1/"
+target="_blank">VRML</A> standard.</P>
+<H4>
+<HR ALIGN="CENTER">
+TouchSensor Node:</H4>
+
+<BLOCKQUOTE>
+	<P>The TouchSensor node being the most commonly used interaction node, let's describe it more in details. The TouchSensor
+	node captures mouse events when the mouse is over a shape with the same parent as the sensor:</P>
+	<P><U>Example:</U></P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;Transform2D&gt;<BR>
+		&lt;children&gt;<BR>
+		&lt;Transform2D&gt;<BR>
+		&lt;children&gt;<BR>
+		&lt;TouchSensor ... /&gt;<BR>
+		&lt;Shape DEF=&quot;S1&quot;&gt;...&lt;/Shape&gt;<BR>
+		&lt;/children&gt;<BR>
+		&lt;/Transform2D&gt;<BR>
+		&lt;Shape DEF=&quot;S2&quot; &gt;...&lt;/Shape&gt;<BR>
+		&lt;/children&gt;<BR>
+		&lt;/Transform2D&gt;</FONT></P>
+	</BLOCKQUOTE>
+	<P>In this exmple, the touchSensor will be activated when the mouse is over S1, but won't be when the mouse is
+	over S2.</P>
+</BLOCKQUOTE>
+
+<P>
+<TABLE BORDER="1" WIDTH="99%">
+	<TR>
+		<TD>
+			<P ALIGN="CENTER"><B>BIFS Field</B>
+		</TD>
+		<TD WIDTH="2%"><B>type</B></TD>
+		<TD WIDTH="2%"><B>event</B></TD>
+		<TD WIDTH="83%">
+			<P ALIGN="CENTER"><B>Description</B>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<BLOCKQUOTE>
+				<BLOCKQUOTE>
+					<P>enabled
+				</BLOCKQUOTE>
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="2%">SFBool</TD>
+		<TD WIDTH="2%">exposedField</TD>
+		<TD WIDTH="83%">Indicates whether the node is enabled or not</TD>
+	</TR>
+	<TR>
+		<TD>
+			<BLOCKQUOTE>
+				<BLOCKQUOTE>
+					<P>hitPoint_changed
+				</BLOCKQUOTE>
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="2%">SFVec3F</TD>
+		<TD WIDTH="2%">eventOut</TD>
+		<TD WIDTH="83%">Indicates the current mouse position in the local coordinate system. In 2D, the Z coordinate is set to 0.</TD>
+	</TR>
+	<TR>
+		<TD>
+			<BLOCKQUOTE>
+				<BLOCKQUOTE>
+					<P>isActive
+				</BLOCKQUOTE>
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="2%">SFBool</TD>
+		<TD WIDTH="2%">eventOut</TD>
+		<TD WIDTH="83%">Indicates if the mouse button is pressed or not</TD>
+	</TR>
+	<TR>
+		<TD>
+			<BLOCKQUOTE>
+				<BLOCKQUOTE>
+					<P>isOver
+				</BLOCKQUOTE>
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="2%">SFBool</TD>
+		<TD WIDTH="2%">eventOut</TD>
+		<TD WIDTH="83%">Indicates if the mouse is over the associated shape(s) or not</TD>
+	</TR>
+</TABLE>
+</P>
+<H4>
+<HR ALIGN="CENTER">
+Using events to trigger actions with the Conditional node:</H4>
+<P>
+<TABLE BORDER="0" WIDTH="100%">
+	<TR>
+		<TD WIDTH="46%">
+			<BLOCKQUOTE>
+				<P>The <FONT FACE="Courier New, Courier">Conditional</FONT> node allows execution of a set of BIFS commands when
+				it recieves the TRUE event on its <FONT FACE="Courier New, Courier">activate</FONT> field or when it recieves the
+				FALSE event on its <FONT FACE="Courier New, Courier">reverseActivate</FONT> field. All BIFS commands are allowed;
+				they are listed in the <FONT FACE="Courier New, Courier">buffer</FONT> field of the node:
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="54%"><FONT FACE="Courier New, Courier">&lt;Conditional&gt;<BR>
+			&lt;buffer&gt; ... list of BIFS commands ...&lt;/buffer&gt;<BR>
+			&lt;/Conditional&gt;</FONT></TD>
+	</TR>
+</TABLE>
+</P>
+
+<BLOCKQUOTE>
+	<P><U>Example:</U> The following scene shows a conditional node combined with a touchSensor. The conditional adds
+	an object when the rectangle is clicked <A HREF="samples/cond1.xmt">cond1.xmt</A>, <A HREF="samples/cond1.bt">cond1.bt</A>,
+	<A HREF="samples/cond1.mp4">cond1.mp4</A></P>
+</BLOCKQUOTE>
+
+<H4>
+<HR ALIGN="CENTER">
+Modifying events with the Valuator node:</H4>
+
+<BLOCKQUOTE>
+	<P>The <FONT FACE="Courier New, Courier">Valuator</FONT> node can be used to perform simple linear transformation
+	on events and typecasting (conversion from a field type to another). The node has an input field and an output
+	field for all BIFS base types (SFBool, SFInt32, MFColor ...) except SFNode and MFNode. These fields are named inSFBool/outSFBool,
+	inSFInt32/outSFInt32, inMFColor/outMFColor... It also has 9 fields of types SFFloat called <FONT FACE="Courier New, Courier">Factor1</FONT>,
+	<FONT FACE="Courier New, Courier">Factor2</FONT>, <FONT FACE="Courier New, Courier">Factor3</FONT>, <FONT FACE="Courier New, Courier">Factor4</FONT>
+	and <FONT FACE="Courier New, Courier">Offset1</FONT>, <FONT FACE="Courier New, Courier">Offset2</FONT>, <FONT FACE="Courier New, Courier">Offset3</FONT>,
+	<FONT FACE="Courier New, Courier">Offset4</FONT>, plus an SFBool field called <FONT FACE="Courier New, Courier">Sum</FONT>.</P>
+	<P>The input values are transformed to float as follows:</P>
+</BLOCKQUOTE>
+
+
+<UL>
+	<UL>
+		<LI>SFBool: TRUE = 1.0 and FALSE = 0.0
+		<LI>Integers and double (SFTime, 64-bit precision) become float
+		<LI>Strings are converted to float if possible, otherwise 0.
+	</UL>
+</UL>
+
+
+<BLOCKQUOTE>
+	<P>Then for each eventOut field the following formula is applied to all components of the output value: <I>output.i
+	= Factor_i * input_i + Offset.i</I>
+	<BLOCKQUOTE>
+		<P><I>input.i</I> : i-th component of input event.<BR>
+		<I>output.i</I>: i-th component of output event.<BR>
+		<I>Factor_i</I>: Factor1, Factor2, Factor3 or Factor4 field depending on the value of i.<BR>
+		<I>Offset_i</I>: Offset1, Offset2, Offset3 or Offset4 field depending on the value of i.
+	</BLOCKQUOTE>
+	<P>In the special case of a scalar input type (e.g. SFBool, SFInt32) that is cast to a vectorial output type (e.g.
+	SFVec2f), for all components i of output.i, input.i takes the value of the scalar input type, after type conversion.<BR>
+	Otherwise, if the output field has more component than the input field (SFVec2f to SFVec3f), the extra output components
+	are set to 0.</P>
+	<P>If the Sum field is TRUE then the sum of all input components are used instead of matching component to component.</P>
+	<P>The output type-casting is done as follows:</P>
+</BLOCKQUOTE>
+
+
+<UL>
+	<UL>
+		<LI>integers are obtained by truncating the decimal part.
+		<LI>Booleans are TRUE if the result of the preceding formula is not 0, FALSE otherwise.
+		<LI>Strings represent the literal value of the preceding formula (eg 12.23 will be &quot;12.23&quot;)
+	</UL>
+</UL>
+
+
+<BLOCKQUOTE>
+	<P><U>Example:</U> The following scene shows a valuator combine with a touchSensor to change an object color when
+	clicking on a rectangle <A HREF="samples/val1.xmt">val1.xmt</A>, <A HREF="samples/val1.bt">val1.bt</A>, <A HREF="samples/val1.mp4">val1.mp4</A></P>
+</BLOCKQUOTE>
+
+<H4>
+<HR ALIGN="CENTER">
+Complex event handling with the Script node:</H4>
+
+<BLOCKQUOTE>
+	<P>The <FONT FACE="Courier New, Courier">Script</FONT> node is used to interface ECMAScript code with the BIFS
+	scene. ECMAScript is the root standard of JavaScript, VRMLScript, ... The script node design is unique in BIFS:
+	it has from 3 to infinity fields, and can thus be used to process any kind of events for complex interactivity.
+	The pre-defined URL field is used to store the script code.</P>
+	<P>For each eventIn (<B>my_event)</B> defined by the user in the script, an ECMAScript function ( <B>function my_event(value,
+	timestamp) ) </B>is defined in the script, where value is the recieved value and timestamp the current scene time.</P>
+	<P>Moreover, the <B><FONT FACE="Courier New, Courier">initialize</FONT></B> function is called, when present, upon
+	creation of the node and the <B><FONT FACE="Courier New, Courier">shutdown</FONT></B> function is called (when
+	present) at deletion of the node. This allows for very complex authoring as found in most javascript games on the
+	internet.</P>
+	<P><U>Example:</U> The following scene shows how to modify a node field from inside a Script node <A HREF="samples/script1.xmt">script1.xmt</A>,
+	<A HREF="samples/script1.bt">script1.bt</A>, <A HREF="samples/script1.mp4">script1.mp4</A>.</P>
+	<P>Manipulation of the scene graph through ECMAScript is defined in <A HREF="http://www.web3d.org/x3d/specifications/vrml/ISO-IEC-14772-IS-VRML97WithAmendment1/"
+target="_blank">VRML</A></P>
+</BLOCKQUOTE>
+
+<H2>
+<HR ALIGN="CENTER">
+Exercises :</H2>
+<P><U><FONT COLOR="#CC0000">Exercise 14 :</FONT></U> Rewrite the val1.xmt example to use a conditional instead
+of a valuator and keep the same behaviour.
+<H2>
+<HR ALIGN="CENTER">
+Conclusion :</H2>
+<P>In this part we have reviewed the most common interaction tools of the BIFS scene. Although this is far from
+being exhaustive, you now have enough tools to create very complex and impressive content, from games to presentations
+and interactive movies.</P>
+
+<P>
+<HR ALIGN="CENTER">
+
+<TABLE BORDER="0" WIDTH="100%">
+<TBODY>
+  																																		<TR>
+		<TD WIDTH="1228">
+			<P ALIGN="CENTER">[ <A HREF="http://gpac.sourceforge.net"><FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">Home</FONT></A>
+			] [ <A HREF="bifs_part3.htm"><FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">Including Media</FONT></A> ]&nbsp;[<FONT
+			FACE="Verdana, Arial, Helvetica, Sans-Serif"> Interactivity</FONT> ] [ <A HREF="bifs_part5.htm"><FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">Time-dependent
+			Nodes</FONT></A> ]
+		</TD>
+	</TR>
+</TBODY></TABLE>
+
+<HR ALIGN="CENTER">
+Last Modified: 02/04/2005<BR>
+Cyril Concolato & Jean Le Feuvre &copy; 2002-2005
+
+</BODY>
+
+</HTML>

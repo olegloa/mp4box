@@ -1,0 +1,65 @@
+InitialObjectDescriptor {
+ objectDescriptorID 1
+ audioProfileLevelIndication 254
+ visualProfileLevelIndication 254
+ sceneProfileLevelIndication 254
+ graphicsProfileLevelIndication 254
+ ODProfileLevelIndication 254
+ esDescr [
+  ES_Descriptor {
+   ES_ID 1
+   decConfigDescr DecoderConfigDescriptor {
+    streamType 3
+    decSpecificInfo BIFSConfig {
+     isCommandStream true
+     pixelMetric true
+     pixelWidth 400
+     pixelHeight 400
+    }
+   }
+  }
+ ]
+}
+
+OrderedGroup {
+ children [
+  Background2D {
+   backColor 1 1 1
+  }
+  DEF T2D1 Transform2D {
+   translation 100 0
+   children [
+    DEF TS1 TouchSensor {}
+    Shape {
+     appearance Appearance {
+      material Material2D {
+       emissiveColor 1 0 0
+       filled TRUE
+       lineProps LineProperties {
+        lineColor 1 1 0
+        width 2
+       }
+      }
+     }
+     geometry Rectangle {
+      size 50 40
+     }
+    }
+   ]
+  }
+  DEF S1 Script {
+   eventIn SFBool activate
+   field SFNode t2d USE T2D1
+   url ["javascript: 
+   	function activate(value) {
+   		if (value)
+   			t2d.translation.x += 100;
+   	}
+   	"
+   ]
+  }
+ ]
+}
+
+ROUTE TS1.isActive TO S1.activate
+
