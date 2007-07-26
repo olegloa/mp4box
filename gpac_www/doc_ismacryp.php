@@ -11,7 +11,7 @@
 <!-- =================== ENTETE DE LA PAGE =========================================  -->
 	<div id="Chapeau_court">
 		<h1>
-		This page describes how to instruct MP4Box to encrypt or decrypt content according to the ISMA E&A and OMA DRM 2.0 specifications.
+		MP4Box can be used to encrypt or decrypt media streams in a more or less format-agnostic manner, according to the ISMA E&A and OMA DRM 2.0 specifications. An XML language is used by MP4Box to get/set the encryption parameters. 
 		</h1>
 	</div>
 <!-- =================== CORPS DE LA PAGE ============================================  -->
@@ -149,7 +149,7 @@ mainly key information, KMS information, encryption instructions and eventually 
       </div>
 	</div>
 
-<?php $mod_date="\$Date: 2007-07-26 13:43:29 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

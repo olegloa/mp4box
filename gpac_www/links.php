@@ -11,7 +11,7 @@
 <!-- =================== ENTETE DE LA PAGE =========================================  -->
 	<div id="Chapeau_court">
 		<h1>
-			Useful links related to GPAC.
+As an open source multimedia project, GPAC is linked to many existing open source software as well as many multimedia standards.
 		</h1>
 	</div>
 <!-- =================== CORPS DE LA PAGE ============================================  -->
@@ -36,14 +36,6 @@
 	<li><a href="http://www.libpng.org">The PNG project</a>: lossless image compression format</li>
 	<li><a href="http://www.underbit.com/products/mad/">MAD</a>: MPEG-1 and MPEG-2 audio decoder</li>
 	<li><a href="http://www.xvid.org">XviD</a>: MPEG-4 Advanced Simple Profile video codec</li>
-</ul>
-
-<h1>MPEG-4 Content</h1>
-<ul>
-
-<!--li>The <a href="http://www.comelec.enst.fr/%7Edufourd/mpeg-4/index.html">ENST pages</a> on MPEG-4 and the late MP4Tool</li-->
-<li><a href="http://sourceforge.net/projects/mp4menu">MP4MENU</a>: an amazing MPEG-4 scene mapping DVD interactivity to the MPEG-4 standard, under GPL license</li>
-<li><a href="http://www.archive.org/">The Internet Movie Archives</a>: the source for public domain video files available in MPEG-4 format</li>
 </ul>
 
 <h1>Multimedia Standards</h1>
@@ -73,13 +65,16 @@
   </li>
 </ul>
 
-<h1>Other MPEG-4 or related OpenSource projects</h1>
+<h1>Other multimedia or related open source projects</h1>
 <ul>
 	<li><a href="http://www.iso.ch/iso/en/ittf/PubliclyAvailableStandards/14496-5_Compressed_directories/">Latest official release of the MPEG-4 Reference Software</a> - For those who dare:)</li>
 
 	<li><a href="http://www.mpeg4ip.net">MPEG4IP</a> Open Source MPEG-4 audio and video player (local and streaming)</li>
 	<li><a href="http://developer.apple.com/darwin/projects/streaming/">Apple's Darwin Streaming Server</a> Open source	RTP/RTSP server for content streaming</li>
-	<li><a href="http://sourceforge.net/projects/openipmp">OpenIPMP</a> Open Source Project on DRM and MPEG-4 IPMP</li>
+	<li><a href="http://sourceforge.net/projects/openipmp">OpenIPMP</a> Open source Project on DRM and MPEG-4 IPMP</li>
+	<li><a href="http://xml.apache.org/batik">Batik SVG Toolkit</a> An open source java SVG toolkit</li>
+	<li><a href="www.xsmiles.org">X-Smiles</a> Java based Open Source XML browser</li>
+	<li><a href="http://xml.apache.org/batik">Batik SVG Toolkit</a> An open source java SVG toolkit</li>
 </ul>
 
 <h1>Misc links</h1>
@@ -90,7 +85,7 @@
 			</div>
 	</div>
 
-<?php $mod_date="\$Date: 2007-07-26 13:43:29 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

@@ -11,8 +11,7 @@
 <!-- =================== ENTETE DE LA PAGE =========================================  -->
 	<div id="Chapeau_court">
 		<h1>
-The multimedia players of GPAC can be configured in various ways.<br/>
-This page documents all configuration options from video codec to downloading options.
+The multimedia player of GPAC can be configured in various ways.<br/> A file is available to configure options ranging from the selection of the prefered language, the video codec to the downloading parameter options.
 		</h1>
 	</div>
 
@@ -750,7 +749,7 @@ Specifies whether the text shall be drawn using an intermediate texture or not.<
 <br><br>
 	</div>
 
-<?php $mod_date="\$Date: 2007-07-26 13:43:29 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

@@ -13,7 +13,7 @@
 <!-- =================== ENTETE DE LA PAGE =========================================  -->
 	<div id="Chapeau_court">
 		<h1>
-		News Archive
+GPAC is quite a big project. There is never enough documentation, so do not hesitate to contact us for help. And there is always a need for new developments, where support would be very appreciated.<br/>
 		</h1>
 	</div>
 
@@ -52,7 +52,7 @@
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-07-26 13:43:29 $"; ?><?php include_once("bas.php"); ?></div>
+<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?></div>
 </body>
 </html>
 

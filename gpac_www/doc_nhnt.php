@@ -11,7 +11,7 @@
 <!-- =================== ENTETE DE LA PAGE =========================================  -->
 	<div id="Chapeau_court">
 		<h1>
-			This page is dedicated to the NHNT and NHML languages used by MP4Box to generically manipulate any media format.
+MP4Box can natively import many multimedia formats (AVI, MP3, ...) into ISO files. For non-natively supported media formats, MP4Box defines two generic multiplexing languages: a binary format NHNT and a more powerful XML language called NHML.
 		</h1>
 	</div>
 <!-- =================== CORPS DE LA PAGE ============================================  -->
@@ -238,7 +238,7 @@ xmlTo="..."
 <p></p>		</div>
 	</div>
 
-<?php $mod_date="\$Date: 2007-07-26 13:43:29 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

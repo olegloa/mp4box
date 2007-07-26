@@ -11,7 +11,7 @@
 <!-- =================== ENTETE DE LA PAGE =========================================  -->
 	<div id="Chapeau_court">
 		<h1>
-			This page describes how to create subtitle streams for the GPAC project, compliant with the 3GPP Timed Text and MPEG-4 Streaming Text specifications.
+The 3GPP consortium has defined a standard for text streaming, independent of any scene description such as SMIL, SVG or BIFS: 3GPP Timed Text. MP4Box supports this standard and uses its own textual format to describe a streaming text session.
 		</h1>
 	</div>
 <!-- =================== CORPS DE LA PAGE ============================================  -->
@@ -337,7 +337,7 @@ Download GPAC TTXT sample streams <a href="downloads/ttxt_sample_streams.zip">.z
  		</div>
 	</div>
 
-<?php $mod_date="\$Date: 2007-07-26 13:43:29 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

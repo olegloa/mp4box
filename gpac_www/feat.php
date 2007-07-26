@@ -13,8 +13,8 @@
 <!-- =================== ENTETE DE LA PAGE =========================================  -->
 	<div id="Chapeau_court">
 		<h1>
-		GPAC supports many multimedia tools, related to different aspects of multimedia: A/V codecs, network and synchronization management tools, scene representation tools, etc...<br/>
-    You will find here a summary of the technologies implemented in GPAC.     
+		GPAC has many features related to different aspects of multimedia: A/V codecs, network protocols and synchronization management algorithms, scene representation tools, etc...
+    Here is a brief summary of the technologies implemented in GPAC in the packaging, playing and streaming areas.     
 		</h1>
 	</div>
 
@@ -35,8 +35,8 @@
 		<li>Media Track extractions,</li>
 		<li>ISMA E&amp;A encryption and decryption,</li>
 		<li>3GPP timed text tools (SUB/SRT/TTXT/TeXML), VobSub import/export,</li>
-		<li>MPEG-4 BIFS codec and scene conversion between MP4, BT and XMT-A,</li>
-		<li>MPEG-4 LASeR codec and scene conversion between  MP4, SAF, SVG and XSR (XML LASeR),</li>
+		<li>BIFS codec and scene conversion between MP4, BT and XMT-A,</li>
+		<li>LASeR codec and scene conversion between  MP4, SAF, SVG and XSR (XML LASeR),</li>
 		<li>XML scene statistics for BIFS scene (BT, XMT-A and MP4),</li>
 		<li>Conversion to and from BT, XMT-A, WRL, X3D and X3DV with support for gzip.</li>
 <!--
@@ -48,11 +48,11 @@
   	       <h1 id="Player">Playing Multimedia Content</h1>
 	<p>GPAC supports many protocols and standards, among which: </p>
 		<ul>
-			<li>MPEG-4 BIFS scenes (2D, 3D and mixed 2D/3D scenes),</li>
+			<li>BIFS scenes (2D, 3D and mixed 2D/3D scenes),</li>
 			<li>VRML 2.0 (VRML97) scenes (without GEO or NURBS extensions),</li>
 			<li>X3D scenes (not complete) in X3D (XML) and X3DV (VRML) formats,</li>
 			<li>SVG Tiny 1.2 scenes,</li>
-			<li>MPEG-4 LASeR and SAF (partial) support,</li>
+			<li>LASeR and SAF (partial) support,</li>
 
 			<li>Progressive loading/rendering of SVG, X3D and XMT files,</li>
 			<li>HTTP reading of all scene descriptions,</li>
@@ -90,7 +90,7 @@
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-07-26 13:43:29 $"; ?><?php include_once("bas.php"); ?></div>
+<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?></div>
 </body>
 </html>
 

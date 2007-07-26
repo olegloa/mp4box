@@ -1,15 +1,15 @@
 			<div class="Col1">
 				<h2><a href="feat_det.php">FEATURES</a></h2>
 				<p>
-				A detailed review about technologies implemented in GPAC players. 
+				A detailed review of the technologies implemented in the GPAC player. 
 				</p>
 				<h2><a href="doc_config.php">CONFIGURATION</a></h2>
 				<p>
-				How to configure GPAC players.
+				The documentation to configure the GPAC player.
 				</p>
 				<h2><a href="doc_embed.php">EMBEDDING</a></h2>
 				<p>
-				How to embed GPAC Browser plugins in HTML pages. 
+				The documentation to embed GPAC Browser plugins in HTML pages. 
 				</p>
 <!--				<h2>ARCHITECTURE</h2>
 				<p>

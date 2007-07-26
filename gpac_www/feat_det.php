@@ -12,7 +12,8 @@
 <?php include_once("nav.php"); ?>
 <!-- =================== ENTETE DE LA PAGE =========================================  -->
 	<div id="Chapeau_court">
-		<h1>The current version of GPAC supports the following features in its multimedia players.
+		<h1>
+A true multimedia player is a complex system involving networking, media and user interactions management, rasterizing, etc. The following section is a more or less exhaustive list of supported features in the GPAC player.
 		</h1>
 	</div>
 
@@ -223,7 +224,7 @@ The GPAC framework heavily relies on plugins for most tasks (stream input, file 
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-07-26 13:43:29 $"; ?><?php include_once("bas.php"); ?></div>
+<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?></div>
 </body>
 </html>
 

@@ -1,6 +1,6 @@
 			<div class="Col1">
-				<h2><a href="home_screens.php">SCREENSHOTS</a></h2>
-        <p>For a quick overview of GPAC potential, have a look at these <a href="home_screens.php">screenshots</a>.</p>
+				<h2><a href="home_screens.php">DEMOS</a></h2>
+        <p>For a quick overview of GPAC potential, have a look at these <a href="home_screens.php">demonstrations</a>.</p>
 				<h2><a href="home_download.php">DOWNLOADS</a></h2>
 				<p>The latest release of GPAC is 0.4.4 RC2, issued in May 2007. Check out the <a href="home_download.php">downloads</a> section.</p> 
 				<h2><a href="feat.php">FEATURES</a></h2>

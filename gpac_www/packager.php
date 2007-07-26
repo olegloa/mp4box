@@ -11,7 +11,7 @@
 <!-- =================== ENTETE DE LA PAGE =========================================  -->
 	<div id="Chapeau_court">
 		<h1>
-			This section is dedicated to multimedia content manipulation and packaging using MP4Box, the GPAC swiss army knife.
+The multimedia packager available in GPAC is called MP4Box. <br/>It can be used for performing many manipulations on multimedia files like AVI, MPG, TS, but mostly on ISO media files (e.g. MP4, 3GP). A complete documentation of this tool is available <a href="doc_mp4box.php">here</a>. 
 		</h1>
 
 	</div>
@@ -30,10 +30,7 @@
 </ul>
 </div>
 	  <h1>Overview</h1>
-		<p>The multimedia packager available in GPAC is called MP4Box.
-      It can be used for performing many manipulations on multimedia files like AVI, MPG, TS, but mostly on ISO media files (e.g. MP4, 3GP).</p> 
-    <p>A complete documentation of this tool is available <a href="doc_mp4box.php">here</a>. 
-    <p>In short, it can be used:</p> 
+    <p>In short, MP4Box can be used:</p> 
     <ul>
       <li>for encoding/decoding presentation languages like MPEG-4 XMT or W3C SVG into/from binary formats like MPEG-4 BIFS or LASeR,</li>
       <li>for manipulating ISO files like MP4, 3GP: adding, removing, multiplexing audio, video and presentation data (including subtitles) from different sources and in different formats,</li> 
@@ -117,7 +114,7 @@ to an SVG file:
     </div>
 	</div>
 
-<?php $mod_date="\$Date: 2007-07-26 13:43:29 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

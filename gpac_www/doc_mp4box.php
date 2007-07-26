@@ -11,7 +11,7 @@
 <!-- =================== ENTETE DE LA PAGE =========================================  -->
 	<div id="Chapeau_court">
 		<h1>
-This page gives a detailed documentation of the major switches of MP4Box.
+MP4Box is a multimedia packager, with a vast number of functionalities: conversion, splitting, hinting, dumping and others. It is a command-line tool whose major switches are documented here.
 		</h1>
 	</div>
 
@@ -423,7 +423,7 @@ IsoMedia files can be used as generic meta-data containers, for examples storing
 		</div>
 	</div>
 
-<?php $mod_date="\$Date: 2007-07-26 13:43:29 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

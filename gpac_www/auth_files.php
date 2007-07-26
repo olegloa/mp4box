@@ -1,22 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /><title>Authoring with GPAC - GPAC Project on Advanced Content</title><link href="code/styles.css" rel="stylesheet" type="text/css" /></head><body><div id="fond"><?php include_once("nav.php"); ?><!-- =================== ENTETE DE LA PAGE =========================================  -->	<div id="Chapeau_court">		<h1>			This part of the GPAC Web Site is dedicated to MPEG-4 content authoring, available tools and other useful ressources to create content.		</h1>	</div><!-- =================== CORPS DE LA PAGE ============================================  -->	<div id="Centre">      <?php include_once("auth_left.php"); ?>			<!-- =================== SECTION 2 ============  -->			<div class="Col2">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /><title>Authoring with GPAC - GPAC Project on Advanced Content</title><link href="code/styles.css" rel="stylesheet" type="text/css" /></head><body><div id="fond"><?php include_once("nav.php"); ?><!-- =================== ENTETE DE LA PAGE =========================================  -->	<div id="Chapeau_court">		<h1>The web is full of audiovisual, SVG and VRML content, but only a few sites propose BIFS content. Apart from the demos hosted on this site, you may find the following links useful.
+		</h1>	</div><!-- =================== CORPS DE LA PAGE ============================================  -->	<div id="Centre">      <?php include_once("auth_left.php"); ?>			<!-- =================== SECTION 2 ============  -->			<div class="Col2">
 
 		<div id="sous_menu"><ul><li><a href="#streaming">RTSP Resources</a></li><li><a href="#vrml">VRML & X3D</a></li><li><a href="#svg">SVG</a></li><li><a href="#bifs">MPEG4 Systems</a></li></ul>		</div>
 
 <h1 ID="bifs">MPEG4 Systems content</h1>
 
-<h2>GPAC Regression Tests</h2>
 
-<p>The GPAC Regression Test suite is a collection of test sequences exercising a large set of MPEG-4 capabilities. The suite contains tests for:</p>
-<ul>
-<li>all MPEG-4 nodes supported by the GPAC renderer</li>
-<li>all BIFS commands, extended BIFS commands and OD Commands</li>
-<li>Stream Management (MediaControl, MediaSegments and segmentDescriptor usage)</li>
-<li>Most Advanced Text and Graphics nodes (not standardized yet)</li>
-</ul>
+<h2><a href="http://sourceforge.net/projects/mp4menu">MP4MENU</a></h2>
+<p>A rather complete mapping of DVD interactivity to the BIFS standard, under GPL license.</p>
 
-<p>Test files are written in the BT format, and need MP4Box to be re-encoded (MP4Tool will work with most samples). 
-<br/>The GPAC Regression Tests are part of the <a href="downloads.php">GPAC source code</a> and are also available on <a href="http://cvs.sourceforge.net/viewcvs.py/gpac/">GPAC CVS</a>.</p>
-<p>These files are not really fancy and only designed for non-regression testing of GPAC, but can be usefull to understand features not documented in the tutorial.</p>
 
 <h2>MPEG-4 Systems Conformance Streams</h2>
 <p>ENST is currently hosting a <a href="http://www.comelec.enst.fr/%7Edufourd/mpeg-4/streams.html">large repository of conformance streams</a> for MPEG-4 Systems. These streams may proove extremely usefull
@@ -67,4 +59,4 @@ To play the following RTSP presentations, copy and paste the URL in GPAC (Osmo4 
 <li><a href="rtsp://a1749.q.kamai.net/7/1749/1416/3c964c64/neo.qtv.apple.com/secure/may/preview/civ3_700.mp4">Civilization III trailer</a></li>
 </ul>
 	</div>
-<?php $mod_date="\$Date: 2007-07-26 13:43:28 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  --></div></body></html>
+<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  --></div></body></html>
