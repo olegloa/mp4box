@@ -70,7 +70,7 @@
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 	<div id="Bas">
-		<p>(C) 2000-05 JLF / (C) 2005-0X ENST - $Id: index.php,v 1.4 2007-07-26 13:14:54 cconcolato Exp $ - <a href="mailto:jeanlf@users.sourceforge.net">Webmaster</a></p>
+		<p>(C) 2000-05 JLF / (C) 2005-0X ENST - $Date: 2007-07-26 13:20:18 $ - <a href="mailto:jeanlf@users.sourceforge.net">Webmaster</a></p>
 	</div>
 </div>
 </body>
