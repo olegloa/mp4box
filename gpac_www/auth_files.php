@@ -25,6 +25,8 @@ and were designed to <i>be playable</i>, coping with rendering bugs of players a
 <h1 id="svg">SVG Content (Full, Mobile, Basic, Tiny) </h1>
 <p>A lot of SVG content is available on the Internet. If you are an SVG beginner, you should start with the <a href="http://www.w3.org/Graphics/SVG/Test/">SVG 1.1 test suite</a>.</p>
 
+<p>Some very nice cliparts are also available on <a href="http://www.croczilla.com/svg/samples/">mozilla web site</a>.</p>
+
 <h1 id="vrml">VRML and X3D content</h1>
 <p>A lot of VRML/X3D content is available on the Internet. If you are a VRML/X3D beginner, you should start with the <a href="http://xsun.sdct.itl.nist.gov/~mkass/vts/html/vrml.html">NIST vrml conformance files</a> and the <a href="http://www.web3d.org/x3d/learn/">Web3D X3D resource page</a>.</p>
 
@@ -59,4 +61,4 @@ To play the following RTSP presentations, copy and paste the URL in GPAC (Osmo4 
 <li><a href="rtsp://a1749.q.kamai.net/7/1749/1416/3c964c64/neo.qtv.apple.com/secure/may/preview/civ3_700.mp4">Civilization III trailer</a></li>
 </ul>
 	</div>
-<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  --></div></body></html>
+<?php $mod_date="\$Date: 2007-07-27 12:26:18 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  --></div></body></html>

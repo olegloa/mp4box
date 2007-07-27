@@ -11,7 +11,7 @@
 <!-- =================== ENTETE DE LA PAGE =========================================  -->
 	<div id="Chapeau_court">
 		<h1>
-The GPAC Project includes a multimedia player available in many flavors (command-line, GUI and browser plugins) and is highly configurable, both statically and at run-time. In order to make sure compilation and configuration are correct, the feature check below can be useful.
+GPAC provides a highly configurable multimedia player available in many flavors (command-line, GUI and browser plugins).
 		</h1>
 	</div>
 <!-- =================== CORPS DE LA PAGE ============================================  -->
@@ -29,11 +29,19 @@ The GPAC Project includes a multimedia player available in many flavors (command
 		</div>
 
         <h1>Overview</h1>
+<p>
+The GPAC multimedia player is more than a traditional audiovisual player because, in addition to its capabilities to play most video or audio formats and its support for most of the existing delivery protocols, it focuses on graphics, animations and interactivity technologies. 
+</p>
+<p>
+GPAC offers a unique integrated player capable of playing back audiovisual content mixed with 2D or 3D content in the following formats: MPEG-4 BIFS and LASeR, W3C SVG, W3D VRML and X3D. 
+It is already widely used by academics and by industrials to display interactive 2D and/or 3D scenes.</p>
+
 				<p>
-				The GPAC player is supported on Windows platforms (Osmo4/Osmophone on PocketPC) and all platforms with GCC, SDL 1.2 (and wxWidgets 2.5.2 for Osmo4).
+The GPAC player is supported on Windows platforms (Osmo4/Osmophone on PocketPC) and all platforms with GCC, SDL 1.2 (and wxWidgets 2.5.2 for Osmo4).
+
 				</p>
 				<p>
-				Osmozilla (GPAC plugin for mozilla-based browsers) is supported on Windows (except PocketPCs) and Linux platforms. GPAX (GPAC ActiveX control, IE only) is supported on Windows and PocketPC (navigation not supported) platforms.
+The GPAC player is integrated with web browsers like Firefox, Opera (Osmozilla plugin - windows, linux) or Internet Explorer (GPAX ActiveX control - windows and windows mobile).
 				</p>
         
         <h1 ID="osmo">GPAC Player with GUI: Osmo4</h1>
@@ -62,7 +70,7 @@ The GPAC Project includes a multimedia player available in many flavors (command
         <h2>Installation Check</h2>
         <img src="img/configuration_ok.png" width="558" height="565"/>
         <p>For the purpose of evaluating if the compilation and installation steps went well, the GPAC framework 
-        provides a <a href="configuration.mp4">test content</a> in the form of an MPEG-4 file containing an MPEG-4 BIFS stream 
+        provides a <a href="demos/configuration.mp4">test content</a> in the form of an MPEG-4 file containing an MPEG-4 BIFS stream 
         for text and vector graphics, a PNG image, an MPEG-4 video Part 2 stream and an MP3 stream. 
         If the installation step went well, you should see this result.</p>
         <img src="img/configuration_not_ok.png" width="558" height="565"/>
@@ -79,7 +87,7 @@ The GPAC Project includes a multimedia player available in many flavors (command
 		</div>
 	</div>
 
-<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2007-07-27 12:26:18 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

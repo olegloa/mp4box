@@ -41,7 +41,7 @@
         <p><a href="home_about.php">Read more here.</a></p>
 -->
         <h1>News</h1>
-        <h2>June 20th 2007 - New web site</h2>
+        <h2>July 26th 2007 - New web site</h2>
         <p>A brand new web site is available. </p>
         <h2>May 31st 2007 - GPAC Release 0.4.4</h2>
         <p>New features in this long-awaited release:
@@ -70,7 +70,7 @@
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-07-26 13:43:29 $"; ?><?php include_once("bas.php"); ?>
+<?php $mod_date="\$Date: 2007-07-27 12:26:18 $"; ?><?php include_once("bas.php"); ?>
 </div>
 </body>
 </html>

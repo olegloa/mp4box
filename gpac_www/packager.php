@@ -11,7 +11,7 @@
 <!-- =================== ENTETE DE LA PAGE =========================================  -->
 	<div id="Chapeau_court">
 		<h1>
-The multimedia packager available in GPAC is called MP4Box. <br/>It can be used for performing many manipulations on multimedia files like AVI, MPG, TS, but mostly on ISO media files (e.g. MP4, 3GP). A complete documentation of this tool is available <a href="doc_mp4box.php">here</a>. 
+The multimedia packager available in GPAC is called MP4Box. <br/>It can be used for performing many manipulations on multimedia files like AVI, MPG, TS, but mostly on ISO media files (e.g. MP4, 3GP). A complete documentation is available <a href="doc_mp4box.php">here</a>. 
 		</h1>
 
 	</div>
@@ -114,7 +114,7 @@ to an SVG file:
     </div>
 	</div>
 
-<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2007-07-27 12:26:18 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

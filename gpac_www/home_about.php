@@ -27,7 +27,20 @@ GPAC is an Open Source multimedia framework for research and academic purposes.
 			<!-- =================== SECTION 2 ============  -->
 			<div class="Col2">
 				<h1>Overview</h1>
+
         <img src="img/ImgHome.gif" />
+
+        <p>GPAC provides three sets of tools based on a core library called libgpac: 
+          <ul>
+            <li>A multimedia player, called <a href="player.php">Osmo4</a>,</li> 
+            <li>A multimedia packager, called <a href="packager.php">MP4Box</a>,</li> 
+            <li>And some server tools (under development).</li> 
+          </ul>
+        </p>
+
+<!--
+<p>GPAC features encoders and multiplexers, publishing and content distribution tools for MP4 and 3GPP(2) files and many tools for scene descriptions (BIFS/VRML/X3D converters, SWF/BIFS, SVG/BIFS, etc...). For more information on supported tools, check out the <a href="feat.php">features</a> page.</p>
+-->
         <p>GPAC is cross-platform. It is written in (almost 100% ANSI) C for portability reasons 
           (embedded platforms and DSPs), attempting to keep the memory footprint as low as possible. 
           It is currently running under Windows, Linux, WindowsCE (SmartPhone, PocketPC 2002/2003), 
@@ -45,22 +58,54 @@ GPAC is an Open Source multimedia framework for research and academic purposes.
           as part of research work on digital media.
         </p>      
         
+
         <h1>GPAC and Standards</h1>
-				<p>GPAC can probably be seen as the most advanced and robust 2D MPEG-4 Player publicly available worldwide, as well as a decent 3D player. It also has some good support for X3D, W3C SVG Tiny 1.2, and 3GPP features. 3D support is available on embedded platforms through <a href="http://www.khronos.org/opengles/">OpenGL-ES</a>.</p>
-				<p>GPAC also features MPEG-4 Systems encoders and multiplexers, publishing and content distribution tools for MP4 and 3GPP(2) files and many tools for scene descriptions (MPEG4/VRML/X3D converters, SWF/MPEG-4, etc...) For more information on supported tools, check out the <a href="feat.php">features</a> page.</p>
-        <p>
+<p>
           GPAC officially started as an open-source project  in 2003 with the initial goal to develop from scratch, 
           in ANSI C, clean software compliant to the MPEG-4 Systems standard, 
-          a small and flexible alternative to the MPEG-4 reference software. 
-          Since then, the project has evolved and features now three sets of tools based on a core library called libgpac: 
-          <ul>
-            <li>A multimedia player, called <a href="player.php">Osmo4</a>,</li> 
-            <li>A multimedia packager, called <a href="packager.php">MP4Box</a>,</li> 
-            <li>And some server tools.</li> 
-          </ul>
-        </p>
+          a small and flexible alternative to the MPEG-4 reference software. GPAC can probably be seen as the most advanced and robust 2D MPEG-4 Player publicly available worldwide, as well as a decent 3D player.
+</p>
+
+<p>In parallel, the project has evolved and now supports many other multimedia standards, with some good support for X3D, W3C SVG Tiny 1.2, and OMA/3GPP/ISMA features. 3D support is available on embedded platforms through <a href="http://www.khronos.org/opengles/">OpenGL-ES</a>.</p>
 
 
+        <h1>People @ GPAC</h1>
+
+
+<p>
+The project is hosted at ENST (Ecole Nationale Supérieure des 
+Télécommunications), leading French engineering school, located in Paris. 
+Current main contributors of GPAC are:
+<ul>
+<li>Jean Le Feuvre</li>
+<li>Cyril Concolato</li>
+</ul>
+</p>
+ 
+<p>
+Other (current or past) contributors from ENST are:
+<ul>
+<li>Jean-Claude Moissinac</li>
+<li>Benoît Pellan</li>
+<li>Philippe de Cuetos</li>
+</ul>
+</p>
+
+<p>
+Additionally, GPAC is used at ENST for pedagogical purposes. Students regularly 
+participate in the development of the project. The main students projects which 
+have been contributed to GPAC are:
+<ul>
+<li>Support for MPEG-2 transport stream (W. Ben Hania)</li>
+<li>DVB-H simulator (A.-V. Bui, X. Liu, Y. Qiu, H. Chi)</li>
+<li>Browser plugins for mozilla (osmozilla), IE (GPAX) (Y. Xi, X. Zhao)</li>
+<li>Java integration (N. Nehme)</li>
+<li>Experimental voice controler based on HTK (L. Laisné)</li>
+<li>3D add-ons (M. Chahid and B. Anglaret)</li>
+<li>Experimental authoring tool (J. Nitard)</li>
+<li>BIFS Broadcaster (E. Boustani, E. Ghevre)</li>
+</ul>
+</p>
         <p>
           GPAC is a project under constant evolution. 
           We invite people, companies and universities interested in Rich Media 
@@ -71,7 +116,7 @@ GPAC is an Open Source multimedia framework for research and academic purposes.
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?></div>
+<?php $mod_date="\$Date: 2007-07-27 12:26:18 $"; ?><?php include_once("bas.php"); ?></div>
 </body>
 </html>
 

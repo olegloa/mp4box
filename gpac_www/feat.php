@@ -13,7 +13,7 @@
 <!-- =================== ENTETE DE LA PAGE =========================================  -->
 	<div id="Chapeau_court">
 		<h1>
-		GPAC has many features related to different aspects of multimedia: A/V codecs, network protocols and synchronization management algorithms, scene representation tools, etc...
+		GPAC covers different aspects of multimedia: A/V codecs, network protocols and synchronization management algorithms, scene representation tools, etc...
     Here is a brief summary of the technologies implemented in GPAC in the packaging, playing and streaming areas.     
 		</h1>
 	</div>
@@ -25,7 +25,7 @@
 			<!-- =================== SECTION 2 ============  -->
 			<div class="Col2">
 	       <h1 id="MP4Box">Packaging Multimedia Content</h1>
-	<p>MP4Box aims at providing all tools needed to produce and distribute MPEG-4, 3GP and 3GP2 content in a single command-line application. An exhaustive	list of MP4Box features is available <a href="doc_mp4box.php">here</a> but a good summary of what MP4Box can do for you is the following:
+<p>GPAC features encoders and multiplexers, publishing and content distribution tools for MP4 and 3GPP(2) files and many tools for scene descriptions (BIFS/VRML/X3D converters, SWF/BIFS, SVG/BIFS, etc...). MP4Box provides all these tools in a single command-line application. An exhaustive	list of packaging features is available <a href="packager.php">here</a> but a good summary of what MP4Box can do for you is the following:
 	<ul>
 		<li>MP4/3GP Conversion from MP3, AVI, MEPG-2 TS, MPEG-PS, AAC, H263, H264, AMR, and many others,</li>
 		<li>File layout: fragmentation or interleaving, and cleaning,</li>
@@ -90,7 +90,7 @@
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?></div>
+<?php $mod_date="\$Date: 2007-07-27 12:26:18 $"; ?><?php include_once("bas.php"); ?></div>
 </body>
 </html>
 

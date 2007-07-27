@@ -1799,6 +1799,7 @@ gpac_www/demos/Map_of_Iceland.svg -text
 gpac_www/demos/Taken_trailer2.mp4 -text
 gpac_www/demos/TimesSquare.jpg -text
 gpac_www/demos/TimesSquare.mp4 -text
+gpac_www/demos/arrange.mp4 -text
 gpac_www/demos/bubbles.jpg -text
 gpac_www/demos/bubbles.mp4 -text
 gpac_www/demos/cartographie_usa.mp4 -text
@@ -1817,6 +1818,7 @@ gpac_www/demos/movietexture.mp4 -text
 gpac_www/demos/othello.mp4 -text
 gpac_www/demos/pathlayout.mp4 -text
 gpac_www/demos/pctv.mp4 -text
+gpac_www/demos/slideshow.mp4 -text
 gpac_www/demos/spiningcubes.mp4 -text
 gpac_www/demos/srpo_1.jpg -text
 gpac_www/demos/srpo_2.jpg -text
@@ -1862,6 +1864,12 @@ gpac_www/img/configuration_ok.png -text
 gpac_www/img/osmo4_3dswitch.png -text
 gpac_www/img/osmo4_gui.png -text
 gpac_www/img/osmo4_options.png -text
+gpac_www/img/patent_button.jpg -text
+gpac_www/img/patent_button.png -text
+gpac_www/img/valid-xhtml10.jpg -text
+gpac_www/img/valid-xhtml10.png -text
+gpac_www/img/vcss.jpg -text
+gpac_www/img/vcss.png -text
 gpac_www/index.php -text
 gpac_www/links.php -text
 gpac_www/nav.php -text
@@ -1871,6 +1879,7 @@ gpac_www/play_left.php -text
 gpac_www/player.php -text
 gpac_www/screenshots/Map_of_Iceland.jpg -text
 gpac_www/screenshots/animatrix.jpg -text
+gpac_www/screenshots/arrange.jpg -text
 gpac_www/screenshots/bubbles.jpg -text
 gpac_www/screenshots/cartographie_usa.jpg -text
 gpac_www/screenshots/castle.jpg -text
@@ -1886,6 +1895,7 @@ gpac_www/screenshots/mp4menu.jpg -text
 gpac_www/screenshots/othello.jpg -text
 gpac_www/screenshots/pathlayout.jpg -text
 gpac_www/screenshots/rgba_color.jpg -text
+gpac_www/screenshots/slideshow.jpg -text
 gpac_www/screenshots/spiningcubes.jpg -text
 gpac_www/screenshots/text_extrude.jpg -text
 gpac_www/screenshots/textgradient.jpg -text
