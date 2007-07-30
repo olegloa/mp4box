@@ -5,6 +5,8 @@
 				<p>The latest release of GPAC is 0.4.4 RC2, issued in May 2007. Check out the <a href="home_download.php">downloads</a> section.</p> 
 				<h2><a href="feat.php">FEATURES</a></h2>
 				<p>Look <a href="feat.php">here</a> for a short overview of all the features of the GPAC project.</p> 
+				<h2><a href="home_ref.php">REFERENCES</a></h2>
+				<p>Check interesting <a href="home_ref.php">references</a> about GPAC.</p> 
 				<h2><a href="home_support.php">HELP &amp; SUPPORT</a></h2>
 				<p>The <a href="home_support.php">place to go</a> if you have questions on GPAC not answered in the <a href="home_faq.php">FAQ</a>.</p> 
 				<h2><a href="links.php">LINKS</a></h2>

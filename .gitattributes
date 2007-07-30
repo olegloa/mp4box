@@ -1842,6 +1842,7 @@ gpac_www/home_download.php -text
 gpac_www/home_faq.php -text
 gpac_www/home_left.php -text
 gpac_www/home_news.php -text
+gpac_www/home_ref.php -text
 gpac_www/home_screens.php -text
 gpac_www/home_support.php -text
 gpac_www/img/Fleche.gif -text
