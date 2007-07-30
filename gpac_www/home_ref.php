@@ -44,35 +44,31 @@ in Proceedings of ACM Symposium on Document Engineering (DocEng 2007)
 </li>
 <br/>
 <li>
-Monteiro de Resende Costa R. et al., “New Facilities for
-Presenting and Authoring MPEG-4 Documents”, in
-Proceedings of 12th International Conference on Multi-
-Media Modelling, (MMM 2006).
+Monteiro de Resende Costa R. et al., "New Facilities for Presenting and Authoring MPEG-4 Documents", in
+Proceedings of 12th International Conference on Multi-Media Modelling, (MMM 2006).
 </li>
 <br/>
 <li>
-Shin J. et al., “Demonstration of Bidirectional Services
-Using MPEG-4 BIFS in Terrestrial DMB Systems”, ETRI
+Shin J. et al., "Demonstration of Bidirectional Services Using MPEG-4 BIFS in Terrestrial DMB Systems", ETRI
 Journal, Volume 28, Number 5, October 2006, pp. 583-592
 </li>
 <br/>
 <li>
-Andry Tanoto et al., “MPEG-4-Based Interactive Visualization as an Analysis Tool for Experiments in Robotics.”,
+Andry Tanoto et al., "MPEG-4-Based Interactive Visualization as an Analysis Tool for Experiments in Robotics",
 in Proceedings of the 2006 International Conference on Modeling, Simulation and Visualization Methods (MSV 06)
 </li>
 <br/>
 <li>
-Cho et al., “Multimedia Packaging for TVAF-based Contents”,
+Cho et al., "Multimedia Packaging for TVAF-based Contents",
 in Proceedings of the 2006 International Conference on Image Processing, Computer Vision, & Pattern Recognition (IPCV 2006)
 </li>
 <br/>
-<li>De Neve W. et al., “Using MPEG-4 Scene Description for
-offering customizable and interactive multimedia presentations “,
+<li>De Neve W. et al., "Using MPEG-4 Scene Description for offering customizable and interactive multimedia presentations ",
  in Workshop on Image Analysis for Multimedia Interactive Services (WIAMIS 2005), Montreux, Switzerland, Apr 13 - Apr 15 2005.
 </li>
 <br/>
 <li>
-Jens Herder et al., “Interactive Virtual Set Applications for Post Production”, 
+Jens Herder et al., "Interactive Virtual Set Applications for Post Production", 
 Seventh International Conference on Human and Computer, Aizu-Wakamatsu/Tokyo, September 2004
 </li>
 
@@ -111,7 +107,7 @@ Seventh International Conference on Human and Computer, Aizu-Wakamatsu/Tokyo, Se
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-07-30 09:35:08 $"; ?><?php include_once("bas.php"); ?></div>
+<?php $mod_date="\$Date: 2007-07-30 09:38:11 $"; ?><?php include_once("bas.php"); ?></div>
 </body>
 </html>
 
