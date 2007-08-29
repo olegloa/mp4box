@@ -23,6 +23,7 @@
 		<div id="sous_menu">
 <ul>
 <li><a href="#samples">Sample Files</a></li>
+<li><a href="#OMA">OMA DRM</a></li>
 <li><a href="#decrypt">Decryption</a></li>
 <li><a href="#encrypt">Encryption</a></li>
 </ul>
@@ -119,7 +120,7 @@ mainly key information, KMS information, encryption instructions and eventually 
 
 
 <br>
-<h1 ID="encrypt">OMA DRM authoring</h1>
+<h1 ID="OMA">OMA DRM authoring</h1>
 
 <p>In order to encrypt a 3GP/MP4 file into a PDCF file, MP4Box uses the same process as ISMA encryption, only the drm file syntax changes.</p>
 <p>Just like any XML file, the file must begin with the usual xml header. The file encoding SHALL BE UTF-8. The file is then a collection of <i>OMATrack</i> elements placed under an <i>OMADRM</i> document root (currently ignored). Each element describes all OMA DRM information needed to encrypt a given track. An <i>OMATrack</i> element may have children describing the optional textual headers defined in OMA DRM 2.0. Each textual header is inserted as is during OMA encryption, so be carefull not to specify twice the same header.</p>
@@ -203,7 +204,7 @@ mainly key information, KMS information, encryption instructions and eventually 
       </div>
 	</div>
 
-<?php $mod_date="\$Date: 2007-08-29 17:55:47 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2007-08-29 17:57:10 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

@@ -7,7 +7,7 @@
 <p>Generic multiplexing languages to manipulate any media format with GPAC and MP4Box.</p> 
 				<h2><a href="doc_ttxt.php">TIMED TEXT</a></h2>
 <p>Description of 3GPP/MPEG-4 Timed Text tracks for subtitles, tickers ...</p> 
-				<h2><a href="doc_ismacryp.php">ISMA E&A</a></h2>
+				<h2><a href="doc_ismacryp.php">ISMA E&A - OMA DRM</a></h2>
 <p>Encrypting and decrypting content according to ISMA E&A and OMA DRM 2.0 specifications.</p> 
 				<br/>
 				<br/>
