@@ -22,7 +22,7 @@ The multimedia player of GPAC can be configured in various ways.<br/> A file is 
 			<!-- =================== SECTION 2 ============  -->
 			<div class="Col2">
 
-		<div id="sous_menu">
+		<div>
 <ul>
 <li><a href="#FontEngine">FontEngine</a></li>
 <li><a href="#Network">Network</a></li>
@@ -37,7 +37,7 @@ The multimedia player of GPAC can be configured in various ways.<br/> A file is 
 </ul>
 		</div>
 
-		<div id="sous_menu">
+		<div>
 <ul>
 <li><a href="#ALSA">ALSA</a></li>
 <li><a href="#DVB">DVB</a></li>
@@ -749,7 +749,9 @@ Specifies whether the text shall be drawn using an intermediate texture or not.<
 <br><br>
 	</div>
 
-<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2007-08-30 14:10:59 $"; ?>
+<?php include_once("bas.php"); ?>
+<!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>
