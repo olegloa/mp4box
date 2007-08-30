@@ -52,7 +52,9 @@ The multimedia player of GPAC can be configured in various ways.<br/> A file is 
 </ul>
 		</div>
 
-<!--
+<!-- start of gpac/doc/configuration.html insert -->
+
+<!-- 
 <p style="text-align: center;">
 <br>
 <b><span style="font-size: 24pt;">GPAC Configuration file documentation<br>Version 0.4.4</span></b>
@@ -209,7 +211,7 @@ Specifies the level of the log. By default, no log is performed.
 </p>
 <b>LogTools</b> [value: a &apos;:&apos;-separated list of the following values]
 <p style="text-indent: 5%">
-Specifies which set of tools from GPAC should be logged. Available tools are:
+Specifies which set of tools from GPAC should be logged. Available tools are:</p>
 <ul>
 <li><i>core</i> : libgpac core</li>
 <li><i>coding</i> : bitstream formats (audio, video, scene)</li>
@@ -228,7 +230,6 @@ Specifies which set of tools from GPAC should be logged. Available tools are:
 <li><i>service</i> : network service management</li>
 <li><i>mmio</i> : Audio/Video HW I/O management</li>
 </ul>
-</p>
 
 
 <a name="RecentFiles"></a>
@@ -566,13 +567,13 @@ Specifies first port for RTP channels. If not set, the default first port used b
 Specifies the maximum inactivity period in milliseconds for RTP sockets. If no data is received after this period, an empty RTP packet will be sent in order to keep any NAT alive. If 0 (default), disables NAT keep-alive packets.</p>
 <b>StreamControl</b> [value: <i>"aggregate", "independent", "RTSP2"</i>]
 <p style="text-indent: 5%">
-Specifies how streams are controled within a streaming session the maximum inactivity period in milliseconds for RTP sockets. If no data is received after this period, an empty RTP packet will be sent in order to keep any NAT alive. If 0 (default), disables NAT keep-alive packets.
+Specifies how streams are controled within a streaming session the maximum inactivity period in milliseconds for RTP sockets. If no data is received after this period, an empty RTP packet will be sent in order to keep any NAT alive. If 0 (default), disables NAT keep-alive packets.</p>
 <ul>
 <li><i>aggregate</i> : All streams within a session share the same sessionID. It is not possible to stop a stream without stoping the sesssion( RTSP v1 default),</li>
 <li><i>independent</i> : All streams within a session use their own session ID (NOT IMPLEMENTED YET),</li>
 <li><i>RTSP2</i> : All streams within a session share the same sessionID, but stoping a stream without killing the others is possible (RTSPV2 draft - NOT FULLY IMPLEMENTED).</li>
 </ul>
-</p>
+
 <b>FirstPacketDrop</b> [value: <i>positive integer</i>]
 <p style="text-indent: 5%">
 Specifies the sequence number of the first RTP packet to be droped - 0 means no packet drop. Used for packet drop simulation tests.</p>
@@ -690,10 +691,15 @@ Specifies the ALSA device to use. Default device is "hw:0,0".</p>
 <p style="text-indent: 5%">
 Specifies whether the text shall be drawn using an intermediate texture or not.</p>
 
+
 <br/><br/>
+
+<!-- end of gpac/doc/configuration.html insert -->
+
+</div>
 	</div>
 
-<?php $mod_date="\$Date: 2007-08-30 14:15:12 $"; ?>
+<?php $mod_date="\$Date: 2007-08-30 14:23:32 $"; ?>
 <?php include_once("bas.php"); ?>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
