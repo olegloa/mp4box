@@ -29,7 +29,7 @@ The GPAC framework is available for download in source code under LGPL License. 
 
 <h1>GPAC source code</h1>
 <p>The latest release of GPAC is 0.4.4 RC2, released in May 2007.</p>
-<p>Supported platforms in this release are:
+<p>Supported platforms in this release are:</p>
 <ul>
 <li>Windows,</li> 
 <li>Windows CE,</li> 
@@ -38,7 +38,7 @@ The GPAC framework is available for download in source code under LGPL License. 
 <li>GCC+X11 or GCC+SDL,</li> 
 <li>and Symbian 9.</li>
 </ul> 
-</p>
+
 
 <h2 class="download_section">Download GPAC source <br/><a class="download_link" href="http://downloads.sourceforge.net/gpac/gpac-0.4.4-rc2.zip">Windows Archive (zip)</a>&nbsp;&nbsp;&nbsp;<a class="download_link" href="http://downloads.sourceforge.net/gpac/gpac-0.4.4.tar.gz">Generic Archive (tar.gz)</a></h2>
 
@@ -56,7 +56,9 @@ The GPAC framework is available for download in source code under LGPL License. 
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?></div>
+<?php $mod_date="\$Date: 2007-08-30 13:19:19 $"; ?>
+<?php include_once("bas.php"); ?>
+</div>
 </body>
 </html>
 

@@ -44,8 +44,9 @@ The GPAC player is supported on Windows platforms (Osmo4/Osmophone on PocketPC) 
 The GPAC player is integrated with web browsers like Firefox, Opera (Osmozilla plugin - windows, linux) or Internet Explorer (GPAX ActiveX control - windows and windows mobile).
 				</p>
         
-        <h1 ID="osmo">GPAC Player with GUI: Osmo4</h1>
-        <img src="img/osmo4_gui.png" width="328" height="405"/>
+        <h1 id="osmo">GPAC Player with GUI: Osmo4</h1>
+        <img src="img/osmo4_gui.png" width="328" height="405" 
+alt="GUI"/>
 				<p>The GPAC project offers a very simple GUI for the control of the player. 
         The interface is similar to the GUI of traditional audio-visual players. 
         Buttons allow (from left to right): </p>
@@ -68,26 +69,32 @@ The GPAC player is integrated with web browsers like Firefox, Opera (Osmozilla p
  
          
         <h2>Installation Check</h2>
-        <img src="img/configuration_ok.png" width="558" height="565"/>
+        <img src="img/configuration_ok.png" width="558" height="565" 
+alt="Configuration"/>
         <p>For the purpose of evaluating if the compilation and installation steps went well, the GPAC framework 
         provides a <a href="demos/configuration.mp4">test content</a> in the form of an MPEG-4 file containing an MPEG-4 BIFS stream 
         for text and vector graphics, a PNG image, an MPEG-4 video Part 2 stream and an MP3 stream. 
         If the installation step went well, you should see this result.</p>
-        <img src="img/configuration_not_ok.png" width="558" height="565"/>
+        <img src="img/configuration_not_ok.png" width="558" height="565" 
+alt="Partial Configuration"/>
         <p>The GPAC player may be used even if the compilation of the JavaScript engine, of the raster image decoder, of the MPEG-4 video decoder (ffmpeg or XviD), of the MP3 audio decoder (MAD) or of the GDIPlus or FreeType font engine went wrong, in such case, you may see, when playing configuration.mp4, a line showing that a particular support for a particular type of data is not correct.</p>
-         
-	<h1 ID="config">GPAC Player Configuration</h1>
+       
+	<h1 id="config">GPAC Player Configuration</h1>
 
-        <img src="img/osmo4_options.png" width="354" height="242"/>
+        <img src="img/osmo4_options.png" width="354" height="242" 
+alt="Options"/>
 				<p>GPAC is highly configurable. The player uses a configuration file shared among modules and reloadable at run time. Modules may use the configuration file as well (to avoid multiple config files). The documentation of the configuration file is available <a href="doc_config.php">here</a>.</p>
         <p>The View>Options menu of the GUI allows setting some parameters in the configuration (for 2D Rendering, 3D Rendering, XML parsing, media handling …).</p>
         <p>The GPAC player supports rendering of 2D graphics formats like SVG or BIFS and 3D graphics formats like VRML or X3D.</p> 
         <br/>
-        <p><img src="img/osmo4_3dswitch.png" width="279" height="25"/>An important point to note is that the rendering engine used for 3D graphics is (currently) different from the 2D graphics rendering engine and the switch between engines is not automatic. Therefore, before playing 3D content, one needs to make sure the selector in the main tool bar is in the right position as shown.</p>
+        <p><img src="img/osmo4_3dswitch.png" width="279" 
+height="25" alt="3DSwitch"/>An important point to note is that the 
+rendering engine 
+used for 3D graphics is (currently) different from the 2D graphics rendering engine and the switch between engines is not automatic. Therefore, before playing 3D content, one needs to make sure the selector in the main tool bar is in the right position as shown.</p>
 		</div>
 	</div>
 
-<?php $mod_date="\$Date: 2007-07-27 12:26:18 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2007-08-30 13:19:20 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

@@ -152,14 +152,14 @@ A true multimedia player is a complex system involving networking, media and use
 			<li>Supports all nodes supported by 2D renderer (except SVG nodes).</li>
 
 		</ul>
-		<br>
-		</li>
+		<br/>
+	
 
 <br/><br/>
 
 <p>
 The GPAC framework heavily relies on plugins for most tasks (stream input, file downloading, hardware IO, specialized renderers and rasterizer,	...).
-<br>Currently the following plugins are available:
+<br/>Currently the following plugins are available:
 </p>
 
 		<h1 id="decoding">Media Decoders</h1>
@@ -205,10 +205,10 @@ The GPAC framework heavily relies on plugins for most tasks (stream input, file 
 			<li>video output: Microsoft DirectDraw (supports hardware YUV and RGB stretch), cross-platform SDL, Linux X11 with OpenGL and shared memory support.</li>
 			<li>raw memory video output for BIFS testing.</li>
 		</ul>
-		<br>
-		</li>
+		<br/>
+		
 
-		<h1 ID="raster">2D Rasterizer Plugins</h1>
+		<h1 id="raster">2D Rasterizer Plugins</h1>
 		<ul>
 			<li>Microsoft GDIplus (Windows 98 and later only).</li>
 			<li>GPAC rasterizer, ANSI C, using FreeType Anti-Aliased raster module.</li>
@@ -219,12 +219,14 @@ The GPAC framework heavily relies on plugins for most tasks (stream input, file 
 			<li>FreeType2 for TrueType font outline extraction.</li>
 		</ul>
 
-<br>
+<br/>
 				</div>
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?></div>
+<?php $mod_date="\$Date: 2007-08-30 13:19:19 $"; ?>
+<?php include_once("bas.php"); ?>
+</div>
 </body>
 </html>
 

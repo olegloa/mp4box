@@ -26,7 +26,7 @@ MP4Box can natively import many multimedia formats (AVI, MP3, ...) into ISO file
 </ul>
 		</div>
 
-  <h1 ID="NHNT">NHNT Format</h1>
+  <h1 id="NHNT">NHNT Format</h1>
 <p>
 The NHNT format has been developed during the MPEG-4 Systems implementation phase, as a way to easily mux unknown media formats to an MP4 file or an MPEG-4 multiplex.
 The goal was to have the media encoder produce a description of the media time fragmentation (access units and timestamps) that could be reused by a media-unaware MPEG-4 multiplexer.
@@ -126,7 +126,7 @@ A NHNT file is made of a header, and a set of access units descriptors. All inte
 <p><b>Note</b> : Samples must be described in decoding order in the nhnt file when using sample fragmentation. Otherwise, sample may be described out of order.</p>
 
 <a name="NHML"></a>
-<h1 ID="NHML">NHML Format</h1>
+<h1 id="NHML">NHML Format</h1>
 <p>
 The NHNT format is a very usefull tool for multiplexing data, but is not user-friendly at all when dealing with complex cases such as multi-source media files or NHNT authoring (timing modification, data removal or insertion).
 </p>
@@ -238,7 +238,9 @@ xmlTo="..."
 <p></p>		</div>
 	</div>
 
-<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2007-08-30 13:19:19 $"; ?>
+<?php include_once("bas.php"); ?>
+<!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

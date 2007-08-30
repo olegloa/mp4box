@@ -28,15 +28,16 @@ GPAC is an Open Source multimedia framework for research and academic purposes.
 			<div class="Col2">
 				<h1>Overview</h1>
 
-        <img src="img/ImgHome.gif" />
+        <img src="img/ImgHome.gif" alt="" />
 
-        <p>GPAC provides three sets of tools based on a core library called libgpac: 
+        <p>GPAC provides three sets of tools based on a core library 
+called libgpac:</p>
           <ul>
             <li>A multimedia player, called <a href="player.php">Osmo4</a>,</li> 
             <li>A multimedia packager, called <a href="packager.php">MP4Box</a>,</li> 
             <li>And some server tools (under development).</li> 
           </ul>
-        </p>
+      
 
 <!--
 <p>GPAC features encoders and multiplexers, publishing and content distribution tools for MP4 and 3GPP(2) files and many tools for scene descriptions (BIFS/VRML/X3D converters, SWF/BIFS, SVG/BIFS, etc...). For more information on supported tools, check out the <a href="feat.php">features</a> page.</p>
@@ -75,26 +76,24 @@ GPAC is an Open Source multimedia framework for research and academic purposes.
 <p>
 The project is hosted at ENST (Ecole Nationale Supérieure des 
 Télécommunications), leading French engineering school, located in Paris. 
-Current main contributors of GPAC are:
+Current main contributors of GPAC are:</p>
 <ul>
 <li>Jean Le Feuvre</li>
 <li>Cyril Concolato</li>
 </ul>
-</p>
- 
-<p>
-Other (current or past) contributors from ENST are:
+
+<p>Other (current or past) contributors from ENST are:</p>
 <ul>
 <li>Jean-Claude Moissinac</li>
 <li>Benoît Pellan</li>
 <li>Philippe de Cuetos</li>
 </ul>
-</p>
+
 
 <p>
 Additionally, GPAC is used at ENST for pedagogical purposes. Students regularly 
 participate in the development of the project. The main students projects which 
-have been contributed to GPAC are:
+have been contributed to GPAC are:</p>
 <ul>
 <li>Support for MPEG-2 transport stream (W. Ben Hania)</li>
 <li>DVB-H simulator (A.-V. Bui, X. Liu, Y. Qiu, H. Chi)</li>
@@ -105,7 +104,7 @@ have been contributed to GPAC are:
 <li>Experimental authoring tool (J. Nitard)</li>
 <li>BIFS Broadcaster (E. Boustani, E. Ghevre)</li>
 </ul>
-</p>
+
         <p>
           GPAC is a project under constant evolution. 
           We invite people, companies and universities interested in Rich Media 
@@ -116,7 +115,9 @@ have been contributed to GPAC are:
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-07-27 12:26:18 $"; ?><?php include_once("bas.php"); ?></div>
+<?php $mod_date="\$Date: 2007-08-30 13:19:19 $"; ?>
+<?php include_once("bas.php"); ?>
+</div>
 </body>
 </html>
 

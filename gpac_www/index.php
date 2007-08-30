@@ -44,7 +44,7 @@
         <h2>July 26th 2007 - New web site</h2>
         <p>A brand new web site is available. </p>
         <h2>May 31st 2007 - GPAC Release 0.4.4</h2>
-        <p>New features in this long-awaited release:
+        <p>New features in this long-awaited release:</p>
           <ul>
           <li>Initial Symbian support for GPAC</li>
           <li>Massive memory optimizations for the 2D renderer and SVG scenes</li>
@@ -61,16 +61,17 @@
           <li>mp42ts, a draft MPEG-2 TS multiplexer. The multiplexer only supports MPEG-2 Video, MPEG-1 video and MPEG-1 audio. It is capable of outputing to a file or to a rtp/udp port. The source programs can either be local ISO Media files or SDP files describing a uni/multicast already setup (no RTSP support).</li>
           <li>And of course the usual lot of bug fixes and other improvements ...</li>
           </ul>
-        <p>
+        
 
         <p>Check the complete <a href="http://gpac.cvs.sourceforge.net/*checkout*/gpac/gpac/Changelog">changelog</a>.</p>
-        <p>Read the <a href="home_news.php"/>old news</a>.</p>
+        <p>Read the <a href="home_news.php">old news</a>.</p>
 
 			</div>
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-07-27 12:26:18 $"; ?><?php include_once("bas.php"); ?>
+<?php $mod_date="\$Date: 2007-08-30 13:19:19 $"; ?>
+<?php include_once("bas.php"); ?>
 </div>
 </body>
 </html>

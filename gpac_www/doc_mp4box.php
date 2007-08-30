@@ -26,7 +26,7 @@ MP4Box is a multimedia packager, with a vast number of functionalities: conversi
 <ul>
 <li><a href="#misc">Misc</a></li>
 <li><a href="#meta">MetaData</a></li>
-<li><a href="#ismacryp">ISMA E&A</a></li>
+<li><a href="#ismacryp">ISMA E&amp;A</a></li>
 <li><a href="#coding">Coding</a></li>
 <li><a href="#extraction">Extraction</a></li>
 <li><a href="#dumping">Dumping</a></li>
@@ -72,10 +72,10 @@ will result in the file being stored without interleaving, with all meta-data pl
 <p><b><i>-no-sys</i></b> : removes all MPEG-4 systems tracks and keeps an empty InitialObjectDescriptor will be left in the file for MPEG-4 Level@Profile indications.</p>
 <p><b><i>-no-iod</i></b> : removes the file InitialObjectDescriptor.</p>
 <p><b><i>-isma</i></b>: converts file to ISMA 1.0 specification. This is extremely usefull since most MPEG-4 players only understand ISMA-like content. All systems information and tracks numbering are rewritten to comply to the specification.
-<br>WARNING: some media tracks may be removed.</p>
+<br/>WARNING: some media tracks may be removed.</p>
 <p><b><i>-3gp</i></b> : converts to 3GPP specification. This will remove all MPEG-4 Systems information, leaving only the audio/video/text media tracks supported by 3GPP. This option is always turned on when the file extension is '3gp' or '3g2'.
 
-<br>WARNING: some media tracks may be removed.</p>
+<br/>WARNING: some media tracks may be removed.</p>
 <p><b><i>-brand ABCD[:v]</i></b> : sets the major brand of a file. Brands are used to identify the most common usage of a file (MPEG-4 presentation, 3GP movie, etc...). If 'v' is set, also sets the version of the brand (default version is 0).</p>
 <p><b><i>-ab ABCD</i></b> : adds an alternate brand to the file. Alternate Brands are used to identify the other possible usage of a file (whether the 3GP file compliant with MPEG-4, etc...)</p>
 <p><b><i>-rb ABCD</i></b> : removes an alternate brand from the file. </p>
@@ -104,7 +104,7 @@ in MP4Box, but reimporting the track will solve the problem. To do this:</p>
 <li><i>MP4Box -avi trackID file.mp4</i>: exports track to avi (raw MPEG-4 video also possible).</li>
 <li><i>MP4Box -import file.avi dest.mp4</i>: converts avi into MP4 and handles B-Frame correct import (packed bitstreams, n-Vops).</li>
 </ul>
-<br><br>
+<br/><br/>
 
 <h1 id="conversion">File conversion ("MP4Box -h import")</h1>
 MP4Box can convert the following files into compliant IsoMedia files:
@@ -153,7 +153,7 @@ MP4Box can convert the following files into compliant IsoMedia files:
 
 <p>The conversion syntax is <b>MP4Box -add inputFile destinationFile</b>. This option is used to import media from several sources. You can specify up to 20 <i>-add</i> in common MP4Box builds. This
 process will create the destination file if not existing, and add the track(s) to it. If you wish to erase the destination file, just add the <i>-new</i> option.</p>
-<br>
+<br/>
 <h2>Input file track selection</h2>
 To select a desired media track, the following syntax is used:
 <ul>
@@ -171,7 +171,7 @@ automatically make the file 3GP(2) compliant. This means that MP4Box will always
 <p><i>Note on text import</i> : When importing SRT or SUB files, MP4Box will choose default layout options to make the subtitle appear at the bottom of the video. 
 You SHOULD NOT import such files before any video track is added to the destination file, otherwise the results will likelly not be usefull (default SRT/SUB importing uses default serif font, fontSize 18 and display size 400x60). For more details on 3GPP timed text, please <a href="doc_ttxt.php">go here</a>.
 </p>
-<br>
+<br/>
 
 <h2>Import Options</h2>
 <p>There are several media-specific options which can be used when importing media. To know which options are supported for non-IsoMedia files, use the <i>-info</i> option for the desired media track, for example <i>MP4Box -info 2 file.mpg</i>.
@@ -192,11 +192,11 @@ This is extremely usefull when developping content, since importing and storage 
 
 <p><b><i>-mpeg4</i></b> : This option forces MPEG-4 stream descriptions for formats having several description syntax available (QCELP, EVRC and SMV audio).</p>
 <p><b><i>-agg N</i></b> : Aggregates N audio frames in an IsoMedia sample. This option is only valid for some 3GP(2) audio formats (AMR, QCELP, EVRC and SMV audio). The maximum acceptable value is 15.</p>
-<br>
+<br/>
 <p>When importing several tracks/sources in one pass, all options will be applied if relevant to each source. These options are set for all imported streams. If you need to specify these options par stream, the syntax is:
-<br><b>MP4Box -add stream[:opt1:...:optN]	dest.mp4</b>
+<br/><b>MP4Box -add stream[:opt1:...:optN]	dest.mp4</b>
 </p>
-<br>The following options are available:
+<br/>The following options are available:
 <ul>
 <li><i>fps=N</i> same as -fps, but only applies to the imported media.</li>
 
@@ -218,7 +218,7 @@ This is extremely usefull when developping content, since importing and storage 
 <p><i>Note on OGG Support</i> : MP4Box can import OGG files containing either Vorbis audio or Theora video. This feature is experimental and support for these media formats in IsoMedia files is NOT STANDARDIZED anywhere. This should only be used for development and R&amp;D purposes, and you must be aware
 that files created this way may be unusable, even with future versions of GPAC.</p>
 
-<br><br>
+<br/><br/>
 
 <h1 id="split_concat">File Splitting and Concatenation ("MP4Box -h general")</h1>
 <p>MP4Box can split IsoMedia files by size, duration or extract a given part of the file to new IsoMedia file(s). This process requires that at most one track in 
@@ -257,10 +257,10 @@ systems tracks by specifying <i>-keepsys</i>.</p>
 
 <p><b><i>-sdp_ex string</i></b> : adds the given text to the movie SDP information (<i>-sdp_ex "a=x-test: an sdp test"</i>) or to a track (<i>-sdp_ex "N:a=x-test"</i>, where N is the hint track or its base track ID). This will take care of SDP line ordering. WARNING: You cannot add anything to SDP, please refer to <a href="http://www.faqs.org/rfcs/rfc2327.html">RFC2327</a> for more info.</p>
 <p><b><i>-unhint</i></b> : removes all hint tracks and SDP information from file. This can be usefull since MP4Box doesn't remove any existing hint tracks when hinting the file.</p>
-<br>
+<br/>
 <p>For advanced users, MP4Box can allow you to specify special options of the MPEG-4 Generic RTP payload format:</p>
 
-<br>
+<br/>
 <p><b><i>-ocr</i></b> : forces all media tracks in the file to be served synchronized. This is needed because most streaming servers don't support desynchronized tracks in a single file. Be extremelly carefull when designing MPEG-4 interactive presentations for streaming since you will have to take care of the streaming server capabilities... 
 MP4Box generates warnings when the file timeline can be ambiguously interpreted by the server.</p>
 <p><b><i>-iod</i></b> : prevents ISMA-like IOD generation in SDP. MP4Box automatically detects ambiguous (ISMA/non-ISMA) files but nobody's perfect. This shouldn't be used with -isma option.</p>
@@ -270,10 +270,10 @@ MP4Box generates warnings when the file timeline can be ambiguously interpreted 
 <p><b><i>-size</i></b> : signals AU size in the payload.</p>
 <p><b><i>-idx</i></b> : signals AU sequence number in the payload. </p>
 
-<br>
+<br/>
 <p>MP4Box always detects the best payload possible and when not found gets back to MPEG-4 Generic payload. The configuration of the 
 MPEG-4 Generic payload is quite complex, so MP4Box always computes the most suitable configuration for you.</p> 
-<br><br>
+<br/><br/>
 <i>Examples:</i>
 <ul>
 <li><i>Prepare any mp4 for ISMA streaming</i>: MP4Box -isma -hint myfile.mp4</li>
@@ -295,8 +295,8 @@ It depends. MPEG4IP works with ISMA / plain AV files, therefore you should first
 Yes and no. GPAC uses RFC3640 to stream MPEG-4 systems information, and most players don't accept that (they usually use their own format). Moreover
 RTSP servers as known today only understand simple synchronized presentations, and most MPEG-4 presentations have too complex timing for servers to handle. If 
 you need to know more about that join us in our forums.
-<br>
-<br>
+<br/>
+<br/>
 
 <h1 id="dumping">File Dumping and information ("MP4Box -h dump")</h1>
 MP4Box has many dump functionalities, from simple track listing to more complete reporting of special tracks
@@ -315,7 +315,7 @@ MP4Box has many dump functionalities, from simple track listing to more complete
 <p><b><i>-srt</i></b> : converts input subtitle (TTXT, SUB) to SRT format.</p>
 <p><b><i>-srt TrackID</i></b> : dumps text track to SRT format.</p>
 
-<br><br>
+<br/><br/>
 
 <h1 id="extraction">Media track Extraction ("MP4Box -h extract")</h1>
 MP4Box can extract media tracks in a variety of formats:
@@ -331,7 +331,7 @@ MP4Box can extract media tracks in a variety of formats:
 <p><b><i>-single TrackID</i></b> : extracts track in a new MP4 with a single track.</p>
 <p><b><i>-saf</i></b> : remux input file to a SAF multiplex. This can also be used directly when encoding a LASeR content.</p>
 
-<br><br>
+<br/><br/>
 
 <h1 id="coding">Scene Description Coding ("MP4Box -h dump" and "MP4Box -h encode" )</h1>
 MP4Box can be used to encode and decode MPEG-4 Scene Description. It may also be used to convert to and from the various textual format: BT, XMT-A, WRL (VRML97), X3D in XML or VRML format, LASeR and SVG. These conversions will not always work since these standards do not use the same set of nodes.
@@ -348,10 +348,10 @@ MP4Box can be used to encode and decode MPEG-4 Scene Description. It may also be
 <p><b><i>-x3dv</i></b> : dumps scene into X3D/text format - - unknown/incompatible nodes are removed.</p>
 <p><b><i>-lsr</i></b> : dumps scene in a LASeR+XML file.</p>
 <p><b><i>-svg</i></b> : dumps LASeR scene root node to an SVG file.</p>
-<br>
+<br/>
 
 <p><i>Note</i> : conversion from VRML-based scene graphs to/from SVG-based scene graphs is not supported.</p>
-<br>
+<br/>
 
 <h2>LASeR encoding options</h2>
 <p><b><i>-resolution res</i></b> : specifies the resolution to use when encoding points. Value ranges from -8 to 7, and all coordinates are multiplied by 2^res. The default resolution used is 0.</p>
@@ -359,7 +359,7 @@ MP4Box can be used to encode and decode MPEG-4 Scene Description. It may also be
 <p><b><i>-scale-bits bits</i></b> : Number of extra bits used to encode a scale factor (scale factor are therefore encoded on coord_bits+scale_bits). Default value is 0 bits.</p>
 
 <p><b><i>-auto-quant res</i></b> : resolution is given as if using <i>-resolution</i> but coord-bits and scale-bits are computed dynamically. The default resolution used is 0.</p>
-<br><br>
+<br/><br/>
 
 <h2>Scene Random Access</h2>
 MP4Box can encode BIFS or LASeR streams and insert random access points at a given frequency. This is usefull when packaging content for broadcast, where users will not turn in the scene at the same time. In MPEG-4 terminology, this is called the scene carousel. 
@@ -368,7 +368,7 @@ MP4Box can encode BIFS or LASeR streams and insert random access points at a giv
 <p><b><i>-shadow time</i></b> : inserts random access points at the desired frequency, specified in milliseconds. This cannot be used with the <i>-sync or -carousel</i> option. The difference with <i>-carousel</i> is that random access samples can only be inserted as a substitution to existing samples, therefore their frequency is not guaranteed.</p>
 <p><b><i>-sync time</i></b> : forces sync sample at the desired frequency by replacing the original sample. Time is specified in milliseconds. This cannot be used with the <i>-shadow or -carousel</i> option.</p>
 
-<br><br>
+<br/><br/>
 
 <h1 id="ismacryp">ISMA Encryption and description ("MP4Box -h crypt")</h1>
 MP4Box supports ISMA E&amp;A specification, better known as ISMACryp. In order to describe the cryptographic info, GPAC uses its own XML format documented <a href="doc_ismacryp.php">here</a>.
@@ -377,7 +377,7 @@ MP4Box supports ISMA E&amp;A specification, better known as ISMACryp. In order t
 
 <p><b><i>-set-kms [trackID=]kms_uri</i></b> : changes the URI of the key management system for the specified track, or for all tracks in the file if no trackID is given.</p>
 
-<br><br>
+<br/><br/>
 <h1 id="meta">Meta ("MP4Box -h meta")</h1>
 IsoMedia files can be used as generic meta-data containers, for examples storing XML information and sample images for a movie. These information can be stored at the file root level, as is the case for MPEG-21 file format, or at the moovie or track level for a regular movie. 
 
@@ -409,7 +409,7 @@ IsoMedia files can be used as generic meta-data containers, for examples storing
 
 <p><b><i>-package</i></b> : packages the input XML file into an ISO container. All local media referenced (except hyperlinks) are added to file (only 'href' and 'url' attributes are currently processsed). <b>THIS IS AN EXPERIMENTAL FEATURE NOT FULLY TESTED</b></p>
 
-<br><br>
+<br/><br/>
 <h1 id="misc">Misc ("MP4Box -h")</h1>
 <p><b><i>-nodes</i></b> : prints list of MPEG-4 nodes supported in this MP4Box build.</p>
 <p><b><i>-node NodeName</i></b> : prints MPEG-4 node syntax: fields, their type, event type, default value and quantization info if any. Note this works only for nodes supported in the current built.</p>
@@ -423,7 +423,9 @@ IsoMedia files can be used as generic meta-data containers, for examples storing
 		</div>
 	</div>
 
-<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2007-08-30 13:19:19 $"; ?>
+<?php include_once("bas.php"); ?>
+<!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

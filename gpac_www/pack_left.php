@@ -2,13 +2,17 @@
 				<h2><a href="doc_mp4box.php">MP4BOX HELP</a></h2>
 <p>A rather complete description of MP4Box functionalities and various switches.</p>
 				<h2><a href="doc_bt.php">MPEG-4 SYSTEMS</a></h2>
-<p>Documentation of GPAC specific handling of MPEG-4 scene description textual formats: BT & XMT-A.</p> 
-				<h2><a href="doc_nhnt.php">NHNT & NHML</a></h2>
+<p>Documentation of GPAC specific handling of MPEG-4 scene description 
+textual formats: BT and XMT-A.</p> 
+				<h2><a href="doc_nhnt.php">NHNT &amp; 
+NHML</a></h2>
 <p>Generic multiplexing languages to manipulate any media format with GPAC and MP4Box.</p> 
 				<h2><a href="doc_ttxt.php">TIMED TEXT</a></h2>
 <p>Description of 3GPP/MPEG-4 Timed Text tracks for subtitles, tickers ...</p> 
-				<h2><a href="doc_ismacryp.php">ISMA E&A - OMA DRM</a></h2>
-<p>Encrypting and decrypting content according to ISMA E&A and OMA DRM 2.0 specifications.</p> 
+				<h2><a href="doc_ismacryp.php">ISMA 
+E&amp;A - OMA DRM</a></h2>
+<p>Encrypting and decrypting content according to ISMA E&amp;A and OMA 
+DRM 2.0 specifications.</p> 
 				<br/>
 				<br/>
 				<p>

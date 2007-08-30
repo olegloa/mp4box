@@ -37,7 +37,7 @@ This is a very convenient way to encode subtitles, tickers, etc,... independantl
 </p>
 <p>For regular MPEG-4/VRML static text, please refer to the MPEG-4 tutorial or any VRML tutorials available on the internet.</p>
 
-<h1 ID="overview">Overview of a timed text stream</h1>
+<h1 id="overview">Overview of a timed text stream</h1>
 The 3GPP timed text specification is called <a href="http://www.3gpp.org/ftp/Specs/archive/26_series/26.245/26245-600.zip">3GPP TS 26.245</a> (3GPP web site) and will 
 give you in-depth knowledge of this format. If you don't want to read and understand all the technical details, there are some important things to know about timed text streams, 
 so let's review them.
@@ -93,7 +93,7 @@ starting and ending characters.
 </ul>
 
 
-<h1 ID="ttxt">GPAC TTXT Format</h1>
+<h1 id="ttxt">GPAC TTXT Format</h1>
 There is no official textual representation of a text stream. Moreover, the specification relies on IsoMedia knowledge for most structure descriptions. In order to help authoring text streams, 
 an XML format has been developed in GPAC, called <b>TTXT</b> for timed-text - the extension used being <i>.ttxt</i>. This format is not related in any way to any scene description language to keep the
 timed text authoring a standalone step in the authoring process.
@@ -110,7 +110,8 @@ As said above, this format has been developed in GPAC, and you will likely not f
 The TTXT format is an XML description of the timed text stream, and as such MUST begin with the usual XML header with encoding hints - only UTF-8 has currently been tested. 
 The text stream is encapsulated in a single element at the root of the document, called <i>TextStream</i>. This element has a single defined attribute <i>version</i> identifying the format version - the current and only defined version is "1.0".
 The TextStream element must have one and only one <i>TextStreamHeader</i> child and has as many <i>TextSample</i> children as desired.
-<br>Note: All coordinates are specified in pixels, framebuffer-coordinate like: 
+<br/>Note: All coordinates are specified in pixels, 
+framebuffer-coordinate like: 
 
 <ul>
 <li>X-axis increases from left to right, with origin (0) on left edge.</li>
@@ -140,7 +141,8 @@ The TextStreamHeader describes all 3GPP text stream decoder configuration. It mu
 
 <h2>TextSampleDescription</h2>
 The TextSampleDescription element may be present as many times as desired in a TextStreamHeader. It defines the default styles text samples may refer to in the stream. 
-<br>The TextSampleDescription may also contain zero or one <i>FontTable</i>, <i>TextBox</i> and <i>Style</i>.
+<br/>The TextSampleDescription may also contain zero or one 
+<i>FontTable</i>, <i>TextBox</i> and <i>Style</i>.
 
 
 <h3>Syntax</h3>
@@ -309,15 +311,15 @@ The Karaoke element indicates dynamic highlighting, or karaoke, applies to this 
 
 </ul>
 
-<h1 ID="encode">Encoding of text streams</h1>
+<h1 id="encode">Encoding of text streams</h1>
 Using text streams in a 3GPP file or outisde the MPEG-4 Systems scene description is quite straightforward. All you need to do is add the text stream to your (existing) file with MP4Box. For example, adding a text track and an AVI file into a new 3GP file can be done in a single call:
-<br><i>MP4Box -3gp -add movie.avi -add text.ttxt dest.3gp</i>. 
+<br/><i>MP4Box -3gp -add movie.avi -add text.ttxt dest.3gp</i>. 
 <p>Note that you can use either SRT/SUB subtitles or TTXT files with the <i>-add</i> option. Other subtitles formats are currently not supported.</p>
 <p>Using text streams within MPEG-4 scene description is much more tricky (is it?). You will add an ObjectDescriptor to your scene as you add an audio/video object, specifying the file name with the usual MuxInfo. <b>Note</b>: when using SRT/SUB, make sure you don't have <i>TextNode</i> specified in the MuxInfo, as this ALWAYS triggers subtitles to BIFS conversion and not 3GPP timed text.</p>
 
 <p>The second step is controlling the new text object in the same way you control an audio or visual object. This is done through the AnimationStream node. Instead of controlling a BIFS stream, you can start/stop/play the text stream with this node.</p>
 
-<h1 ID="impl">GPAC Implementation</h1>
+<h1 id="impl">GPAC Implementation</h1>
 <ul>
 <li>During playback, GPAC does not support dynamic highlighting (Karaoke) nor soft text wrapping (wrapping is only done at newline characters).</li>
 <li>GPAC should support vertical text drawing and alignment, but this has not be really tested yet.</li>
@@ -325,19 +327,22 @@ Using text streams in a 3GPP file or outisde the MPEG-4 Systems scene descriptio
 <li>GPAC should support text streams placed below the main video or on its right, but cannot currently handle text streams placed above or on the left of the main video.</li>
 </ul>
 
-<h1 ID="samples">Sample TTXT Files</h1>
+<h1 id="samples">Sample TTXT Files</h1>
 
 The following files are taken from a 3GPP test suite and are pure translations to TTXT with MP4Box. They should give you a good overview of the format and help you author your own test tracks.
 <p>
 Download GPAC TTXT sample streams <a href="downloads/ttxt_sample_streams.zip">.zip</a> <a href="downloads/ttxt_sample_streams.tar.gz">.tgz</a>
 </p>
 
-<p><i>This is version 1.0 documentation of GPAC TimedText stream textual format. Comments, details and any correction are welcome</i> 
+<p><i>This is version 1.0 documentation of GPAC TimedText stream textual 
+format. Comments, details and any correction are welcome</i></p>
 
  		</div>
 	</div>
 
-<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2007-08-30 13:19:19 $"; ?>
+<?php include_once("bas.php"); ?>
+<!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

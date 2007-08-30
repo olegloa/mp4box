@@ -40,9 +40,9 @@ The multimedia packager available in GPAC is called MP4Box. <br/>It can be used 
     </ul>
     <p>It is widely used: by academics, by the <a href="www.doom9.org">video community</a> and is noticeably used in <a href="http://video.google.com/">Google Video services</a> 
     for preparation of multimedia files for playback on iPod and PlayStation.</p> 
-    </p>
 
-    <h1 ID="cont_pack">Content Packaging</h1>
+
+    <h1 id="cont_pack">Content Packaging</h1>
     <p>MP4Box can be used to repackage existing content to compliant ISO Media Files (MP4, 3GP, 3G2, OMA DCF). Note however that MP4Box does NOT re-encode audio, video and still image content, external tools shall be used for this purpose.</p>
     <ul>
     <li>Transforming a DivX file to an MP4 file:
@@ -63,7 +63,7 @@ MP4Box -info file.ts</pre>
     </li>
     </ul>
 
-    <h1 ID="cont_deli">Delivery Setup</h1>
+    <h1 id="cont_deli">Delivery Setup</h1>
     <p>MP4Box can be used to prepare files for different delivery protocols, mainly HTTP downloading or RTP streaming.</p>
     <ul>
     <li>To prepare a file for HTTP download, the following
@@ -81,7 +81,7 @@ RTSP/RTP:
     </li>
     </ul>
 
-    <h1 ID="cont_trans">Scene Transcoding</h1>
+    <h1 id="cont_trans">Scene Transcoding</h1>
     <p>MP4Box can be used to encode MPEG-4 scene descriptions BIFS
 and LASeR and to decode MPEG-4 scene descriptions BIFS and
 LASeR.</p>
@@ -114,7 +114,9 @@ to an SVG file:
     </div>
 	</div>
 
-<?php $mod_date="\$Date: 2007-07-27 12:26:18 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2007-08-30 13:19:20 $"; ?>
+<?php include_once("bas.php"); ?>
+<!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

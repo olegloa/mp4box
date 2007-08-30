@@ -11,7 +11,9 @@
 <!-- =================== ENTETE DE LA PAGE =========================================  -->
 	<div id="Chapeau_court">
 		<h1>
-		MP4Box can be used to encrypt or decrypt media streams in a more or less format-agnostic manner, according to the ISMA E&A and OMA DRM 2.0 specifications. An XML language is used by MP4Box to get/set the encryption parameters. 
+		MP4Box can be used to encrypt or decrypt media streams 
+in a more or less format-agnostic manner, according to the ISMA E&amp;A 
+and OMA DRM 2.0 specifications. An XML language is used by MP4Box to get/set the encryption parameters. 
 		</h1>
 	</div>
 <!-- =================== CORPS DE LA PAGE ============================================  -->
@@ -31,12 +33,18 @@
 
 <h1>Introduction</h1>
 <p>As of version 0.2.4, GPAC supports the ISMA E&amp;A specification, better known as ISMACryp. This specification provides reliable transmission of encrypted media data with key signaling and cryptographic resynchronization in case of packet loss or random access.</p> 
-<p>As of version 0.4.4, GPAC supports the OMA DRM PDCF specification available <a href="http://www.openmobilealliance.org/release_program/docs/CopyrightClick.asp?pck=DRM&file=V2_0-20060303-A/OMA-TS-DRM-DCF-V2_0-20060303-A.pdf"=>here</a>. This specification is derived from the ISMA E&A specification and OMA DRM PDCF files have a structure almost equivalent to ISMA protected files. GPAC does NOT support the ROAP protocol and other tools from the OMA DRM framework, but has a dedicated module API (still at beta stage) allowing for pluging a decryption agent in the streaming core.</p>
+<p>As of version 0.4.4, GPAC supports the OMA DRM PDCF specification 
+available <a 
+href="http://www.openmobilealliance.org/release_program/docs/CopyrightClick.asp?pck=DRM&amp;file=V2_0-20060303-A/OMA-TS-DRM-DCF-V2_0-20060303-A.pdf">here</a>. 
+This specification is derived from the ISMA E&amp;A specification and 
+OMA 
+DRM PDCF files have a structure almost equivalent to ISMA protected files. GPAC does NOT support the ROAP protocol and other tools from the OMA DRM framework, but has a dedicated module API (still at beta stage) allowing for pluging a decryption agent in the streaming core.</p>
 <p>Note that, unlike OMA DRM, ISMACryp does not mandate anything regarding how keys are to be distributed (hereafter refered to as <i>KMS - Key Management System</i>) which is up to the content provider/distributor. 
 In other words, ISMACryp is concerned with cryptographic interoperability only, not rights management.</p>
 <p>The current version of the specification uses for encryption the AES 128 bit algorithm in counter mode (AES-CTR). You do not need to know of all these things, the only thing you need to know 
 is that ISMACryp uses a 128 bit key and a 64 bit salt, which would need to be fetched by the client at some point for decryption.
-<br>In this document, the key and the salt will simply be refered to as <i>key</i> unless specified otherwise.</p>
+<br/>In this document, the key and the salt will simply be refered to as 
+<i>key</i> unless specified otherwise.</p>
 
 <p>One interesting feature of the ISMACryp specification is that it allows for selective encryption, in other words you may decide to encrypt only specific samples in the media track rather than the whole media. 
 Selective encryption will reduce the complexity of the decryption process, and may also be very nice in demonstrations - for example, encrypting only I-frames in a video
@@ -48,8 +56,8 @@ of keys and media which is much more reliable than a clock-based synchronization
 <p>
 <i>Note</i>: Usage of ISMACryp with MPEG-4 AVC/H264 video in GPAC is only supported as of version 0.4.4
 </p>
-<br>
-<h1 ID="encrypt">ISMACryp authoring</h1>
+<br/>
+<h1 id="encrypt">ISMACryp authoring</h1>
 
 <p>In order to encrypt an MP4 file, MP4Box will need a specific file containing all cryptographic information, usually refered to as <i>drm_file</i> in MP4Box documentation. This file is an XML document containing
 mainly key information, KMS information, encryption instructions and eventually MPEG-4 IPMP(X) indications. The syntax is very basic and will likelly be subject to many changes in the near future.</p>
@@ -64,7 +72,6 @@ mainly key information, KMS information, encryption instructions and eventually 
 </tbody></table>
 
 <h2>Semantics</h2>
-<p>
 <ul>
 <li><i>trackID</i> : specifies the track ID to encrypt. This is a mandatory field, not specifing it will result in an error.</li>
 <li><i>key</i> : the AES-128 bit key to use. The key must be specified as an 32 bytes hex string, like <b>0x2b7e151628aed2a6abf7158809cf4f3c</b>. This is a mandatory field, not specifing it or using an improper length will result in an error.</li>
@@ -101,9 +108,9 @@ mainly key information, KMS information, encryption instructions and eventually 
 <li><i>ipmpDescriptorID</i> : specifies the IPMP(X) descriptor ID for this media. If not set, <b>defaults to the media track 1-based index</b>. Ignored when IPMP(X) signaling is not used.</li>
 
 </ul>
-</p>
 
-<h1 ID="decrypt">Decrypting a file with GPAC</h1>
+
+<h1 id="decrypt">Decrypting a file with GPAC</h1>
 <p>MP4Box/GPAC players will attempt to load the keys from a KMS URI as follows:</p>
 <ul>
 <li>if kms_URI begins with <b>(key)</b>, the keys are Base64 encoded in the track and can be fetched. This corresponds to the case of special value <i>kms_URI="self"</i> when encrypting.</li>
@@ -111,7 +118,7 @@ mainly key information, KMS information, encryption instructions and eventually 
 
 <li>if kms_URI is <i>AudioKey</i> or <i>VideoKey</i>, KMS is assumed to be MPEG4IP one and the file ~/.kms_data is checked (cf <a href="http://www.mpeg4ip.net">MPEG4IP</a> documentation).</li>
 </ul>
-<br>In all other cases:
+<br/>In all other cases:
 <ul>
 <li>For MP4Box: You will need to provide a drm_file for decryption (eg, <i>MP4Box -decrypt drm_file myfile.mp4</i>).</li>
 
@@ -119,11 +126,15 @@ mainly key information, KMS information, encryption instructions and eventually 
 </ul>
 
 
-<br>
-<h1 ID="OMA">OMA DRM authoring</h1>
+<br/>
+<h1 id="OMA">OMA DRM authoring</h1>
 
 <p>In order to encrypt a 3GP/MP4 file into a PDCF file, MP4Box uses the same process as ISMA encryption, only the drm file syntax changes.</p>
-<p>Just like any XML file, the file must begin with the usual xml header. The file encoding SHALL BE UTF-8. The file is then a collection of <i>OMATrack</i> elements placed under an <i>OMADRM</i> document root (currently ignored). Each element describes all OMA DRM information needed to encrypt a given track. An <i>OMATrack</i> element may have children describing the optional textual headers defined in OMA DRM 2.0. Each textual header is inserted as is during OMA encryption, so be carefull not to specify twice the same header. More information on textual headers can be found in the <a href="http://www.openmobilealliance.org/release_program/docs/CopyrightClick.asp?pck=DRM&file=V2_0-20060303-A/OMA-TS-DRM-DCF-V2_0-20060303-A.pdf"=>OMA (P)DCF specification</a>.</p>
+<p>Just like any XML file, the file must begin with the usual xml 
+header. The file encoding SHALL BE UTF-8. The file is then a collection 
+of <i>OMATrack</i> elements placed under an <i>OMADRM</i> document root 
+(currently ignored). Each element describes all OMA DRM information 
+needed to encrypt a given track. An <i>OMATrack</i> element may have children describing the optional textual headers defined in OMA DRM 2.0. Each textual header is inserted as is during OMA encryption, so be carefull not to specify twice the same header. More information on textual headers can be found in the <a href="http://www.openmobilealliance.org/release_program/docs/CopyrightClick.asp?pck=DRM&amp;file=V2_0-20060303-A/OMA-TS-DRM-DCF-V2_0-20060303-A.pdf">OMA (P)DCF specification</a>.</p>
 
 <h2>XML Syntax</h2>
 <table class="xml_app">
@@ -136,7 +147,6 @@ mainly key information, KMS information, encryption instructions and eventually 
 </tbody></table>
 
 <h2>Semantics</h2>
-<p>
 <ul>
 <li><i>trackID</i> : specifies the track ID to encrypt. This is a mandatory field, not specifing it will result in an error.</li>
 <li><i>key</i> : the AES-128 bit key to use. The key must be specified as an 32 bytes hex string, like <b>0x2b7e151628aed2a6abf7158809cf4f3c</b>. This is a mandatory field, not specifing it or using an improper length will result in an error.</li>
@@ -156,10 +166,10 @@ mainly key information, KMS information, encryption instructions and eventually 
 </ul>
 </li>
 </ul>
-</p>
+
 <br/>
 
-<h1 ID="samples">Sample GPAC drm files</h1>
+<h1 id="samples">Sample GPAC drm files</h1>
 <p>The following example shows how to encrypt a file with one track, using selective encryption of RAP samples, embedded keys and no IPMP signaling.</p>
 
 <table class="xml_app">
@@ -204,7 +214,9 @@ mainly key information, KMS information, encryption instructions and eventually 
       </div>
 	</div>
 
-<?php $mod_date="\$Date: 2007-08-30 10:12:22 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2007-08-30 13:19:19 $"; ?>
+<?php include_once("bas.php"); ?>
+<!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

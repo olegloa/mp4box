@@ -1,9 +1,35 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /><title>Authoring with GPAC - GPAC Project on Advanced Content</title><link href="code/styles.css" rel="stylesheet" type="text/css" /></head><body><div id="fond"><?php include_once("nav.php"); ?><!-- =================== ENTETE DE LA PAGE =========================================  -->	<div id="Chapeau_court">		<h1>The web is full of audiovisual, SVG and VRML content, but only a few sites propose BIFS content. Apart from the demos hosted on this site, you may find the following links useful.
-		</h1>	</div><!-- =================== CORPS DE LA PAGE ============================================  -->	<div id="Centre">      <?php include_once("auth_left.php"); ?>			<!-- =================== SECTION 2 ============  -->			<div class="Col2">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Authoring with GPAC - GPAC Project on Advanced Content</title>
+<link href="code/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="fond">
+<?php include_once("nav.php"); ?>
+<!-- =================== ENTETE DE LA PAGE =========================================  -->
+	<div id="Chapeau_court">
+		<h1>
+The web is full of audiovisual, SVG and VRML content, but only a few sites propose BIFS content. Apart from the demos hosted on this site, you may find the following links useful.
+		</h1>
+	</div>
+<!-- =================== CORPS DE LA PAGE ============================================  -->
+	<div id="Centre">
+      <?php include_once("auth_left.php"); ?>
+			<!-- =================== SECTION 2 ============  -->
+			<div class="Col2">
 
-		<div id="sous_menu"><ul><li><a href="#streaming">RTSP Resources</a></li><li><a href="#vrml">VRML & X3D</a></li><li><a href="#svg">SVG</a></li><li><a href="#bifs">MPEG4 Systems</a></li></ul>		</div>
+		<div id="sous_menu">
+<ul>
+<li><a href="#streaming">RTSP Resources</a></li>
+<li><a href="#vrml">VRML - X3D</a></li>
+<li><a href="#svg">SVG</a></li>
+<li><a href="#bifs">MPEG4 Systems</a></li>
+</ul>
+		</div>
 
-<h1 ID="bifs">MPEG4 Systems content</h1>
+<h1 id="bifs">MPEG4 Systems content</h1>
 
 
 <h2><a href="http://sourceforge.net/projects/mp4menu">MP4MENU</a></h2>
@@ -60,5 +86,12 @@ To play the following RTSP presentations, copy and paste the URL in GPAC (Osmo4 
 <li><a href="rtsp://a463.q.kamai.net/7/463/1416/3ce0984/neo.qtv.apple.com/secure/may/preview/pacific_300.mp4">Pacific Grove Coast</a></li>
 <li><a href="rtsp://a1749.q.kamai.net/7/1749/1416/3c964c64/neo.qtv.apple.com/secure/may/preview/civ3_700.mp4">Civilization III trailer</a></li>
 </ul>
-	</div>
-<?php $mod_date="\$Date: 2007-07-27 12:26:18 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  --></div></body></html>
+
+</div>
+	</div>
+<?php $mod_date="\$Date: 2007-08-30 13:19:19 $"; ?>
+<?php include_once("bas.php"); ?>
+<!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+</div>
+</body>
+</html>

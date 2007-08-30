@@ -25,7 +25,11 @@
 			<!-- =================== SECTION 2 ============  -->
 			<div class="Col2">
 	       <h1 id="MP4Box">Packaging Multimedia Content</h1>
-<p>GPAC features encoders and multiplexers, publishing and content distribution tools for MP4 and 3GPP(2) files and many tools for scene descriptions (BIFS/VRML/X3D converters, SWF/BIFS, SVG/BIFS, etc...). MP4Box provides all these tools in a single command-line application. An exhaustive	list of packaging features is available <a href="packager.php">here</a> but a good summary of what MP4Box can do for you is the following:
+<p>GPAC features encoders and multiplexers, publishing and content 
+distribution tools for MP4 and 3GPP(2) files and many tools for scene 
+descriptions (BIFS/VRML/X3D converters, SWF/BIFS, SVG/BIFS, etc...). 
+MP4Box provides all these tools in a single command-line application. An 
+exhaustive	list of packaging features is available <a href="packager.php">here</a> but a good summary of what MP4Box can do for you is the following:</p>
 	<ul>
 		<li>MP4/3GP Conversion from MP3, AVI, MEPG-2 TS, MPEG-PS, AAC, H263, H264, AMR, and many others,</li>
 		<li>File layout: fragmentation or interleaving, and cleaning,</li>
@@ -43,7 +47,6 @@
 		<li>Conversion of simple Macromedia Flash (SWF) to MPEG-4 Systems (BT/XMT/MP4).</li>
 -->
 	</ul>
-	</p>
   
   	       <h1 id="Player">Playing Multimedia Content</h1>
 	<p>GPAC supports many protocols and standards, among which: </p>
@@ -75,22 +78,25 @@
 			<li>Multichannel audio, multichannel to stereo mapper.</li>
 -->
 		</ul>
-		</p>
+		
 
 	       <h1 id="Server">Streaming Multimedia Content</h1>
-	<p>As of version 0.4.4, GPAC has some experimental server-side tools:
+	<p>As of version 0.4.4, GPAC has some experimental server-side 
+tools:</p>
 		<ul>
 			<li>MP4/3GP file RTP streamer (unicast and multicast),</li>
 			<li>RTP streamer with service timeslicing (DVB-H) simulation,</li>
 			<li>MPEG-2 TS broadcaster using MP4/3GP files or RTP streams as inputs,</li>
 			<li>BIFS RTP broadcaster tool performing live encoding and RandomAccessPoints generation.</li>
 		</ul>
-	</p>
+	
 			</div>
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-07-27 12:26:18 $"; ?><?php include_once("bas.php"); ?></div>
+<?php $mod_date="\$Date: 2007-08-30 13:19:19 $"; ?>
+<?php include_once("bas.php"); ?>
+</div>
 </body>
 </html>
 
