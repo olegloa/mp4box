@@ -46,7 +46,7 @@ is encrypted while in IPMP-X selective encryption usually means whether specific
 <p>Another interesting feature of ISMACryp is the possibility to <i>roll</i> keys, eg have more than one key needed for stream decryption. ISMACryp provides for sample-based synchronization 
 of keys and media which is much more reliable than a clock-based synchronization (relying on media/key timestamps). GPAC does not currently support usage of multiple keys in ISMACryp, only one key can be used in the stream lifetime.</p>
 <p>
-<i>Note </i>: <b>!! GPAC does not currently support usage of ISMACryp with MPEG-4 AVC/H264 video !! </b>
+<i>Note</i>: Usage of ISMACryp with MPEG-4 AVC/H264 video in GPAC is only supported as of version 0.4.4
 </p>
 <br>
 <h1 ID="encrypt">ISMACryp authoring</h1>
@@ -123,7 +123,7 @@ mainly key information, KMS information, encryption instructions and eventually 
 <h1 ID="OMA">OMA DRM authoring</h1>
 
 <p>In order to encrypt a 3GP/MP4 file into a PDCF file, MP4Box uses the same process as ISMA encryption, only the drm file syntax changes.</p>
-<p>Just like any XML file, the file must begin with the usual xml header. The file encoding SHALL BE UTF-8. The file is then a collection of <i>OMATrack</i> elements placed under an <i>OMADRM</i> document root (currently ignored). Each element describes all OMA DRM information needed to encrypt a given track. An <i>OMATrack</i> element may have children describing the optional textual headers defined in OMA DRM 2.0. Each textual header is inserted as is during OMA encryption, so be carefull not to specify twice the same header.</p>
+<p>Just like any XML file, the file must begin with the usual xml header. The file encoding SHALL BE UTF-8. The file is then a collection of <i>OMATrack</i> elements placed under an <i>OMADRM</i> document root (currently ignored). Each element describes all OMA DRM information needed to encrypt a given track. An <i>OMATrack</i> element may have children describing the optional textual headers defined in OMA DRM 2.0. Each textual header is inserted as is during OMA encryption, so be carefull not to specify twice the same header. More information on textual headers can be found in the <a href="http://www.openmobilealliance.org/release_program/docs/CopyrightClick.asp?pck=DRM&file=V2_0-20060303-A/OMA-TS-DRM-DCF-V2_0-20060303-A.pdf"=>OMA (P)DCF specification</a>.</p>
 
 <h2>XML Syntax</h2>
 <table class="xml_app">
@@ -204,7 +204,7 @@ mainly key information, KMS information, encryption instructions and eventually 
       </div>
 	</div>
 
-<?php $mod_date="\$Date: 2007-08-29 17:57:10 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2007-08-30 10:12:22 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>
