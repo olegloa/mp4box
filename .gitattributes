@@ -1119,6 +1119,8 @@ gpac/modules/render_full/mesh_collide.c -text
 gpac/modules/render_full/mesh_tesselate.c -text
 gpac/modules/render_full/navigate.c -text
 gpac/modules/render_full/node_stacks.h -text
+gpac/modules/render_full/offscreen_cache.c -text
+gpac/modules/render_full/offscreen_cache.h -text
 gpac/modules/render_full/path_layout.c -text
 gpac/modules/render_full/render.c -text
 gpac/modules/render_full/render.def -text
