@@ -41,6 +41,8 @@
         <p><a href="home_about.php">Read more here.</a></p>
 -->
         <h1>News</h1>
+        <h2>Septembre 2007 - GPAC team is at <a href="http://mmc36.informatik.uni-augsburg.de/acmmm2007/">ACM MM 2007</a></h2>
+        <p>A presentation of GPAC will take place on thursday afternoon - don't miss it!.</p>
         <h2>July 26th 2007 - New web site</h2>
         <p>A brand new web site is available. </p>
         <h2>May 31st 2007 - GPAC Release 0.4.4</h2>
@@ -70,7 +72,7 @@
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-08-30 13:19:19 $"; ?>
+<?php $mod_date="\$Date: 2007-09-25 14:22:08 $"; ?>
 <?php include_once("bas.php"); ?>
 </div>
 </body>
