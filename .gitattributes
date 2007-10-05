@@ -1467,7 +1467,6 @@ gpac/src/compositor/audio_mixer.c -text
 gpac/src/compositor/audio_render.c -text
 gpac/src/compositor/bindable.c -text
 gpac/src/compositor/camera.c -text
-gpac/src/compositor/camera.h -text
 gpac/src/compositor/compositor.c -text
 gpac/src/compositor/compositor_2d.c -text
 gpac/src/compositor/compositor_3d.c -text
@@ -1478,7 +1477,6 @@ gpac/src/compositor/events.c -text
 gpac/src/compositor/gl_inc.h -text
 gpac/src/compositor/hardcoded_protos.c -text
 gpac/src/compositor/mesh.c -text
-gpac/src/compositor/mesh.h -text
 gpac/src/compositor/mesh_collide.c -text
 gpac/src/compositor/mesh_tesselate.c -text
 gpac/src/compositor/mpeg4_animstream.c -text
