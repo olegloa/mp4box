@@ -79,14 +79,12 @@ A true multimedia player is a complex system involving networking, media and use
 
 		<ul>
 
-			<li>SVG 1.2 scene graph under develoment (cf <a href="feat_n_svg.php">SVG implementation details</a>).</li>
+			<li>SVG 1.2 Tiny scene graph under develoment (see <a href="feat_n_svg.php">SVG implementation details</a>).</li>
 			<li>Complete LASeR scene graph (subset of SVG Tiny 1.2).</li>
-			<li>SVG-based graphs are configurable through an included RNG-based generator.</li>
-			<li>Some SVG 1.1 extensions.</li>
+			<li>Some SVG 1.1 Full extensions.</li>
 			<li>XML events and SMIL animation for SVG content.</li>
-
 			<li>uDOM (MicroDOM) ECMAScript support through Mozilla SpiderMonkey engine.</li>
-			<li>SAX  Progressive loading of SVG files (text and gziped).</li>
+			<li>SAX Progressive loading of SVG files (text and gziped).</li>
 			<li>Scene Manager for authoring, textual dumping and importing.</li>
 		</ul>
 
@@ -224,7 +222,7 @@ The GPAC framework heavily relies on plugins for most tasks (stream input, file 
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-08-30 13:19:19 $"; ?>
+<?php $mod_date="\$Date: 2007-10-12 14:23:11 $"; ?>
 <?php include_once("bas.php"); ?>
 </div>
 </body>
