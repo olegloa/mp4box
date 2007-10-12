@@ -23,9 +23,16 @@ the features that are implemented and the roadmap for missing or new features.</
       <?php include_once("play_left.php"); ?>
 			<!-- =================== SECTION 2 ============  -->
 			<div class="Col2">
-        <h1 class="activity">Overview</h1>
+		<div id="sous_menu">
+<ul>
+<li><a href="#results">Test Suite Results</a></li>
+<li><a href="#status">Overall Status</a></li>
+<li><a href="#overview">Overview</a></li>
+</ul>
+		</div>
+        <h1 id="overview">Overview</h1>
           <p>The goal of the SVG support in GPAC is not to provide yet another mixed HTML/SVG browser but to focus on integration of description languages with audio/video resources. The GPAC player will remain in between a document browser and a traditional audio/video player with support for languages like BIFS, SVG, X3D ...</p>
-          <p>The implementation of the SVG support in GPAC spreads over  modules:</p>
+          <p>The implementation of the SVG support in GPAC is divided into 3 parts as follows:</p>
         <ul>
         
         <li>SVG Parsing</li>
@@ -43,7 +50,7 @@ the features that are implemented and the roadmap for missing or new features.</
         platforms, and the GPAC 2D Rasterizer, based on FreeType.<br>If you check out the source code, look for src/compositor/svg*.c.</p>
         </ul>
 
-<h1>Overall Status</h1>
+<h1 id="status">Overall Status</h1>
 
 <p>Obviously, the current implementation has some limitations, which we
 would like to remove and bugs we would like to fix. The following items
@@ -117,7 +124,7 @@ is currently available for SVG presentations. We are still trying to understand 
 <h4>&gt; Miscellaneous</h4>
 There are also some small features which are currently supported like : System Colors, currentColor, preserveAspectRatio on images, whitespace preservation, vector-effect, viewport-fill* and some others that we still need to implement: xml:base, snapshotTime, playbackOrder, ....
 
-		<h1>Detailed results for version 0.4.5-DEV (build 10) - 2007/10/12</h1>
+		<h1 id="results">Detailed results for version 0.4.5-DEV (build 10) - 2007/10/12</h1>
     
     <p>The following table is the result of the SVG Tiny 1.2 test suite behaviour in GPAC. Some elements are refered to as not implemented, which means they are not supported but implementation is on the short-term roadmap. Elements not supported are likely to remain unsupported for a longer time.</p>
 		</h1>
@@ -2749,7 +2756,7 @@ There are also some small features which are currently supported like : System C
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-10-12 14:23:11 $"; ?>
+<?php $mod_date="\$Date: 2007-10-12 14:31:13 $"; ?>
 <?php include_once("bas.php"); ?>
 </div>
 </body>
