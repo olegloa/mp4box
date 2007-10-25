@@ -957,6 +957,7 @@ gpac/modules/ft_font/Makefile -text
 gpac/modules/ft_font/ft_font.c -text
 gpac/modules/ft_font/ft_font.def -text
 gpac/modules/ft_font/ft_font.h -text
+gpac/modules/ft_font/ft_reader.c -text
 gpac/modules/gapi/gapi.cpp -text
 gpac/modules/gapi/gapi.def -text
 gpac/modules/gapi/gapi.h -text
@@ -1474,6 +1475,7 @@ gpac/src/compositor/compositor_node_init.c -text
 gpac/src/compositor/drawable.c -text
 gpac/src/compositor/drawable.h -text
 gpac/src/compositor/events.c -text
+gpac/src/compositor/font_engine.c -text
 gpac/src/compositor/gl_inc.h -text
 gpac/src/compositor/hardcoded_protos.c -text
 gpac/src/compositor/mesh.c -text
