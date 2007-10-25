@@ -1621,8 +1621,6 @@ gpac/src/scene_manager/loader_bt.c -text
 gpac/src/scene_manager/loader_isom.c -text
 gpac/src/scene_manager/loader_qt.c -text
 gpac/src/scene_manager/loader_svg_da.c -text
-gpac/src/scene_manager/loader_svg_sa.c -text
-gpac/src/scene_manager/loader_svg_sani.c -text
 gpac/src/scene_manager/loader_xmt.c -text
 gpac/src/scene_manager/scene_dump.c -text
 gpac/src/scene_manager/scene_manager.c -text
