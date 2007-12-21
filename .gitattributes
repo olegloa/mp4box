@@ -1693,6 +1693,7 @@ gpac/src/utils/path2d_stroker.c -text
 gpac/src/utils/symbian_net.cpp -text
 gpac/src/utils/symbian_os.cpp -text
 gpac/src/utils/token.c -text
+gpac/src/utils/uni_bidi.c -text
 gpac/src/utils/url.c -text
 gpac/src/utils/utf.c -text
 gpac/src/utils/xml_parser.c -text
