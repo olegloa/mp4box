@@ -553,6 +553,7 @@ gpac/doc/man/mp4box.1 -text
 gpac/doc/man/mp4client.1 -text
 gpac/doc/osmo4_svg1.2tiny-status-gpac2Draster.xml -text
 gpac/doc/status2html.xslt -text
+gpac/doc/svg_status.html -text
 gpac/extra_lib/include/faad/faad.h -text
 gpac/extra_lib/include/faad/neaacdec.h -text
 gpac/extra_lib/include/ffmpeg/avcodec.h -text
