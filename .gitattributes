@@ -986,6 +986,8 @@ gpac/modules/isom_in/isom_in.h -text
 gpac/modules/isom_in/load.c -text
 gpac/modules/isom_in/read.c -text
 gpac/modules/isom_in/read_ch.c -text
+gpac/modules/jack/Makefile -text
+gpac/modules/jack/jack.c -text
 gpac/modules/laser_dec/Makefile -text
 gpac/modules/laser_dec/laser_dec.c -text
 gpac/modules/laser_dec/laser_dec.def -text
