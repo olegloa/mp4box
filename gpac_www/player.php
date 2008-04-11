@@ -94,7 +94,9 @@ used for 3D graphics is (currently) different from the 2D graphics rendering eng
 		</div>
 	</div>
 
-<?php $mod_date="\$Date: 2007-08-30 13:19:20 $"; ?><?php include_once("bas.php"); ?><!-- =================== FIN CADRE DE LA PAGE =========================================  -->
+<?php $mod_date="\$Date: 2008-04-11 09:48:31 $"; ?>
+<?php include_once("bas.php"); ?>
+<!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>
 </body>
 </html>

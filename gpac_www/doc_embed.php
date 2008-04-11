@@ -32,6 +32,8 @@
 <h1>Foreword</h1>
         <p>
 GPAC can be embedded in HTML/XHTML web pages through an ActiveX control (GPAX) or a Mozilla plugin (Osmozillla). All features of GPAC clients are available in these plugins, like progressive loading (IsoMedia or progressive SAX on XMT, X3D or SVG), real-time streaming, web-radios support, etc. As usual, these features are controled through GPAC's <a href="doc_config.php">configuration file</a>.
+<br>
+To install the plugins: on Windows, use the GPAC installer because installation of mozilla plugin is a bit tricky; on other platforms simply use 'make install'.  
         </p>
 
 
@@ -183,7 +185,7 @@ The browser plugins may be controled dynamically from the HTML page through scri
 </ul>
       </div>
 	</div>
-<?php $mod_date="\$Date: 2007-08-30 13:19:19 $"; ?>
+<?php $mod_date="\$Date: 2008-04-11 09:48:30 $"; ?>
 <?php include_once("bas.php"); ?>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 </div>

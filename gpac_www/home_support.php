@@ -52,7 +52,9 @@ GPAC is quite a big project. There is never enough documentation, so do not hesi
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-07-26 15:56:25 $"; ?><?php include_once("bas.php"); ?></div>
+<?php $mod_date="\$Date: 2008-04-11 09:48:30 $"; ?>
+<?php include_once("bas.php"); ?>
+</div>
 </body>
 </html>
 

@@ -137,6 +137,8 @@ There are also some small features which are currently supported like : System C
                     .PARTIAL { background: #eee } 
                     .FAIL { background: #fdc; border: 2px solid #f33 } 
                 </style>
+
+		<h2>Global results</h2>
 		<table>
 			<tbody>
 				<tr>
@@ -145,18 +147,18 @@ There are also some small features which are currently supported like : System C
 				</tr>
 				<tr>
 					<td class="OK">Number of (non-empty) tests with status = OK</td>
-					<td class="OK" align="right">282</td>
-					<td class="OK" align="right">55%</td>
+					<td class="OK" align="right">296</td>
+					<td class="OK" align="right">57%</td>
 				</tr>
 				<tr>
 					<td class="PARTIAL">Number of (non-empty) tests with status = PARTIAL</td>
-					<td class="PARTIAL" align="right">102</td>
-					<td class="PARTIAL" align="right">20%</td>
+					<td class="PARTIAL" align="right">115</td>
+					<td class="PARTIAL" align="right">22%</td>
 				</tr>
 				<tr>
 					<td class="FAIL">Number of (non-empty) tests with status = FAIL</td>
-					<td class="FAIL" align="right">130</td>
-					<td class="FAIL" align="right">25%</td>
+					<td class="FAIL" align="right">103</td>
+					<td class="FAIL" align="right">20%</td>
 				</tr>
 			</tbody>
 		</table>
@@ -806,44 +808,44 @@ There are also some small features which are currently supported like : System C
 					<td xmlns="" class="PARTIAL">Strings are not selectable</td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">interact-pevents-01-t</td>
-					<td xmlns="" class="FAIL" align="center">1.2</td>
-					<td xmlns="" class="FAIL">Pointer events not supported</td>
+					<td xmlns="" class="PARTIAL" align="center">interact-pevents-01-t</td>
+					<td xmlns="" class="PARTIAL" align="center">1.2</td>
+					<td xmlns="" class="PARTIAL">Some text is not pointed correctly.</td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">interact-pevents-02-t</td>
-					<td xmlns="" class="FAIL" align="center">1.8</td>
-					<td xmlns="" class="FAIL">Pointer events not supported</td>
+					<td xmlns="" class="PARTIAL" align="center">interact-pevents-02-t</td>
+					<td xmlns="" class="PARTIAL" align="center">1.8</td>
+					<td xmlns="" class="PARTIAL">Some text is not pointed correctly.</td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">interact-pevents-03-t</td>
-					<td xmlns="" class="FAIL" align="center">1.2</td>
-					<td xmlns="" class="FAIL">Pointer events not supported</td>
+					<td xmlns="" class="OK" align="center">interact-pevents-03-t</td>
+					<td xmlns="" class="OK" align="center">1.2</td>
+					<td xmlns="" class="OK"></td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">interact-pevents-04-t</td>
-					<td xmlns="" class="FAIL" align="center">1.2</td>
-					<td xmlns="" class="FAIL">Pointer events not supported</td>
+					<td xmlns="" class="OK" align="center">interact-pevents-04-t</td>
+					<td xmlns="" class="OK" align="center">1.2</td>
+					<td xmlns="" class="OK"></td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">interact-pevents-05-t</td>
-					<td xmlns="" class="FAIL" align="center">1.5</td>
-					<td xmlns="" class="FAIL">Pointer events not supported</td>
+					<td xmlns="" class="PARTIAL" align="center">interact-pevents-05-t</td>
+					<td xmlns="" class="PARTIAL" align="center">1.5</td>
+					<td xmlns="" class="PARTIAL"></td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">interact-pevents-06-t</td>
-					<td xmlns="" class="FAIL" align="center">1.5</td>
-					<td xmlns="" class="FAIL">Pointer events not supported</td>
+					<td xmlns="" class="PARTIAL" align="center">interact-pevents-06-t</td>
+					<td xmlns="" class="PARTIAL" align="center">1.5</td>
+					<td xmlns="" class="PARTIAL"></td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">interact-pevents-07-t</td>
-					<td xmlns="" class="FAIL" align="center">1.5</td>
-					<td xmlns="" class="FAIL">Pointer events not supported</td>
+					<td xmlns="" class="OK" align="center">interact-pevents-07-t</td>
+					<td xmlns="" class="OK" align="center">1.5</td>
+					<td xmlns="" class="OK"></td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">interact-pevents-08-t</td>
-					<td xmlns="" class="FAIL" align="center">1.7</td>
-					<td xmlns="" class="FAIL">Pointer events not supported</td>
+					<td xmlns="" class="OK" align="center">interact-pevents-08-t</td>
+					<td xmlns="" class="OK" align="center">1.7</td>
+					<td xmlns="" class="OK"></td>
 				</tr>
 				<tr xmlns="">
 					<td xmlns="" class="OK" align="center">interact-zoom-01-t</td>
@@ -1076,9 +1078,9 @@ There are also some small features which are currently supported like : System C
 					<td xmlns="" class="FAIL"></td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">masking-opacity-01-t</td>
-					<td xmlns="" class="FAIL" align="center">1.1</td>
-					<td xmlns="" class="FAIL"></td>
+					<td xmlns="" class="OK" align="center">masking-opacity-01-t</td>
+					<td xmlns="" class="OK" align="center">1.1</td>
+					<td xmlns="" class="OK"></td>
 				</tr>
 				<tr xmlns="">
 					<td xmlns="" class="OK" align="center">media-alevel-201-t</td>
@@ -2226,29 +2228,29 @@ There are also some small features which are currently supported like : System C
 					<td xmlns="" class="OK"></td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-align-03-t</td>
-					<td xmlns="" class="FAIL" align="center">1.7</td>
-					<td xmlns="" class="FAIL"></td>
+					<td xmlns="" class="PARTIAL" align="center">text-align-03-t</td>
+					<td xmlns="" class="PARTIAL" align="center">1.7</td>
+					<td xmlns="" class="PARTIAL">Bug in text-anchor</td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-align-04-t</td>
-					<td xmlns="" class="FAIL" align="center">1.1</td>
-					<td xmlns="" class="FAIL"></td>
+					<td xmlns="" class="OK" align="center">text-align-04-t</td>
+					<td xmlns="" class="OK" align="center">1.1</td>
+					<td xmlns="" class="OK">tref and toap are not tiny elements</td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-align-07-t</td>
-					<td xmlns="" class="FAIL" align="center">1.5</td>
-					<td xmlns="" class="FAIL"></td>
-				</tr>
-				<tr xmlns="">
-					<td xmlns="" class="OK" align="center">text-align-08-t</td>
+					<td xmlns="" class="OK" align="center">text-align-07-t</td>
 					<td xmlns="" class="OK" align="center">1.5</td>
 					<td xmlns="" class="OK"></td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="OK" align="center">text-align-201-t</td>
-					<td xmlns="" class="OK" align="center">1.2</td>
-					<td xmlns="" class="OK"></td>
+					<td xmlns="" class="FAIL" align="center">text-align-08-t</td>
+					<td xmlns="" class="FAIL" align="center">1.5</td>
+					<td xmlns="" class="FAIL">SVG Fonts not supported.</td>
+				</tr>
+				<tr xmlns="">
+					<td xmlns="" class="PARTIAL" align="center">text-align-201-t</td>
+					<td xmlns="" class="PARTIAL" align="center">1.2</td>
+					<td xmlns="" class="PARTIAL">last space in tspan not rendered properly.</td>
 				</tr>
 				<tr xmlns="">
 					<td xmlns="" class="FAIL" align="center">text-align-202-t</td>
@@ -2341,89 +2343,89 @@ There are also some small features which are currently supported like : System C
 					<td xmlns="" class="PARTIAL"></td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-fonts-01-t</td>
-					<td xmlns="" class="FAIL" align="center">1.7</td>
-					<td xmlns="" class="FAIL">SVG Fonts not supported</td>
+					<td xmlns="" class="OK" align="center">text-fonts-01-t</td>
+					<td xmlns="" class="OK" align="center">1.7</td>
+					<td xmlns="" class="OK">SVG Fonts not supported</td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-fonts-02-t</td>
-					<td xmlns="" class="FAIL" align="center">1.7</td>
-					<td xmlns="" class="FAIL"></td>
+					<td xmlns="" class="OK" align="center">text-fonts-02-t</td>
+					<td xmlns="" class="OK" align="center">1.7</td>
+					<td xmlns="" class="OK"></td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-fonts-03-t</td>
-					<td xmlns="" class="FAIL" align="center">1.5</td>
-					<td xmlns="" class="FAIL"></td>
+					<td xmlns="" class="OK" align="center">text-fonts-03-t</td>
+					<td xmlns="" class="OK" align="center">1.5</td>
+					<td xmlns="" class="OK"></td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-fonts-04-t</td>
-					<td xmlns="" class="FAIL" align="center">1.2</td>
-					<td xmlns="" class="FAIL"></td>
+					<td xmlns="" class="OK" align="center">text-fonts-04-t</td>
+					<td xmlns="" class="OK" align="center">1.2</td>
+					<td xmlns="" class="OK"></td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-fonts-202-t</td>
-					<td xmlns="" class="FAIL" align="center">1.4</td>
-					<td xmlns="" class="FAIL"></td>
+					<td xmlns="" class="OK" align="center">text-fonts-202-t</td>
+					<td xmlns="" class="OK" align="center">1.4</td>
+					<td xmlns="" class="OK"></td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-intro-01-t</td>
-					<td xmlns="" class="FAIL" align="center">1.7</td>
-					<td xmlns="" class="FAIL"></td>
+					<td xmlns="" class="OK" align="center">text-intro-01-t</td>
+					<td xmlns="" class="OK" align="center">1.7</td>
+					<td xmlns="" class="OK"></td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-intro-04-t</td>
-					<td xmlns="" class="FAIL" align="center">1.7</td>
-					<td xmlns="" class="FAIL"></td>
+					<td xmlns="" class="OK" align="center">text-intro-04-t</td>
+					<td xmlns="" class="OK" align="center">1.7</td>
+					<td xmlns="" class="OK"></td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-intro-05-t</td>
-					<td xmlns="" class="FAIL" align="center">1.5</td>
-					<td xmlns="" class="FAIL"></td>
+					<td xmlns="" class="OK" align="center">text-intro-05-t</td>
+					<td xmlns="" class="OK" align="center">1.5</td>
+					<td xmlns="" class="OK">Using GDI+ Font Engine</td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-intro-06-t</td>
-					<td xmlns="" class="FAIL" align="center">1.2</td>
-					<td xmlns="" class="FAIL"></td>
+					<td xmlns="" class="OK" align="center">text-intro-06-t</td>
+					<td xmlns="" class="OK" align="center">1.2</td>
+					<td xmlns="" class="OK">Using GDI+ Font Engine</td>
 				</tr>
 				<tr xmlns="">
 					<td xmlns="" class="OK" align="center">text-intro-201-t</td>
 					<td xmlns="" class="OK" align="center">1.3</td>
+					<td xmlns="" class="OK">Using GDI+ Font Engine</td>
+				</tr>
+				<tr xmlns="">
+					<td xmlns="" class="OK" align="center">text-text-03-t</td>
+					<td xmlns="" class="OK" align="center">1.1</td>
 					<td xmlns="" class="OK"></td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-text-03-t</td>
-					<td xmlns="" class="FAIL" align="center">1.1</td>
-					<td xmlns="" class="FAIL"></td>
+					<td xmlns="" class="PARTIAL" align="center">text-text-04-t</td>
+					<td xmlns="" class="PARTIAL" align="center">1.5</td>
+					<td xmlns="" class="PARTIAL">SVG Fonts not supported.</td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-text-04-t</td>
-					<td xmlns="" class="FAIL" align="center">1.5</td>
-					<td xmlns="" class="FAIL"></td>
+					<td xmlns="" class="PARTIAL" align="center">text-text-05-t</td>
+					<td xmlns="" class="PARTIAL" align="center">1.2</td>
+					<td xmlns="" class="PARTIAL">SVG Fonts not supported.</td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-text-05-t</td>
-					<td xmlns="" class="FAIL" align="center">1.2</td>
-					<td xmlns="" class="FAIL"></td>
+					<td xmlns="" class="PARTIAL" align="center">text-text-06-t</td>
+					<td xmlns="" class="PARTIAL" align="center">1.6</td>
+					<td xmlns="" class="PARTIAL">SVG Fonts not supported.</td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-text-06-t</td>
-					<td xmlns="" class="FAIL" align="center">1.6</td>
-					<td xmlns="" class="FAIL"></td>
+					<td xmlns="" class="PARTIAL" align="center">text-text-07-t</td>
+					<td xmlns="" class="PARTIAL" align="center">1.5</td>
+					<td xmlns="" class="PARTIAL">rotate text glyphs not supported.</td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-text-07-t</td>
-					<td xmlns="" class="FAIL" align="center">1.5</td>
-					<td xmlns="" class="FAIL"></td>
+					<td xmlns="" class="OK" align="center">text-text-08-t</td>
+					<td xmlns="" class="OK" align="center">1.8</td>
+					<td xmlns="" class="OK"></td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-text-08-t</td>
-					<td xmlns="" class="FAIL" align="center">1.8</td>
-					<td xmlns="" class="FAIL"></td>
-				</tr>
-				<tr xmlns="">
-					<td xmlns="" class="FAIL" align="center">text-text-09-t</td>
-					<td xmlns="" class="FAIL" align="center">1.4</td>
-					<td xmlns="" class="FAIL"></td>
+					<td xmlns="" class="PARTIAL" align="center">text-text-09-t</td>
+					<td xmlns="" class="PARTIAL" align="center">1.4</td>
+					<td xmlns="" class="PARTIAL">rotate text glyphs not supported.</td>
 				</tr>
 				<tr xmlns="">
 					<td xmlns="" class="FAIL" align="center">text-tref-01-b</td>
@@ -2433,17 +2435,17 @@ There are also some small features which are currently supported like : System C
 				<tr xmlns="">
 					<td xmlns="" class="FAIL" align="center">text-tselect-03-t</td>
 					<td xmlns="" class="FAIL" align="center">1.7</td>
-					<td xmlns="" class="FAIL"></td>
+					<td xmlns="" class="FAIL">text is not selectable.</td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="OK" align="center">text-ws-01-t</td>
-					<td xmlns="" class="OK" align="center">1.6</td>
-					<td xmlns="" class="OK"></td>
+					<td xmlns="" class="PARTIAL" align="center">text-ws-01-t</td>
+					<td xmlns="" class="PARTIAL" align="center">1.6</td>
+					<td xmlns="" class="PARTIAL"></td>
 				</tr>
 				<tr xmlns="">
-					<td xmlns="" class="OK" align="center">text-ws-02-t</td>
-					<td xmlns="" class="OK" align="center">1.7</td>
-					<td xmlns="" class="OK"></td>
+					<td xmlns="" class="PARTIAL" align="center">text-ws-02-t</td>
+					<td xmlns="" class="PARTIAL" align="center">1.7</td>
+					<td xmlns="" class="PARTIAL"></td>
 				</tr>
 				<tr xmlns="">
 					<td xmlns="" class="OK" align="center">types-basicDOM-02-t</td>
@@ -2751,12 +2753,14 @@ There are also some small features which are currently supported like : System C
 					<td xmlns="" class="FAIL"></td>
 				</tr>
 			</tbody>
-		</table></div>
+		</table>
+    
+            </div>
 			</div>
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-10-12 14:31:13 $"; ?>
+<?php $mod_date="\$Date: 2008-04-11 09:48:30 $"; ?>
 <?php include_once("bas.php"); ?>
 </div>
 </body>
