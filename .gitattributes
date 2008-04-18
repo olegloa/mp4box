@@ -844,7 +844,7 @@ gpac/include/gpac/bifsengine.h -text
 gpac/include/gpac/bitstream.h -text
 gpac/include/gpac/color.h -text
 gpac/include/gpac/compositor.h -text
-gpac/include/gpac/config.h -text
+gpac/include/gpac/config_file.h -text
 gpac/include/gpac/constants.h -text
 gpac/include/gpac/crypt.h -text
 gpac/include/gpac/download.h -text
@@ -856,6 +856,7 @@ gpac/include/gpac/internal/bifs_dev.h -text
 gpac/include/gpac/internal/bifs_tables.h -text
 gpac/include/gpac/internal/camera.h -text
 gpac/include/gpac/internal/compositor_dev.h -text
+gpac/include/gpac/internal/config_static.h -text
 gpac/include/gpac/internal/crypt_dev.h -text
 gpac/include/gpac/internal/ietf_dev.h -text
 gpac/include/gpac/internal/isomedia_dev.h -text
