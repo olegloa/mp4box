@@ -1595,6 +1595,7 @@ gpac/src/mcrypt/tripledes.c -text
 gpac/src/media_tools/av_parsers.c -text
 gpac/src/media_tools/avilib.c -text
 gpac/src/media_tools/gpac_ogg.c -text
+gpac/src/media_tools/img.c -text
 gpac/src/media_tools/ismacryp.c -text
 gpac/src/media_tools/isom_hinter.c -text
 gpac/src/media_tools/isom_tools.c -text
