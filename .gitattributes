@@ -1608,8 +1608,8 @@ gpac/src/scene_manager/loader_xmt.c -text
 gpac/src/scene_manager/scene_dump.c -text
 gpac/src/scene_manager/scene_manager.c -text
 gpac/src/scene_manager/scene_stats.c -text
+gpac/src/scene_manager/swf_bifs.c -text
 gpac/src/scene_manager/swf_parse.c -text
-gpac/src/scene_manager/swf_shape.c -text
 gpac/src/scene_manager/text_to_bifs.c -text
 gpac/src/scenegraph/base_scenegraph.c -text
 gpac/src/scenegraph/commands.c -text
