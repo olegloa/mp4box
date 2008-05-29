@@ -1637,6 +1637,8 @@ gpac/src/scenegraph/vrml_script.c -text
 gpac/src/scenegraph/vrml_smjs.c -text
 gpac/src/scenegraph/vrml_tools.c -text
 gpac/src/scenegraph/x3d_nodes.c -text
+gpac/src/scenegraph/xbl_nodes.c -text
+gpac/src/scenegraph/xbl_process.c -text
 gpac/src/terminal/channel.c -text
 gpac/src/terminal/clock.c -text
 gpac/src/terminal/decoder.c -text
