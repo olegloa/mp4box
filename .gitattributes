@@ -875,6 +875,7 @@ gpac/include/gpac/network.h -text
 gpac/include/gpac/nodes_mpeg4.h -text
 gpac/include/gpac/nodes_svg_da.h -text
 gpac/include/gpac/nodes_x3d.h -text
+gpac/include/gpac/nodes_xbl.h -text
 gpac/include/gpac/options.h -text
 gpac/include/gpac/path2d.h -text
 gpac/include/gpac/scene_manager.h -text
