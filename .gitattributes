@@ -1615,6 +1615,7 @@ gpac/src/scenegraph/base_scenegraph.c -text
 gpac/src/scenegraph/commands.c -text
 gpac/src/scenegraph/dom_events.c -text
 gpac/src/scenegraph/dom_smjs.c -text
+gpac/src/scenegraph/gpac_js.c -text
 gpac/src/scenegraph/mpeg4_animators.c -text
 gpac/src/scenegraph/mpeg4_nodes.c -text
 gpac/src/scenegraph/mpeg4_valuator.c -text
