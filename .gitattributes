@@ -867,6 +867,7 @@ gpac/include/gpac/modules/audio_out.h -text
 gpac/include/gpac/modules/codec.h -text
 gpac/include/gpac/modules/font.h -text
 gpac/include/gpac/modules/ipmp.h -text
+gpac/include/gpac/modules/js_usr.h -text
 gpac/include/gpac/modules/raster2d.h -text
 gpac/include/gpac/modules/service.h -text
 gpac/include/gpac/modules/video_out.h -text
@@ -954,6 +955,9 @@ gpac/modules/gdip_raster/gdip_priv.h -text
 gpac/modules/gdip_raster/gdip_rend.cpp -text
 gpac/modules/gdip_raster/gdip_rend.def -text
 gpac/modules/gdip_raster/gdip_texture.cpp -text
+gpac/modules/gpac_js/Makefile -text
+gpac/modules/gpac_js/gpac_js.c -text
+gpac/modules/gpac_js/gpac_js.def -text
 gpac/modules/img_in/Makefile -text
 gpac/modules/img_in/bmp_dec.c -text
 gpac/modules/img_in/img_dec.c -text
@@ -1616,7 +1620,6 @@ gpac/src/scenegraph/base_scenegraph.c -text
 gpac/src/scenegraph/commands.c -text
 gpac/src/scenegraph/dom_events.c -text
 gpac/src/scenegraph/dom_smjs.c -text
-gpac/src/scenegraph/gpac_js.c -text
 gpac/src/scenegraph/mpeg4_animators.c -text
 gpac/src/scenegraph/mpeg4_nodes.c -text
 gpac/src/scenegraph/mpeg4_valuator.c -text
