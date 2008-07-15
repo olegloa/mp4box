@@ -422,6 +422,7 @@ gpac/build/msvc6/ffmpeg_in.dsp -text
 gpac/build/msvc6/ft_font.dsp -text
 gpac/build/msvc6/gdip_raster.dsp -text
 gpac/build/msvc6/gpac.dsw -text
+gpac/build/msvc6/gpac_js.dsp -text
 gpac/build/msvc6/img_in.dsp -text
 gpac/build/msvc6/ismacryp.dsp -text
 gpac/build/msvc6/isom_in.dsp -text
