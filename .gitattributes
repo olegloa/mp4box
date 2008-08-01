@@ -870,6 +870,7 @@ gpac/include/gpac/modules/ipmp.h -text
 gpac/include/gpac/modules/js_usr.h -text
 gpac/include/gpac/modules/raster2d.h -text
 gpac/include/gpac/modules/service.h -text
+gpac/include/gpac/modules/term_ext.h -text
 gpac/include/gpac/modules/video_out.h -text
 gpac/include/gpac/mpeg4_odf.h -text
 gpac/include/gpac/mpegts.h -text
