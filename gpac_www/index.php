@@ -41,7 +41,13 @@
         <p><a href="home_about.php">Read more here.</a></p>
 -->
         <h1>News</h1>
-        <h2>Septembre 2007 - GPAC team is at <a href="http://mmc36.informatik.uni-augsburg.de/acmmm2007/">ACM MM 2007</a></h2>
+        <h2>September 2008 - GPAC will be demonstrated at <a href="http://www.icmc.usp.br/~doceng08/">the ACM Document Engineering Conference</a></h2>
+        <p>GPAC players are now capable of playing mixed documents: documents in the SVG language containing links to MPEG-4 or X3D content and vice-versa. Details of the demonstrations will be available on the ACM portal.</p>
+        <h2>July 2008 - Meet the GPAC team at <a href="http://mpeg.tnt.uni-hannover.de/">the 85th MPEG meeting</a></h2>
+        <p>The team participates to the Systems activities (File Format, Transport, MPEG-4 BIFS, MPEG-4 LASeR and MPEG User Interface Framework).</p>
+        <h2>May 2008 - Implementation of SVG support in GPAC is published</h2>
+        <p>The underlying principles and algorithms of the SVG support in GPAC players is now published in the journal <a href="http://ieeexplore.ieee.org/iel5/30/4560070/04560176.pdf?tp=&isnumber=4560070&arnumber=4560176">IEEE Transactions on Consumer Electronics</a></p>
+        <h2>September 2007 - GPAC team is at <a href="http://mmc36.informatik.uni-augsburg.de/acmmm2007/">ACM MM 2007</a></h2>
         <p>A presentation of GPAC will take place on thursday afternoon - don't miss it!.</p>
         <h2>July 26th 2007 - New web site</h2>
         <p>A brand new web site is available. </p>
@@ -72,7 +78,7 @@
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-09-25 14:22:08 $"; ?>
+<?php $mod_date="\$Date: 2008-08-05 13:48:55 $"; ?>
 <?php include_once("bas.php"); ?>
 </div>
 </body>

@@ -55,7 +55,7 @@ called libgpac:</p>
         </p>
         <p>
           The GPAC framework is being developed at 
-          <a href="http://www.enst.fr">ENST</a> 
+          <a href="http://www.enst.fr">TELECOM ParisTech (a.k.a. ENST)</a> 
           as part of research work on digital media.
         </p>      
         
@@ -64,18 +64,18 @@ called libgpac:</p>
 <p>
           GPAC officially started as an open-source project  in 2003 with the initial goal to develop from scratch, 
           in ANSI C, clean software compliant to the MPEG-4 Systems standard, 
-          a small and flexible alternative to the MPEG-4 reference software. GPAC can probably be seen as the most advanced and robust 2D MPEG-4 Player publicly available worldwide, as well as a decent 3D player.
+          a small and flexible alternative to the MPEG-4 reference software. GPAC can probably be seen as the most advanced and robust 2D MPEG-4 Player publicly available worldwide, as well as a decent 3D player. 3D support is available on embedded platforms through <a href="http://www.khronos.org/opengles/">OpenGL-ES</a>.</p>
+
 </p>
 
-<p>In parallel, the project has evolved and now supports many other multimedia standards, with some good support for X3D, W3C SVG Tiny 1.2, and OMA/3GPP/ISMA features. 3D support is available on embedded platforms through <a href="http://www.khronos.org/opengles/">OpenGL-ES</a>.</p>
-
+<p>In parallel, the project has evolved and now supports many other multimedia standards, with some good support for X3D, W3C SVG Tiny 1.2, and OMA/3GPP/ISMA features. 
 
         <h1>People @ GPAC</h1>
 
 
 <p>
-The project is hosted at ENST (Ecole Nationale Supérieure des 
-Télécommunications), leading French engineering school, located in Paris. 
+The project is hosted at TELECOM ParisTech (also known as ENST or Ecole Nationale Sup&eacute;rieure des 
+T&eacute;l&eacute;communications), leading French engineering school, located in Paris. 
 Current main contributors of GPAC are:</p>
 <ul>
 <li>Jean Le Feuvre</li>
@@ -85,13 +85,13 @@ Current main contributors of GPAC are:</p>
 <p>Other (current or past) contributors from ENST are:</p>
 <ul>
 <li>Jean-Claude Moissinac</li>
-<li>Benoît Pellan</li>
+<li>Benoit Pellan</li>
 <li>Philippe de Cuetos</li>
 </ul>
 
 
 <p>
-Additionally, GPAC is used at ENST for pedagogical purposes. Students regularly 
+Additionally, GPAC is used in our school for pedagogical purposes. Students regularly 
 participate in the development of the project. The main students projects which 
 have been contributed to GPAC are:</p>
 <ul>
@@ -99,7 +99,7 @@ have been contributed to GPAC are:</p>
 <li>DVB-H simulator (A.-V. Bui, X. Liu, Y. Qiu, H. Chi)</li>
 <li>Browser plugins for mozilla (osmozilla), IE (GPAX) (Y. Xi, X. Zhao)</li>
 <li>Java integration (N. Nehme)</li>
-<li>Experimental voice controler based on HTK (L. Laisné)</li>
+<li>Experimental voice controler based on HTK (L. Laisn&eacute;)</li>
 <li>3D add-ons (M. Chahid and B. Anglaret)</li>
 <li>Experimental authoring tool (J. Nitard)</li>
 <li>BIFS Broadcaster (E. Boustani, E. Ghevre)</li>
@@ -115,7 +115,7 @@ have been contributed to GPAC are:</p>
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-08-30 13:19:19 $"; ?>
+<?php $mod_date="\$Date: 2008-08-05 13:48:55 $"; ?>
 <?php include_once("bas.php"); ?>
 </div>
 </body>

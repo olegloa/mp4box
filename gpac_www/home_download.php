@@ -28,7 +28,9 @@ The GPAC framework is available for download in source code under LGPL License. 
 <p>Due to licensing issues, there is currently no binary release of the GPAC framework. Only the source code is available.</p>
 
 <h1>GPAC source code</h1>
-<p>The latest release of GPAC is 0.4.4 RC2, released in May 2007.</p>
+<p>GPAC is updated on a day-to-day basis. The latest version is the development version, sometimes not stable. It is available on the <a href="http://sourceforge.net/cvs/?group_id=84101">CVS repository hosted on sourceforge.net</a>. You can also  <a href="http://gpac.cvs.sourceforge.net/gpac/gpac/">browse the source code</a>.</p>
+<p>For non-CVS user, the latest packaged release is 0.4.4 RC2. However, since this version was issued in May 2007, it may not contain all the new features or bug fixes.</p>
+
 <p>Supported platforms in this release are:</p>
 <ul>
 <li>Windows,</li> 
@@ -42,8 +44,6 @@ The GPAC framework is available for download in source code under LGPL License. 
 
 <h2 class="download_section">Download GPAC source <br/><a class="download_link" href="http://downloads.sourceforge.net/gpac/gpac-0.4.4-rc2.zip">Windows Archive (zip)</a>&nbsp;&nbsp;&nbsp;<a class="download_link" href="http://downloads.sourceforge.net/gpac/gpac-0.4.4.tar.gz">Generic Archive (tar.gz)</a></h2>
 
-<p>The development version of GPAC (sometimes not stable) is available from the <a href="http://sourceforge.net/cvs/?group_id=84101">CVS repository hosted on sourceforge.net</a>. You can also  <a href="http://gpac.cvs.sourceforge.net/gpac/gpac/">browse the source code</a>.</p>
-
 <h1>GPAC third-party libraries</h1>
 <p>GPAC is only fully functionnal when compiled with several third-party libraries (media codecs, ECMAScript, Font engine, ...). Features of GPAC are limited without them.
 </p> 
@@ -56,7 +56,7 @@ The GPAC framework is available for download in source code under LGPL License. 
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-08-30 13:19:19 $"; ?>
+<?php $mod_date="\$Date: 2008-08-05 13:48:55 $"; ?>
 <?php include_once("bas.php"); ?>
 </div>
 </body>

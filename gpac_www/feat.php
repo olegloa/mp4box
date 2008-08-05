@@ -26,12 +26,13 @@
 			<div class="Col2">
 	       <h1 id="MP4Box">Packaging Multimedia Content</h1>
 <p>GPAC features encoders and multiplexers, publishing and content 
-distribution tools for MP4 and 3GPP(2) files and many tools for scene 
+distribution tools for MP4 and 3GPP or 3GPP2 files and many tools for scene 
 descriptions (BIFS/VRML/X3D converters, SWF/BIFS, SVG/BIFS, etc...). 
 MP4Box provides all these tools in a single command-line application. An 
 exhaustive	list of packaging features is available <a href="packager.php">here</a> but a good summary of what MP4Box can do for you is the following:</p>
 	<ul>
 		<li>MP4/3GP Conversion from MP3, AVI, MEPG-2 TS, MPEG-PS, AAC, H263, H264, AMR, and many others,</li>
+		<li>3GPP DIMS Packaging from SVG files,</li>
 		<li>File layout: fragmentation or interleaving, and cleaning,</li>
 		<li>File hinting for RTP/RTSP and QTSS/DSS servers (MPEG-4 / ISMA / 3GP / 3GP2 files),</li>
 		<li>File splitting by size or time, extraction from file and file concatenation,</li>
@@ -54,7 +55,7 @@ exhaustive	list of packaging features is available <a href="packager.php">here</
 			<li>BIFS scenes (2D, 3D and mixed 2D/3D scenes),</li>
 			<li>VRML 2.0 (VRML97) scenes (without GEO or NURBS extensions),</li>
 			<li>X3D scenes (not complete) in X3D (XML) and X3DV (VRML) formats,</li>
-			<li>SVG Tiny 1.2 scenes,</li>
+			<li>SVG Tiny 1.2 scenes (including packaged in 3GP DIMS files),</li>
 			<li>LASeR and SAF (partial) support,</li>
 
 			<li>Progressive loading/rendering of SVG, X3D and XMT files,</li>
@@ -94,7 +95,7 @@ tools:</p>
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2007-08-30 13:19:19 $"; ?>
+<?php $mod_date="\$Date: 2008-08-05 13:48:55 $"; ?>
 <?php include_once("bas.php"); ?>
 </div>
 </body>
