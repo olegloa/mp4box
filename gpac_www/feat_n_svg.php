@@ -114,7 +114,6 @@ There are also some small features which are currently supported like : System C
     
     <p>The following table is the result of the SVG Tiny 1.2 test suite behaviour in GPAC. Some elements are refered to as not implemented, which means they are not supported but implementation is on the short-term roadmap. Elements not supported are likely to remain unsupported for a longer time.</p>
 		</h1>
-		<h2>Global results</h2>
 		<style type="text/css" xml:space="preserve">
                     tr { padding: 0.2em; background: #ddd }
                     td {padding: 0.2em}
@@ -2746,7 +2745,7 @@ There are also some small features which are currently supported like : System C
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2008-08-05 16:23:39 $"; ?>
+<?php $mod_date="\$Date: 2008-08-05 19:53:11 $"; ?>
 <?php include_once("bas.php"); ?>
 </div>
 </body>
