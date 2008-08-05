@@ -57,12 +57,6 @@ would like to remove and bugs we would like to fix. The following items
 give the area that we want to improve. The order is not important.
 </p>
 
-<h4>&gt; SVG Fonts</h4>
-<p>SVG Fonts are not yet supported. Initially, we did not consider this
-feature as important because text can be shown without it. But font
-embedding is an important feature if you want your text to be displayed
-correctly on all terminals. So this is a feature we want to look at (as well as MPEG-4 Font streaming) but this requires modification of the text processing of GPAC (i.e. the integration with Freetype).</p>
-
 <h4>&gt; Conditional Processing</h4>
 <p>The switch element and the required* attributes are not yet
 supported, but we plan to support it to enable adapation of the content
@@ -71,20 +65,15 @@ adaptation is one of our research topic. We plan to investigate how to
 extend the existing features for dynamic adaptation and especially in
 Broadcast environments.</p>
 
-<h4>&gt; Text display</h4>
-<p>The text layout is very basic in the current implementation. We
-would like to improve it taking into account the proposed new features
-in Tiny 1.2. Some nice support for the textArea element is already there.</p>
-
 <h4>&gt; Animations</h4>
 <p>Though animations are supported, the current model is not completely
-compliant with the combined SMIL/CSS/SVG specifications. For instance, animations restarting are not reorderd. We would also like to improve the performances of the animation module, basically making assumptions on usage scenarios.</p>
+compliant with the combined SMIL/CSS/SVG specifications. For instance, animations restarting are not reordered. We would also like to improve the performances of the animation module.</p>
 
 <h4>&gt; CSS</h4>
 <p>CSS is a big specification and supporting it all is not really under consideration. We currently support the CSS properties referenced by the SVG specification, the use of presentation attributes and the inheritance mechanisms (except tricky cases with paint servers). The style attribute is also supported but not the style element.</p>
 
 <h4>&gt; DOM API</h4>
-<p>Support for DOM is envisaged but a simpler API like Micro DOM will be prefered. Micro DOM is partially supported.</p>
+<p>Support for SVG 1.1 DOM is not envisaged. Scripting is supported through SVG Tiny 1.2 Micro DOM (not complete yet). XMLHttpRequest is also supported.</p>
 
 <h4>&gt; Filters</h4>
 <p>Support for Filters is not envisaged at the moment.</p>
@@ -92,16 +81,13 @@ compliant with the combined SMIL/CSS/SVG specifications. For instance, animation
 <h4>&gt; Paint Servers</h4>
 <p>Solid colors and gradients are supported but patterns are not. The integration of SVG patterns should not be so difficult as it is supported for other languages.</p>
 
-<h4>&gt; Linking</h4>
-<p>We currently support hyperlinking to full SVG documents. Linking to external elements from use elements is not supported for instance. svgView is not yet supported but is planned.</p>
-
 <h4>&gt; Use</h4>
-<p>The use element is implemented but we initially thought it was close to VRML USE. This is not at all the case and therefore implementation is not fully conformant. We also need to think about how to best implement the 'synchronized deep-cloning' behavior attached to a use element. However, this only has impact when doing heavy scripting.</p>
+<p>The use element is implemented but is not fully conformant to the SVG specification as it does not use 'synchronized deep-cloning' of the used sub-tree. Fixing this is not yet under consideration.</p>
 
 <h4>&gt; Audio/Video</h4>
 
-<p>Audio/Video support, using various encoding formats and protocols,
-is currently available for SVG presentations. We are still trying to understand the specification and the following features: independent timelines for SVG document and embedded medias, SMIL features like clipBegin and clipEnd, media timeline control (begin, end).</p>
+<p>Audio/Video support, using various encoding formats and protocols, is currently available for SVG presentations. 
+Most features are implemented (play/pause/stop, clipBegin/clipEnd, syncBehaviour), however conformance to the SVG specification is not 100% sure.</p>
 
 <h4 >&gt; The animation element</h4>
 <p>The animation element, which is equivalent to the Flash MovieClip feature, and which allows sprite animations, is supported.</p>
@@ -112,8 +98,8 @@ is currently available for SVG presentations. We are still trying to understand 
 <h4>&gt; Focus &amp; Navigation</h4>
 <p>The focus ring concept is implemented but the SVG specification is not clear in some parts (look at the test suite) and the implementation will be fixed when the spec is fixed.</p>
 
-<h4>&gt; Timeline and Progressive Rendering</h4>
-<p>Some support for progressive rendering is there but the timelineBegin and externalResourceRequired attributes are not yet supported.</p>
+<h4>&gt; Progressive Rendering</h4>
+<p>Progressive rendering is supported, but the externalResourceRequired is not.</p>
 
 <h4 >&gt; Memory Managment</h4>
 <p>The discard element is fully supported already.</p>
@@ -122,7 +108,7 @@ is currently available for SVG presentations. We are still trying to understand 
 <p>The prefetch element is supported because it is parsed and ignored. But we plan to see in the near future how it can be leveraged for low-latency presentations.</p>
 
 <h4>&gt; Miscellaneous</h4>
-There are also some small features which are currently supported like : System Colors, currentColor, preserveAspectRatio on images, whitespace preservation, vector-effect, viewport-fill* and some others that we still need to implement: xml:base, snapshotTime, playbackOrder, ....
+There are also some small features which are currently supported like : System Colors, currentColor, preserveAspectRatio on images, whitespace preservation, vector-effect, viewport-fill* and some others that we still need to implement: snapshotTime, playbackOrder, ....
 
 		<h1 id="results">Detailed results for version 0.4.5-DEV (build 10) - 2007/10/12</h1>
     
@@ -2760,7 +2746,7 @@ There are also some small features which are currently supported like : System C
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2008-04-11 09:48:30 $"; ?>
+<?php $mod_date="\$Date: 2008-08-05 16:23:39 $"; ?>
 <?php include_once("bas.php"); ?>
 </div>
 </body>
