@@ -1002,6 +1002,8 @@ gpac/modules/ogg/theora_dec.c -text
 gpac/modules/ogg/vorbis_dec.c -text
 gpac/modules/oss_audio/Makefile -text
 gpac/modules/oss_audio/oss.c -text
+gpac/modules/pulseaudio/Makefile -text
+gpac/modules/pulseaudio/pulseaudio.c -text
 gpac/modules/raw_out/Makefile -text
 gpac/modules/raw_out/raw_out.def -text
 gpac/modules/raw_out/raw_video.c -text
