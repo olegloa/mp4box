@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="status2html.xslt"?>
+<?xml-stylesheet type="text/xsl" href="gpac_svg_testsuite_status.xslt"?>
 <!-- shortsvg-version="1.1" name=A unique abbreviation to be used for a file name for this file             -->
 <!--        and column header for the matrix.  MUST be a legal xml id prefix and fileName -->
 <!--       (shortName.xml) please make it 3-12 characters and do not use spaces.          -->

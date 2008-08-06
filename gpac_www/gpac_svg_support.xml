@@ -1,0 +1,446 @@
+<?xml-stylesheet type="text/xsl" href="gpac_svg_support.xslt"?>
+<support>
+    <comment apply-to="all">
+    <!-- add text here that should appear at the top of the page -->
+    </comment>
+    <comment apply-to="attribute">
+    <!-- add text here that should appear at the top of the attribute section -->
+    </comment>
+    <comment apply-to="property">
+    <!-- add text here that should appear at the top of the property section -->
+    </comment>
+    
+    <comment apply-to="script">
+    <!-- add text here that should appear at the top of the property section -->
+    </comment>
+
+    <element name = "altGlyph" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "altGlyphDef" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "altGlyphItem" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "clipPath" version = "1.1" profile = "Full" supported = "no">To do.</element>
+    <element name = "color-profile" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "cursor" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "definition-src" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feBlend" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feColorMatrix" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feComponentTransfer" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feComposite" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feConvolveMatrix" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feDiffuseLighting" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feDisplacementMap" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feDistantLight" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feFlood" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feFuncA" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feFuncB" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feFuncG" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feFuncR" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feGaussianBlur" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feImage" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feMerge" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feMergeNode" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feMorphology" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feOffset" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "fePointLight" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feSpecularLighting" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feSpotLight" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feTile" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "feTurbulence" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "filter" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "font-face-format" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "font-face-name" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "glyphRef" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "marker" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "mask" version = "1.1" profile = "Full" supported = "no">To do.</element>
+    <element name = "pattern" version = "1.1" profile = "Full" supported = "no">To do. Already supported in other languages.</element>
+    <element name = "style" version = "1.1" profile = "Full" supported = "no">CSS is a big specification and supporting it all is not really under consideration.</element>
+    <element name = "symbol" version = "1.1" profile = "Full" supported = "no">To do.</element>
+    <element name = "textPath" version = "1.1" profile = "Full" supported = "no">To do.</element>
+    <element name = "tref" version = "1.1" profile = "Full" supported = "no">To do.</element>
+    <element name = "view" version = "1.1" profile = "Full" supported = "no">To do.</element>
+    <element name = "vkern" version = "1.1" profile = "Full" supported = "no"></element>
+    <element name = "a" version = "1.2" profile = "Tiny" supported = "yes">The target attribute is not supported.</element>
+    <element name = "animate" version = "1.2" profile = "Tiny" supported = "yes">
+      Supported with an extension to allow (discrete) animation of matrices using attributeName="transform" and value="matrix(a,b,c,d,e,f)".
+      <example url="http://olaf.kilu.de/svgtest/animate01.svg"/>    
+    </element>
+    <element name = "animateColor" version = "1.2" profile = "Tiny" supported = "yes">
+      <example url="http://olaf.kilu.de/svgtest/animatecolor01.svg"/>
+    </element>
+    <element name = "animateMotion" version = "1.2" profile = "Tiny" supported = "yes">
+      <example url="http://olaf.kilu.de/svgtest/animatemotionmpath01.svg"/>
+    </element>
+    <element name = "animateTransform" version = "1.2" profile = "Tiny" supported = "yes">
+      <example url="http://olaf.kilu.de/svgtest/transform25.svg"/>
+    </element>
+    <element name = "animation" version = "1.2" profile = "Tiny" supported = "yes">Support is extended compared to the SVG spec because the referenced content may be any vector graphics supported by GPAC, including Flash, MPEG-4 BIFS or X3D.</element>
+    <element name = "audio" version = "1.2" profile = "Tiny" supported = "yes">Many audio formats are supported (MP3, AAC, OGG, ...). </element>
+    <element name = "circle" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "defs" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "desc" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "discard" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "ellipse" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "font" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "font-face" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "font-face-src" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "font-face-uri" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "foreignObject" version = "1.2" profile = "Tiny" supported = "yes">Only externally referenced content is supported. Embedded content inside the foreignObject element is not. All formats supported by GPAC are supported.</element>
+    <element name = "g" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "glyph" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "handler" version = "1.2" profile = "Tiny" supported = "yes">Media Access Events are supported. Progress Events are not yet supported.</element>
+    <element name = "hkern" version = "1.2" profile = "Tiny" supported = "no"></element>
+    <element name = "image" version = "1.2" profile = "Tiny" supported = "yes">Only raster images are supported as required in SVG Tiny 1.2. Many image types are supported including JPG, PNG, BMP.</element>
+    <element name = "line" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "linearGradient" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "listener" version = "1.2" profile = "Tiny" supported = "yes">Only the bubbling and target phases are supported as required in SVG Tiny 1.2. The propagate and defaultAction attributes are not supported.</element>
+    <element name = "metadata" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "missing-glyph" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "mpath" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "path" version = "1.2" profile = "Tiny" supported = "yes">Elliptical arcs as defined in SVG Full 1.1 are also supported.</element>
+    <element name = "polygon" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "polyline" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "prefetch" version = "1.2" profile = "Tiny" supported = "no">Ignored. In the todo list.</element>
+    <element name = "radialGradient" version = "1.2" profile = "Tiny" supported = "yes">Focal points as defined in SVG Full 1.1 are also supported.</element>
+    <element name = "rect" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "script" version = "1.2" profile = "Tiny" supported = "yes">Only ECMAScript is supported as scripting language. MicroDOM is partially supported. XmlHttpRequest is also supported.</element>
+    <element name = "set" version = "1.2" profile = "Tiny" supported = "yes">Set may be used to animate a transform attribute (see the 'animate' element).
+      <example url="http://olaf.kilu.de/svgtest/set01.svg"/>
+    </element>
+    <element name = "solidColor" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "stop" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "svg" version = "1.2" profile = "Tiny" supported = "yes">The version, baseProfile, snapshotTime, timelineBegin, playbackOrder attributes are ignored. Nested svg elements are also supported. </element>
+    <element name = "switch" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "tbreak" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "text" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "textArea" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "title" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "tspan" version = "1.2" profile = "Tiny" supported = "yes"></element>
+    <element name = "use" version = "1.2" profile = "Tiny" supported = "partial">The use element is implemented but is not fully conformant to the SVG specification as it does not use 'synchronized deep-cloning' of the used sub-tree. Fixing this is not yet under consideration.</element>
+    <element name = "video" version = "1.2" profile = "Tiny" supported = "yes">Many formats and protocols are supported (MPEG-4 ASP, SP, H264, ...). The transformBehavior attribute is not yet supported. </element>
+    <attribute name = "amplitude" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "azimuth" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "baseFrequency" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "bias" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "clipPathUnits" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "contentStyleType" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "diffuseConstant" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "divisor" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "dx" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "dy" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "edgeMode" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "elevation" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "exponent" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "filterRes" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "filterUnits" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "format" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "fx" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "fy" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "glyphRef" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "gradientTransform" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "horiz-origin-y" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "in" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "in2" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "intercept" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "k1" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "k2" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "k3" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "k4" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "kernelMatrix" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "kernelUnitLength" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "kernelUnitLength" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "lengthAdjust" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "limitingConeAngle" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "local" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "markerHeight" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "markerUnits" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "markerWidth" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "maskContentUnits" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "maskUnits" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "media" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "method" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "mode" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "name" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "numOctaves" version = "1.1" profile = "Full" supported = "no"></attribute>
+    
+    <attribute name = "onabort" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "onactivate" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "onbegin" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "onclick" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "onend" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "onerror" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "onfocusin" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "onfocusout" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "onload" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "onmousedown" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "onmousemove" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "onmouseout" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "onmouseover" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "onmouseup" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "onrepeat" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "onresize" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "onscroll" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "onunload" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    <attribute name = "onzoom" version = "1.1" profile = "Full" supported = "yes"></attribute>
+    
+    <attribute name = "operator" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "order" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "orient" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "orientation" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "patternContentUnits" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "patternTransform" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "patternUnits" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "pointsAtX" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "pointsAtY" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "pointsAtZ" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "preserveAlpha" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "primitiveUnits" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "radius" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "refX" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "refY" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "rendering-intent" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "result" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "scale" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "seed" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "spacing" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "specularConstant" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "specularConstant" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "specularExponent" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "spreadMethod" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "startOffset" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "stdDeviation" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "stitchTiles" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "style" version = "1.1" profile = "Full" supported = "partial">Precedence between style and the presentation attributes not handled.</attribute>
+    <attribute name = "surfaceScale" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "tableValues" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "targetX" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "targetY" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "textLength" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "title" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "v-alphabetic" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "vert-adv-y" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "vert-origin-x" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "vert-origin-y" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "v-hanging" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "v-ideographic" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "viewTarget" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "v-mathematical" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "xChannelSelector" version = "1.1" profile = "Full" supported = "no"></attribute>
+    <attribute name = "xmlns" version = "1.1" profile = "Full" supported = "no">XMLNS support is not correct.</attribute>
+    
+    <attribute name = "accent-height" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "alphabetic" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "arabic-form" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "ascent" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "bandwidth" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "baseProfile" version = "1.2" profile = "Tiny" supported = "no">Ignored.</attribute>
+    <attribute name = "bbox" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "cap-height" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "class" version = "1.2" profile = "Tiny" supported = "yes">Ignored during rendering.</attribute>
+    <attribute name = "contentScriptType" version = "1.2" profile = "Tiny" supported = "partial">Ignored. Only 'application/ecmascript' is supported as scripting language.</attribute>
+    <attribute name = "defaultAction" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "descent" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "editable" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "externalResourcesRequired" version = "1.2" profile = "Tiny" supported = "no">Progressive rendering is supported but the use of eRR to control the progressivity is not.</attribute>
+    <attribute name = "focusable" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "focusHighlight" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "g1" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "g2" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "glyph-name" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "gradientUnits" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "hanging" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "horiz-adv-x" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "horiz-origin-x" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "ideographic" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "k" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "lang" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "mathematical" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "mediaCharacterEncoding" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "mediaContentEncodings" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "mediaSize" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "mediaTime" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "nav-down" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "nav-down-left" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "nav-down-right" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "nav-left" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "nav-next" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "nav-prev" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "nav-right" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "nav-up" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "nav-up-left" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "nav-up-right" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "origin" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "overlay" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "overline-position" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "overline-thickness" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "panose-1" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "playbackOrder" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "requiredExtensions" version = "1.2" profile = "Tiny" supported = "no">Always evaluates to true.</attribute>
+    <attribute name = "requiredFeatures" version = "1.2" profile = "Tiny" supported = "no">Always evaluates to true.</attribute>
+    <attribute name = "requiredFonts" version = "1.2" profile = "Tiny" supported = "no">Always evaluates to true.</attribute>
+    <attribute name = "requiredFormats" version = "1.2" profile = "Tiny" supported = "no">Always evaluates to true.</attribute>
+    <attribute name = "slope" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "snapshotTime" version = "1.2" profile = "Tiny" supported = "yes">Ignored during rendering.</attribute>
+    <attribute name = "stemh" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "stemv" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "strikethrough-position" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "strikethrough-thickness" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "syncBehavior" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "syncBehaviorDefault" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "syncMaster" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "syncTolerance" version = "1.2" profile = "Tiny" supported = "yes">Ignored.</attribute>
+    <attribute name = "syncToleranceDefault" version = "1.2" profile = "Tiny" supported = "yes">Ignored.</attribute>
+    <attribute name = "timelineBegin" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "u1" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "u2" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "underline-position" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "underline-thickness" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "unicode" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "unicode-range" version = "1.2" profile = "Tiny" supported = "yes">Ignored.</attribute>
+    <attribute name = "units-per-em" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "version" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "widths" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "x-height" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "xlink:actuate" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "xlink:arcrole" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "xlink:role" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "xlink:show" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "xlink:title" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "xlink:type" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "xml:base" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "xml:lang" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "accumulate" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "additive" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "attributeName" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "attributeType" version = "1.2" profile = "Tiny" supported = "partial">Only the 'XML' value is supported.</attribute>
+    <attribute name = "begin" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "by" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "calcMode" version = "1.2" profile = "Tiny" supported = "partial">Only 'linear' and 'discrete' are supported.</attribute>
+    <attribute name = "cx" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "cy" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "d" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "dur" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "end" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "event" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "fill" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "from" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "handler" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "height" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "id" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "initialVisibility" version = "1.2" profile = "Tiny" supported = "partial">Supported only on the 'video' element.</attribute>
+    <attribute name = "keyPoints" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "keySplines" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "keyTimes" version = "1.2" profile = "Tiny" supported = "ye"></attribute>
+    <attribute name = "max" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "min" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "observer" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "offset" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "path" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "pathLength" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "phase" version = "1.2" profile = "Tiny" supported = "yes">The capture phase is not supported since it is not required in SVG Tiny 1.2</attribute>
+    <attribute name = "points" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "preserveAspectRatio" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "propagate" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "r" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "repeatCount" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "repeatDur" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "restart" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "rotate" version = "1.2" profile = "Tiny" supported = "partial">Supported on the animateMotion element but not on the text element.</attribute>
+    <attribute name = "rx" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "ry" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "systemLanguage" version = "1.2" profile = "Tiny" supported = "partial">Always evaluated to true.</attribute>
+    <attribute name = "target" version = "1.2" profile = "Tiny" supported = "partial">Supported on the listener element but not supported on the a element.</attribute>
+    <attribute name = "to" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "transform" version = "1.2" profile = "Tiny" supported = "yes">Including the "ref()" syntax.</attribute>
+    <attribute name = "transformBehavior" version = "1.2" profile = "Tiny" supported = "no"></attribute>
+    <attribute name = "type" version = "1.2" profile = "Tiny" supported = "partial">Supported on the animateTransform element. Ignored on media elements (audio, video, image). Ignored on script and handler elements (to fix).</attribute>
+    <attribute name = "values" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "viewBox" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "width" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "x" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "x1" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "x2" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "xlink:href" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "xml:id" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "xml:space" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "y" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "y1" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "y2" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <attribute name = "zoomAndPan" version = "1.2" profile = "Tiny" supported = "yes"></attribute>
+    <property name = "audio-level" version = "1.2" profile = "Tiny" supported = "yes">Inheritance is buggy.</property>
+    <property name = "color" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "color-rendering" version = "1.2" profile = "Tiny" supported = "yes">Ignored.</property>
+    <property name = "display" version = "1.2" profile = "Tiny" supported = "yes">All values other than 'none' or 'inherit' are equivalent to 'inline'.</property>
+    <property name = "display-align" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "fill" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "fill-opacity" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "fill-rule" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "font-family" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "font-size" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "font-style" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "font-variant" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "font-weight" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "image-rendering" version = "1.2" profile = "Tiny" supported = "yes">Ignored.</property>
+    <property name = "line-increment" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "opacity" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "pointer-events" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "shape-rendering" version = "1.2" profile = "Tiny" supported = "yes">Ignored.</property>
+    <property name = "solid-color" version = "1.2" profile = "Tiny" supported = "yes">Joint animation and inheritance is buggy.</property>
+    <property name = "solid-opacity" version = "1.2" profile = "Tiny" supported = "yes">Joint animation and inheritance is buggy.</property>
+    <property name = "stop-color" version = "1.2" profile = "Tiny" supported = "yes">Joint animation and inheritance is buggy.</property>
+    <property name = "stop-opacity" version = "1.2" profile = "Tiny" supported = "yes">Joint animation and inheritance is buggy.</property>
+    <property name = "stroke" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "stroke-dasharray" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "stroke-dashoffset" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "stroke-linecap" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "stroke-linejoin" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "stroke-miterlimit" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "stroke-opacity" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "stroke-width" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "text-align" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "text-anchor" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "text-rendering" version = "1.2" profile = "Tiny" supported = "yes">Ignored.</property>
+    <property name = "vector-effect" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "viewport-fill" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "viewport-fill-opacity" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "visibility" version = "1.2" profile = "Tiny" supported = "yes"></property>
+    <property name = "alignment-baseline" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "baseline-shift" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "clip" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "clip-path" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "clip-rule" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "color-interpolation" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "color-interpolation-filters" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "color-profile" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "cursor" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "direction" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "dominant-baseline" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "enable-background" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "filter" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "flood-color" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "flood-opacity" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "font" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "font-size-adjust" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "font-stretch" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "glyph-orientation-horizontal" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "glyph-orientation-vertical" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "kerning" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "letter-spacing" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "lighting-color" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "marker" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "marker-end" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "marker-mid" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "marker-start" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "mask" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "overflow" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "text-decoration" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "unicode-bidi" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "word-spacing" version = "1.1" profile = "Full" supported = "no"></property>
+    <property name = "writing-mode" version = "1.1" profile = "Full" supported = "no"></property>
+    <element name = "conditional" version = "1" profile = "LASeR" supported = "yes"></element>
+    <element name = "cursorManager" version = "1" profile = "LASeR" supported = "no"></element>
+    <element name = "rectClip" version = "1" profile = "LASeR" supported = "no"></element>
+    <element name = "selector" version = "1" profile = "LASeR" supported = "yes"></element>
+    <element name = "simpleLayout" version = "1" profile = "LASeR" supported = "no"></element>
+    <element name = "*" version = "2" profile = "LASeR" supported = "no"></element>
+    
+    <api name="XmlHttpRequest" supported="yes"/>
+</support>

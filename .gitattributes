@@ -536,9 +536,6 @@ gpac/doc/man/gpac.1 -text
 gpac/doc/man/mp42avi.1 -text
 gpac/doc/man/mp4box.1 -text
 gpac/doc/man/mp4client.1 -text
-gpac/doc/osmo4_svg1.2tiny-status-gpac2Draster.xml -text
-gpac/doc/status2html.xslt -text
-gpac/doc/svg_status.html -text
 gpac/extra_lib/include/faad/faad.h -text
 gpac/extra_lib/include/faad/neaacdec.h -text
 gpac/extra_lib/include/ffmpeg/avcodec.h -text
@@ -1754,6 +1751,11 @@ gpac_www/feat_det.php -text
 gpac_www/feat_n_mpeg4.php -text
 gpac_www/feat_n_svg.php -text
 gpac_www/feat_n_x3d.php -text
+gpac_www/gpac_svg_support.css -text
+gpac_www/gpac_svg_support.xml -text
+gpac_www/gpac_svg_support.xslt -text
+gpac_www/gpac_svg_testsuite_status.xml -text
+gpac_www/gpac_svg_testsuite_status.xslt -text
 gpac_www/home_about.php -text
 gpac_www/home_download.php -text
 gpac_www/home_faq.php -text
