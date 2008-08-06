@@ -33,7 +33,7 @@
     		</div>
         <h1 id="overview">Overview</h1>        
         
-        <p>The GPAC project includes support for rendering SVG content. The goal is not to provide yet another mixed HTML/SVG browser but to focus on integration of multimedia description languages with audio/video resources. The GPAC player will remain in between a document browser and a traditional audio/video player with support for languages like BIFS, SVG, X3D ...</p>
+        <p>The GPAC project includes support for the playback and rendering of SVG content. The goal is not to provide yet another mixed HTML/SVG browser (Opera or Firefox are very good at that) but to focus on the integration of multimedia description languages with audio/video data. The GPAC player will therefore remain in between a document browser and a traditional audio/video player with support for languages like BIFS, SVG, X3D ...</p>
         
         <p>For Windows, the player is available: in command line (MP4Client), with an MFC GUI (Osmo4), with a cross-platform GUI (wxOsmo4) or as plugins of Internet Explorer (GPAX), Firefox or Opera (Osmozilla). For Linux, MP4Client, wxOsmo4 and Osmozilla are also available. For PocketPC and smartphone, the player is called respectively OsmoCE and Osmophone, and GPAX is also available. Finally, MP4Client can also be used on Linux Familiar and Linux on Nokia 770. A player is also available for some Symbian platform.</p>
         
@@ -67,7 +67,7 @@
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2008-08-06 10:20:07 $"; ?>
+<?php $mod_date="\$Date: 2008-08-06 10:22:27 $"; ?>
 <?php include_once("bas.php"); ?>
 </div>
 </body>
