@@ -42,18 +42,16 @@
         <p>The implementation of the SVG support in GPAC is divided into 3 parts as follows:</p>
         <ul>        
           <li>SVG Parsing</li>
-          <p>The GPAC framework reads SVG files and builds the memory tree. It uses a (simple, limited but functional) SAX parser. The parser can load, progressively or not, an SVG document into memory. If you are interested, the source code for this part is <a href="http://gpac.cvs.sourceforge.net/gpac/gpac/src/scene_manager/loader_svg_da.c?view=markup">here</a>.</p>
+          <p>The GPAC framework reads SVG files (or streams) and builds the memory tree. It uses a (simple, limited, but functional) SAX parser. The parser can load, progressively or not, an SVG document into memory. If you are interested, the source code for this part is <a href="http://gpac.cvs.sourceforge.net/gpac/gpac/src/scene_manager/loader_svg_da.c?view=markup">here</a>.</p>
           
           <li>SVG Tree Managment</li>
           
           <p>This part of the SVG support is common in the GPAC implementation with the MPEG-4 BIFS tree managment, and is called in general Scene Graph Managment. The Scene Graph part is responsible for the creation of elements, the handling
-          of attributes (parsing, dump, cloning ...). It also handles the animations and scripting features of SVG.<br>If you check out the source code, look for svg_nodes.h, scenegraph_svg.h, src/scenegraph/svg_*.*.</p>
+          of attributes (parsing, dump, cloning ...). It also handles the animations and scripting features of SVG.<br>If you check out the source code, look for svg_nodes.h, scenegraph_svg.h, <a href="http://gpac.cvs.sourceforge.net/gpac/gpac/src/scenegraph/">src/scenegraph</a>/svg_*.*.</p>
           
-          <li>SVG Compositing</li>
-          <p>The compositing operation in our terminology is the process which
-          consists in transforming the scene graph into structures used by a
-          rasterizer. The GPAC project has two rasterizers: GDI Plus on Windows
-          platforms, and the GPAC 2D Rasterizer, based on FreeType.<br>If you check out the source code, look for src/compositor/svg*.c. </p>
+          <li>SVG Compositing and Rendering</li>
+          <p>The compositing and rendering operations consists in applying animations, triggering user interactions, rasterizing the vector graphics and producing the final image. The GPAC project has two rasterizers: GDI Plus on Windows
+          platforms, and the GPAC 2D Rasterizer, based on FreeType.<br>If you check out the source code, look for <a href="http://gpac.cvs.sourceforge.net/gpac/gpac/src/compositor">src/compositor</a>/svg*.c. </p>
         </ul>
 
         <h1 id="status">Status</h1>
@@ -69,7 +67,7 @@
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2008-08-06 10:10:12 $"; ?>
+<?php $mod_date="\$Date: 2008-08-06 10:20:07 $"; ?>
 <?php include_once("bas.php"); ?>
 </div>
 </body>
