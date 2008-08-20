@@ -1447,6 +1447,7 @@ gpac/regression_tests/x3d-misc-ColorRGBA.x3dv -text
 gpac/regression_tests/x3d-misc-HatchStyle.x3dv -text
 gpac/regression_tests/x3d-misc-KeySensor.x3dv -text
 gpac/regression_tests/x3d-misc-StringSensor.x3dv -text
+gpac/run_configure.sh -text
 gpac/src/Makefile -text
 gpac/src/bifs/arith_decoder.c -text
 gpac/src/bifs/bifs_codec.c -text
