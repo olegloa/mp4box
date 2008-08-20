@@ -532,6 +532,7 @@ gpac/debian/gpac.install -text
 gpac/debian/libgpac-dev.install -text
 gpac/debian/libgpac0.4.5.install -text
 gpac/debian/rules -text
+gpac/debian/watch -text
 gpac/doc/CODING_STYLE -text
 gpac/doc/INSTALL.gcc -text
 gpac/doc/INSTALL.gpe -text
