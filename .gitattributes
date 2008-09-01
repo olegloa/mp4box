@@ -1756,6 +1756,8 @@ gpac_www/doc_ismacryp.php -text
 gpac_www/doc_mp4box.php -text
 gpac_www/doc_nhnt.php -text
 gpac_www/doc_ttxt.php -text
+gpac_www/downloads/ttxt_sample_streams.tar.gz -text
+gpac_www/downloads/ttxt_sample_streams.zip -text
 gpac_www/feat.php -text
 gpac_www/feat_det.php -text
 gpac_www/feat_n_mpeg4.php -text
