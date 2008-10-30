@@ -36,6 +36,7 @@ GPAC is always on the move. Due to its accademic mission, TELECOM ParisTech may 
 				<h1>PhDs, Post-Doctorate, Traineeships ...</h1>
 				<p>If you are looking for such a position and are fluent in either english or french, do not hesitate to <a href="mailto:jeanlf@users.sourceforge.net">contact us</a>, our team will be happy to welcome you on board.</p>
 
+        <br />
 				<h1>Open Positions</h1>
 				<h2 align="center">Quality Engineer</h2>
 				<p>TELECOM ParisTech is looking for a quality engineer for the GPAC project. The candidate will be in charge of:</p>
@@ -59,6 +60,7 @@ GPAC is always on the move. Due to its accademic mission, TELECOM ParisTech may 
         If you are interested in this job, <a href="mailto:jeanlf@users.sourceforge.net?subject=Quality Engineer Positon">send us</a> your resume and motivation letter.</p>
         </p>
 
+        <br />
 				<h2 align="center">Software Engineer</h2>
 				<p>France is currently adopting the T-DMB standard for its Digital Interactive Radio broadcasting, and TELECOM ParisTech, as a core developper of the MPEG-4 Standard, is deeply involved in this activity. TELECOM ParisTech is looking for a software engineer in the field of multimedia broadcasting. The candidate will be in charge of:</p>
 				<ul>
@@ -76,7 +78,7 @@ GPAC is always on the move. Due to its accademic mission, TELECOM ParisTech may 
 				<li>Ability to work in a team environment.</li>
 				</ul>
         
-        <p>This position is a renewable short-term contract of 2 years.
+        <p>This position is a renewable short-term contract of 1.5 years.
         <br />
         If you are interested in this job, <a href="mailto:jeanlf@users.sourceforge.net?subject=Software Engineer Positon">send us</a> your resume and motivation letter.</p>
         </p>
@@ -85,7 +87,7 @@ GPAC is always on the move. Due to its accademic mission, TELECOM ParisTech may 
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2008-10-30 10:24:09 $"; ?>
+<?php $mod_date="\$Date: 2008-10-30 10:43:38 $"; ?>
 <?php include_once("bas.php"); ?>
 </div>
 </body>

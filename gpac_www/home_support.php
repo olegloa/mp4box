@@ -45,14 +45,11 @@ GPAC is quite a big project. There is never enough documentation, so do not hesi
 				 <h2 align="center">then <a href="mailto:jeanlf@users.sourceforge.net">contact us</a>!</h2>
 
 
-				<h1>Jobs</h1>
-				<p>Due to its accademic mission, our team at ENST may have some open position for traineeship and short-term contracts at any moment. If you have strong interest in multimedia R&amp;D and are looking for a great experience in Paris, do not hesitate to <a href="mailto:jeanlf@users.sourceforge.net">contact us</a>.</p>
-
 			</div>
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2008-04-11 09:48:30 $"; ?>
+<?php $mod_date="\$Date: 2008-10-30 10:43:38 $"; ?>
 <?php include_once("bas.php"); ?>
 </div>
 </body>

@@ -9,11 +9,10 @@
 				<p>Check interesting <a href="home_ref.php">references</a> about GPAC.</p> 
 				<h2><a href="home_support.php">HELP &amp; SUPPORT</a></h2>
 				<p>The <a href="home_support.php">place to go</a> if you have questions on GPAC not answered in the <a href="home_faq.php">FAQ</a>.</p> 
+				<h2><a href="home_jobs.php">JOBS</a></h2>
+				<p>Interested in <a href="home_jobs.php">joining us</a>?</p> 
 				<h2><a href="links.php">LINKS</a></h2>
 				<p><a href="links.php">Interesting links</a> related to GPAC (other projects, related standards ...)</p> 
-				<h2><a href="home_jobs.php">HELP &amp; JOBS</a></h2>
-				<p>Interested in <a href="home_jobs.php">joining us</a>?</p> 
-				<br/>
 				<br/>
 				<p>
         <a href="http://www.enst.fr"><img src="http://www.enst.fr/_images/logo_telecomparis.gif" width="60" height="60" alt="ENST Home Page" /></a> 
