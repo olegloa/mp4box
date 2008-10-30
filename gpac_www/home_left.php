@@ -11,6 +11,8 @@
 				<p>The <a href="home_support.php">place to go</a> if you have questions on GPAC not answered in the <a href="home_faq.php">FAQ</a>.</p> 
 				<h2><a href="links.php">LINKS</a></h2>
 				<p><a href="links.php">Interesting links</a> related to GPAC (other projects, related standards ...)</p> 
+				<h2><a href="home_jobs.php">HELP &amp; JOBS</a></h2>
+				<p>Interested in <a href="home_jobs.php">joining us</a>?</p> 
 				<br/>
 				<br/>
 				<p>

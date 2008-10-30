@@ -1771,6 +1771,7 @@ gpac_www/gpac_svg_testsuite_status.xslt -text
 gpac_www/home_about.php -text
 gpac_www/home_download.php -text
 gpac_www/home_faq.php -text
+gpac_www/home_jobs.php -text
 gpac_www/home_left.php -text
 gpac_www/home_news.php -text
 gpac_www/home_ref.php -text
