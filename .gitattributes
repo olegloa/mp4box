@@ -15,7 +15,7 @@ gpac/BUGS -text
 gpac/COPYING -text
 gpac/Changelog -text
 gpac/Clean.bat -text
-gpac/INSTALL -text
+gpac/INSTALLME -text
 gpac/Makefile -text
 gpac/README -text
 gpac/TODO -text
