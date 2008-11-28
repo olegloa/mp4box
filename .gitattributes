@@ -913,6 +913,10 @@ gpac/modules/aac_in/Makefile -text
 gpac/modules/aac_in/aac_in.c -text
 gpac/modules/aac_in/aac_in.def -text
 gpac/modules/aac_in/faad_dec.c -text
+gpac/modules/ac3_in/Makefile -text
+gpac/modules/ac3_in/ac3_in.c -text
+gpac/modules/ac3_in/ac3_in.def -text
+gpac/modules/ac3_in/liba52_dec.c -text
 gpac/modules/alsa/Makefile -text
 gpac/modules/alsa/alsa.c -text
 gpac/modules/amr_dec/Makefile -text
