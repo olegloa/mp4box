@@ -412,6 +412,7 @@ gpac/build/msvc6/GPAX.dsp -text
 gpac/build/msvc6/Osmo4.dsp -text
 gpac/build/msvc6/V4Studio.dsp -text
 gpac/build/msvc6/aac_in.dsp -text
+gpac/build/msvc6/ac3_in.dsp -text
 gpac/build/msvc6/amr_dec.dsp -text
 gpac/build/msvc6/amr_float_dec.dsp -text
 gpac/build/msvc6/bifs_dec.dsp -text
