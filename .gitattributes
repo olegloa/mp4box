@@ -453,6 +453,7 @@ gpac/build/msvc8/GPAX.vcproj -text
 gpac/build/msvc8/Osmo4.vcproj -text
 gpac/build/msvc8/V4Studio.vcproj -text
 gpac/build/msvc8/aac_in.vcproj -text
+gpac/build/msvc8/ac3_in.vcproj -text
 gpac/build/msvc8/amr_dec.vcproj -text
 gpac/build/msvc8/amr_float_dec.vcproj -text
 gpac/build/msvc8/bifs_dec.vcproj -text
