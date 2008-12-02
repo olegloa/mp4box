@@ -48,7 +48,7 @@ The GPAC framework is available for download in source code under LGPL License. 
 <p>GPAC is only fully functionnal when compiled with several third-party libraries (media codecs, ECMAScript, Font engine, ...). Features of GPAC are limited without them.
 </p> 
 
-<h2 class="download_section">Download GPAC third-party libraries <br/><a class="download_link" href="http://downloads.sourceforge.net/gpac/gpac_extra_libs-0.4.4.zip">Windows Archive (zip)</a>&nbsp;&nbsp;&nbsp;<a class="download_link" href="http://downloads.sourceforge.net/gpac/gpac_extra_libs-0.4.4.tar.gz">Generic Archive (tar.gz)</a></h2>
+<h2 class="download_section">Download GPAC third-party libraries <br/><a class="download_link" href="http://downloads.sourceforge.net/gpac/gpac_extra_libs-0.4.5.zip">Windows Archive (zip)</a>&nbsp;&nbsp;&nbsp;<a class="download_link" href="http://downloads.sourceforge.net/gpac/gpac_extra_libs-0.4.5.tar.gz">Generic Archive (tar.gz)</a></h2>
 
 <p>If you need other releases of GPAC, please consult the <a href="http://sourceforge.net/project/showfiles.php?group_id=84101">SourceForge download page</a>.</p>
 
@@ -56,7 +56,7 @@ The GPAC framework is available for download in source code under LGPL License. 
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2008-12-02 19:21:03 $"; ?>
+<?php $mod_date="\$Date: 2008-12-02 19:22:10 $"; ?>
 <?php include_once("bas.php"); ?>
 </div>
 </body>
