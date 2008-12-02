@@ -41,6 +41,17 @@
         <p><a href="home_about.php">Read more here.</a></p>
 -->
         <h1>News</h1>
+        <h2>December 2008 - GPAC 0.4.5 released</a></h2>
+        <p>Many new features in this new release:</p>
+          <ul>
+          <li>Massive improvements of the SVG support - checkout the <a href="http://dev.w3.org/cvsweb/~checkout~/SVG/profiles/1.2T/test/SVGT12-ImpReport.html?rev=1.7&content-type=text/html;%20charset=iso-8859-1">W3C SVG Implementation Report</a></li>
+          <li>Integrated 2D/3D renderer with support for mixed 2D/3D drawing (documents mixing BIFS, SVG, VRML/X3D)</li>
+          <li>Support for 3GPP DIMS (hinting, streaming and file playback).</li>
+          <li>Support for AC3 muxing in ISO Media and AC3 decoding in GPAC</li>
+          <li>Added support for MPEG-4 over MPEG-2 systems (T-DMB)</li>
+          <li>Improvements on Symbian version</li> 
+          <li>And many small fixes and improvements in MP4Box and GPAC clients</li>
+          </ul>
         <h2>September 2008 - GPAC will be demonstrated at <a href="http://www.icmc.usp.br/~doceng08/">the ACM Document Engineering Conference</a></h2>
         <p>GPAC players are now capable of playing mixed documents: documents in the SVG language containing links to MPEG-4 or X3D content and vice-versa. Details of the demonstrations will be available on the ACM portal.</p>
         <h2>July 2008 - Meet the GPAC team at <a href="http://mpeg.tnt.uni-hannover.de/">the 85th MPEG meeting</a></h2>
@@ -78,7 +89,7 @@
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2008-08-05 13:48:55 $"; ?>
+<?php $mod_date="\$Date: 2008-12-02 19:02:17 $"; ?>
 <?php include_once("bas.php"); ?>
 </div>
 </body>
