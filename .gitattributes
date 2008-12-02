@@ -662,6 +662,7 @@ gpac/extra_lib/include/js/jsdbgapi.h -text
 gpac/extra_lib/include/js/jslong.h -text
 gpac/extra_lib/include/js/jsosdep.h -text
 gpac/extra_lib/include/js/jsotypes.h -text
+gpac/extra_lib/include/js/jsproto.tbl -text
 gpac/extra_lib/include/js/jspubtd.h -text
 gpac/extra_lib/include/js/jstypes.h -text
 gpac/extra_lib/include/js/jsxdrapi.h -text
