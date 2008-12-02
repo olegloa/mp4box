@@ -29,7 +29,7 @@ The GPAC framework is available for download in source code under LGPL License. 
 
 <h1>GPAC source code</h1>
 <p>GPAC is updated on a day-to-day basis. The latest version is the development version, sometimes not stable. It is available on the <a href="http://sourceforge.net/cvs/?group_id=84101">CVS repository hosted on sourceforge.net</a>. You can also  <a href="http://gpac.cvs.sourceforge.net/gpac/gpac/">browse the source code</a>.</p>
-<p>For non-CVS user, the latest packaged release is 0.4.4 RC2. However, since this version was issued in May 2007, it may not contain all the new features or bug fixes.</p>
+<p>For non-CVS user, the latest packaged release is 0.4.5. </p>
 
 <p>Supported platforms in this release are:</p>
 <ul>
@@ -42,7 +42,7 @@ The GPAC framework is available for download in source code under LGPL License. 
 </ul> 
 
 
-<h2 class="download_section">Download GPAC source <br/><a class="download_link" href="http://downloads.sourceforge.net/gpac/gpac-0.4.4-rc2.zip">Windows Archive (zip)</a>&nbsp;&nbsp;&nbsp;<a class="download_link" href="http://downloads.sourceforge.net/gpac/gpac-0.4.4.tar.gz">Generic Archive (tar.gz)</a></h2>
+<h2 class="download_section">Download GPAC source <br/><a class="download_link" href="http://downloads.sourceforge.net/gpac/gpac-0.4.5.zip">Windows Archive (zip)</a>&nbsp;&nbsp;&nbsp;<a class="download_link" href="http://downloads.sourceforge.net/gpac/gpac-0.4.5.tar.gz">Generic Archive (tar.gz)</a></h2>
 
 <h1>GPAC third-party libraries</h1>
 <p>GPAC is only fully functionnal when compiled with several third-party libraries (media codecs, ECMAScript, Font engine, ...). Features of GPAC are limited without them.
@@ -56,7 +56,7 @@ The GPAC framework is available for download in source code under LGPL License. 
 	</div>
 <!-- =================== FIN CADRE DE LA PAGE =========================================  -->
 
-<?php $mod_date="\$Date: 2008-08-05 13:48:55 $"; ?>
+<?php $mod_date="\$Date: 2008-12-02 19:21:03 $"; ?>
 <?php include_once("bas.php"); ?>
 </div>
 </body>
