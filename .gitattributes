@@ -1289,6 +1289,7 @@ gpac/regression_tests/build-shell -text
 gpac/regression_tests/build-w32.bat -text
 gpac/regression_tests/index.css -text
 gpac/regression_tests/index.xml -text
+gpac/regression_tests/utfscript.svg -text
 gpac/regression_tests/x3d-2D-Arc2d.x3dv -text
 gpac/regression_tests/x3d-2D-ArcClose2d.x3dv -text
 gpac/regression_tests/x3d-2D-Disk2d.x3dv -text
