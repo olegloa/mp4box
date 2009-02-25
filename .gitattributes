@@ -464,8 +464,10 @@ gpac/build/msvc8/dummy_in.vcproj -text
 gpac/build/msvc8/dx_hw.vcproj -text
 gpac/build/msvc8/ffmpeg_in.vcproj -text
 gpac/build/msvc8/ft_font.vcproj -text
+gpac/build/msvc8/gapi.vcproj -text
 gpac/build/msvc8/gdip_raster.vcproj -text
 gpac/build/msvc8/gpac.sln -text
+gpac/build/msvc8/gpac_js.vcproj -text
 gpac/build/msvc8/img_in.vcproj -text
 gpac/build/msvc8/ismacryp.vcproj -text
 gpac/build/msvc8/isom_in.vcproj -text
@@ -478,6 +480,7 @@ gpac/build/msvc8/mp4client.vcproj -text
 gpac/build/msvc8/mpegts_in.vcproj -text
 gpac/build/msvc8/odf_dec.vcproj -text
 gpac/build/msvc8/ogg.vcproj -text
+gpac/build/msvc8/osmophone.vcproj -text
 gpac/build/msvc8/osmozilla.vcproj -text
 gpac/build/msvc8/raw_out.vcproj -text
 gpac/build/msvc8/rtp_in.vcproj -text
