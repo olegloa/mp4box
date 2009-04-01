@@ -595,6 +595,7 @@ gpac/doc/man/gpac.1 -text
 gpac/doc/man/mp42avi.1 -text
 gpac/doc/man/mp4box.1 -text
 gpac/doc/man/mp4client.1 -text
+gpac/doc/osmo4.ico -text
 gpac/extra_lib/include/a52dec/a52.h -text
 gpac/extra_lib/include/a52dec/mm_accel.h -text
 gpac/extra_lib/include/faad/faad.h -text
