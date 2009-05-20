@@ -365,6 +365,7 @@ gpac/build/codeblocks/amr_dec.cbp -text
 gpac/build/codeblocks/amr_float_dec.cbp -text
 gpac/build/codeblocks/bifs_dec.cbp -text
 gpac/build/codeblocks/ctx_load.cbp -text
+gpac/build/codeblocks/demo_is.cbp -text
 gpac/build/codeblocks/dummy_in.cbp -text
 gpac/build/codeblocks/dx_hw.cbp -text
 gpac/build/codeblocks/ffmpeg_in.cbp -text
@@ -392,6 +393,7 @@ gpac/build/codeblocks/soft_raster.cbp -text
 gpac/build/codeblocks/svg_in.cbp -text
 gpac/build/codeblocks/timedtext.cbp -text
 gpac/build/codeblocks/wav_out.cbp -text
+gpac/build/codeblocks/wiiis.cbp -text
 gpac/build/codeblocks/wxOsmo4.cbp -text
 gpac/build/codeblocks/xvid_dec.cbp -text
 gpac/build/msevc3/GPAC.VCW -text
@@ -497,6 +499,7 @@ gpac/build/msvc8/amr_dec.vcproj -text
 gpac/build/msvc8/amr_float_dec.vcproj -text
 gpac/build/msvc8/bifs_dec.vcproj -text
 gpac/build/msvc8/ctx_load.vcproj -text
+gpac/build/msvc8/demo_is.vcproj -text
 gpac/build/msvc8/dummy_in.vcproj -text
 gpac/build/msvc8/dx_hw.vcproj -text
 gpac/build/msvc8/ffmpeg_in.vcproj -text
@@ -527,6 +530,7 @@ gpac/build/msvc8/soft_raster.vcproj -text
 gpac/build/msvc8/svg_in.vcproj -text
 gpac/build/msvc8/timedtext.vcproj -text
 gpac/build/msvc8/wav_out.vcproj -text
+gpac/build/msvc8/wiiis.vcproj -text
 gpac/build/msvc8/wxOsmo4.vcproj -text
 gpac/build/msvc8/xvid_dec.vcproj -text
 gpac/build/symbian/Icons.mk -text
@@ -836,7 +840,6 @@ gpac/modules/demo_is/Makefile -text
 gpac/modules/demo_is/demo-sensor.bt -text
 gpac/modules/demo_is/demo_is.c -text
 gpac/modules/demo_is/demo_is.def -text
-gpac/modules/demo_is/demo_is.vcproj -text
 gpac/modules/dummy_in/Makefile -text
 gpac/modules/dummy_in/dummy_in.c -text
 gpac/modules/dummy_in/dummy_in.def -text
@@ -969,7 +972,6 @@ gpac/modules/wiiis/Makefile -text
 gpac/modules/wiiis/test_wii.bt -text
 gpac/modules/wiiis/wiiis.c -text
 gpac/modules/wiiis/wiiis.def -text
-gpac/modules/wiiis/wiiis.vcproj -text
 gpac/modules/x11_out/Makefile -text
 gpac/modules/x11_out/x11_out.c -text
 gpac/modules/x11_out/x11_out.h -text
