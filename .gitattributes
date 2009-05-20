@@ -832,6 +832,11 @@ gpac/modules/bifs_dec/bifs_dec.def -text
 gpac/modules/ctx_load/Makefile -text
 gpac/modules/ctx_load/ctx_load.c -text
 gpac/modules/ctx_load/ctx_load.def -text
+gpac/modules/demo_is/Makefile -text
+gpac/modules/demo_is/demo-sensor.bt -text
+gpac/modules/demo_is/demo_is.c -text
+gpac/modules/demo_is/demo_is.def -text
+gpac/modules/demo_is/demo_is.vcproj -text
 gpac/modules/dummy_in/Makefile -text
 gpac/modules/dummy_in/dummy_in.c -text
 gpac/modules/dummy_in/dummy_in.def -text
@@ -960,6 +965,11 @@ gpac/modules/timedtext/timedtext_in.c -text
 gpac/modules/wav_out/Makefile -text
 gpac/modules/wav_out/wav_out.c -text
 gpac/modules/wav_out/wav_out.def -text
+gpac/modules/wiiis/Makefile -text
+gpac/modules/wiiis/test_wii.bt -text
+gpac/modules/wiiis/wiiis.c -text
+gpac/modules/wiiis/wiiis.def -text
+gpac/modules/wiiis/wiiis.vcproj -text
 gpac/modules/x11_out/Makefile -text
 gpac/modules/x11_out/x11_out.c -text
 gpac/modules/x11_out/x11_out.h -text
