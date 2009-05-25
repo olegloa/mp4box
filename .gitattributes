@@ -969,6 +969,10 @@ gpac/modules/timedtext/Makefile -text
 gpac/modules/timedtext/timedtext.def -text
 gpac/modules/timedtext/timedtext_dec.c -text
 gpac/modules/timedtext/timedtext_in.c -text
+gpac/modules/ui_rec/Makefile -text
+gpac/modules/ui_rec/readme.txt -text
+gpac/modules/ui_rec/ui_rec.c -text
+gpac/modules/ui_rec/ui_rec.def -text
 gpac/modules/wav_out/Makefile -text
 gpac/modules/wav_out/wav_out.c -text
 gpac/modules/wav_out/wav_out.def -text
