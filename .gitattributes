@@ -522,6 +522,7 @@ gpac/build/msvc8/mp4client.vcproj -text
 gpac/build/msvc8/mpegts_in.vcproj -text
 gpac/build/msvc8/odf_dec.vcproj -text
 gpac/build/msvc8/ogg.vcproj -text
+gpac/build/msvc8/opencv_is.vcproj -text
 gpac/build/msvc8/osmophone.vcproj -text
 gpac/build/msvc8/osmozilla.vcproj -text
 gpac/build/msvc8/raw_out.vcproj -text
@@ -927,6 +928,11 @@ gpac/modules/ogg/ogg_in.h -text
 gpac/modules/ogg/ogg_load.c -text
 gpac/modules/ogg/theora_dec.c -text
 gpac/modules/ogg/vorbis_dec.c -text
+gpac/modules/opencv_is/Makefile -text
+gpac/modules/opencv_is/demo-sensor.bt -text
+gpac/modules/opencv_is/haarcascade_frontalface_default.xml -text
+gpac/modules/opencv_is/opencv_is.c -text
+gpac/modules/opencv_is/opencv_is.def -text
 gpac/modules/oss_audio/Makefile -text
 gpac/modules/oss_audio/oss.c -text
 gpac/modules/pulseaudio/Makefile -text
