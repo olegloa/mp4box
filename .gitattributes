@@ -1464,6 +1464,7 @@ gpac/src/compositor/visual_manager_3d.h -text
 gpac/src/compositor/visual_manager_3d_gl.c -text
 gpac/src/compositor/x3d_geometry.c -text
 gpac/src/dir_info -text
+gpac/src/empty.cpp -text
 gpac/src/ietf/rtcp.c -text
 gpac/src/ietf/rtp.c -text
 gpac/src/ietf/rtp_depacketizer.c -text
