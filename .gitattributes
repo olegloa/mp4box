@@ -1440,7 +1440,7 @@ gpac/src/compositor/visual_manager_3d.h -text
 gpac/src/compositor/visual_manager_3d_gl.c -text
 gpac/src/compositor/x3d_geometry.c -text
 gpac/src/dir_info -text
-gpac/src/empty.cpp -text
+gpac/src/export.cpp -text
 gpac/src/ietf/rtcp.c -text
 gpac/src/ietf/rtp.c -text
 gpac/src/ietf/rtp_depacketizer.c -text
@@ -1481,8 +1481,6 @@ gpac/src/isomedia/tx3g.c -text
 gpac/src/laser/lsr_dec.c -text
 gpac/src/laser/lsr_enc.c -text
 gpac/src/laser/lsr_tables.c -text
-gpac/src/libgpac.def -text
-gpac/src/libgpac_ce.def -text
 gpac/src/mcrypt/cbc.c -text
 gpac/src/mcrypt/cfb.c -text
 gpac/src/mcrypt/ctr.c -text
