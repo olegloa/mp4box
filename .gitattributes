@@ -749,6 +749,7 @@ gpac/include/gpac/bitstream.h -text
 gpac/include/gpac/color.h -text
 gpac/include/gpac/compositor.h -text
 gpac/include/gpac/config_file.h -text
+gpac/include/gpac/configuration.h -text
 gpac/include/gpac/constants.h -text
 gpac/include/gpac/crypt.h -text
 gpac/include/gpac/download.h -text
@@ -761,7 +762,6 @@ gpac/include/gpac/internal/bifs_dev.h -text
 gpac/include/gpac/internal/bifs_tables.h -text
 gpac/include/gpac/internal/camera.h -text
 gpac/include/gpac/internal/compositor_dev.h -text
-gpac/include/gpac/internal/config_static.h -text
 gpac/include/gpac/internal/crypt_dev.h -text
 gpac/include/gpac/internal/ietf_dev.h -text
 gpac/include/gpac/internal/isomedia_dev.h -text
@@ -1589,7 +1589,6 @@ gpac/src/scenegraph/xml_ns.c -text
 gpac/src/terminal/channel.c -text
 gpac/src/terminal/clock.c -text
 gpac/src/terminal/decoder.c -text
-gpac/src/terminal/inline.c -text
 gpac/src/terminal/input_sensor.c -text
 gpac/src/terminal/input_sensor.h -text
 gpac/src/terminal/media_control.c -text
@@ -1599,9 +1598,11 @@ gpac/src/terminal/media_memory.c -text
 gpac/src/terminal/media_memory.h -text
 gpac/src/terminal/media_object.c -text
 gpac/src/terminal/media_sensor.c -text
+gpac/src/terminal/mpeg4_inline.c -text
 gpac/src/terminal/network_service.c -text
 gpac/src/terminal/object_browser.c -text
 gpac/src/terminal/object_manager.c -text
+gpac/src/terminal/scene.c -text
 gpac/src/terminal/svg_external.c -text
 gpac/src/terminal/term_node_init.c -text
 gpac/src/terminal/terminal.c -text
