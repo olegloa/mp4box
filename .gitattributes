@@ -238,6 +238,8 @@ gpac/applications/testapps/broadcaster/broadcaster.c -text
 gpac/applications/testapps/broadcaster/broadcaster.dsp -text
 gpac/applications/testapps/broadcaster/broadcaster.h -text
 gpac/applications/testapps/broadcaster/broadcaster_config.cfg -text
+gpac/applications/testapps/broadcaster/debug.c -text
+gpac/applications/testapps/broadcaster/debug.h -text
 gpac/applications/testapps/broadcaster/france.mp4 -text
 gpac/applications/testapps/broadcaster/meteo_local.xmt -text
 gpac/applications/testapps/broadcaster/sdp_generator.c -text
