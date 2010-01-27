@@ -227,6 +227,7 @@ gpac/applications/testapps/beng_test/BifsEngineTester.dsp -text
 gpac/applications/testapps/beng_test/CmdLineTst.c -text
 gpac/applications/testapps/beng_test/rect-update.bt -text
 gpac/applications/testapps/beng_test/rect.bt -text
+gpac/applications/testapps/beng_test/rect_aggregate.bt -text
 gpac/applications/testapps/broadcaster/Makefile -text
 gpac/applications/testapps/broadcaster/RTP_serv_generator.c -text
 gpac/applications/testapps/broadcaster/RTP_serv_generator.h -text
