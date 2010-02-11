@@ -221,8 +221,6 @@ gpac/applications/osmozilla/osmozilla.png -text
 gpac/applications/osmozilla/osmozilla.rc -text
 gpac/applications/osmozilla/readme.txt -text
 gpac/applications/osmozilla/resource.h -text
-gpac/applications/standalone2drender/standalone2drender.c -text
-gpac/applications/standalone2drender/standalone2drender.h -text
 gpac/applications/testapps/beng_test/BifsEngineTester.dsp -text
 gpac/applications/testapps/beng_test/CmdLineTst.c -text
 gpac/applications/testapps/beng_test/rect-update.bt -text
