@@ -721,7 +721,6 @@ gpac/gpac.spec -text
 gpac/include/gpac/avparse.h -text
 gpac/include/gpac/base_coding.h -text
 gpac/include/gpac/bifs.h -text
-gpac/include/gpac/bifsengine.h -text
 gpac/include/gpac/bitstream.h -text
 gpac/include/gpac/color.h -text
 gpac/include/gpac/compositor.h -text
@@ -779,6 +778,7 @@ gpac/include/gpac/nodes_xbl.h -text
 gpac/include/gpac/options.h -text
 gpac/include/gpac/path2d.h -text
 gpac/include/gpac/rtp_streamer.h -text
+gpac/include/gpac/scene_engine.h -text
 gpac/include/gpac/scene_manager.h -text
 gpac/include/gpac/scenegraph.h -text
 gpac/include/gpac/scenegraph_svg.h -text
@@ -1495,7 +1495,6 @@ gpac/src/odf/odf_dump.c -text
 gpac/src/odf/odf_parse.c -text
 gpac/src/odf/qos.c -text
 gpac/src/odf/slc.c -text
-gpac/src/scene_manager/encode_cbk.c -text
 gpac/src/scene_manager/encode_isom.c -text
 gpac/src/scene_manager/loader_bt.c -text
 gpac/src/scene_manager/loader_isom.c -text
@@ -1503,6 +1502,7 @@ gpac/src/scene_manager/loader_qt.c -text
 gpac/src/scene_manager/loader_svg.c -text
 gpac/src/scene_manager/loader_xmt.c -text
 gpac/src/scene_manager/scene_dump.c -text
+gpac/src/scene_manager/scene_engine.c -text
 gpac/src/scene_manager/scene_manager.c -text
 gpac/src/scene_manager/scene_stats.c -text
 gpac/src/scene_manager/swf_bifs.c -text
