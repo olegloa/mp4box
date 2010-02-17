@@ -476,6 +476,7 @@ gpac/build/msvc8/aac_in.vcproj -text
 gpac/build/msvc8/ac3_in.vcproj -text
 gpac/build/msvc8/amr_dec.vcproj -text
 gpac/build/msvc8/amr_float_dec.vcproj -text
+gpac/build/msvc8/audio_filter.vcproj -text
 gpac/build/msvc8/bifs_dec.vcproj -text
 gpac/build/msvc8/ctx_load.vcproj -text
 gpac/build/msvc8/demo_is.vcproj -text
@@ -811,6 +812,8 @@ gpac/modules/amr_float_dec/Makefile -text
 gpac/modules/amr_float_dec/amr_float_dec.c -text
 gpac/modules/amr_float_dec/amr_nb_ft/dummy -text
 gpac/modules/amr_float_dec/amr_wb_ft/dummy -text
+gpac/modules/audio_filter/Makefile -text
+gpac/modules/audio_filter/audio_filter.c -text
 gpac/modules/bifs_dec/Makefile -text
 gpac/modules/bifs_dec/bifs_dec.c -text
 gpac/modules/ctx_load/Makefile -text
