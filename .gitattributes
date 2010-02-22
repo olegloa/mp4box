@@ -110,6 +110,7 @@ gpac/applications/mp42avi/main.c -text
 gpac/applications/mp4box/Makefile -text
 gpac/applications/mp4box/filedump.c -text
 gpac/applications/mp4box/fileimport.c -text
+gpac/applications/mp4box/live.c -text
 gpac/applications/mp4box/main.c -text
 gpac/applications/mp4client/Makefile -text
 gpac/applications/mp4client/extract.c -text
