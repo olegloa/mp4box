@@ -1558,6 +1558,7 @@ gpac/src/utils/base_encoding.c -text
 gpac/src/utils/bitstream.c -text
 gpac/src/utils/color.c -text
 gpac/src/utils/configfile.c -text
+gpac/src/utils/dlmalloc.c -text
 gpac/src/utils/downloader.c -text
 gpac/src/utils/error.c -text
 gpac/src/utils/gzio.cpp -text
