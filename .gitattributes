@@ -550,6 +550,7 @@ gpac/build/symbian/svg_in.mmp -text
 gpac/build/symbian/symbian_dll_entry.cpp -text
 gpac/build/symbian/timedtext.mmp -text
 gpac/build/symbian/xvid_dec.mmp -text
+gpac/build/xcode/gpac.xcodeproj/project.pbxproj -text
 gpac/configure -text
 gpac/debian/changelog -text
 gpac/debian/compat -text
