@@ -1580,6 +1580,7 @@ gpac/src/media_tools/img.c -text
 gpac/src/media_tools/ismacryp.c -text
 gpac/src/media_tools/isom_hinter.c -text
 gpac/src/media_tools/isom_tools.c -text
+gpac/src/media_tools/m2ts_mux.c -text
 gpac/src/media_tools/media_export.c -text
 gpac/src/media_tools/media_import.c -text
 gpac/src/media_tools/mpeg2_ps.c -text
