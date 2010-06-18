@@ -468,6 +468,7 @@ gpac/build/msvc6/svg_in.dsp -text
 gpac/build/msvc6/timedtext.dsp -text
 gpac/build/msvc6/ui_rec.dsp -text
 gpac/build/msvc6/wav_out.dsp -text
+gpac/build/msvc6/widgetman.dsp -text
 gpac/build/msvc6/wxOsmo4.dsp -text
 gpac/build/msvc6/xvid_dec.dsp -text
 gpac/build/msvc8/GPAX.vcproj -text
@@ -514,6 +515,7 @@ gpac/build/msvc8/svg_in.vcproj -text
 gpac/build/msvc8/timedtext.vcproj -text
 gpac/build/msvc8/ui_rec.vcproj -text
 gpac/build/msvc8/wav_out.vcproj -text
+gpac/build/msvc8/widgetman.vcproj -text
 gpac/build/msvc8/wiiis.vcproj -text
 gpac/build/msvc8/wxOsmo4.vcproj -text
 gpac/build/msvc8/xvid_dec.vcproj -text
@@ -1037,6 +1039,14 @@ gpac/modules/ui_rec/readme.txt -text
 gpac/modules/ui_rec/ui_rec.c -text
 gpac/modules/wav_out/Makefile -text
 gpac/modules/wav_out/wav_out.c -text
+gpac/modules/widgetman/Makefile -text
+gpac/modules/widgetman/unzip.c -text
+gpac/modules/widgetman/unzip.h -text
+gpac/modules/widgetman/wgt_load.c -text
+gpac/modules/widgetman/wgt_load_base.js -text
+gpac/modules/widgetman/widget.c -text
+gpac/modules/widgetman/widgetman.c -text
+gpac/modules/widgetman/widgetman.h -text
 gpac/modules/wiiis/Makefile -text
 gpac/modules/wiiis/test_wii.bt -text
 gpac/modules/wiiis/wiiis.c -text
