@@ -1490,6 +1490,7 @@ gpac/src/compositor/events.c -text
 gpac/src/compositor/font_engine.c -text
 gpac/src/compositor/gl_inc.h -text
 gpac/src/compositor/hardcoded_protos.c -text
+gpac/src/compositor/hc_flash_shape.c -text
 gpac/src/compositor/mesh.c -text
 gpac/src/compositor/mesh_collide.c -text
 gpac/src/compositor/mesh_tesselate.c -text
