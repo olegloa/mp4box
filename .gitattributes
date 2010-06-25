@@ -1017,7 +1017,6 @@ gpac/modules/platinum/SDK/include/PltUPnP.h -text
 gpac/modules/platinum/SDK/include/PltUPnPHelper.h -text
 gpac/modules/platinum/SDK/include/PltVersion.h -text
 gpac/modules/platinum/SDK/include/PltXmlHelper.h -text
-gpac/modules/platinum/SDK/include/pltaction.h -text
 gpac/modules/pulseaudio/Makefile -text
 gpac/modules/pulseaudio/pulseaudio.c -text
 gpac/modules/raw_out/Makefile -text
