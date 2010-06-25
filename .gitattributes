@@ -974,6 +974,7 @@ gpac/modules/platinum/SDK/include/NptVersion.h -text
 gpac/modules/platinum/SDK/include/NptXml.h -text
 gpac/modules/platinum/SDK/include/NptZip.h -text
 gpac/modules/platinum/SDK/include/Platinum.h -text
+gpac/modules/platinum/SDK/include/PltAction.h -text
 gpac/modules/platinum/SDK/include/PltArgument.h -text
 gpac/modules/platinum/SDK/include/PltConstants.h -text
 gpac/modules/platinum/SDK/include/PltCtrlPoint.h -text
