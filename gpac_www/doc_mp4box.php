@@ -54,7 +54,7 @@ MP4Box is a multimedia packager, with a vast number of functionalities: conversi
 </p>
 <p>As of version 0.2.2, you don't need to follow any specific option ordering at prompt.
 </p>
-<p>Please be aware that this page documents the latest version of MP4Box and may therefore give details on options available only on GPAC CVS. If your version of MP4Box does not support an option please upgrade.
+<p>Please be aware that this page documents the latest version of MP4Box and may therefore give details on options available only on GPAC SVN. If your version of MP4Box does not support an option please upgrade.
 </p>
 
 <h1 id="general">General operations ("MP4Box -h general")</h1>

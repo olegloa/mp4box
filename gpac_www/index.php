@@ -82,7 +82,7 @@
           </ul>
         
 
-        <p>Check the complete <a href="http://gpac.cvs.sourceforge.net/*checkout*/gpac/gpac/Changelog">changelog</a>.</p>
+        <p>Check the complete <a href="http://gpac.svn.sourceforge.net/viewvc/gpac/?view=log">changelog</a>.</p>
         <p>Read the <a href="home_news.php">old news</a>.</p>
 
 			</div>

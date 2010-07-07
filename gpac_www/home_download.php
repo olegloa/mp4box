@@ -13,7 +13,7 @@
 <!-- =================== ENTETE DE LA PAGE =========================================  -->
 	<div id="Chapeau_court">
 		<h1>
-The GPAC framework is available for download in source code under LGPL License. Many developments are always ongoing and stable releases are usually issued twice a year, so do not hesitate to use the GPAC CVS repository.
+The GPAC framework is available for download in source code under LGPL License. Many developments are always ongoing and stable releases are usually issued twice a year, so do not hesitate to use the GPAC SVN repository.
 		</h1>
 	</div>
 
@@ -28,8 +28,8 @@ The GPAC framework is available for download in source code under LGPL License. 
 <p>Due to licensing issues, there is currently no binary release of the GPAC framework. Only the source code is available.</p>
 
 <h1>GPAC source code</h1>
-<p>GPAC is updated on a day-to-day basis. The latest version is the development version, sometimes not stable. It is available on the <a href="http://sourceforge.net/cvs/?group_id=84101">CVS repository hosted on sourceforge.net</a>. You can also  <a href="http://gpac.cvs.sourceforge.net/gpac/gpac/">browse the source code</a>.</p>
-<p>For non-CVS user, the latest packaged release is 0.4.5. </p>
+<p>GPAC is updated on a day-to-day basis. The latest version is the development version, sometimes not stable. It is available on the <a href="http://sourceforge.net/svn/?group_id=84101">SVN repository hosted on sourceforge.net</a>. You can also  <a href="http://gpac.svn.sourceforge.net/viewvc/gpac/trunk/gpac/">browse the source code</a>.</p>
+<p>For non-SVN user, the latest packaged release is 0.4.5. </p>
 
 <p>Supported platforms in this release are:</p>
 <ul>
