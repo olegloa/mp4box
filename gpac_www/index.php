@@ -41,6 +41,9 @@
         <p><a href="home_about.php">Read more here.</a></p>
 -->
         <h1>News</h1>
+        <h2>July 2010 - GPAC migrates from CVS to SVN</a></h2>
+        <p>The CVS repository has been disabled. Please checkout the new SVN repository with the following command-line:</p>
+        <li>svn co https://gpac.svn.sourceforge.net/svnroot/gpac/trunk/gpac gpac</li>
         <h2>December 2008 - GPAC 0.4.5 released</a></h2>
         <p>Many new features in this new release:</p>
           <ul>
