@@ -764,13 +764,6 @@ gpac/extra_lib/include/wiiuse.h -text
 gpac/extra_lib/include/xvid/xvid.h -text
 gpac/extra_lib/include/zlib/zconf.h -text
 gpac/extra_lib/include/zlib/zlib.h -text
-gpac/extra_lib/lib/arm_ppc02_deb/dummy -text
-gpac/extra_lib/lib/arm_ppc02_rel/dummy -text
-gpac/extra_lib/lib/arm_ppc03_deb/dummy -text
-gpac/extra_lib/lib/arm_ppc03_rel/dummy -text
-gpac/extra_lib/lib/gcc/dummy -text
-gpac/extra_lib/lib/w32_deb/dummy -text
-gpac/extra_lib/lib/w32_rel/dummy -text
 gpac/gpac.spec -text
 gpac/include/gpac/avparse.h -text
 gpac/include/gpac/base_coding.h -text
@@ -866,8 +859,6 @@ gpac/modules/amr_dec/amr_in.c -text
 gpac/modules/amr_dec/amr_nb/typedefs.h -text
 gpac/modules/amr_float_dec/Makefile -text
 gpac/modules/amr_float_dec/amr_float_dec.c -text
-gpac/modules/amr_float_dec/amr_nb_ft/dummy -text
-gpac/modules/amr_float_dec/amr_wb_ft/dummy -text
 gpac/modules/audio_filter/Makefile -text
 gpac/modules/audio_filter/audio_filter.c -text
 gpac/modules/bifs_dec/Makefile -text
