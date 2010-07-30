@@ -309,6 +309,7 @@ gpac/build/msvc8/mpegts_in.vcproj eol=crlf
 gpac/build/msvc8/odf_dec.vcproj eol=crlf
 gpac/build/msvc8/ogg.vcproj eol=crlf
 gpac/build/msvc8/opencv_is.vcproj eol=crlf
+gpac/build/msvc8/opensvc.vcproj -text
 gpac/build/msvc8/osmophone.vcproj eol=crlf
 gpac/build/msvc8/osmozilla.vcproj eol=crlf
 gpac/build/msvc8/platinum.vcproj eol=crlf
@@ -468,6 +469,8 @@ gpac/modules/dx_hw/dx_hw.rc -text
 gpac/modules/dx_hw/hand.cur -text
 gpac/modules/opencv_is/demo-sensor.bt -text
 gpac/modules/opencv_is/haarcascade_frontalface_default.xml -text
+gpac/modules/opensvc_dec/Makefile -text
+gpac/modules/opensvc_dec/opensvc_dec.c -text
 gpac/modules/widgetman/wgt_load_base.js -text
 gpac/modules/wiiis/test_wii.bt -text
 gpac/modules/xvid_dec/xvid_wce/AUTHORS -text
