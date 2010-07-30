@@ -472,6 +472,7 @@ gpac/modules/opencv_is/demo-sensor.bt -text
 gpac/modules/opencv_is/haarcascade_frontalface_default.xml -text
 gpac/modules/opensvc_dec/Makefile -text
 gpac/modules/opensvc_dec/opensvc_dec.c -text
+gpac/modules/redirect_av/Makefile -text
 gpac/modules/redirect_av/redirect_av.c -text
 gpac/modules/widgetman/wgt_load_base.js -text
 gpac/modules/wiiis/test_wii.bt -text
