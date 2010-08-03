@@ -465,6 +465,9 @@ gpac/doc/osmo4.ico -text
 gpac/extra_lib/include/js/jsproto.tbl -text
 gpac/gpac.spec -text
 gpac/modules/demo_is/demo-sensor.bt -text
+gpac/modules/directfb_out/Makefile -text
+gpac/modules/directfb_out/directfb_out.c -text
+gpac/modules/directfb_out/directfb_out.h -text
 gpac/modules/dx_hw/collide.cur -text
 gpac/modules/dx_hw/dx_hw.rc -text
 gpac/modules/dx_hw/hand.cur -text
