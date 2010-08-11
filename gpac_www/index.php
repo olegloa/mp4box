@@ -41,12 +41,15 @@
         <p><a href="home_about.php">Read more here.</a></p>
 -->
         <h1>News</h1>
-        <h2>July 2010 - GPAC migrates from CVS to SVN</a></h2>
+        <h2>August 2010 - Version 0.4.5 is deprecated</h2>
+        <p>Since no release has occured since December 2008, the last packaged release (0.4.5) has become obsolete. Please check out the SVN or contact us for a snapshot of the SVN.</p>
+        
+        <h2>July 2010 - GPAC migrates from CVS to SVN</h2>
         <p>The CVS repository has been disabled. Please checkout the new SVN repository with the following command-line:</p>
         <ul>
         <li>svn co https://gpac.svn.sourceforge.net/svnroot/gpac/trunk/gpac gpac</li>
         </ul>
-        <h2>December 2008 - GPAC 0.4.5 released</a></h2>
+        <h2>December 2008 - GPAC 0.4.5 released</h2>
         <p>Many new features in this new release:</p>
           <ul>
           <li>Massive improvements of the SVG support - checkout the <a href="http://dev.w3.org/cvsweb/~checkout~/SVG/profiles/1.2T/test/SVGT12-ImpReport.html?rev=1.7&content-type=text/html;%20charset=iso-8859-1">W3C SVG Implementation Report</a></li>

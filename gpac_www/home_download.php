@@ -13,7 +13,7 @@
 <!-- =================== ENTETE DE LA PAGE =========================================  -->
 	<div id="Chapeau_court">
 		<h1>
-The GPAC framework is available for download in source code under LGPL License. Many developments are always ongoing and stable releases are usually issued twice a year, so do not hesitate to use the GPAC SVN repository.
+The GPAC framework is available for download in source code under LGPL License. Developments are ongoing as your read these lines. 
 		</h1>
 	</div>
 
@@ -25,13 +25,12 @@ The GPAC framework is available for download in source code under LGPL License. 
 			<div class="Col2">
 				<h1>Licensing</h1>
 				<p>As of version 0.4.0 GPAC is licensed under the GNU Lesser General Public License. Older GPAC versions are available under the GNU General Public License. GPAC is being distributed under the LGPL license, but is also partially distributed by ENST under commercial license. For more info on commercial licensing, please <a href="#">contact us</a>.</p>
-<p>Due to licensing issues, there is currently no binary release of the GPAC framework. Only the source code is available.</p>
 
 <h1>GPAC source code</h1>
 <p>GPAC is updated on a day-to-day basis. The latest version is the development version, sometimes not stable. It is available on the <a href="http://sourceforge.net/svn/?group_id=84101">SVN repository hosted on sourceforge.net</a>. You can also  <a href="http://gpac.svn.sourceforge.net/viewvc/gpac/trunk/gpac/">browse the source code</a>.</p>
-<p>For non-SVN user, the latest packaged release is 0.4.5. </p>
+<p>For non-SVN user, there is no current packaged release (soon). Please contact us.</p>
 
-<p>Supported platforms in this release are:</p>
+<p>Supported platforms are:</p>
 <ul>
 <li>Windows,</li> 
 <li>Windows CE,</li> 
@@ -42,15 +41,13 @@ The GPAC framework is available for download in source code under LGPL License. 
 </ul> 
 
 
-<h2 class="download_section">Download GPAC source <br/><a class="download_link" href="http://downloads.sourceforge.net/gpac/gpac-0.4.5.zip">Windows Archive (zip)</a>&nbsp;&nbsp;&nbsp;<a class="download_link" href="http://downloads.sourceforge.net/gpac/gpac-0.4.5.tar.gz">Generic Archive (tar.gz)</a></h2>
-
 <h1>GPAC third-party libraries</h1>
 <p>GPAC is only fully functionnal when compiled with several third-party libraries (media codecs, ECMAScript, Font engine, ...). Features of GPAC are limited without them.
-</p> 
-
-<h2 class="download_section">Download GPAC third-party libraries <br/><a class="download_link" href="http://downloads.sourceforge.net/gpac/gpac_extra_libs-0.4.5.zip">Windows Archive (zip)</a>&nbsp;&nbsp;&nbsp;<a class="download_link" href="http://downloads.sourceforge.net/gpac/gpac_extra_libs-0.4.5.tar.gz">Generic Archive (tar.gz)</a></h2>
-
-<p>If you need other releases of GPAC, please consult the <a href="http://sourceforge.net/project/showfiles.php?group_id=84101">SourceForge download page</a>.</p>
+<br>
+For Linux users, most of these libraries are distributed in packaged versions (e.g. using apt). Here is the list:
+zlib1g-dev xulrunner-1.9.2-dev libfreetype6-dev libjpeg62-dev libpng12-dev libopenjpeg-dev libmad0-dev libfaad-dev libogg-dev libvorbis-dev libtheora-dev liba52-0.7.4-dev libavcodec-dev libavformat-dev libavutil-dev libswscale-dev libxv-dev x11proto-video-dev libgl1-mesa-dev x11proto-gl-dev linux-sound-base libxvidcore-dev libwxbase2.8-dev libwxgtk2.8-dev wx2.8-headers libssl-dev libjack-dev libasound2-dev libpulse-dev libsdl1.2-dev dvb-apps
+<br>
+For windows users, you can download GPAC third-party libraries here, compilation instructions (sometimes complex) are in the archive.<br/><a class="download_link" href="http://downloads.sourceforge.net/gpac/gpac_extra_libs-0.4.5.zip">Windows Archive (zip)</a></h2>
 
 			</div>
 	</div>
