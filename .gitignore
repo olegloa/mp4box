@@ -1,0 +1,5 @@
+gpac/applications/generators/MPEG4/MPEG4Gen
+gpac/applications/generators/X3D/X3DGen
+gpac/bin/gcc
+gpac/config.h
+gpac/config.mak
