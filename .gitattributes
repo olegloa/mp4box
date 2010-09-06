@@ -571,6 +571,7 @@ gpac/regression_tests/bifs-2D-positioning-layout-vert-ttb-nowrap.bt -text
 gpac/regression_tests/bifs-2D-positioning-layout-vert-ttb-wrap-ltr.bt -text
 gpac/regression_tests/bifs-2D-positioning-layout-vert-ttb-wrap-rtl.bt -text
 gpac/regression_tests/bifs-2D-positioning-orderedgroup.bt -text
+gpac/regression_tests/bifs-2D-positioning-pathlayout-graphics.bt -text
 gpac/regression_tests/bifs-2D-positioning-pathlayout.bt -text
 gpac/regression_tests/bifs-2D-positioning-transform2D.bt -text
 gpac/regression_tests/bifs-2D-positioning-transformmatrix2D.bt -text
