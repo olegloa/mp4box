@@ -813,6 +813,7 @@ gpac/regression_tests/index.xml -text
 gpac/regression_tests/svg/all_syntaxes_1.1F2.svg -text
 gpac/regression_tests/svg/createanim-by-script.svg -text
 gpac/regression_tests/svg/createimage-by-script.svg -text
+gpac/regression_tests/svg/utfscript.svg -text
 gpac/regression_tests/utfscript.svg -text
 gpac/regression_tests/x3d/x3d-2D-Arc2d.x3dv -text
 gpac/regression_tests/x3d/x3d-2D-ArcClose2d.x3dv -text
