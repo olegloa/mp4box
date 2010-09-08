@@ -363,6 +363,7 @@ gpac/build/msvc9/osmophone.vcproj eol=crlf
 gpac/build/msvc9/osmozilla.vcproj eol=crlf
 gpac/build/msvc9/platinum.vcproj eol=crlf
 gpac/build/msvc9/raw_out.vcproj eol=crlf
+gpac/build/msvc9/redirect_av.vcproj -text
 gpac/build/msvc9/rtp_in.vcproj eol=crlf
 gpac/build/msvc9/saf_in.vcproj eol=crlf
 gpac/build/msvc9/sdl_out.vcproj eol=crlf
