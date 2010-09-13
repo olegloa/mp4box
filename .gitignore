@@ -1,4 +1,5 @@
 gpac/applications/generators/MPEG4/MPEG4Gen
+gpac/applications/generators/SVG/SVGGen
 gpac/applications/generators/X3D/X3DGen
 gpac/applications/testapps/mp4_streamer
 gpac/bin/gcc
