@@ -17,6 +17,9 @@ gpac/applications/GPAX/GPAXps.mk -text
 gpac/applications/GPAX/gpax.bmp -text
 gpac/applications/generators/MPEG4/MPEG4Gen.dsp eol=crlf
 gpac/applications/generators/MPEG4/MPEG4Gen.dsw eol=crlf
+gpac/applications/generators/MPEG4/templates10.txt -text
+gpac/applications/generators/MPEG4/templates8.txt -text
+gpac/applications/generators/MPEG4/templates9.txt -text
 gpac/applications/generators/SVG/SVGGen.dsp eol=crlf
 gpac/applications/generators/SVG/SVGGen.dsw eol=crlf
 gpac/applications/generators/SVG/Tiny-1.2-NG/Tiny-1.2.nvdl -text
