@@ -425,6 +425,14 @@ gpac/doc/man/mp4client.1 -text
 gpac/doc/osmo4.ico -text
 gpac/extra_lib/include/js/jsproto.tbl -text
 gpac/gpac.spec -text
+gpac/gui/iphone_wm_gui.js -text
+gpac/gui/iphone_wm_gui.svg -text
+gpac/gui/mpegu-core.js -text
+gpac/gui/mpegu-wm.bt -text
+gpac/gui/mpegu-wm.js -text
+gpac/gui/mpegu-wm.xmt -text
+gpac/gui/tv_wm_gui.js -text
+gpac/gui/tv_wm_gui.svg -text
 gpac/modules/demo_is/demo-sensor.bt -text
 gpac/modules/directfb_out/Makefile -text
 gpac/modules/directfb_out/directfb_out.c -text
