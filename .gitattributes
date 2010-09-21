@@ -283,6 +283,7 @@ gpac/build/msvc8/soft_raster.vcproj eol=crlf
 gpac/build/msvc8/svg_in.vcproj eol=crlf
 gpac/build/msvc8/timedtext.vcproj eol=crlf
 gpac/build/msvc8/ui_rec.vcproj eol=crlf
+gpac/build/msvc8/validator.vcproj -text
 gpac/build/msvc8/wav_out.vcproj eol=crlf
 gpac/build/msvc8/widgetman.vcproj eol=crlf
 gpac/build/msvc8/wiiis.vcproj eol=crlf
