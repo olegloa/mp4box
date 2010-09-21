@@ -265,6 +265,7 @@ gpac/build/msvc8/libgpac_dll.vcproj eol=crlf
 gpac/build/msvc8/mp3_in.vcproj eol=crlf
 gpac/build/msvc8/mp4box.vcproj eol=crlf
 gpac/build/msvc8/mp4client.vcproj eol=crlf
+gpac/build/msvc8/mpd_in.vcproj -text
 gpac/build/msvc8/mpegts_in.vcproj eol=crlf
 gpac/build/msvc8/odf_dec.vcproj eol=crlf
 gpac/build/msvc8/ogg.vcproj eol=crlf
