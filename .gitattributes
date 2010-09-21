@@ -398,9 +398,6 @@ gpac/doc/SceneGenerators -text
 gpac/doc/configuration.html -text
 gpac/doc/doxyfile -text
 gpac/doc/gpac.mp4 -text
-gpac/doc/gui/gui.bt -text
-gpac/doc/gui/gui.js -text
-gpac/doc/gui/mpegu-core.js -text
 gpac/doc/ipmpx_syntax.bt -text
 gpac/doc/man/gpac.1 -text
 gpac/doc/man/mp42avi.1 -text
