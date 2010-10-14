@@ -5,3 +5,4 @@ gpac/applications/testapps/mp4_streamer
 gpac/bin/gcc
 gpac/config.h
 gpac/config.mak
+gpac/modules/m3u8_in/test
