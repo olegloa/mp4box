@@ -480,6 +480,13 @@ gpac/modules/directfb_out/directfb_out.h -text
 gpac/modules/dx_hw/collide.cur -text
 gpac/modules/dx_hw/dx_hw.rc -text
 gpac/modules/dx_hw/hand.cur -text
+gpac/modules/m3u8_in/tests/direct8.m3u8 -text
+gpac/modules/m3u8_in/tests/relative_playlist.m3u8 -text
+gpac/modules/m3u8_in/tests/spec_encrypted_media.m3u8 -text
+gpac/modules/m3u8_in/tests/spec_multiple_files.m3u8 -text
+gpac/modules/m3u8_in/tests/spec_simple_playlist.m3u8 -text
+gpac/modules/m3u8_in/tests/spec_sliding_window_playlist.m3u8 -text
+gpac/modules/m3u8_in/tests/spec_variant_playlist.m3u8 -text
 gpac/modules/opencv_is/demo-sensor.bt -text
 gpac/modules/opencv_is/haarcascade_frontalface_default.xml -text
 gpac/modules/opensvc_dec/Makefile -text
