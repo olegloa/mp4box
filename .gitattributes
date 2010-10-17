@@ -262,6 +262,7 @@ gpac/build/msvc8/isom_in.vcproj eol=crlf
 gpac/build/msvc8/laser_dec.vcproj eol=crlf
 gpac/build/msvc8/libgpac.vcproj eol=crlf
 gpac/build/msvc8/libgpac_dll.vcproj eol=crlf
+gpac/build/msvc8/m3u8_in.vcproj -text
 gpac/build/msvc8/mp3_in.vcproj eol=crlf
 gpac/build/msvc8/mp4box.vcproj eol=crlf
 gpac/build/msvc8/mp4client.vcproj eol=crlf
