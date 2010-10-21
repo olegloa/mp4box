@@ -62,6 +62,7 @@ gpac/applications/generators/SVG/Tiny-1.2-NG/xlink-attrib.rng -text
 gpac/applications/generators/SVG/Tiny-1.2-NG/xml-events.rng -text
 gpac/applications/generators/X3D/X3DGen.dsp eol=crlf
 gpac/applications/generators/X3D/X3DGen.dsw eol=crlf
+gpac/applications/m3u82mpd/main.c -text
 gpac/applications/osmo4_sym/aif/osmo4_icon.bmp -text
 gpac/applications/osmo4_sym/aif/osmo4_icon_mask.bmp -text
 gpac/applications/osmo4_sym/aif/osmo4_menu.bmp -text
