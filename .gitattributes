@@ -490,6 +490,7 @@ gpac/modules/m3u8_in/tests/spec_multiple_files.m3u8 -text
 gpac/modules/m3u8_in/tests/spec_simple_playlist.m3u8 -text
 gpac/modules/m3u8_in/tests/spec_sliding_window_playlist.m3u8 -text
 gpac/modules/m3u8_in/tests/spec_variant_playlist.m3u8 -text
+gpac/modules/mpd_in/Makefile -text
 gpac/modules/mpd_in/m3u8.c -text
 gpac/modules/mpd_in/m3u8.h -text
 gpac/modules/mpd_in/mpd.c -text
