@@ -490,6 +490,9 @@ gpac/modules/m3u8_in/tests/spec_multiple_files.m3u8 -text
 gpac/modules/m3u8_in/tests/spec_simple_playlist.m3u8 -text
 gpac/modules/m3u8_in/tests/spec_sliding_window_playlist.m3u8 -text
 gpac/modules/m3u8_in/tests/spec_variant_playlist.m3u8 -text
+gpac/modules/mpd_in/mpd.c -text
+gpac/modules/mpd_in/mpd.h -text
+gpac/modules/mpd_in/mpd_in.c -text
 gpac/modules/opencv_is/demo-sensor.bt -text
 gpac/modules/opencv_is/haarcascade_frontalface_default.xml -text
 gpac/modules/opensvc_dec/Makefile -text
