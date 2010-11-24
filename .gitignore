@@ -1,3 +1,6 @@
+gpac/*.diff
+gpac/*.kdev4
+gpac/.kdev*
 gpac/applications/generators/MPEG4/MPEG4Gen
 gpac/applications/generators/SVG/SVGGen
 gpac/applications/generators/X3D/X3DGen
@@ -5,3 +8,6 @@ gpac/applications/testapps/mp4_streamer
 gpac/bin/gcc
 gpac/config.h
 gpac/config.mak
+gpac/core
+gpac/gmon.out
+gpac/include/gpac/.directory
