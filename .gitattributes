@@ -323,6 +323,7 @@ gpac/build/msvc9/libgpac_dll.vcproj eol=crlf
 gpac/build/msvc9/mp3_in.vcproj eol=crlf
 gpac/build/msvc9/mp4box.vcproj eol=crlf
 gpac/build/msvc9/mp4client.vcproj eol=crlf
+gpac/build/msvc9/mpd_in.vcproj -text
 gpac/build/msvc9/mpegts_in.vcproj eol=crlf
 gpac/build/msvc9/odf_dec.vcproj eol=crlf
 gpac/build/msvc9/ogg.vcproj eol=crlf
