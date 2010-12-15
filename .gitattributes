@@ -67,6 +67,8 @@ gpac/applications/mp42ts/mp42ts.dsp eol=crlf
 gpac/applications/mp42ts/mp42ts.vcproj eol=crlf
 gpac/applications/mp4client/mp4client.rc -text
 gpac/applications/mp4client/resource.h -text
+gpac/applications/osmo4_ios/extract.c -text
+gpac/applications/osmo4_ios/main.c -text
 gpac/applications/osmo4_sym/aif/osmo4_icon.bmp -text
 gpac/applications/osmo4_sym/aif/osmo4_icon_mask.bmp -text
 gpac/applications/osmo4_sym/aif/osmo4_menu.bmp -text
@@ -378,7 +380,15 @@ gpac/build/symbian/soft_raster.mmp -text
 gpac/build/symbian/svg_in.mmp -text
 gpac/build/symbian/timedtext.mmp -text
 gpac/build/symbian/xvid_dec.mmp -text
+gpac/build/xcode/README_IOS.txt -text
+gpac/build/xcode/empty.c -text
 gpac/build/xcode/gpac.xcodeproj/project.pbxproj -text
+gpac/build/xcode/gpac4ios.xcodeproj/project.pbxproj -text
+gpac/build/xcode/libgpac_symbols.h -text
+gpac/build/xcode/module_av_generic.c -text
+gpac/build/xcode/module_av_sdl.c -text
+gpac/build/xcode/script_libgpac.sh -text
+gpac/build/xcode/script_modules.sh -text
 gpac/configure -text
 gpac/debian/changelog -text
 gpac/debian/compat -text
