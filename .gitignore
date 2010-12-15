@@ -5,7 +5,15 @@ gpac/applications/generators/MPEG4/MPEG4Gen
 gpac/applications/generators/SVG/SVGGen
 gpac/applications/generators/X3D/X3DGen
 gpac/applications/testapps/mp4_streamer
+gpac/bin/Win32
 gpac/bin/gcc
+gpac/bin/w32_rel/Thumbs.db
+gpac/build/msvc9/*.ncb
+gpac/build/msvc9/*.suo
+gpac/build/msvc9/*.tlb
+gpac/build/msvc9/*.user
+gpac/build/msvc9/Debug
+gpac/build/msvc9/obj
 gpac/config.h
 gpac/config.mak
 gpac/core
