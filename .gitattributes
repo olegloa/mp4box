@@ -449,8 +449,11 @@ gpac/gui/icons/document-print-preview.svg -text
 gpac/gui/icons/document-print.svg -text
 gpac/gui/icons/document-save-as.svg -text
 gpac/gui/icons/document-save.svg -text
+gpac/gui/icons/edit-find.svg -text
+gpac/gui/icons/emblem-symbolic-link.svg -text
 gpac/gui/icons/emblem-unreadable.svg -text
 gpac/gui/icons/face-surprise.svg -text
+gpac/gui/icons/folder-open.svg -text
 gpac/gui/icons/folder.svg -text
 gpac/gui/icons/go-bottom.svg -text
 gpac/gui/icons/go-down.svg -text
@@ -475,6 +478,8 @@ gpac/gui/icons/media-seek-backward.svg -text
 gpac/gui/icons/media-seek-forward.svg -text
 gpac/gui/icons/media-skip-backward.svg -text
 gpac/gui/icons/media-skip-forward.svg -text
+gpac/gui/icons/preferences-desktop-remote-desktop.svg -text
+gpac/gui/icons/preferences-system-windows.svg -text
 gpac/gui/icons/process-stop.svg -text
 gpac/gui/icons/right_arrow.svg -text
 gpac/gui/icons/tennis_ball.svg -text
