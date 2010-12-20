@@ -425,8 +425,11 @@ gpac/doc/man/mp4client.1 -text
 gpac/doc/osmo4.ico -text
 gpac/extra_lib/include/js/jsproto.tbl -text
 gpac/gpac.spec -text
+gpac/gui/gui.bt -text
+gpac/gui/gui.js -text
 gpac/gui/gui_old.bt -text
 gpac/gui/gui_old.js -text
+gpac/gui/gwlib.js -text
 gpac/gui/icons/applications-internet.svg -text
 gpac/gui/icons/applications-multimedia.svg -text
 gpac/gui/icons/applications-system.svg -text
