@@ -500,6 +500,7 @@ gpac/gui/mpegu-wm.js -text
 gpac/gui/mpegu-wm.xmt -text
 gpac/gui/tv_wm_gui.js -text
 gpac/gui/tv_wm_gui.svg -text
+gpac/mkdmg.sh -text
 gpac/modules/demo_is/demo-sensor.bt -text
 gpac/modules/directfb_out/Makefile -text
 gpac/modules/directfb_out/directfb_out.c -text
