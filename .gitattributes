@@ -347,6 +347,10 @@ gpac/build/msvc9/widgetman.vcproj eol=crlf
 gpac/build/msvc9/wiiis.vcproj eol=crlf
 gpac/build/msvc9/wxOsmo4.vcproj eol=crlf
 gpac/build/msvc9/xvid_dec.vcproj eol=crlf
+gpac/build/osxdmg/Osmo4.app/Contents/Info.plist -text
+gpac/build/osxdmg/Osmo4.app/Contents/PkgInfo -text
+gpac/build/osxdmg/Osmo4.app/Contents/Resources/Osmo4.icns -text
+gpac/build/osxdmg/Osmo4.app/Contents/lib -text
 gpac/build/symbian/Icons.mk -text
 gpac/build/symbian/aac_in.mmp -text
 gpac/build/symbian/amr_in.mmp -text
