@@ -19,3 +19,4 @@ gpac/config.mak
 gpac/core
 gpac/gmon.out
 gpac/include/gpac/.directory
+gpac/include/gpac/version.h
