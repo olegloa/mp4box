@@ -199,6 +199,10 @@ gpac/bin/arm_ppc02_rel/install/gpac.ini -text
 gpac/bin/arm_ppc03_rel/install/do.bat -text
 gpac/bin/arm_ppc03_rel/install/gpac.inf -text
 gpac/bin/arm_ppc03_rel/install/gpac.ini -text
+gpac/bin/smartphone[!!-~]2003[!!-~](armv4)/release/install/do.bat -text
+gpac/bin/smartphone[!!-~]2003[!!-~](armv4)/release/install/gpac.inf -text
+gpac/bin/smartphone[!!-~]2003[!!-~](armv4)/release/install/gpac.ini -text
+gpac/bin/smartphone[!!-~]2003[!!-~](armv4)/release/install/readme.txt -text
 gpac/bin/w32_rel/Osmo4.ico -text
 gpac/bin/w32_rel/nsis_install/gpac_installer.nsi -text
 gpac/bin/win32/release/nsis_install/gpac_installer.nsi -text
