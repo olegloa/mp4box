@@ -204,7 +204,9 @@ gpac/bin/smartphone[!!-~]2003[!!-~](armv4)/release/install/gpac.inf -text
 gpac/bin/smartphone[!!-~]2003[!!-~](armv4)/release/install/readme.txt -text
 gpac/bin/w32_rel/Osmo4.ico -text
 gpac/bin/w32_rel/nsis_install/gpac_installer.nsi -text
+gpac/bin/win32/release/nsis_install/default.out -text
 gpac/bin/win32/release/nsis_install/gpac_installer.nsi -text
+gpac/bin/win32/release/nsis_install/readme.txt -text
 gpac/build/android/AndroidManifest.xml -text
 gpac/build/android/default.properties -text
 gpac/build/android/gen/com/artemis/gpac/R.java -text
@@ -517,6 +519,7 @@ gpac/extra_lib/lib/android/libmad.so -text
 gpac/extra_lib/lib/android/libopenjpeg.so -text
 gpac/extra_lib/lib/android/libpng.so -text
 gpac/extra_lib/lib/android/libz.so -text
+gpac/generate_installer.bat -text
 gpac/gpac.spec -text
 gpac/gui/extensions/widget_manager/applications-system.svg -text
 gpac/gui/extensions/widget_manager/init.js -text
