@@ -596,6 +596,8 @@ gpac/gui/mpegu-wm.js -text
 gpac/gui/mpegu-wm.xmt -text
 gpac/gui/tv_wm_gui.js -text
 gpac/gui/tv_wm_gui.svg -text
+gpac/include/gpac/internal/m3u8.h -text
+gpac/include/gpac/internal/mpd.h -text
 gpac/mkdmg.sh -text
 gpac/modules/demo_is/demo-sensor.bt -text
 gpac/modules/directfb_out/Makefile -text
@@ -976,9 +978,7 @@ gpac/regression_tests/x3d/x3d-misc-StringSensor.x3dv -text
 gpac/src/compositor/svg_filters.c -text
 gpac/src/dir_info -text
 gpac/src/media_tools/m3u8.c -text
-gpac/src/media_tools/m3u8.h -text
 gpac/src/media_tools/mpd.c -text
-gpac/src/media_tools/mpd.h -text
 gpac/src/scenegraph/smil_anim.c -text
 gpac/src/utils/alloc.c -text
 gpac/version.bat -text
