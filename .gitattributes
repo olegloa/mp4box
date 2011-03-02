@@ -612,10 +612,6 @@ gpac/modules/dx_hw/hand.cur -text
 gpac/modules/libplayer/Makefile -text
 gpac/modules/libplayer/libplayer.c -text
 gpac/modules/mpd_in/Makefile -text
-gpac/modules/mpd_in/m3u8.c -text
-gpac/modules/mpd_in/m3u8.h -text
-gpac/modules/mpd_in/mpd.c -text
-gpac/modules/mpd_in/mpd.h -text
 gpac/modules/mpd_in/mpd_in.c -text
 gpac/modules/opencv_is/demo-sensor.bt -text
 gpac/modules/opencv_is/haarcascade_frontalface_default.xml -text
@@ -979,6 +975,10 @@ gpac/regression_tests/x3d/x3d-misc-KeySensor.x3dv -text
 gpac/regression_tests/x3d/x3d-misc-StringSensor.x3dv -text
 gpac/src/compositor/svg_filters.c -text
 gpac/src/dir_info -text
+gpac/src/media_tools/m3u8.c -text
+gpac/src/media_tools/m3u8.h -text
+gpac/src/media_tools/mpd.c -text
+gpac/src/media_tools/mpd.h -text
 gpac/src/scenegraph/smil_anim.c -text
 gpac/src/utils/alloc.c -text
 gpac/version.bat -text
