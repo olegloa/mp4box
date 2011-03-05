@@ -1,5 +1,7 @@
 gpac/*.diff
+gpac/*.dmg
 gpac/*.kdev4
+gpac/*.log
 gpac/.kdev*
 gpac/applications/generators/MPEG4/MPEG4Gen
 gpac/applications/generators/SVG/SVGGen
