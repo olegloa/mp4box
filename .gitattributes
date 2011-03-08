@@ -404,6 +404,7 @@ gpac/build/msvc9/mpegts_in.vcproj eol=crlf
 gpac/build/msvc9/odf_dec.vcproj eol=crlf
 gpac/build/msvc9/ogg.vcproj eol=crlf
 gpac/build/msvc9/opencv_is.vcproj eol=crlf
+gpac/build/msvc9/opensvc.vcproj -text
 gpac/build/msvc9/osmophone.vcproj eol=crlf
 gpac/build/msvc9/osmozilla.vcproj eol=crlf
 gpac/build/msvc9/platinum.vcproj eol=crlf
