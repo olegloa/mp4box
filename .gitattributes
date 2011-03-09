@@ -148,6 +148,10 @@ gpac/applications/testapps/mp42ts/mp42ts.vcproj -text
 gpac/applications/testapps/mpedemux/mpedemux.dsp eol=crlf
 gpac/applications/testapps/mpeg2ts/mpeg2ts.dsp eol=crlf
 gpac/applications/testapps/svg2bifs/svg2bifs.dsp eol=crlf
+gpac/applications/udptsseg/Makefile -text
+gpac/applications/udptsseg/main.c -text
+gpac/applications/udptsseg/udptsseg.dsp -text
+gpac/applications/udptsseg/udptsseg.vcproj -text
 gpac/applications/v4studio/rc/V4Studio.aps -text
 gpac/applications/v4studio/rc/V4Studio.rc -text
 gpac/applications/v4studio/rc/appearance.bmp -text
