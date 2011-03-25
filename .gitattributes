@@ -78,7 +78,6 @@ gpac/applications/osmo4_android/jni/wrapper-bitmap-20-09-2010.cpp -text
 gpac/applications/osmo4_android/jni/wrapper-bitmap-20-09-2010.h -text
 gpac/applications/osmo4_android/jni/wrapper.cpp -text
 gpac/applications/osmo4_android/jni/wrapper.h -text
-gpac/applications/osmo4_android/libs/armeabi/gdbserver -text
 gpac/applications/osmo4_android/local.properties -text
 gpac/applications/osmo4_android/proguard.cfg -text
 gpac/applications/osmo4_android/res/drawable-hdpi/icon.png -text
