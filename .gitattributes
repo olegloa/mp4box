@@ -87,6 +87,7 @@ gpac/applications/osmo4_android/res/layout/main.xml -text
 gpac/applications/osmo4_android/res/menu/main_menu.xml -text
 gpac/applications/osmo4_android/res/values/strings.xml -text
 gpac/applications/osmo4_android/src/com/artemis/Osmo4/BitmapView.java -text svn_keywords=Id%0ARevision
+gpac/applications/osmo4_android/src/com/artemis/Osmo4/GpacCallback.java svn_keywords
 gpac/applications/osmo4_android/src/com/artemis/Osmo4/GpacObject.java -text svn_keywords=Id%0ARevision
 gpac/applications/osmo4_android/src/com/artemis/Osmo4/Osmo4.java -text svn_keywords=Id%0ARevision
 gpac/applications/osmo4_android/src/com/artemis/Osmo4/Osmo4GLSurfaceView.java -text svn_keywords=Id%0ARevision
