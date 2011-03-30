@@ -15,6 +15,7 @@ gpac/bin/Win32
 gpac/bin/android
 gpac/bin/gcc
 gpac/bin/w32_rel/Thumbs.db
+gpac/build/android/libs/armeabi-v7a
 gpac/build/android/obj
 gpac/build/msvc9/*.ncb
 gpac/build/msvc9/*.suo
@@ -25,6 +26,7 @@ gpac/build/msvc9/obj
 gpac/config.h
 gpac/config.mak
 gpac/core
+gpac/extra_lib/android
 gpac/gmon.out
 gpac/include/gpac/.directory
 gpac/include/gpac/version.h
