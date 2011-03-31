@@ -94,6 +94,7 @@ gpac/applications/osmo4_android/src/com/artemis/Osmo4/Osmo4GLSurfaceView.java -t
 gpac/applications/osmo4_android/src/com/artemis/Osmo4/Osmo4Renderer.java -text svn_keywords=Id%0ARevision
 gpac/applications/osmo4_ios/extract.c -text
 gpac/applications/osmo4_ios/main.c -text
+gpac/applications/osmo4_ios/osmo4ios-Info.plist -text
 gpac/applications/osmo4_sym/aif/osmo4_icon.bmp -text
 gpac/applications/osmo4_sym/aif/osmo4_icon_mask.bmp -text
 gpac/applications/osmo4_sym/aif/osmo4_menu.bmp -text
