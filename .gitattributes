@@ -470,6 +470,7 @@ gpac/build/symbian/timedtext.mmp -text
 gpac/build/symbian/xvid_dec.mmp -text
 gpac/build/xcode/README_IOS.txt -text
 gpac/build/xcode/empty.c -text
+gpac/build/xcode/generate_ios.sh -text
 gpac/build/xcode/gpac.xcodeproj/project.pbxproj -text
 gpac/build/xcode/gpac4ios.xcodeproj/project.pbxproj -text
 gpac/build/xcode/libgpac_symbols.h -text
