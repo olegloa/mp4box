@@ -83,7 +83,6 @@ gpac/applications/osmo4_android/proguard.cfg -text
 gpac/applications/osmo4_android/res/drawable-hdpi/icon.png -text
 gpac/applications/osmo4_android/res/drawable-ldpi/icon.png -text
 gpac/applications/osmo4_android/res/drawable-mdpi/icon.png -text
-gpac/applications/osmo4_android/res/layout/main.xml -text
 gpac/applications/osmo4_android/res/menu/main_menu.xml -text
 gpac/applications/osmo4_android/res/values/strings.xml -text
 gpac/applications/osmo4_android/src/com/artemis/Osmo4/BitmapView.java -text svn_keywords=Id%0ARevision
