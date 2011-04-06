@@ -83,10 +83,12 @@ gpac/applications/osmo4_android/proguard.cfg -text
 gpac/applications/osmo4_android/res/drawable-hdpi/icon.png -text
 gpac/applications/osmo4_android/res/drawable-ldpi/icon.png -text
 gpac/applications/osmo4_android/res/drawable-mdpi/icon.png -text
+gpac/applications/osmo4_android/res/layout/auth_requested.xml -text svneol=unset#text/xml
 gpac/applications/osmo4_android/res/menu/main_menu.xml -text
 gpac/applications/osmo4_android/res/values/strings.xml -text
 gpac/applications/osmo4_android/src/com/artemis/Osmo4/BitmapView.java -text svn_keywords=Id%0ARevision
 gpac/applications/osmo4_android/src/com/artemis/Osmo4/GPACInstance.java svn_keywords
+gpac/applications/osmo4_android/src/com/artemis/Osmo4/GPACInstanceInterface.java svn_keywords
 gpac/applications/osmo4_android/src/com/artemis/Osmo4/GpacCallback.java svn_keywords
 gpac/applications/osmo4_android/src/com/artemis/Osmo4/Osmo4.java -text svn_keywords=Id%0ARevision
 gpac/applications/osmo4_android/src/com/artemis/Osmo4/Osmo4GLSurfaceView.java -text svn_keywords=Id%0ARevision
