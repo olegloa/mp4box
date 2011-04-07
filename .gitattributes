@@ -213,6 +213,7 @@ gpac/bin/smartphone[!!-~]2003[!!-~](armv4)/release/install/gpac.inf -text
 gpac/bin/smartphone[!!-~]2003[!!-~](armv4)/release/install/readme.txt -text
 gpac/bin/w32_rel/Osmo4.ico -text
 gpac/bin/w32_rel/nsis_install/gpac_installer.nsi -text
+gpac/bin/win32/release/mfc90.dll -text
 gpac/bin/win32/release/nsis_install/default.out -text
 gpac/bin/win32/release/nsis_install/gpac_installer.nsi -text
 gpac/bin/win32/release/nsis_install/readme.txt -text
