@@ -97,6 +97,7 @@ gpac/applications/osmo4_android/src/com/artemis/Osmo4/Osmo4Renderer.java -text s
 gpac/applications/osmo4_android/src/com/artemis/Osmo4/extra/FileArrayAdapter.java svn_keywords
 gpac/applications/osmo4_android/src/com/artemis/Osmo4/extra/FileChooserActivity.java svn_keywords
 gpac/applications/osmo4_android/src/com/artemis/Osmo4/extra/FileEntry.java svn_keywords
+gpac/applications/osmo4_android/src/com/artemis/Osmo4/logs/GpacLogger.java svn_keywords
 gpac/applications/osmo4_ios/extract.c -text
 gpac/applications/osmo4_ios/main.c -text
 gpac/applications/osmo4_ios/osmo4ios-Info.plist -text
