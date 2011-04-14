@@ -804,6 +804,8 @@ gpac/regression_tests/bifs/bifs-bitmap-image-resizing.bt -text
 gpac/regression_tests/bifs/bifs-bitmap-movie-materialkey.bt -text
 gpac/regression_tests/bifs/bifs-bitmap-movie.bt -text
 gpac/regression_tests/bifs/bifs-bitmap-video-resizing.bt -text
+gpac/regression_tests/bifs/bifs-cachetexture_cache.bt -text
+gpac/regression_tests/bifs/bifs-cachetexture_nocache.bt -text
 gpac/regression_tests/bifs/bifs-command-animated-osmo4logo.bt -text
 gpac/regression_tests/bifs/bifs-command-delete-index.bt -text
 gpac/regression_tests/bifs/bifs-command-delete-node.bt -text
@@ -832,6 +834,7 @@ gpac/regression_tests/bifs/bifs-command-route-children.bt -text
 gpac/regression_tests/bifs/bifs-command-route-node-exposedfield.bt -text
 gpac/regression_tests/bifs/bifs-command-route-node.bt -text
 gpac/regression_tests/bifs/bifs-command-route-remove-children.bt -text
+gpac/regression_tests/bifs/bifs-environmenttest.bt -text
 gpac/regression_tests/bifs/bifs-externproto-forestgump-lib.bt -text
 gpac/regression_tests/bifs/bifs-externproto-forestgump.bt -text
 gpac/regression_tests/bifs/bifs-externproto-mfurl-lib.bt -text
@@ -859,6 +862,7 @@ gpac/regression_tests/bifs/bifs-interpolation-timesensor-enabled.bt -text
 gpac/regression_tests/bifs/bifs-interpolation-timesensor-starttime_norestart.bt -text
 gpac/regression_tests/bifs/bifs-interpolation-timesensor-starttime_restart.bt -text
 gpac/regression_tests/bifs/bifs-interpolation-valuator-sftime.bt -text
+gpac/regression_tests/bifs/bifs-keynavigator.bt -text
 gpac/regression_tests/bifs/bifs-linking-anchor-mp4-next.bt -text
 gpac/regression_tests/bifs/bifs-linking-anchor-mp4-prev.bt -text
 gpac/regression_tests/bifs/bifs-linking-anchor-viewpoint.bt -text
@@ -928,6 +932,7 @@ gpac/regression_tests/bifs/bifs-script-node-access.bt -text
 gpac/regression_tests/bifs/bifs-script-node-create.bt -text
 gpac/regression_tests/bifs/bifs-script-proto.bt -text
 gpac/regression_tests/bifs/bifs-script-timestamp.bt -text
+gpac/regression_tests/bifs/bifs-storage.bt -text
 gpac/regression_tests/bifs/bifs-stream-text-switch.bt -text
 gpac/regression_tests/bifs/bifs-text-align-horiz1.bt -text
 gpac/regression_tests/bifs/bifs-text-align-horiz2.bt -text
