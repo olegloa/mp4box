@@ -610,6 +610,7 @@ gpac/gui/tv_wm_gui.svg -text
 gpac/include/gpac/internal/m3u8.h -text
 gpac/include/gpac/internal/mpd.h -text
 gpac/include/gpac/internal/smjs_api.h -text
+gpac/include/wince/errno.h -text
 gpac/mkdmg.sh -text
 gpac/modules/demo_is/demo-sensor.bt -text
 gpac/modules/directfb_out/Makefile -text
