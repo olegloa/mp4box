@@ -1000,6 +1000,7 @@ gpac/src/media_tools/mpd.c -text
 gpac/src/scenegraph/smil_anim.c -text
 gpac/src/utils/alloc.c -text
 gpac/version.bat -text
+gpac_extra_libs/gpac_extra_libs.zip -text
 gpac_www/auth.php -text
 gpac_www/auth_demos.php -text
 gpac_www/auth_demos_bubbles.php -text
