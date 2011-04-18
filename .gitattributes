@@ -82,6 +82,7 @@ gpac/applications/osmo4_android/proguard.cfg -text
 gpac/applications/osmo4_android/res/drawable-hdpi/icon.png -text
 gpac/applications/osmo4_android/res/drawable-ldpi/icon.png -text
 gpac/applications/osmo4_android/res/drawable-mdpi/icon.png -text
+gpac/applications/osmo4_android/res/layout/about_dialog.xml -text svneol=unset#text/xml
 gpac/applications/osmo4_android/res/layout/auth_requested.xml -text svneol=unset#text/xml
 gpac/applications/osmo4_android/res/layout/file_view.xml -text svneol=unset#text/xml
 gpac/applications/osmo4_android/res/menu/main_menu.xml -text
