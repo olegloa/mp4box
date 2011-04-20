@@ -523,6 +523,7 @@ gpac/doc/osmo4.ico -text
 gpac/extra_lib/include/js/jsproto.tbl -text
 gpac/extra_lib/lib/android/armeabi-v7a/libeditline.so -text
 gpac/extra_lib/lib/android/armeabi-v7a/libfaad.so -text
+gpac/extra_lib/lib/android/armeabi-v7a/libffmpeg.so -text
 gpac/extra_lib/lib/android/armeabi-v7a/libft2.so -text
 gpac/extra_lib/lib/android/armeabi-v7a/libjpeg.so -text
 gpac/extra_lib/lib/android/armeabi-v7a/libjs_osmo.so -text
