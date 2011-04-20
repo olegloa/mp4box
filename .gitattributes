@@ -541,17 +541,6 @@ gpac/extra_lib/lib/android/armeabi/libmad.so -text
 gpac/extra_lib/lib/android/armeabi/libopenjpeg.so -text
 gpac/extra_lib/lib/android/armeabi/libpng.so -text
 gpac/extra_lib/lib/android/armeabi/libz.so -text
-gpac/extra_lib/lib/android/libeditline.so -text
-gpac/extra_lib/lib/android/libfaad.so -text
-gpac/extra_lib/lib/android/libfaad_static.a -text
-gpac/extra_lib/lib/android/libffmpeg.so -text
-gpac/extra_lib/lib/android/libft2.so -text
-gpac/extra_lib/lib/android/libjpeg.so -text
-gpac/extra_lib/lib/android/libjs_osmo.so -text
-gpac/extra_lib/lib/android/libmad.so -text
-gpac/extra_lib/lib/android/libopenjpeg.so -text
-gpac/extra_lib/lib/android/libpng.so -text
-gpac/extra_lib/lib/android/libz.so -text
 gpac/generate_installer.bat -text
 gpac/gpac.spec -text
 gpac/gui/extensions/widget_manager/applications-system.svg -text
