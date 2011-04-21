@@ -625,6 +625,8 @@ gpac/include/win32/inttypes.h -text
 gpac/include/win32/stdint.h -text
 gpac/include/wince/errno.h -text
 gpac/mkdmg.sh -text
+gpac/modules/amr_dec/amr_nb_api.h -text
+gpac/modules/amr_float_dec/amr_api.h -text
 gpac/modules/demo_is/demo-sensor.bt -text
 gpac/modules/directfb_out/Makefile -text
 gpac/modules/directfb_out/directfb_out.c -text
