@@ -225,8 +225,10 @@ gpac/build/android/jni/Application.mk -text
 gpac/build/android/jni/common.mk -text
 gpac/build/android/jni/gpac_build_android -text
 gpac/build/android/jni/libgpac/Android.mk -text
+gpac/build/android/jni/libgpac/Application.mk -text
 gpac/build/android/jni/libgpac/config.h -text
 gpac/build/android/jni/modules/Android.mk -text
+gpac/build/android/jni/modules/Application.mk -text
 gpac/build/android/jni/modules/base.mk -text
 gpac/build/android/jni/modules/gm_aac_in.mk -text
 gpac/build/android/jni/modules/gm_bifs_dec.mk -text
@@ -253,6 +255,7 @@ gpac/build/android/jni/modules/gm_svg_in.mk -text
 gpac/build/android/jni/modules/gm_timedtext.mk -text
 gpac/build/android/jni/modules/gm_widgetman.mk -text
 gpac/build/android/jni/wrapper/Android.mk -text
+gpac/build/android/jni/wrapper/Application.mk -text
 gpac/build/android/res/drawable-hdpi/icon.png -text
 gpac/build/android/res/drawable-ldpi/icon.png -text
 gpac/build/android/res/drawable-mdpi/icon.png -text
