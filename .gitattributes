@@ -71,6 +71,8 @@ gpac/applications/osmo4_android/.classpath -text
 gpac/applications/osmo4_android/.project -text
 gpac/applications/osmo4_android/.settings/de.loskutov.anyedit.AnyEditTools.prefs -text
 gpac/applications/osmo4_android/AndroidManifest.xml -text
+gpac/applications/osmo4_android/Osmo4_keystore -text
+gpac/applications/osmo4_android/build.properties -text
 gpac/applications/osmo4_android/build.xml -text
 gpac/applications/osmo4_android/default.properties -text
 gpac/applications/osmo4_android/jni/wrapper-bitmap-20-09-2010.cpp -text
