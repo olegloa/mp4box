@@ -65,6 +65,7 @@ gpac/applications/generators/X3D/X3DGen.dsw eol=crlf
 gpac/applications/m3u82mpd/main.c -text
 gpac/applications/mp42ts/mp42ts.dsp eol=crlf
 gpac/applications/mp42ts/mp42ts.vcproj eol=crlf
+gpac/applications/mp4box/wrapper.c -text
 gpac/applications/mp4client/mp4client.rc -text
 gpac/applications/mp4client/resource.h -text
 gpac/applications/osmo4_android/.classpath -text
