@@ -1010,6 +1010,7 @@ gpac/gui/mpegu-wm.js -text
 gpac/gui/mpegu-wm.xmt -text
 gpac/gui/tv_wm_gui.js -text
 gpac/gui/tv_wm_gui.svg -text
+gpac/include/gpac/carousel.h -text
 gpac/include/gpac/internal/m3u8.h -text
 gpac/include/gpac/internal/mpd.h -text
 gpac/include/gpac/internal/smjs_api.h -text
