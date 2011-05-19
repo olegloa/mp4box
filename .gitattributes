@@ -83,8 +83,6 @@ gpac/applications/osmo4_android/Osmo4_keystore -text
 gpac/applications/osmo4_android/build.properties -text
 gpac/applications/osmo4_android/build.xml -text
 gpac/applications/osmo4_android/default.properties -text
-gpac/applications/osmo4_android/local.properties -text
-gpac/applications/osmo4_android/proguard.cfg -text
 gpac/applications/osmo4_android/res/drawable-hdpi/icon.png -text
 gpac/applications/osmo4_android/res/drawable-ldpi/icon.png -text
 gpac/applications/osmo4_android/res/drawable-mdpi/icon.png -text
