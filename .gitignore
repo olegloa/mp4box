@@ -28,6 +28,7 @@ gpac/config.h
 gpac/config.mak
 gpac/core
 gpac/extra_lib/android
+gpac/extra_lib/include/jpeg/android
 gpac/gmon.out
 gpac/include/gpac/.directory
 gpac/include/gpac/version.h
