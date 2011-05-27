@@ -141,6 +141,8 @@ gpac/applications/osmophone/osmophone.rc -text
 gpac/applications/osmozilla/nsIOsmozilla.idl -text
 gpac/applications/osmozilla/nsIOsmozilla.xpt_linux -text
 gpac/applications/osmozilla/nsIOsmozilla.xpt_w32 -text
+gpac/applications/osmozilla/osmo_npapi.cpp -text
+gpac/applications/osmozilla/osmo_npapi.h -text
 gpac/applications/osmozilla/osmozilla.def -text
 gpac/applications/osmozilla/osmozilla.png -text
 gpac/applications/osmozilla/osmozilla.rc -text
