@@ -483,6 +483,7 @@ gpac/build/symbian/soft_raster.mmp -text
 gpac/build/symbian/svg_in.mmp -text
 gpac/build/symbian/timedtext.mmp -text
 gpac/build/symbian/xvid_dec.mmp -text
+gpac/build/xcode/build/Release-iphonesimulator/libgpac_dynamic.dylib -text svneol=unset#unset
 gpac/build/xcode/gpac.xcodeproj/project.pbxproj -text
 gpac/build/xcode/gpac4ios.xcodeproj/project.pbxproj -text
 gpac/configure -text
