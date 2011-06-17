@@ -103,6 +103,7 @@ gpac/applications/osmo4_android/src/com/artemis/Osmo4/extra/FileArrayAdapter.jav
 gpac/applications/osmo4_android/src/com/artemis/Osmo4/extra/FileChooserActivity.java svn_keywords
 gpac/applications/osmo4_android/src/com/artemis/Osmo4/extra/FileEntry.java svn_keywords
 gpac/applications/osmo4_android/src/com/artemis/Osmo4/logs/GpacLogger.java svn_keywords
+gpac/applications/osmo4_ios/Resources/icon.png -text
 gpac/applications/osmo4_ios/Resources/osmo.icns -text
 gpac/applications/osmo4_ios/osmo4ios-Info.plist -text
 gpac/applications/osmo4_sym/aif/osmo4_icon.bmp -text
