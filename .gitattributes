@@ -378,6 +378,7 @@ gpac/build/msvc8/platinum.vcproj eol=crlf
 gpac/build/msvc8/raw_out.vcproj eol=crlf
 gpac/build/msvc8/redirect_av.vcproj eol=crlf
 gpac/build/msvc8/rtp_in.vcproj eol=crlf
+gpac/build/msvc8/rvc_dec.vcproj -text
 gpac/build/msvc8/saf_in.vcproj eol=crlf
 gpac/build/msvc8/sdl_out.vcproj eol=crlf
 gpac/build/msvc8/soft_raster.vcproj eol=crlf
@@ -650,6 +651,8 @@ gpac/modules/dx_hw/dx_hw.rc -text
 gpac/modules/dx_hw/hand.cur -text
 gpac/modules/opencv_is/demo-sensor.bt -text
 gpac/modules/opencv_is/haarcascade_frontalface_default.xml -text
+gpac/modules/rvc_dec/Makefile -text
+gpac/modules/rvc_dec/rvc_dec.c -text
 gpac/modules/widgetman/wgt_load_base.js -text
 gpac/modules/wiiis/test_wii.bt -text
 gpac/modules/xvid_dec/xvid_wce/AUTHORS -text
