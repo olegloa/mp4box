@@ -222,6 +222,7 @@ gpac/bin/w32_rel/nsis_install/gpac_installer.nsi -text
 gpac/bin/win32/release/nsis_install/default.out -text
 gpac/bin/win32/release/nsis_install/gpac_installer.nsi -text
 gpac/build/android/AndroidManifest.xml -text
+gpac/build/android/README -text
 gpac/build/android/default.properties -text
 gpac/build/android/gen/com/artemis/gpac/R.java -text
 gpac/build/android/jni/Android.mk -text
