@@ -224,7 +224,7 @@ gpac/bin/win32/release/nsis_install/gpac_installer.nsi -text
 gpac/build/android/AndroidManifest.xml -text
 gpac/build/android/README -text
 gpac/build/android/default.properties -text
-gpac/build/android/gen/com/artemis/gpac/R.java -text
+gpac/build/android/gen/com/enst/gpac/R.java -text
 gpac/build/android/jni/Android.mk -text
 gpac/build/android/jni/Application.mk -text
 gpac/build/android/jni/common.mk -text
@@ -267,7 +267,7 @@ gpac/build/android/res/drawable-ldpi/icon.png -text
 gpac/build/android/res/drawable-mdpi/icon.png -text
 gpac/build/android/res/layout/main.xml -text
 gpac/build/android/res/values/strings.xml -text
-gpac/build/android/src/com/artemis/gpac/gpac.java -text
+gpac/build/android/src/com/enst/gpac/gpac.java -text
 gpac/build/codeblocks/GPAX.cbp -text
 gpac/build/codeblocks/Osmo4.cbp -text
 gpac/build/codeblocks/aac_in.cbp -text
