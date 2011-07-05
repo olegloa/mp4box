@@ -91,18 +91,18 @@ gpac/applications/osmo4_android/res/layout/auth_requested.xml -text svneol=unset
 gpac/applications/osmo4_android/res/layout/file_view.xml -text svneol=unset#text/xml
 gpac/applications/osmo4_android/res/menu/main_menu.xml -text
 gpac/applications/osmo4_android/res/values/strings.xml -text
-gpac/applications/osmo4_android/src/com/artemis/Osmo4/BitmapView.java -text svn_keywords=Id%0ARevision
-gpac/applications/osmo4_android/src/com/artemis/Osmo4/GPACInstance.java svn_keywords
-gpac/applications/osmo4_android/src/com/artemis/Osmo4/GPACInstanceInterface.java svn_keywords
-gpac/applications/osmo4_android/src/com/artemis/Osmo4/GpacCallback.java svn_keywords
-gpac/applications/osmo4_android/src/com/artemis/Osmo4/GpacConfig.java svn_keywords
-gpac/applications/osmo4_android/src/com/artemis/Osmo4/Osmo4.java -text svn_keywords=Id%0ARevision
-gpac/applications/osmo4_android/src/com/artemis/Osmo4/Osmo4GLSurfaceView.java -text svn_keywords=Id%0ARevision
-gpac/applications/osmo4_android/src/com/artemis/Osmo4/Osmo4Renderer.java -text svn_keywords=Id%0ARevision
-gpac/applications/osmo4_android/src/com/artemis/Osmo4/extra/FileArrayAdapter.java svn_keywords
-gpac/applications/osmo4_android/src/com/artemis/Osmo4/extra/FileChooserActivity.java svn_keywords
-gpac/applications/osmo4_android/src/com/artemis/Osmo4/extra/FileEntry.java svn_keywords
-gpac/applications/osmo4_android/src/com/artemis/Osmo4/logs/GpacLogger.java svn_keywords
+gpac/applications/osmo4_android/src/com/gpac/Osmo4/BitmapView.java -text svn_keywords=Id%0ARevision
+gpac/applications/osmo4_android/src/com/gpac/Osmo4/GPACInstance.java svn_keywords
+gpac/applications/osmo4_android/src/com/gpac/Osmo4/GPACInstanceInterface.java svn_keywords
+gpac/applications/osmo4_android/src/com/gpac/Osmo4/GpacCallback.java svn_keywords
+gpac/applications/osmo4_android/src/com/gpac/Osmo4/GpacConfig.java svn_keywords
+gpac/applications/osmo4_android/src/com/gpac/Osmo4/Osmo4.java -text svn_keywords=Id%0ARevision
+gpac/applications/osmo4_android/src/com/gpac/Osmo4/Osmo4GLSurfaceView.java -text svn_keywords=Id%0ARevision
+gpac/applications/osmo4_android/src/com/gpac/Osmo4/Osmo4Renderer.java -text svn_keywords=Id%0ARevision
+gpac/applications/osmo4_android/src/com/gpac/Osmo4/extra/FileArrayAdapter.java svn_keywords
+gpac/applications/osmo4_android/src/com/gpac/Osmo4/extra/FileChooserActivity.java svn_keywords
+gpac/applications/osmo4_android/src/com/gpac/Osmo4/extra/FileEntry.java svn_keywords
+gpac/applications/osmo4_android/src/com/gpac/Osmo4/logs/GpacLogger.java svn_keywords
 gpac/applications/osmo4_ios/Resources/icon.png -text
 gpac/applications/osmo4_ios/Resources/osmo.icns -text
 gpac/applications/osmo4_ios/osmo4ios-Info.plist -text

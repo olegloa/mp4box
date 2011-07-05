@@ -7,7 +7,7 @@ gpac/applications/generators/MPEG4/MPEG4Gen
 gpac/applications/generators/SVG/SVGGen
 gpac/applications/generators/X3D/X3DGen
 gpac/applications/osmo4_android/bin
-gpac/applications/osmo4_android/gen/com/artemis/Osmo4/R.java
+gpac/applications/osmo4_android/gen/com/gpac/Osmo4/R.java
 gpac/applications/osmo4_android/libs/armeabi/gdb.setup
 gpac/applications/osmo4_android/libs/armeabi/gdbserver
 gpac/applications/osmo4_android/obj
