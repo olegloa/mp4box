@@ -356,6 +356,7 @@ gpac/build/msvc8/gapi.vcproj eol=crlf
 gpac/build/msvc8/gdip_raster.vcproj eol=crlf
 gpac/build/msvc8/gpac.sln eol=crlf
 gpac/build/msvc8/gpac_js.vcproj eol=crlf
+gpac/build/msvc8/hyb_in.vcproj -text
 gpac/build/msvc8/img_in.vcproj eol=crlf
 gpac/build/msvc8/ismacryp.vcproj eol=crlf
 gpac/build/msvc8/isom_in.vcproj eol=crlf
@@ -650,6 +651,11 @@ gpac/modules/demo_is/demo-sensor.bt -text
 gpac/modules/dx_hw/collide.cur -text
 gpac/modules/dx_hw/dx_hw.rc -text
 gpac/modules/dx_hw/hand.cur -text
+gpac/modules/hyb_in/fm_fake_pull.c -text
+gpac/modules/hyb_in/fm_fake_push.c -text
+gpac/modules/hyb_in/fm_mmbtools.c -text
+gpac/modules/hyb_in/hyb_in.c -text
+gpac/modules/hyb_in/hyb_in.h -text
 gpac/modules/opencv_is/demo-sensor.bt -text
 gpac/modules/opencv_is/haarcascade_frontalface_default.xml -text
 gpac/modules/rvc_dec/Makefile -text
