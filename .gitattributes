@@ -567,6 +567,8 @@ gpac/extra_lib/include/openssl/symhacks.h -text
 gpac/extra_lib/include/openssl/tls1.h -text
 gpac/extra_lib/include/openssl/x509.h -text
 gpac/extra_lib/include/openssl/x509_vfy.h -text
+gpac/extra_lib/lib/android/armeabi svn_writable=on
+gpac/extra_lib/lib/android/armeabi-v7a svn_writable=on
 gpac/generate_installer.bat -text
 gpac/gpac.spec -text
 gpac/gui/extensions/widget_manager/applications-system.svg -text
