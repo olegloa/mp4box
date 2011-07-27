@@ -660,6 +660,8 @@ gpac/modules/hyb_in/hyb_in.c -text
 gpac/modules/hyb_in/hyb_in.h -text
 gpac/modules/opencv_is/demo-sensor.bt -text
 gpac/modules/opencv_is/haarcascade_frontalface_default.xml -text
+gpac/modules/osd/Makefile -text
+gpac/modules/osd/osd.c -text
 gpac/modules/rvc_dec/Makefile -text
 gpac/modules/rvc_dec/rvc_dec.c -text
 gpac/modules/widgetman/wgt_load_base.js -text
