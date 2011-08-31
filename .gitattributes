@@ -654,6 +654,7 @@ gpac/modules/demo_is/demo-sensor.bt -text
 gpac/modules/dx_hw/collide.cur -text
 gpac/modules/dx_hw/dx_hw.rc -text
 gpac/modules/dx_hw/hand.cur -text
+gpac/modules/hyb_in/Makefile -text
 gpac/modules/hyb_in/fm_fake_pull.c -text
 gpac/modules/hyb_in/fm_fake_push.c -text
 gpac/modules/hyb_in/fm_mmbtools.c -text
