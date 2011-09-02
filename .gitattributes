@@ -440,6 +440,7 @@ gpac/build/msvc9/soft_raster.vcproj eol=crlf
 gpac/build/msvc9/svg_in.vcproj eol=crlf
 gpac/build/msvc9/timedtext.vcproj eol=crlf
 gpac/build/msvc9/ui_rec.vcproj eol=crlf
+gpac/build/msvc9/validator.vcproj -text
 gpac/build/msvc9/wav_out.vcproj eol=crlf
 gpac/build/msvc9/widgetman.vcproj eol=crlf
 gpac/build/msvc9/wiiis.vcproj eol=crlf
@@ -666,6 +667,8 @@ gpac/modules/osd/Makefile -text
 gpac/modules/osd/osd.c -text
 gpac/modules/rvc_dec/Makefile -text
 gpac/modules/rvc_dec/rvc_dec.c -text
+gpac/modules/validator/README.TXT -text
+gpac/modules/validator/validator.c -text
 gpac/modules/widgetman/wgt_load_base.js -text
 gpac/modules/wiiis/test_wii.bt -text
 gpac/modules/xvid_dec/xvid_wce/AUTHORS -text
