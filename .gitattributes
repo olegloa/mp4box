@@ -59,6 +59,7 @@ gpac/applications/generators/SVG/Tiny-1.2-NG/xlink-attrib.rng -text
 gpac/applications/generators/SVG/Tiny-1.2-NG/xml-events.rng -text
 gpac/applications/generators/X3D/X3DGen.dsp eol=crlf
 gpac/applications/generators/X3D/X3DGen.dsw eol=crlf
+gpac/applications/m3u82mpd/m3u82mpd.vcproj -text
 gpac/applications/mp42ts/mp42ts.dsp eol=crlf
 gpac/applications/mp42ts/mp42ts.vcproj eol=crlf
 gpac/applications/mp4box_android/.classpath -text
