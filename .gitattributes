@@ -97,9 +97,11 @@ gpac/applications/osmo4_android/src/com/gpac/Osmo4/GPACInstance.java svn_keyword
 gpac/applications/osmo4_android/src/com/gpac/Osmo4/GPACInstanceInterface.java svn_keywords
 gpac/applications/osmo4_android/src/com/gpac/Osmo4/GpacCallback.java svn_keywords
 gpac/applications/osmo4_android/src/com/gpac/Osmo4/GpacConfig.java svn_keywords
+gpac/applications/osmo4_android/src/com/gpac/Osmo4/MPEGVSensor.java -text
 gpac/applications/osmo4_android/src/com/gpac/Osmo4/Osmo4.java -text svn_keywords=Id%0ARevision
 gpac/applications/osmo4_android/src/com/gpac/Osmo4/Osmo4GLSurfaceView.java -text svn_keywords=Id%0ARevision
 gpac/applications/osmo4_android/src/com/gpac/Osmo4/Osmo4Renderer.java -text svn_keywords=Id%0ARevision
+gpac/applications/osmo4_android/src/com/gpac/Osmo4/Preview.java -text
 gpac/applications/osmo4_android/src/com/gpac/Osmo4/extra/FileArrayAdapter.java svn_keywords
 gpac/applications/osmo4_android/src/com/gpac/Osmo4/extra/FileChooserActivity.java svn_keywords
 gpac/applications/osmo4_android/src/com/gpac/Osmo4/extra/FileEntry.java svn_keywords
@@ -239,6 +241,8 @@ gpac/build/android/jni/modules/gm_aac_in.mk -text
 gpac/build/android/jni/modules/gm_bifs_dec.mk -text
 gpac/build/android/jni/modules/gm_ctx_load.mk -text
 gpac/build/android/jni/modules/gm_droid_audio.mk -text
+gpac/build/android/jni/modules/gm_droid_cam.mk -text
+gpac/build/android/jni/modules/gm_droid_mpegv.mk -text
 gpac/build/android/jni/modules/gm_droid_out.mk -text
 gpac/build/android/jni/modules/gm_dummy_in.mk -text
 gpac/build/android/jni/modules/gm_ffmpeg_in.mk -text
@@ -653,6 +657,8 @@ gpac/include/win32/inttypes.h -text
 gpac/modules/amr_dec/amr_nb_api.h -text
 gpac/modules/amr_float_dec/amr_api.h -text
 gpac/modules/demo_is/demo-sensor.bt -text
+gpac/modules/droid_cam/droid_cam.c -text
+gpac/modules/droid_mpegv/droid_mpegv.c -text
 gpac/modules/dx_hw/collide.cur -text
 gpac/modules/dx_hw/dx_hw.rc -text
 gpac/modules/dx_hw/hand.cur -text
