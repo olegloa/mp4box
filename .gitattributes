@@ -656,6 +656,8 @@ gpac/gui/tv_wm_gui.svg -text
 gpac/include/win32/inttypes.h -text
 gpac/modules/amr_dec/amr_nb_api.h -text
 gpac/modules/amr_float_dec/amr_api.h -text
+gpac/modules/avcap/Makefile -text
+gpac/modules/avcap/avcap.cpp -text
 gpac/modules/demo_is/demo-sensor.bt -text
 gpac/modules/droid_cam/droid_cam.c -text
 gpac/modules/droid_mpegv/droid_mpegv.c -text
