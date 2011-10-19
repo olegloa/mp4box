@@ -594,6 +594,7 @@ gpac/extra_lib/include/avcap/osx/QT_DeviceDescriptor.h -text
 gpac/extra_lib/include/avcap/osx/QT_DeviceEnumerator.h -text
 gpac/extra_lib/include/avcap/osx/QT_FormatManager.h -text
 gpac/extra_lib/include/avcap/osx/QT_VidCapManager.h -text
+gpac/extra_lib/include/avcap/osx/avcap-config.h -text
 gpac/extra_lib/include/avcap/singleton.h -text
 gpac/extra_lib/include/avcap/windows/Crossbar.h -text
 gpac/extra_lib/include/avcap/windows/DS_Connector.h -text
