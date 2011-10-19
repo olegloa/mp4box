@@ -408,6 +408,7 @@ gpac/build/msvc9/ac3_in.vcproj eol=crlf
 gpac/build/msvc9/amr_dec.vcproj eol=crlf
 gpac/build/msvc9/amr_float_dec.vcproj eol=crlf
 gpac/build/msvc9/audio_filter.vcproj eol=crlf
+gpac/build/msvc9/avcap.vcproj -text
 gpac/build/msvc9/bifs_dec.vcproj eol=crlf
 gpac/build/msvc9/ctx_load.vcproj eol=crlf
 gpac/build/msvc9/demo_is.vcproj eol=crlf
