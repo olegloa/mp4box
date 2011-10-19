@@ -653,12 +653,14 @@ gpac/gui/mpegu-wm.js -text
 gpac/gui/mpegu-wm.xmt -text
 gpac/gui/tv_wm_gui.js -text
 gpac/gui/tv_wm_gui.svg -text
+gpac/include/gpac/events_constants.h -text
 gpac/include/win32/inttypes.h -text
 gpac/modules/amr_dec/amr_nb_api.h -text
 gpac/modules/amr_float_dec/amr_api.h -text
 gpac/modules/avcap/Makefile -text
 gpac/modules/avcap/avcap.cpp -text
 gpac/modules/demo_is/demo-sensor.bt -text
+gpac/modules/directfb_out/directfb_wrapper.c -text
 gpac/modules/droid_cam/droid_cam.c -text
 gpac/modules/droid_mpegv/droid_mpegv.c -text
 gpac/modules/dx_hw/collide.cur -text
