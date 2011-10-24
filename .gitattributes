@@ -532,6 +532,10 @@ gpac/doc/man/mp42avi.1 -text
 gpac/doc/man/mp4box.1 -text
 gpac/doc/man/mp4client.1 -text
 gpac/doc/osmo4.ico -text
+gpac/extra_lib/include/OpenSVCDecoder/ControlLayer.h -text
+gpac/extra_lib/include/OpenSVCDecoder/ParseAU.h -text
+gpac/extra_lib/include/OpenSVCDecoder/SVCDecoder_ietr_api.h -text
+gpac/extra_lib/include/OpenSVCDecoder/SvcInterface.h -text
 gpac/extra_lib/include/avcap/CaptureDevice.h -text
 gpac/extra_lib/include/avcap/CaptureHandler.h -text
 gpac/extra_lib/include/avcap/CaptureManager.h -text
