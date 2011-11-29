@@ -737,7 +737,7 @@ gpac/gui/mpegu-wm.xmt -text
 gpac/gui/tv_wm_gui.js -text
 gpac/gui/tv_wm_gui.svg -text
 gpac/include/gpac/ait.h -text
-gpac/include/gpac/dmscc.h -text
+gpac/include/gpac/dsmcc.h -text
 gpac/include/gpac/events_constants.h -text
 gpac/include/win32/inttypes.h -text
 gpac/modules/amr_dec/amr_nb_api.h -text
