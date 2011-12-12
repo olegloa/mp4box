@@ -111,8 +111,6 @@ gpac/applications/hbbtvplayer/hbbtvbrowserplugin/src/webkit-plugin-header/npapi.
 gpac/applications/hbbtvplayer/hbbtvbrowserplugin/src/webkit-plugin-header/npfunctions.h -text
 gpac/applications/hbbtvplayer/hbbtvbrowserplugin/src/webkit-plugin-header/npruntime.h -text
 gpac/applications/hbbtvplayer/hbbtvbrowserplugin/src/webkit-plugin-header/nptypes.h -text
-gpac/applications/hbbtvplayer/hbbtvterminal/Win32Build/WebKitGTK-Bundle.zip -text
-gpac/applications/hbbtvplayer/hbbtvterminal/Win32Build/WebKitGTK-BundleCreation.sh -text
 gpac/applications/hbbtvplayer/hbbtvterminal/autogen.sh -text
 gpac/applications/hbbtvplayer/hbbtvterminal/configure.ac -text
 gpac/applications/hbbtvplayer/hbbtvterminal/hbbtv_terminal.vcproj -text
@@ -1200,6 +1198,9 @@ gpac/src/media_tools/ait.c -text
 gpac/src/media_tools/dsmcc.c -text
 gpac/src/utils/os_config_init.c -text
 gpac/version.bat -text
+gpac_extra_libs/HBBTVPlayer_Dependencies_Win32Bundle/README.txt -text
+gpac_extra_libs/HBBTVPlayer_Dependencies_Win32Bundle/WebKitGTK-Bundle.zip -text
+gpac_extra_libs/HBBTVPlayer_Dependencies_Win32Bundle/WebKitGTK-BundleCreation.sh -text
 gpac_extra_libs/gpac_extra_libs.zip -text
 gpac_www/auth.php -text
 gpac_www/auth_demos.php -text
