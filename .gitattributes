@@ -426,6 +426,7 @@ gpac/build/msvc8/demo_is.vcproj eol=crlf
 gpac/build/msvc8/dummy_in.vcproj eol=crlf
 gpac/build/msvc8/dx_hw.vcproj eol=crlf
 gpac/build/msvc8/ffmpeg_in.vcproj eol=crlf
+gpac/build/msvc8/freenect.vcproj -text
 gpac/build/msvc8/ft_font.vcproj eol=crlf
 gpac/build/msvc8/gapi.vcproj eol=crlf
 gpac/build/msvc8/gdip_raster.vcproj eol=crlf
@@ -820,6 +821,8 @@ gpac/modules/droid_mpegv/droid_mpegv.c -text
 gpac/modules/dx_hw/collide.cur -text
 gpac/modules/dx_hw/dx_hw.rc -text
 gpac/modules/dx_hw/hand.cur -text
+gpac/modules/freenect/Makefile -text
+gpac/modules/freenect/freenect.c -text
 gpac/modules/hyb_in/Makefile -text
 gpac/modules/hyb_in/fm_fake_pull.c -text
 gpac/modules/hyb_in/fm_fake_push.c -text
