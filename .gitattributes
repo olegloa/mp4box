@@ -593,7 +593,7 @@ gpac/doc/INSTALL.w32 -text
 gpac/doc/INSTALL.wCE -text
 gpac/doc/ISO[!!-~]639-2[!!-~]codes.txt -text
 gpac/doc/SceneGenerators -text
-gpac/doc/configuration.html -text svn_keywords=Date+Author
+gpac/doc/configuration.html -text svneol=unset#unset svn_keywords=Date+Author
 gpac/doc/doxyfile -text
 gpac/doc/gpac.mp4 -text
 gpac/doc/ipmpx_syntax.bt -text
