@@ -64,6 +64,7 @@ gpac/applications/hbbtvplayer/REQUIREMENT -text
 gpac/applications/hbbtvplayer/doc/avancement.txt -text
 gpac/applications/hbbtvplayer/doc/introduction.txt -text
 gpac/applications/hbbtvplayer/doc/projectmanagement.txt -text
+gpac/applications/hbbtvplayer/getsources.sh -text
 gpac/applications/hbbtvplayer/hbbtvbrowserplugin/README -text
 gpac/applications/hbbtvplayer/hbbtvbrowserplugin/autogen.sh -text
 gpac/applications/hbbtvplayer/hbbtvbrowserplugin/configure.ac -text
