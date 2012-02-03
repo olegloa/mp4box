@@ -15,7 +15,6 @@ gpac/applications/testapps/mp4_streamer
 gpac/bin/Win32
 gpac/bin/android
 gpac/bin/gcc
-gpac/bin/w32_rel/Thumbs.db
 gpac/build/android/libs/armeabi-v7a
 gpac/build/android/obj
 gpac/build/msvc9/*.ncb
