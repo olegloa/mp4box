@@ -130,8 +130,6 @@ gpac/applications/hbbtvplayer/install.sh -text
 gpac/applications/hbbtvplayer/listdependencies -text
 gpac/applications/hbbtvplayer/projectmanager/codeblocks/hbbtvplayer.workspace -text
 gpac/applications/m3u82mpd/m3u82mpd.vcproj -text
-gpac/applications/mp42ts/mp42ts.dsp eol=crlf
-gpac/applications/mp42ts/mp42ts.vcproj eol=crlf
 gpac/applications/mp4box_android/.classpath -text
 gpac/applications/mp4box_android/.project -text
 gpac/applications/mp4box_android/AndroidManifest.xml -text
@@ -441,6 +439,7 @@ gpac/build/msvc8/libgpac_dll.vcproj eol=crlf
 gpac/build/msvc8/m3u82mpd.vcproj eol=crlf
 gpac/build/msvc8/m3u8_in.vcproj eol=crlf
 gpac/build/msvc8/mp3_in.vcproj eol=crlf
+gpac/build/msvc8/mp42ts.vcproj eol=crlf
 gpac/build/msvc8/mp4box.vcproj eol=crlf
 gpac/build/msvc8/mp4client.vcproj eol=crlf
 gpac/build/msvc8/mpd_in.vcproj eol=crlf
@@ -496,6 +495,7 @@ gpac/build/msvc9/laser_dec.vcproj eol=crlf
 gpac/build/msvc9/libgpac.vcproj eol=crlf
 gpac/build/msvc9/libgpac_dll.vcproj eol=crlf
 gpac/build/msvc9/mp3_in.vcproj eol=crlf
+gpac/build/msvc9/mp42ts.vcproj eol=crlf
 gpac/build/msvc9/mp4box.vcproj eol=crlf
 gpac/build/msvc9/mp4client.vcproj eol=crlf
 gpac/build/msvc9/mpd_in.vcproj eol=crlf
