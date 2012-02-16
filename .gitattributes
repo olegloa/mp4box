@@ -278,12 +278,6 @@ gpac/applications/v4studio/treeIcon2.xpm -text
 gpac/applications/v4studio/treeIcon3.xpm -text
 gpac/applications/v4studio/treeIcon4.xpm -text
 gpac/applications/v4studio/treeIcon5.xpm -text
-gpac/bin/arm_ppc02_rel/install/do.bat -text
-gpac/bin/arm_ppc02_rel/install/gpac.inf -text
-gpac/bin/arm_ppc02_rel/install/gpac.ini -text
-gpac/bin/arm_ppc03_rel/install/do.bat -text
-gpac/bin/arm_ppc03_rel/install/gpac.inf -text
-gpac/bin/arm_ppc03_rel/install/gpac.ini -text
 gpac/bin/smartphone[!!-~]2003[!!-~](armv4)/release/install/archive.bat -text
 gpac/bin/smartphone[!!-~]2003[!!-~](armv4)/release/install/build_installer.bat -text
 gpac/bin/smartphone[!!-~]2003[!!-~](armv4)/release/install/gpac.inf -text
