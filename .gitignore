@@ -30,4 +30,4 @@ gpac/extra_lib/android
 gpac/extra_lib/include/jpeg/android
 gpac/gmon.out
 gpac/include/gpac/.directory
-gpac/include/gpac/version.h
+gpac/include/gpac/revision.h

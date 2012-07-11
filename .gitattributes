@@ -852,6 +852,7 @@ gpac/include/gpac/ait.h -text
 gpac/include/gpac/dsmcc.h -text
 gpac/include/gpac/events_constants.h -text
 gpac/include/gpac/modules/hardcoded_proto.h -text
+gpac/include/gpac/version.h -text
 gpac/include/win32/inttypes.h -text
 gpac/modules/amr_dec/amr_nb_api.h -text
 gpac/modules/amr_float_dec/amr_api.h -text
