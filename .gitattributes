@@ -1289,6 +1289,7 @@ gpac/regression_tests/x3d/x3d-misc-HatchStyle.x3dv -text
 gpac/regression_tests/x3d/x3d-misc-KeySensor.x3dv -text
 gpac/regression_tests/x3d/x3d-misc-StringSensor.x3dv -text
 gpac/src/dir_info -text
+gpac/src/isomedia/box_code_adobe.c -text
 gpac/src/isomedia/generic_subtitle.c -text
 gpac/src/media_tools/ait.c -text
 gpac/src/media_tools/dash_client.c -text
