@@ -231,6 +231,12 @@ gpac/applications/testapps/mp42ts/mp42ts.vcproj eol=crlf
 gpac/applications/testapps/mpedemux/mpedemux.dsp eol=crlf
 gpac/applications/testapps/mpeg2ts/mpeg2ts.dsp eol=crlf
 gpac/applications/testapps/svg2bifs/svg2bifs.dsp eol=crlf
+gpac/applications/ts2hds svnc_bugtraq_003anumber=true
+gpac/applications/ts2hds/Makefile -text
+gpac/applications/ts2hds/f4m.c -text
+gpac/applications/ts2hds/f4v.c -text
+gpac/applications/ts2hds/main.c -text
+gpac/applications/ts2hds/ts2hds.h -text
 gpac/applications/udptsseg/udptsseg.dsp eol=crlf
 gpac/applications/udptsseg/udptsseg.vcproj eol=crlf
 gpac/applications/v4studio/rc/V4Studio.aps -text
@@ -558,6 +564,7 @@ gpac/build/msvc9/sdl_out.vcproj eol=crlf
 gpac/build/msvc9/soft_raster.vcproj eol=crlf
 gpac/build/msvc9/svg_in.vcproj eol=crlf
 gpac/build/msvc9/timedtext.vcproj eol=crlf
+gpac/build/msvc9/ts2hds.vcproj -text
 gpac/build/msvc9/ui_rec.vcproj eol=crlf
 gpac/build/msvc9/validator.vcproj -text
 gpac/build/msvc9/wav_out.vcproj eol=crlf
