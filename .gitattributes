@@ -906,6 +906,7 @@ gpac/include/gpac/ait.h -text
 gpac/include/gpac/dash.h -text
 gpac/include/gpac/dsmcc.h -text
 gpac/include/gpac/events_constants.h -text
+gpac/include/gpac/map.h -text svneol=unset#text/plain
 gpac/include/gpac/modules/hardcoded_proto.h -text
 gpac/include/gpac/version.h -text
 gpac/include/win32/inttypes.h -text
@@ -1303,6 +1304,7 @@ gpac/src/media_tools/dash_client.c -text
 gpac/src/media_tools/dash_segmenter.c -text
 gpac/src/media_tools/dsmcc.c -text
 gpac/src/scene_manager/swf_svg.c -text
+gpac/src/utils/map.c -text svneol=unset#text/plain
 gpac/src/utils/os_config_init.c -text
 gpac/version.bat -text
 gpac_extra_libs/HBBTVPlayer_Dependencies_Win32Bundle/README.txt -text
