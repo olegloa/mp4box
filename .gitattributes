@@ -537,12 +537,14 @@ gpac/build/msvc9/gapi.vcproj eol=crlf
 gpac/build/msvc9/gdip_raster.vcproj eol=crlf
 gpac/build/msvc9/gpac.sln eol=crlf
 gpac/build/msvc9/gpac_js.vcproj eol=crlf
+gpac/build/msvc9/gpac_static.sln -text
 gpac/build/msvc9/img_in.vcproj eol=crlf
 gpac/build/msvc9/ismacryp.vcproj eol=crlf
 gpac/build/msvc9/isom_in.vcproj eol=crlf
 gpac/build/msvc9/laser_dec.vcproj eol=crlf
 gpac/build/msvc9/libgpac.vcproj eol=crlf
 gpac/build/msvc9/libgpac_dll.vcproj eol=crlf
+gpac/build/msvc9/libgpac_static.vcproj -text
 gpac/build/msvc9/mp3_in.vcproj eol=crlf
 gpac/build/msvc9/mp42ts.vcproj eol=crlf
 gpac/build/msvc9/mp4box.vcproj eol=crlf
