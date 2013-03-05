@@ -322,6 +322,7 @@ gpac/build/android/jni/modules/gm_mp3_in.mk -text
 gpac/build/android/jni/modules/gm_mpd_in.mk -text
 gpac/build/android/jni/modules/gm_mpegts_in.mk -text
 gpac/build/android/jni/modules/gm_odf_dec.mk -text
+gpac/build/android/jni/modules/gm_osd.mk -text
 gpac/build/android/jni/modules/gm_rawout.mk -text
 gpac/build/android/jni/modules/gm_rtp_in.mk -text
 gpac/build/android/jni/modules/gm_saf_in.mk -text
