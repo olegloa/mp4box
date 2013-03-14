@@ -938,6 +938,16 @@ gpac/modules/hyb_in/fm_fake_push.c -text
 gpac/modules/hyb_in/fm_mmbtools.c -text
 gpac/modules/hyb_in/hyb_in.c -text
 gpac/modules/hyb_in/hyb_in.h -text
+gpac/modules/ios_cam/CameraObject.h -text
+gpac/modules/ios_cam/CameraObject.m -text
+gpac/modules/ios_cam/cam_wrap.h -text
+gpac/modules/ios_cam/cam_wrap.m -text
+gpac/modules/ios_cam/ios_cam.c -text
+gpac/modules/ios_mpegv/SensorAcces.m -text
+gpac/modules/ios_mpegv/SensorAccess.h -text
+gpac/modules/ios_mpegv/ios_mpegv-Prefix.pch -text
+gpac/modules/ios_mpegv/ios_mpegv.c -text
+gpac/modules/ios_mpegv/sensor_wrap.h -text
 gpac/modules/opencv_is/demo-sensor.bt -text
 gpac/modules/opencv_is/haarcascade_frontalface_default.xml -text
 gpac/modules/openhevc_dec/Makefile -text
