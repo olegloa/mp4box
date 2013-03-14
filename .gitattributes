@@ -174,7 +174,11 @@ gpac/applications/osmo4_android/src/com/gpac/Osmo4/extra/FileArrayAdapter.java s
 gpac/applications/osmo4_android/src/com/gpac/Osmo4/extra/FileChooserActivity.java svn_keywords
 gpac/applications/osmo4_android/src/com/gpac/Osmo4/extra/FileEntry.java svn_keywords
 gpac/applications/osmo4_android/src/com/gpac/Osmo4/logs/GpacLogger.java svn_keywords
+gpac/applications/osmo4_ios/Resources/Default-568h@2x.png -text
 gpac/applications/osmo4_ios/Resources/icon.png -text
+gpac/applications/osmo4_ios/Resources/icon_ipad.png -text
+gpac/applications/osmo4_ios/Resources/icon_ipad_retina.png -text
+gpac/applications/osmo4_ios/Resources/icon_retina.png -text
 gpac/applications/osmo4_ios/Resources/osmo.icns -text
 gpac/applications/osmo4_ios/osmo4ios-Info.plist -text
 gpac/applications/osmo4_sym/aif/osmo4_icon.bmp -text
@@ -622,6 +626,7 @@ gpac/build/symbian/xvid_dec.mmp -text
 gpac/build/xcode/build/Release-iphonesimulator/libgpac_dynamic.dylib -text svneol=unset#unset
 gpac/build/xcode/gpac.xcodeproj/project.pbxproj -text
 gpac/build/xcode/gpac4ios.xcodeproj/project.pbxproj -text
+gpac/build/xcode/osmo4ios.entitlements -text
 gpac/configure -text
 gpac/debian/changelog -text
 gpac/debian/compat -text
