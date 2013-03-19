@@ -951,6 +951,7 @@ gpac/modules/ios_mpegv/sensor_wrap.h -text
 gpac/modules/opencv_is/demo-sensor.bt -text
 gpac/modules/opencv_is/haarcascade_frontalface_default.xml -text
 gpac/modules/openhevc_dec/Makefile -text
+gpac/modules/openhevc_dec/openHevcWrapper.h -text
 gpac/modules/openhevc_dec/openhevc_dec.c -text
 gpac/modules/openhevc_dec/wrapper.h -text
 gpac/modules/osd/Makefile -text
