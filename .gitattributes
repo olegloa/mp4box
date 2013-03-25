@@ -444,6 +444,7 @@ gpac/build/msvc10/mp4box.vcxproj -text
 gpac/build/msvc10/mp4client.vcxproj -text
 gpac/build/msvc10/mpd_in.vcxproj -text
 gpac/build/msvc10/mpegts_in.vcxproj -text
+gpac/build/msvc10/mse_in.vcxproj -text
 gpac/build/msvc10/odf_dec.vcxproj -text
 gpac/build/msvc10/ogg.vcxproj -text
 gpac/build/msvc10/opensvc.vcxproj -text
