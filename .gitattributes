@@ -916,6 +916,8 @@ gpac/include/gpac/ait.h -text
 gpac/include/gpac/dash.h -text
 gpac/include/gpac/dsmcc.h -text
 gpac/include/gpac/events_constants.h -text
+gpac/include/gpac/html5_media.h -text
+gpac/include/gpac/html5_mse.h -text
 gpac/include/gpac/map.h -text svneol=unset#text/plain
 gpac/include/gpac/modules/hardcoded_proto.h -text
 gpac/include/gpac/version.h -text
@@ -949,6 +951,8 @@ gpac/modules/ios_mpegv/SensorAccess.h -text
 gpac/modules/ios_mpegv/ios_mpegv-Prefix.pch -text
 gpac/modules/ios_mpegv/ios_mpegv.c -text
 gpac/modules/ios_mpegv/sensor_wrap.h -text
+gpac/modules/mse_in/Makefile -text
+gpac/modules/mse_in/mse_in.c -text
 gpac/modules/opencv_is/demo-sensor.bt -text
 gpac/modules/opencv_is/haarcascade_frontalface_default.xml -text
 gpac/modules/openhevc_dec/Makefile -text
@@ -1343,7 +1347,11 @@ gpac/src/media_tools/ait.c -text
 gpac/src/media_tools/dash_client.c -text
 gpac/src/media_tools/dash_segmenter.c -text
 gpac/src/media_tools/dsmcc.c -text
+gpac/src/media_tools/html5_media.c -text
+gpac/src/media_tools/html5_mse.c -text
 gpac/src/scene_manager/swf_svg.c -text
+gpac/src/scenegraph/html5_media_smjs.c -text
+gpac/src/scenegraph/html5_mse_smjs.c -text
 gpac/src/utils/map.c -text svneol=unset#text/plain
 gpac/src/utils/os_config_init.c -text
 gpac/version.bat -text
