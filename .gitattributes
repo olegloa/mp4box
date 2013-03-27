@@ -1314,6 +1314,7 @@ gpac/regression_tests/html5_video/mediasegments-mp4-audio-only.js -text
 gpac/regression_tests/html5_video/mediasegments-mp4-video-audio-multiplexed.js -text
 gpac/regression_tests/html5_video/mediasegments-mp4-video-only-local.js -text
 gpac/regression_tests/html5_video/mediasegments-mp4-video-only.js -text
+gpac/regression_tests/html5_video/mse-overlap.js -text
 gpac/regression_tests/html5_video/video.svg -text
 gpac/regression_tests/html5_video/video_html5_mse.js -text
 gpac/regression_tests/html5_video/xhr.svg -text
