@@ -152,13 +152,13 @@ gpac/applications/osmo4_android/Osmo4_keystore -text
 gpac/applications/osmo4_android/build.properties -text
 gpac/applications/osmo4_android/build.xml -text
 gpac/applications/osmo4_android/default.properties -text
-gpac/applications/osmo4_android/libs/android-support-v4.jar -text
 gpac/applications/osmo4_android/res/drawable-hdpi/icon.png -text
 gpac/applications/osmo4_android/res/drawable-ldpi/icon.png -text
 gpac/applications/osmo4_android/res/drawable-mdpi/icon.png -text
 gpac/applications/osmo4_android/res/layout/about_dialog.xml -text svneol=unset#text/xml
 gpac/applications/osmo4_android/res/layout/auth_requested.xml -text svneol=unset#text/xml
 gpac/applications/osmo4_android/res/layout/file_view.xml -text svneol=unset#text/xml
+gpac/applications/osmo4_android/res/layout/main.xml -text
 gpac/applications/osmo4_android/res/menu/main_menu.xml -text
 gpac/applications/osmo4_android/res/values/strings.xml -text
 gpac/applications/osmo4_android/src/com/gpac/Osmo4/BitmapView.java -text svn_keywords=Id%0ARevision
