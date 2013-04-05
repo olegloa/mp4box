@@ -437,6 +437,7 @@ gpac/build/msvc10/ismacryp.vcxproj -text
 gpac/build/msvc10/isom_in.vcxproj -text
 gpac/build/msvc10/laser_dec.vcxproj -text
 gpac/build/msvc10/libgpac.vcxproj -text
+gpac/build/msvc10/libgpac.vcxproj.filters -text
 gpac/build/msvc10/libgpac_dll.vcxproj -text
 gpac/build/msvc10/mp3_in.vcxproj -text
 gpac/build/msvc10/mp42ts.vcxproj -text
