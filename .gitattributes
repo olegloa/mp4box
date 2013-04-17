@@ -448,6 +448,7 @@ gpac/build/msvc10/mpegts_in.vcxproj -text
 gpac/build/msvc10/mse_in.vcxproj -text
 gpac/build/msvc10/odf_dec.vcxproj -text
 gpac/build/msvc10/ogg.vcxproj -text
+gpac/build/msvc10/openhevc.vcxproj -text
 gpac/build/msvc10/opensvc.vcxproj -text
 gpac/build/msvc10/osmophone.vcxproj -text
 gpac/build/msvc10/osmozilla.vcxproj -text
