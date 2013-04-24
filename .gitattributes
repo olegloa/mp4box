@@ -323,12 +323,6 @@ gpac/bin/smartphone[!!-~]2003[!!-~](armv4)/release/install/archive.bat -text
 gpac/bin/smartphone[!!-~]2003[!!-~](armv4)/release/install/build_installer.bat -text
 gpac/bin/smartphone[!!-~]2003[!!-~](armv4)/release/install/gpac.inf -text
 gpac/bin/smartphone[!!-~]2003[!!-~](armv4)/release/install/readme.txt -text
-gpac/bin/win32/release/nsis_install/default.out -text
-gpac/bin/win32/release/nsis_install/gpac_installer.nsi -text
-gpac/bin/x64/Release/nsis_install/GdiPlus.dll -text
-gpac/bin/x64/Release/nsis_install/default.out -text
-gpac/bin/x64/Release/nsis_install/gpac_installer.nsi -text
-gpac/bin/x64/Release/nsis_install/readme.txt -text
 gpac/build/android/AndroidManifest.xml -text
 gpac/build/android/README -text
 gpac/build/android/default.properties -text
@@ -1012,6 +1006,9 @@ gpac/modules/xvid_dec/xvid_wce/TODO -text
 gpac/modules/xvid_dec/xvid_wce/note -text
 gpac/modules/xvid_dec/xvid_wce/qpel.inl -text
 gpac/modules/xvid_dec/xvid_wce/xvid_ppc.asm -text
+gpac/packagers/win32_64/nsis/default.out -text
+gpac/packagers/win32_64/nsis/gpac_installer.nsi -text
+gpac/packagers/win32_64/nsis/readme.txt -text
 gpac/regression_tests/_mozilla_ie_action.html -text
 gpac/regression_tests/_mozilla_ie_simple.html -text
 gpac/regression_tests/_ppc_action.html -text
