@@ -31,6 +31,7 @@ gpac/applications/dashcast/cmd_data.h -text
 gpac/applications/dashcast/controler.c -text
 gpac/applications/dashcast/controler.h -text
 gpac/applications/dashcast/dashcast.c -text
+gpac/applications/dashcast/libav_compat.h -text
 gpac/applications/dashcast/message_queue.c -text
 gpac/applications/dashcast/message_queue.h -text
 gpac/applications/dashcast/register.c -text
