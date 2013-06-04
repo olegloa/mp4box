@@ -880,6 +880,7 @@ gpac/extra_lib/include/libavutil/timestamp.h -text
 gpac/extra_lib/include/libavutil/version.h -text
 gpac/extra_lib/include/libavutil/xtea.h -text
 gpac/extra_lib/include/libswscale/version.h -text
+gpac/extra_lib/include/openHevcWrapper.h -text
 gpac/extra_lib/include/openssl/asn1.h -text
 gpac/extra_lib/include/openssl/bio.h -text
 gpac/extra_lib/include/openssl/bn.h -text
@@ -1044,9 +1045,7 @@ gpac/modules/mse_in/mse_in.c -text
 gpac/modules/opencv_is/demo-sensor.bt -text
 gpac/modules/opencv_is/haarcascade_frontalface_default.xml -text
 gpac/modules/openhevc_dec/Makefile -text
-gpac/modules/openhevc_dec/openHevcWrapper.h -text
 gpac/modules/openhevc_dec/openhevc_dec.c -text
-gpac/modules/openhevc_dec/wrapper.h -text
 gpac/modules/osd/Makefile -text
 gpac/modules/osd/osd.c -text
 gpac/modules/rvc_dec/Makefile -text
