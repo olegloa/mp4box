@@ -91,6 +91,8 @@ gpac/applications/dashcast/message_queue.c -text
 gpac/applications/dashcast/message_queue.h -text
 gpac/applications/dashcast/register.c -text
 gpac/applications/dashcast/register.h -text
+gpac/applications/dashcast/task.c -text
+gpac/applications/dashcast/task.h -text
 gpac/applications/dashcast/video_data.c -text
 gpac/applications/dashcast/video_data.h -text
 gpac/applications/dashcast/video_decoder.c -text
