@@ -1371,6 +1371,7 @@ gpac/regression_tests/svg/utfscript.svg -text
 gpac/regression_tests/utfscript.svg -text
 gpac/regression_tests/webvtt/comments.vtt -text
 gpac/regression_tests/webvtt/concatenation.vtt -text
+gpac/regression_tests/webvtt/counter.srt -text
 gpac/regression_tests/webvtt/counter.vtt -text
 gpac/regression_tests/webvtt/elephants-dream-chapters-en.vtt -text
 gpac/regression_tests/webvtt/elephants-dream-subtitles-de.vtt -text
