@@ -950,6 +950,7 @@ gpac/gui/mpegu-wm.js -text
 gpac/gui/mpegu-wm.xmt -text
 gpac/gui/tv_wm_gui.js -text
 gpac/gui/tv_wm_gui.svg -text
+gpac/gui/webvtt-renderer.js -text
 gpac/include/gpac/ait.h -text
 gpac/include/gpac/dash.h -text
 gpac/include/gpac/dsmcc.h -text
@@ -1406,7 +1407,6 @@ gpac/regression_tests/webvtt/spec-example-voice.vtt -text
 gpac/regression_tests/webvtt/svg.vtt -text
 gpac/regression_tests/webvtt/timestamps-invalid.vtt -text
 gpac/regression_tests/webvtt/timestamps.vtt -text
-gpac/regression_tests/webvtt/webvtt-renderer.js -text
 gpac/regression_tests/x3d/x3d-2D-Arc2d.x3dv -text
 gpac/regression_tests/x3d/x3d-2D-ArcClose2d.x3dv -text
 gpac/regression_tests/x3d/x3d-2D-Disk2d.x3dv -text
