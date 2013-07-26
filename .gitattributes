@@ -958,6 +958,7 @@ gpac/include/gpac/html5_mse.h -text
 gpac/include/gpac/map.h -text svneol=unset#text/plain
 gpac/include/gpac/modules/hardcoded_proto.h -text
 gpac/include/gpac/version.h -text
+gpac/include/gpac/webvtt.h -text
 gpac/include/win32/inttypes.h -text
 gpac/modules/amr_dec/amr_nb_api.h -text
 gpac/modules/amr_float_dec/amr_api.h -text
@@ -1000,6 +1001,9 @@ gpac/modules/rvc_dec/Makefile -text
 gpac/modules/rvc_dec/rvc_dec.c -text
 gpac/modules/validator/README.TXT -text
 gpac/modules/validator/validator.c -text
+gpac/modules/vtt_in/Makefile -text
+gpac/modules/vtt_in/vtt_dec.c -text
+gpac/modules/vtt_in/vtt_in.c -text
 gpac/modules/widgetman/wgt_load_base.js -text
 gpac/modules/wiiis/test_wii.bt -text
 gpac/modules/xvid_dec/xvid_wce/AUTHORS -text
@@ -1365,6 +1369,7 @@ gpac/regression_tests/svg/utfscript.svg -text
 gpac/regression_tests/utfscript.svg -text
 gpac/regression_tests/webvtt/comments.vtt -text
 gpac/regression_tests/webvtt/concatenation.vtt -text
+gpac/regression_tests/webvtt/counter.vtt -text
 gpac/regression_tests/webvtt/elephants-dream-chapters-en.vtt -text
 gpac/regression_tests/webvtt/elephants-dream-subtitles-de.vtt -text
 gpac/regression_tests/webvtt/elephants-dream-subtitles-en.vtt -text
@@ -1388,6 +1393,7 @@ gpac/regression_tests/webvtt/overlapping-middle.vtt -text
 gpac/regression_tests/webvtt/overlapping-rewritten.vtt -text
 gpac/regression_tests/webvtt/overlapping-start.vtt -text
 gpac/regression_tests/webvtt/overlapping.vtt -text
+gpac/regression_tests/webvtt/simple.vtt -text
 gpac/regression_tests/webvtt/spaces.vtt -text
 gpac/regression_tests/webvtt/spec-example-basic.vtt -text
 gpac/regression_tests/webvtt/spec-example-comment.vtt -text
@@ -1399,6 +1405,7 @@ gpac/regression_tests/webvtt/spec-example-voice.vtt -text
 gpac/regression_tests/webvtt/svg.vtt -text
 gpac/regression_tests/webvtt/timestamps-invalid.vtt -text
 gpac/regression_tests/webvtt/timestamps.vtt -text
+gpac/regression_tests/webvtt/webvtt-renderer.js -text
 gpac/regression_tests/x3d/x3d-2D-Arc2d.x3dv -text
 gpac/regression_tests/x3d/x3d-2D-ArcClose2d.x3dv -text
 gpac/regression_tests/x3d/x3d-2D-Disk2d.x3dv -text
@@ -1429,6 +1436,7 @@ gpac/src/media_tools/webvtt.c -text
 gpac/src/scene_manager/swf_svg.c -text
 gpac/src/scenegraph/html5_media_smjs.c -text
 gpac/src/scenegraph/html5_mse_smjs.c -text
+gpac/src/scenegraph/webvtt_smjs.c -text
 gpac/src/utils/map.c -text svneol=unset#text/plain
 gpac/src/utils/os_config_init.c -text
 gpac/version.bat -text
