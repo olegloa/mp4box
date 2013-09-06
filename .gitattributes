@@ -61,7 +61,9 @@ gpac/applications/generators/SVG/Tiny-1.2-NG/xml-events.rng -text
 gpac/applications/generators/X3D/X3DGen.dsp eol=crlf
 gpac/applications/generators/X3D/X3DGen.dsw eol=crlf
 gpac/applications/hbbtvplayer/REQUIREMENT -text
+gpac/applications/hbbtvplayer/getsources.sh eol=lf
 gpac/applications/hbbtvplayer/hbbtvbrowserplugin/README -text
+gpac/applications/hbbtvplayer/hbbtvbrowserplugin/autogen.sh eol=lf
 gpac/applications/hbbtvplayer/hbbtvbrowserplugin/configure.ac -text
 gpac/applications/hbbtvplayer/hbbtvbrowserplugin/doc/hbbtvBrowserPlugin-NPAPI-20111108.pptx -text
 gpac/applications/hbbtvplayer/hbbtvbrowserplugin/doc/listeOIPFProfile.xlsx -text
@@ -73,6 +75,7 @@ gpac/applications/hbbtvplayer/hbbtvbrowserplugin/projectmanager/codeblocks/hbbtv
 gpac/applications/hbbtvplayer/hbbtvbrowserplugin/projectmanager/codeblocks/hbbtvbrowserplugin/hbbtvbrowserplugin.layout -text
 gpac/applications/hbbtvplayer/hbbtvbrowserplugin/releases/hbbtvbrowserplugin-0.01.tar.gz -text
 gpac/applications/hbbtvplayer/hbbtvbrowserplugin/src/makefile.am -text
+gpac/applications/hbbtvplayer/hbbtvterminal/autogen.sh eol=lf
 gpac/applications/hbbtvplayer/hbbtvterminal/configure.ac -text
 gpac/applications/hbbtvplayer/hbbtvterminal/hbbtv_terminal.vcproj eol=crlf
 gpac/applications/hbbtvplayer/hbbtvterminal/makefile.am -text
@@ -80,6 +83,7 @@ gpac/applications/hbbtvplayer/hbbtvterminal/makefile.old -text
 gpac/applications/hbbtvplayer/hbbtvterminal/projectmanager/codeblocks/hbbtvterminal/HbbtvTerminal.cbp -text
 gpac/applications/hbbtvplayer/hbbtvterminal/projectmanager/codeblocks/hbbtvterminal/HbbtvTerminal.layout -text
 gpac/applications/hbbtvplayer/hbbtvterminal/src/makefile.am -text
+gpac/applications/hbbtvplayer/install.sh eol=lf
 gpac/applications/hbbtvplayer/listdependencies -text
 gpac/applications/hbbtvplayer/projectmanager/codeblocks/hbbtvplayer.workspace -text
 gpac/applications/m3u82mpd/m3u82mpd.vcproj eol=crlf
@@ -576,9 +580,12 @@ gpac/build/symbian/svg_in.mmp -text
 gpac/build/symbian/timedtext.mmp -text
 gpac/build/symbian/xvid_dec.mmp -text
 gpac/build/xcode/build/Release-iphonesimulator/libgpac_dynamic.dylib -text svneol=unset#unset
+gpac/build/xcode/generate_ios.sh eol=lf
 gpac/build/xcode/gpac.xcodeproj/project.pbxproj -text
 gpac/build/xcode/gpac4ios.xcodeproj/project.pbxproj -text
 gpac/build/xcode/osmo4ios.entitlements -text
+gpac/build/xcode/script_libgpac.sh eol=lf
+gpac/build/xcode/script_modules.sh eol=lf
 gpac/configure -text
 gpac/debian/changelog -text
 gpac/debian/compat -text
@@ -617,6 +624,7 @@ gpac/extra_lib/include/ffmpeg_android/.project -text
 gpac/extra_lib/include/js/jsproto.tbl -text
 gpac/extra_lib/lib/android/armeabi svn_writable=on
 gpac/extra_lib/lib/android/armeabi-v7a svn_writable=on
+gpac/fixEOL.sh eol=lf
 gpac/generate_installer.bat -text
 gpac/gpac.spec -text
 gpac/gui/extensions/widget_manager/applications-system.svg -text
@@ -697,6 +705,7 @@ gpac/gui/tv_wm_gui.svg -text
 gpac/gui/webvtt-renderer.js -text
 gpac/include/gpac/map.h svneol=native#text/plain
 gpac/include/win32/inttypes.h -text
+gpac/mkdmg.sh eol=lf
 gpac/modules/amr_dec/amr_nb_api.h -text
 gpac/modules/amr_float_dec/amr_api.h -text
 gpac/modules/demo_is/demo-sensor.bt -text
@@ -1134,6 +1143,7 @@ gpac/regression_tests/x3d/x3d-misc-ColorRGBA.x3dv -text
 gpac/regression_tests/x3d/x3d-misc-HatchStyle.x3dv -text
 gpac/regression_tests/x3d/x3d-misc-KeySensor.x3dv -text
 gpac/regression_tests/x3d/x3d-misc-StringSensor.x3dv -text
+gpac/run_configure.sh eol=lf
 gpac/src/dir_info -text
 gpac/src/utils/map.c svneol=native#text/plain
 gpac/version.bat -text
