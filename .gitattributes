@@ -1071,6 +1071,9 @@ gpac/regression_tests/html5_video/counter-mp4-av-segments-http.js -text
 gpac/regression_tests/html5_video/counter-mp4-video-segments-http.js -text
 gpac/regression_tests/html5_video/counter-mp4-video-segments-live-nobs-http.js -text
 gpac/regression_tests/html5_video/counter-mp4-video-segments-local.js -text
+gpac/regression_tests/html5_video/file.json -text
+gpac/regression_tests/html5_video/file.txt -text
+gpac/regression_tests/html5_video/file.xml -text
 gpac/regression_tests/html5_video/gpac-mse.js -text
 gpac/regression_tests/html5_video/mse-overlap.js -text
 gpac/regression_tests/html5_video/mse.svg -text
@@ -1078,8 +1081,8 @@ gpac/regression_tests/html5_video/redbull-mp4-video-segments-http.js -text
 gpac/regression_tests/html5_video/spatial-mse.svg -text
 gpac/regression_tests/html5_video/two-videos.svg -text
 gpac/regression_tests/html5_video/video.svg -text
+gpac/regression_tests/html5_video/xhr.js -text
 gpac/regression_tests/html5_video/xhr.svg -text
-gpac/regression_tests/html5_video/xhr_reuse.js -text
 gpac/regression_tests/index.css -text
 gpac/regression_tests/index.xml -text
 gpac/regression_tests/svg/all_syntaxes_1.1F2.svg -text
