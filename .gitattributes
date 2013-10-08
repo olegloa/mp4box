@@ -15,7 +15,6 @@ gpac/applications/GPAX/GPAX.rgs -text
 gpac/applications/GPAX/GPAXps.def -text
 gpac/applications/GPAX/GPAXps.mk -text
 gpac/applications/GPAX/gpax.bmp -text
-gpac/applications/dashcast/video_encoder.c -text
 gpac/applications/generators/MPEG4/MPEG4Gen.dsp eol=crlf
 gpac/applications/generators/MPEG4/MPEG4Gen.dsw eol=crlf
 gpac/applications/generators/SVG/SVGGen.dsp eol=crlf
@@ -185,12 +184,10 @@ gpac/applications/testapps/broadcaster/broadcaster_config.cfg -text
 gpac/applications/testapps/broadcaster/france.mp4 -text
 gpac/applications/testapps/broadcaster/meteo_local.xmt -text
 gpac/applications/testapps/dmbrs/dmbrs.dsp eol=crlf
-gpac/applications/testapps/fmp4demux/Makefile -text
-gpac/applications/testapps/fmp4demux/build.sh -text
-gpac/applications/testapps/fmp4demux/fmp4demux.sln -text
+gpac/applications/testapps/fmp4demux/build.sh eol=lf
+gpac/applications/testapps/fmp4demux/fmp4demux.sln eol=crlf
 gpac/applications/testapps/fmp4demux/fmp4demux.vcxproj -text
 gpac/applications/testapps/fmp4demux/gpac svnc_bugtraq_003anumber=true
-gpac/applications/testapps/fmp4demux/gpac/configuration.h -text
 gpac/applications/testapps/fmp4demux/main.c -text
 gpac/applications/testapps/largefile/largefile.dsp eol=crlf
 gpac/applications/testapps/largefile/largefile.dsw eol=crlf
@@ -1079,7 +1076,6 @@ gpac/regression_tests/html5_video/counter-mp4-video-segments-http.js -text
 gpac/regression_tests/html5_video/counter-mp4-video-segments-live-nobs-http.js -text
 gpac/regression_tests/html5_video/counter-mp4-video-segments-local.js -text
 gpac/regression_tests/html5_video/file.json -text
-gpac/regression_tests/html5_video/file.txt -text
 gpac/regression_tests/html5_video/file.xml -text
 gpac/regression_tests/html5_video/gpac-mse.js -text
 gpac/regression_tests/html5_video/mse-overlap.js -text
