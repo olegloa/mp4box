@@ -185,6 +185,7 @@ gpac/applications/testapps/broadcaster/broadcaster_config.cfg -text
 gpac/applications/testapps/broadcaster/france.mp4 -text
 gpac/applications/testapps/broadcaster/meteo_local.xmt -text
 gpac/applications/testapps/dmbrs/dmbrs.dsp eol=crlf
+gpac/applications/testapps/fmp4demux/Makefile -text
 gpac/applications/testapps/fmp4demux/build.sh -text
 gpac/applications/testapps/fmp4demux/fmp4demux.sln -text
 gpac/applications/testapps/fmp4demux/fmp4demux.vcxproj -text
