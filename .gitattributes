@@ -198,6 +198,13 @@ gpac/applications/testapps/loadcompare/LoadCompare.dsp eol=crlf
 gpac/applications/testapps/mp42ts/mp42ts.vcproj eol=crlf
 gpac/applications/testapps/mpedemux/mpedemux.dsp eol=crlf
 gpac/applications/testapps/mpeg2ts/mpeg2ts.dsp eol=crlf
+gpac/applications/testapps/segmp4demux svnc_bugtraq_003anumber=true
+gpac/applications/testapps/segmp4demux/Makefile -text
+gpac/applications/testapps/segmp4demux/build.sh -text
+gpac/applications/testapps/segmp4demux/main.c -text
+gpac/applications/testapps/segmp4demux/segmp4demux.sln -text
+gpac/applications/testapps/segmp4demux/segmp4demux.vcxproj -text
+gpac/applications/testapps/segmp4demux/segmp4demux.vcxproj.filters -text
 gpac/applications/testapps/svg2bifs/svg2bifs.dsp eol=crlf
 gpac/applications/ts2hds svnc_bugtraq_003anumber=true
 gpac/applications/udptsseg/udptsseg.dsp eol=crlf
