@@ -1139,9 +1139,12 @@ gpac/regression_tests/html5_video/counter-mp4-video-segments-live-nobs-http.js -
 gpac/regression_tests/html5_video/counter-mp4-video-segments-local.js -text
 gpac/regression_tests/html5_video/file.json -text
 gpac/regression_tests/html5_video/file.xml -text
+gpac/regression_tests/html5_video/gpac-mse-spatial.js -text
 gpac/regression_tests/html5_video/gpac-mse.js -text
 gpac/regression_tests/html5_video/mse-overlap.js -text
 gpac/regression_tests/html5_video/mse.svg -text
+gpac/regression_tests/html5_video/myanmar-tiles.js -text
+gpac/regression_tests/html5_video/redbull-mp4-audio-segments-http.js -text
 gpac/regression_tests/html5_video/redbull-mp4-video-segments-http.js -text
 gpac/regression_tests/html5_video/spatial-mse.svg -text
 gpac/regression_tests/html5_video/two-videos.svg -text
