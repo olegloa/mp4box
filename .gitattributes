@@ -1231,6 +1231,7 @@ gpac/regression_tests/x3d/x3d-misc-KeySensor.x3dv -text
 gpac/regression_tests/x3d/x3d-misc-StringSensor.x3dv -text
 gpac/run_configure.sh eol=lf
 gpac/src/dir_info -text
+gpac/src/isomedia/ttml.c -text
 gpac/src/utils/map.c svneol=native#text/plain
 gpac/version.bat -text
 gpac_extra_libs/HBBTVPlayer_Dependencies_Win32Bundle/README.txt -text
