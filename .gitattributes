@@ -1069,6 +1069,8 @@ gpac/regression_tests/build-navigator-sh -text
 gpac/regression_tests/build-navigator-w32.bat -text
 gpac/regression_tests/build-shell -text
 gpac/regression_tests/build-w32.bat -text
+gpac/regression_tests/dom/gpac-dom-portability.js -text
+gpac/regression_tests/dom/gpac-html-portability.js -text
 gpac/regression_tests/html5_video/basic_arraybuffer.js -text
 gpac/regression_tests/html5_video/basic_audio.svg -text
 gpac/regression_tests/html5_video/basic_mediasource.js -text
@@ -1086,9 +1088,12 @@ gpac/regression_tests/html5_video/file.json -text
 gpac/regression_tests/html5_video/file.xml -text
 gpac/regression_tests/html5_video/gpac-mse-spatial.js -text
 gpac/regression_tests/html5_video/gpac-mse.js -text
+gpac/regression_tests/html5_video/mediaevents.js -text
+gpac/regression_tests/html5_video/mediaevents.svg -text
 gpac/regression_tests/html5_video/mse-overlap.js -text
 gpac/regression_tests/html5_video/mse.svg -text
 gpac/regression_tests/html5_video/myanmar-tiles.js -text
+gpac/regression_tests/html5_video/nodejs-byte-server.js -text
 gpac/regression_tests/html5_video/redbull-mp4-audio-segments-http.js -text
 gpac/regression_tests/html5_video/redbull-mp4-video-segments-http.js -text
 gpac/regression_tests/html5_video/spatial-mse.svg -text
