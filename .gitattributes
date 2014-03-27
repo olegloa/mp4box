@@ -351,6 +351,7 @@ gpac/build/msvc10/platinum.vcxproj -text
 gpac/build/msvc10/raw_out.vcxproj -text
 gpac/build/msvc10/redirect_av.vcxproj -text
 gpac/build/msvc10/rtp_in.vcxproj -text
+gpac/build/msvc10/rvc_dec.vcxproj -text
 gpac/build/msvc10/saf_in.vcxproj -text
 gpac/build/msvc10/sdl_out.vcxproj -text
 gpac/build/msvc10/soft_raster.vcxproj -text
