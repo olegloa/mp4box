@@ -210,7 +210,7 @@ GF_Err gf_media_mpd_format_segment_name(GF_DashTemplateSegmentType seg_type, Boo
 			else if (!is_template && !strnicmp(& seg_rad_name[char_template], "$Number", 7)) {
 				EXTRACT_FORMAT(7);
 
-				if (is_init || is_init_template) continue;
+				if (is_init_template) continue;
 				sprintf(tmp, szFmt, segment_number);
 				strcat(segment_name, tmp);
 				has_number=GF_TRUE;
