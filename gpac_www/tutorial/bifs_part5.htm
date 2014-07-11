@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<TITLE>MPEG-4 Systems Tutorial - Part 5</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1 ALIGN="CENTER"></H1>
+<CENTER>
+<P>
+<TABLE BORDER="0" WIDTH="100%" HEIGHT="165">
+	<TR>
+		<TD WIDTH="28%" HEIGHT="157">
+			<P ALIGN="CENTER"><IMG SRC="files/logo1.jpg" WIDTH="100" HEIGHT="100" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+		<TD WIDTH="43%" HEIGHT="157">
+			<H1 ALIGN="CENTER">BIFS Tutorial - Part V</H1>
+
+			<H1 ALIGN="CENTER">Time-dependent Nodes
+		</TD>
+		<TD WIDTH="29%" HEIGHT="157">
+			<P ALIGN="CENTER"><IMG SRC="files/logo2.jpg" WIDTH="100" HEIGHT="99" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+	</TR>
+</TABLE>
+
+</CENTER>
+<P>In part III, we have used the Movietexture node to include a video in the scene, but we have left out a major
+functionality of this node: starting and stoping the playback of the movie at desired times. We have also used
+the TimeSensor node to generate events, but haven't tried to stop or start it interactively. A node whose behaviour
+depend on the current time (&quot;scene time&quot;) is said to be a time-dependent node. These are TimeSensor,
+MovieTexture, AudioBuffer, AudioSource, AudioClip and AnimationStream. To understand these nodes we have to explain
+a bit more how timing works in MPEG-4, and what are the differences between the MPEG-4 and the VRML timing models.</P>
+<H3>
+<HR ALIGN="CENTER">
+MPEG-4 Timing Model:</H3>
+<H5>'download-and-play' versus 'Streaming' Model :</H5>
+<P>VRML follows a 'download-and-play' model. The VRML content is first downloaded to the terminal before it is
+displayed to the user. Although MPEG-4 may look similar when playing local content or downloaded content (HTTP/FTP...),
+it is not designed along this model, but originally built for broadcast environments, which means a scene can be
+displayed to the user even though all information is not already present at the terminal. Actually, a terminal
+may not even know what &quot;all information&quot; means. The MPEG-4 model has then been a bit modified to allow
+video-on-demand kind of application, hence follows what is called a 'streaming' model.</P>
+<H5>Elementary Streams and synchronization:</H5>
+<P>We have seen the notion of ElementaryStream, an entity that carries data for a media object. We have also seen
+the notions of Access Unit (AU) and presentation time or CompositionTimeStamp (CTS), which allows to &quot;author
+in time&quot; the scene. An elementary stream is nothing but a succession of AUs, each AU having its own and UNIQUE
+CTS (that is, 2 consecutive AUs of an ES may not have the same CTS). The CTS is then used to present the decoded
+data to the user in time. The timing of ES data can then be known during all its lifetime. The second step is to
+synchronize streams composing a single object (in the case of scalable content), to ensure inter-stream synchronization,
+otherwise a decoder could get out-of-order, hence unusable, data. This is done by defining time dependencies between
+ESs to ensure that timestamps of different streams are interpreted in a single time base. This single time base
+is called the Object Time Base or OTB, and the stream picked up as the time reference is called &quot;clock&quot;.
+Usually one object has its own OTB, but objects may share OTBs to achieve inter-object synchronization (this is
+usually the case of a video object and its related audio object). In order to estimate network jitters, the clock
+may also carry specific timing informations called Object Clock References (OCRs), very much like RTCP timestamps
+in the RTP protocol.</P>
+<H5>What is this OCR story about?</H5>
+<P>Objects may share a single clock, but don't forget this clock is used to synchronize the object data for presentation
+(the famous CTS). Imagine you design a scene with a video, and setup the video to loop. If the video object clock
+is actually the BIFS ES, what happens at the end of the video (time T)? The video is restarted from time 0. But
+the BIFS stream is still playing, the clock is still running and indicates time T, thus the video data will arrive
+too late for presentation and will be discarded. Conclusion: you will not see the video loop, but very likely (depending
+on implementations) only see the last frame of the video at best. This is EXTREMELY important in the case of MP4
+files, where by default all streams (or tracks) shall be presented synchronized. If you do not explicetly assign
+clock references, you will sure get some weird content! So never forget to check your clock dependencies when authoring
+content with multiple time base !!</P>
+<H5>Scene Time:</H5>
+<P>In MPEG-4 as in VRML, the scene has a timing model needed to use the TimeSensor node. This is sometimes refered
+to as &quot;simulation time&quot;, but &quot;scene time&quot; is more accurate. In VRML, the scene time origin
+<I>t=0</I> is January, 1st 1970 0h00 (content uses absolute time), whereas in MPEG-4 the scene time origin <I>t=0</I>
+is the CTS of the first BIFS Access Unit (content uses relative time).</P>
+<H5></H5>
+<H3>
+<HR ALIGN="CENTER">
+MovieTexture node :</H3>
+<P>We will study the behavior of time-dependent nodes with the MovieTexture node, but all other time-dependent
+nodes behave the same. The MovieTexture node is:</P>
+<H4></H4>
+<P>
+<TABLE BORDER="1" WIDTH="100%">
+	<TR>
+		<TD WIDTH="9%">
+			<P ALIGN="CENTER"><B>field</B>
+		</TD>
+		<TD WIDTH="9%">
+			<P ALIGN="CENTER"><B>field type</B>
+		</TD>
+		<TD WIDTH="11%">
+			<P ALIGN="CENTER"><B>event type</B>
+		</TD>
+		<TD WIDTH="11%">
+			<P ALIGN="CENTER"><B>default value</B>
+		</TD>
+		<TD>
+			<P ALIGN="CENTER"><B>description</B>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">loop</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFBool</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">exposedField</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">FALSE</FONT></TD>
+		<TD>Indicates that the video object shall restart once playback is over</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">speed</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFFloat</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">exposedField</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">1.0</FONT></TD>
+		<TD>Indicates playback speed</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">startTime</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFTime</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">exposedField</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">0</FONT></TD>
+		<TD>Indicates the scene time at which playback shall start</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">stopTime</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFTime</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">exposedField</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">0</FONT></TD>
+		<TD>Indicates the scene time at which playback shall stop</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">url</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">MFString</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">exposedField</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">[]</FONT></TD>
+		<TD>Object Identifier of the video</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">repeatS</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFBool</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">field</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">TRUE</FONT></TD>
+		<TD>indicates that texture shall be repeated horizontally to fill the shape</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">repeatT</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFBool</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">field</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">TRUE</FONT></TD>
+		<TD>indicates that texture shall be repeated vertically to fill the shape</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">duration_changed</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFTime</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">eventOut</FONT></TD>
+		<TD WIDTH="11%">&nbsp;</TD>
+		<TD>Duration of the video object</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">isActive</FONT></TD>
+		<TD WIDTH="9%"><FONT FACE="Courier New, Courier">SFBool</FONT></TD>
+		<TD WIDTH="11%"><FONT FACE="Courier New, Courier">eventOut</FONT></TD>
+		<TD WIDTH="11%">&nbsp;</TD>
+		<TD>Indicates whether playback is active or not</TD>
+	</TR>
+</TABLE>
+
+<HR ALIGN="CENTER">
+</P>
+<P>As we have seen, the scene time in MPEG-4 is relative to the first BIFS access unit recieved. Hence the <FONT
+FACE="Courier New, Courier">startTime</FONT> and <FONT FACE="Courier New, Courier">stopTime</FONT> fields are coded
+as relative offsets to the scene time. If the node is inserted in an AU at time t=3s with a <FONT FACE="Courier New, Courier">startTime</FONT>
+of 2 seconds encoded in the bitstream, the actual value of startTime will be offseted of the AU CTS (current scene
+time), hence 5 seconds.</P>
+<P>The behavior of time-dependent nodes is the same in MPEG-4 as in VRML</P>
+<H4>StartTime and StopTime in Time-dependent nodes:</H4>
+<P>For time-dependent nodes the notions of activation and deactivation are defined. A time-dependent node always
+has the 3 following fields: exposedFields <FONT FACE="Courier New, Courier">startTime</FONT>, <FONT FACE="Courier New, Courier">stopTime</FONT>,
+and eventOut <FONT FACE="Courier New, Courier">isActive</FONT>. It may also have an exposedField <FONT FACE="Courier New, Courier">loop</FONT>
+used to restart playback (but AudioSource node doesn't). These values are used to compute the state of the node.
+Unlike any other nodes, an active time-dependent node may ignore modification on some of its fields (that is, the
+node will not take into account the modification and won't generate related events until next activation).</P>
+<P>When a time-dependent node has the loop field, the notion of cycle is defined. For TimeSensor, the cycle is
+given by the <FONT FACE="Courier New, Courier">cycleInterval</FONT> field. For MovieTexture and AudioClip, the
+cycle is defined as the duration of the object - if the object duration is unknown, the node has no associated
+cycle (infinite cycle duration). For AudioBuffer, the cycle duration is given by the <FONT FACE="Courier New, Courier">length
+</FONT>field.</P>
+<P>When active at the end of a cycle and the loop field is false, the node is deactivated (playback doesn't restart).</P>
+<P>When active at the end of a cycle and the loop field is true, the node keeps being active (playback restarts).</P>
+<P>If startTime &gt;= stopTime, the node stays activated according to the loop field. Otherwise (startTime &lt;
+stopTime) the node will be deactivated (playback stops) when the scene time reaches stopTime.</P>
+<P>A time-dependent node only triggers an isActive event when changing state: when becoming active, isActive=TRUE
+is generated, and when becoming inactive, isActive=FALSE is generated.</P>
+<P>A time-dependent node is inactive until the scene time reaches startTime. When scene time &gt;= startTime, the
+node becomes active (playback starts) and triggers an isActive=TRUE eventOut.</P>
+<P>An active time-dependent node becomes inactive when scene time becomes greater than stopTime IF stopTime &gt;
+startTime. If stopTime &lt;= startTime, the stopTime field is ignored (not used for deactivation detection).</P>
+<P>An active time-dependent node becomes inactive when the cycle end is reached and the loop field is FALSE. For
+AudioSource where no loop field is present, the node becomes inactive when the media is over.</P>
+<P>If an active time-dependent node recieves a loop=FALSE event, the node remains active until the current cycle
+is over or scene time becomes greater than stopTime if stopTime&gt;startTime.</P>
+<P>Any modification of the startTime field of an active time-dependent node is ignored. If the stopTime field of
+an active time-dependent node is modified and the new value is less than or equal to startTime, the modification
+is ignored (the field value is modified but the node react as if the value was not modified).</P>
+<P>If the stopTime field of an active time-dependent node is modified at t=T0 and the new value is so that startTime
+&lt; stopTime &lt;= T0, then the node becomes inactive.</P>
+<P>Note: with time-dependent nodes triggering playback of a media object, the media object will start playing from
+its current clock time. If the clock is not running, it will thus restart from the begining. Consequently, these
+nodes cannot be used to seek a media object.
+<H2>
+<HR ALIGN="CENTER">
+Example 1: MovieTexture sharing BIFS timeline</H2>
+<P>Let's take the video example of part III (<A HREF="samples/video1.xmt">video1.xmt</A>), set the loop field to
+true and start the movie at 2 seconds and stop it at 30 seconds. The MovieTexture node is then</P>
+<P><FONT FACE="Courier New, Courier">&lt;texture&gt;&lt;MovieTexture url=&quot;'10'&quot; loop=&quot;true&quot;
+startTime=&quot;2&quot; stopTime=&quot;30&quot;/&gt;&lt;/texture&gt;</FONT></P>
+<P>The final scene is <A HREF="samples/video2.xmt">video2.xmt</A>, <A HREF="samples/video2.bt">video2.bt</A>, <A
+HREF="samples/video2.mp4">video2.mp4</A></P>
+<P>Note what happens at the end of the movie. Some player will restart the whole presentation, and some others
+will just restart the movie and display the last frame(s). Also note that the first frame of the movie should be
+displayed while the MovieTexture node is inactive.</P>
+<P>
+<H2>Example 2: MovieTexture not sharing BIFS timeline</H2>
+<P>Now let's take the above example and set the clock reference of the video stream to be itself. This is done
+by setting the OCR_ES_ID field in the ESDescriptor of the video stream:</P>
+<P><FONT FACE="Courier New, Courier">&lt;ES_Descriptor ES_ID=&quot;VideoStream&quot; binaryID=&quot;3&quot; OCR_ES_ID=&quot;VideoStream&quot;&gt;</FONT></P>
+<P><FONT FACE="Courier New, Courier">&lt;/ES_Descriptor&gt;</FONT></P>
+<P>The final scene is <A HREF="samples/video3.xmt">video3.xmt</A>, <A HREF="samples/video3.bt">video3.bt</A>, <A
+HREF="samples/video3.mp4">video3.mp4</A></P>
+<P>Note that now the movie is correctly looping and stops when stopTime is reached.</P>
+<H2>
+<HR ALIGN="CENTER">
+Exercises :</H2>
+<P><U><FONT COLOR="#CC0000">Exercise 15 :</FONT></U> Rewrite the above examples with audio instead of video using
+the AudioClip node. Note that considerations on clock dependencies still apply.</P>
+<P><U><FONT COLOR="#CC0000">Exercise 16 :</FONT></U> Using touch sensors and conditionals, write a simple scene
+with a play button and a stop button controling a movie.</P>
+<H2></H2>
+<H2>
+<HR ALIGN="CENTER">
+Conclusion :</H2>
+<P>We have seen in this part the different notions of timing in the MPEG-4 standard, how to control time-dependent
+nodes and how important object clock dependencies are. You have now all the tools needed to write complex interactive
+animations and effects to enhance the user experience.</P>
+
+<P>
+<HR ALIGN="CENTER">
+
+<TABLE BORDER="0" WIDTH="100%">
+<TBODY>
+  																											<TR>
+		<TD WIDTH="1228">
+			<P ALIGN="CENTER">[ <A HREF="http://gpac.sourceforge.net"><FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">Home</FONT></A>
+			] [ <A HREF="bifs_part4.htm"><FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">Interactivity</FONT></A>]&nbsp;[<FONT
+			FACE="Verdana, Arial, Helvetica, Sans-Serif"> Time-dependent Nodes </FONT>]&nbsp;[ <A HREF="bifs_part6.htm"><FONT
+			FACE="Verdana, Arial, Helvetica, Sans-Serif">Controling Media Objects</FONT></A><FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">
+			</FONT>]
+		</TD>
+	</TR>
+</TBODY></TABLE>
+
+<HR ALIGN="CENTER">
+Last Modified: 02/04/2005<BR>
+Cyril Concolato & Jean Le Feuvre &copy; 2002-2005
+
+</BODY>
+
+</HTML>

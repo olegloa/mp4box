@@ -1,0 +1,63 @@
+InitialObjectDescriptor {
+ objectDescriptorID 1
+ audioProfileLevelIndication 254
+ visualProfileLevelIndication 254
+ sceneProfileLevelIndication 254
+ graphicsProfileLevelIndication 254
+ ODProfileLevelIndication 254
+ esDescr [
+  ES_Descriptor {
+   ES_ID 1
+   decConfigDescr DecoderConfigDescriptor {
+    streamType 3
+    decSpecificInfo BIFSConfig {
+     isCommandStream true
+     pixelMetric true
+     pixelWidth 150
+     pixelHeight 100
+    }
+   }
+  }
+ ]
+}
+
+OrderedGroup {
+ children [
+  Background2D {
+   backColor 1 1 1
+  }
+  Transform2D {
+   rotationAngle -1.1781
+   scale 1 2.41421
+   translation 0 25
+   children [
+    Transform2D {
+     rotationAngle 0.785398
+     scale 0.541196 0.765367
+     children [
+      Transform2D {
+       translation 25 -25
+       children [
+        Shape {
+         appearance Appearance {
+          material Material2D {
+           emissiveColor 0 0.501961 0
+           filled TRUE
+           lineProps LineProperties {}
+
+          }
+         }
+         geometry Rectangle {
+          size 50 50
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
+
+

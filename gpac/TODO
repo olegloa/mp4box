@@ -1,0 +1,7 @@
+todo items as of version 0.5.0:
+	* more work on DASH support
+	* improve stereo/multiview renderer and texture+depth support
+	* more work on DIMS/RME and scene generation support
+	* rearchitecture of modules
+	* more SVG support (filter , SVG 2.0)
+	

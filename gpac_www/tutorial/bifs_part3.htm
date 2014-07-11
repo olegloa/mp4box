@@ -1,0 +1,572 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<TITLE>MPEG-4 Systems Tutorial - Part 3</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1 ALIGN="CENTER"></H1>
+<CENTER>
+<P>
+<TABLE BORDER="0" WIDTH="100%" HEIGHT="165">
+	<TR>
+		<TD WIDTH="24%" HEIGHT="157">
+			<P ALIGN="CENTER"><IMG SRC="files/logo1.jpg" WIDTH="100" HEIGHT="100" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+		<TD WIDTH="48%" HEIGHT="157">
+			<H1 ALIGN="CENTER">BIFS Tutorial - Part III</H1>
+
+			<H1 ALIGN="CENTER">Including Media
+		</TD>
+		<TD WIDTH="28%" HEIGHT="157">
+			<P ALIGN="CENTER"><IMG SRC="files/logo2.jpg" WIDTH="100" HEIGHT="99" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+	</TR>
+</TABLE>
+
+</CENTER>
+<H1 ALIGN="CENTER"></H1>
+<P>In this part we will learn how to add textures (image, video) and sound to a scene. In order to do so we will
+have to understand the notion of media object in MPEG-4 and the associated <A HREF="#ODF">Object Descriptor</A>
+used to declare visual <A HREF="#jpeg">(image</A> or <A HREF="#video">vid&eacute;o</A>) or <A HREF="#sound">audio</A>
+media in an MPEG-4 scene.</P>
+<H3>
+<HR ALIGN="CENTER">
+<A NAME="ODF"></A>MPEG-4 and Media Objects:</H3>
+
+<BLOCKQUOTE>
+	<P>The MPEG-4 standard is defined at ISO/IEC as the &quot;Coding of audio-visual objects&quot; standard. This is
+	not really related to object-oriented software coding, what it really means is that each media (an image, a video,
+	a sound) is considered as an object that can be used and reused, interactively placed in the scene, independently
+	of the coding format of the media (a video object can be encoded as an MPEG-1, MPEG-2, MPEG-4 video stream but
+	can also be encoded using coding techniques developped outside the MPEG comittee). This allows modifying the scene
+	(eg, layout of media objects) without re-encoding the media object or re-encode the media object at lower bitrates
+	without changing the scene. The only constraint on media objects as &quot;known&quot; by the scene is their base
+	type (audio or visual).</P>
+</BLOCKQUOTE>
+
+<H4>
+<HR ALIGN="CENTER">
+The Object Descriptor Framework:</H4>
+
+<BLOCKQUOTE>
+	<P>A Media Object is described by a set of information transmitted through an object descriptor. This information
+	can be splitted into two distinct sets: information needed by the scene to access and understand the media structure
+	(identifier, time sub-structure or <B>segments</B>) on the one hand, information needed by the terminal to recieve,
+	decode and synchronize the media with other objects.</P>
+	<P>The identifier of a media object is a binary number called <B>ObjectDescriptorID</B>, but the XMT representation
+	is slightly different, the binary identifier being called <B>binaryID</B> while the <B>ObjectDescriptorID</B> holds
+	a textural identifier to simplify reading of the document. The binary number is used to reference objects in the
+	scene graph. In a same scene, no two objects can have the same binary identifier.</P>
+	<P>The most important notion of a media object is that its data is transported in one or several streams, called
+	<B>ElementaryStreams</B> in MPEG-4. Some of these streams are media data streams (a video stream) and some are
+	meta-data streams (stream carrying cryptographic data to unlock the object, or description data such as MPEG-7
+	or MPEG-4 Object Content Information). Usually an object is composed of a single media stream, however there may
+	be cases where an object is composed of several media streams: scalable coding (first stream at low video resolution
+	and enhancement stream for high quality) is one example, alternate coding (one stream per language, one stream
+	per bandwidth, ...) is another one. Each elementary stream is described by a descriptor called <B><FONT FACE="Courier New, Courier">ES_Descriptor</FONT></B>.
+	An <FONT FACE="Courier New, Courier">ES_Descriptor</FONT> also has a binary identifier (<B>ES_ID</B> / <B><FONT
+	FACE="Courier New, Courier">binaryID</FONT></B> in XMT) unique in the presentation. This identifier is used to
+	access the stream (local storage in MP4, real-time streaming through RTSP, ...). The ES_Descriptor also stores
+	the decoder configuration (<B><FONT FACE="Courier New, Courier">DecoderConfigDescriptor</FONT></B>) and the synchronization
+	configuration (<B><FONT FACE="Courier New, Courier">SLConfigDescriptor</FONT></B>). The <FONT FACE="Courier New, Courier">DecoderConfigDescriptor</FONT>
+	indicates at least the type of media (<B><FONT FACE="Courier New, Courier">streamType</FONT></B>) and the type
+	of coding (<B><FONT FACE="Courier New, Courier">ObjectTypeIndication</FONT></B>). It may also contain information
+	depending on the coding type used (video resolution, audio channels and sampling rate, etc) as binary data in the
+	<B>decSpecInfo</B> descriptor. We won't go into the details of the <FONT FACE="Courier New, Courier">SLConfigDescriptor</FONT>
+	for now, we will just use it with '<FONT FACE="Courier New, Courier">&lt;predefined value=&quot;2&quot;/&gt;</FONT>'
+	attribute as this is the mandatory form for storage in MP4 files.</P>
+	<P>Here is a simple ObjectDescriptor syntax in XMT:</P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;ObjectDescriptor objectDescriptorID=&quot;TextualIdentifier&quot; binaryID=&quot;10&quot;&gt;<BR>
+		&lt;Descr&gt;<BR>
+		&lt;esDescr&gt;<BR>
+		&lt;ES_Descriptor ES_ID=&quot;StreamtextualIdentifier&quot; binaryID=&quot;3&quot;&gt;<BR>
+		&lt;decConfigDescr&gt;<BR>
+		&lt;DecoderConfigDescriptor objectTypeIndication=&quot;MPEG4Visual&quot; streamType=&quot;Visual&quot; &gt;<BR>
+		&lt;decSpecificInfo&gt;<BR>
+		&lt;DecoderSpecificInfo src=&quot;data:application/octet-string,%15%08&quot;/&gt;<BR>
+		&lt;/decSpecificInfo&gt;<BR>
+		&lt;/DecoderConfigDescriptor&gt;<BR>
+		&lt;/decConfigDescr&gt;<BR>
+		&lt;slConfigDescr&gt;<BR>
+		&lt;SLConfigDescriptor&gt;&lt;predefined value=&quot;2&quot;/&gt;&lt;/SLConfigDescriptor&gt;<BR>
+		&lt;/slConfigDescr&gt;<BR>
+		&lt;/ES_Descriptor&gt;<BR>
+		&lt;/esDescr&gt;<BR>
+		&lt;/Descr&gt;<BR>
+		&lt;/ObjectDescriptor&gt;</FONT></P>
+	</BLOCKQUOTE>
+	<P>The list of media types currently supported in the MPEG-4 standard is available <A HREF="mediatypes.htm">here</A>.</P>
+</BLOCKQUOTE>
+
+<H4>
+<HR ALIGN="CENTER">
+Dynamic Modification of ODs:</H4>
+
+<BLOCKQUOTE>
+	<P>As there are BIFS commands to modify the scene, there are OD commands to modify the current set of media objects
+	available in the presentation allowing:</P>
+</BLOCKQUOTE>
+
+
+<UL>
+	<UL>
+		<LI>Adding or Updating an <FONT FACE="Courier New, Courier">ObjectDescriptor</FONT> (<FONT FACE="Courier New, Courier">OD_Update</FONT>),
+		<LI>Removing an existing object from the terminal (<FONT FACE="Courier New, Courier">OD_Remove</FONT>),
+		<LI>Adding or Updating a set of streams in an existing object (<FONT FACE="Courier New, Courier">ESD_Update</FONT>),
+		<LI>Removing a stream from an existing object (<FONT FACE="Courier New, Courier">ESD_Remove</FONT>).
+	</UL>
+</UL>
+
+
+<BLOCKQUOTE>
+	<P>These commands are packed in Access Units and assigned ComposionTimeStamps, hence allowing to define an OD stream
+	as we have done with BIFS. It is then possible to replace at any time a video by a new one.</P>
+	<P>Here is an example of an OD command in XMT:</P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;ObjectDescriptorUpdate&gt;<BR>
+		&lt;OD&gt;<BR>
+		&lt;ObjectDescriptor objectDescriptorID=&quot;NewTextualIdentifier&quot; binaryID=&quot;11&quot;&gt;....&lt;ObjectDescriptor&gt;<BR>
+		&lt;/OD&gt;<BR>
+		&lt;/ObjectDescriptorUpdate&gt;</FONT></P>
+	</BLOCKQUOTE>
+</BLOCKQUOTE>
+
+<H4>
+<HR ALIGN="CENTER">
+The Initial Object Descriptor (IOD) :</H4>
+
+<BLOCKQUOTE>
+	<P>In order to bootstrap an MPEG-4 presentation, the terminal must know a few things: where is the BIFS stream
+	containing the scene, is there (and where is it) an OD stream describing objects used by the scene, is the terminal
+	able to understand all coding tools used in the presentation (profiles and levels), and so on . This information
+	is carried in a special descriptor called <FONT FACE="Courier New, Courier">InitialObjectDescriptor</FONT>. The
+	<FONT FACE="Courier New, Courier">InitialObjectDescriptor</FONT> is an extension of the <FONT FACE="Courier New, Courier">ObjectDescriptor</FONT>
+	and must be placed in the <FONT FACE="Courier New, Courier">Header</FONT> element of the XMT document.</P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">&lt;InitialObjectDescriptor&gt;<BR>
+		&lt;Descr&gt;<BR>
+		&lt;esDescr&gt;<BR>
+		&lt;ES_Descriptor ES_ID=&quot;BIFSStream&quot; binaryID=&quot;1&quot;&gt;... ...&lt;/ES_Descriptor&gt;<BR>
+		&lt;ES_Descriptor ES_ID=&quot;ODStream&quot; binaryID=&quot;2&quot;&gt;... ... &lt;/ES_Descriptor&gt;<BR>
+		&lt;/esDescr&gt;<BR>
+		&lt;/Descr&gt;</FONT><BR>
+		<FONT FACE="Courier New, Courier">&lt;/InitialObjectDescriptor&gt;</FONT></P>
+	</BLOCKQUOTE>
+</BLOCKQUOTE>
+
+<H4>
+<HR ALIGN="CENTER">
+Usage of ODs within the scene:</H4>
+
+<BLOCKQUOTE>
+	<P>Through the Object Descriptor Framework, media inclusion in the scene is fairly simple: the binary identifier
+	is used in URL fields of nodes interfacing with media objects. Here are some of these nodes:</P>
+</BLOCKQUOTE>
+
+<CENTER>
+<P>
+<TABLE BORDER="1" WIDTH="44%">
+	<TR>
+		<TD WIDTH="31%">
+			<P ALIGN="CENTER"><B>BIFS Nodes</B>
+		</TD>
+		<TD WIDTH="69%">
+			<P ALIGN="CENTER"><B>Description</B>
+		</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="31%"><FONT FACE="Courier New, Courier">Anchor</FONT></TD>
+		<TD WIDTH="69%">Hyperlinking between MPEG-4 scenes or to external web pages</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="31%"><FONT FACE="Courier New, Courier">AnimationStream</FONT></TD>
+		<TD WIDTH="69%">Playback of a BIFS object (command or anim)</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="31%"><FONT FACE="Courier New, Courier">AudioClip</FONT></TD>
+		<TD WIDTH="69%">Playback of an audio object</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="31%"><FONT FACE="Courier New, Courier">AudioSource</FONT></TD>
+		<TD WIDTH="69%">Playback of an audio object</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="31%"><FONT FACE="Courier New, Courier">Background2D</FONT></TD>
+		<TD WIDTH="69%">Display of background images</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="31%"><FONT FACE="Courier New, Courier">ImageTexture</FONT></TD>
+		<TD WIDTH="69%">Reference a still image for texturing</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="31%"><FONT FACE="Courier New, Courier">Inline</FONT></TD>
+		<TD WIDTH="69%">Includes an (external) MPEG-4 scene in the main scene</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="31%"><FONT FACE="Courier New, Courier">InputSensor</FONT></TD>
+		<TD WIDTH="69%">Recieves generic interactions (keyboard, mouse, joystick ...)</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="31%"><FONT FACE="Courier New, Courier">MediaBuffer</FONT></TD>
+		<TD WIDTH="69%">Buffering of a media object</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="31%"><FONT FACE="Courier New, Courier">MediaControl</FONT></TD>
+		<TD WIDTH="69%">Controls playback of a media object</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="31%"><FONT FACE="Courier New, Courier">MediaSensor</FONT></TD>
+		<TD WIDTH="69%">Retrieves information during playback of a media object</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="31%"><FONT FACE="Courier New, Courier">MovieTexture</FONT></TD>
+		<TD WIDTH="69%">Reference a video object for texturing</TD>
+	</TR>
+</TABLE>
+</P>
+</CENTER>
+
+<BLOCKQUOTE>
+	<P>The XMT syntax used to reference an <FONT FACE="Courier New, Courier">ObjectDescriptor</FONT> is:</P>
+	<BLOCKQUOTE>
+		<P><FONT FACE="Courier New, Courier">url=&quot;'binaryID'&quot;</FONT>.</P>
+	</BLOCKQUOTE>
+	<P>Let's see some real-world examples before you get lost...</P>
+</BLOCKQUOTE>
+
+<H3>
+<HR ALIGN="CENTER">
+<A NAME="jpeg"></A>Adding an Image (JPEG):</H3>
+<P>
+<TABLE BORDER="0" WIDTH="51%">
+	<TR>
+		<TD WIDTH="102%">
+			<BLOCKQUOTE>
+				<P>We will take the following JPEG image (198x197 pixels) and use it as a texture. This will also introduce some
+				new nodes.
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="198"><IMG SRC="files/logo_enst.jpg" WIDTH="198" HEIGHT="197" ALIGN="MIDDLE" BORDER="0"></TD>
+	</TR>
+</TABLE>
+
+
+<BLOCKQUOTE>
+	<H4>Step 1 : Declare the OD stream:</H4>
+</BLOCKQUOTE>
+
+<H4></H4>
+<P>
+<TABLE BORDER="0" WIDTH="100%">
+	<TR>
+		<TD WIDTH="33%">
+			<BLOCKQUOTE>
+				<BLOCKQUOTE>
+					<P>As seen above, we need an ObjectDescriptor to describe the image we're planning to use. This descriptor will
+					be added to the scene via an OD command, hence the need to declare an OD stream in the <FONT FACE="Courier New, Courier">InitialObjectDescriptor</FONT>:
+				</BLOCKQUOTE>
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="67%"><FONT FACE="Courier New, Courier">&lt;ES_Descriptor ES_ID=&quot;ObjectDescriptorStream&quot; binaryID=&quot;2&quot;&gt;<BR>
+			&lt;decConfigDescr&gt;<BR>
+			&lt;DecoderConfigDescriptor objectTypeIndication=&quot;MPEG4Systems1&quot; streamType=&quot;ObjectDescriptor&quot;/&gt;<BR>
+			&lt;/decConfigDescr&gt;<BR>
+			&lt;slConfigDescr&gt;<BR>
+			&lt;SLConfigDescriptor&gt;&lt;predefined value=&quot;2&quot;/&gt;&lt;/SLConfigDescriptor&gt;<BR>
+			&lt;/slConfigDescr&gt;</FONT><BR>
+			<FONT FACE="Courier New, Courier">&lt;/ES_Descriptor&gt;</FONT></TD>
+	</TR>
+</TABLE>
+
+
+<BLOCKQUOTE>
+	<H4>Step 2 : Adding the ObjectDescriptor for the image:</H4>
+</BLOCKQUOTE>
+
+<P>
+<TABLE BORDER="0" WIDTH="100%">
+	<TR>
+		<TD WIDTH="37%">
+			<BLOCKQUOTE>
+				<BLOCKQUOTE>
+					<P>We now need to write the OD command that will add the ObjectDescriptor of the image to the scene. Since we want
+					the image to be displayed upon loading, we will send this command at time t=0s. As we have seen in the previous
+					part, the <FONT FACE="Courier New, Courier">body</FONT> element behaves as a <FONT FACE="Courier New, Courier">par</FONT>
+					element with a default timing at 0s. Therefore we only have to add an <FONT FACE="Courier New, Courier">ObjectDescriptorUpdate</FONT>
+					in the <FONT FACE="Courier New, Courier">body</FONT> element. If we wanted to insert the image at time 10 s, the
+					same rules as for BIFS would apply: a <FONT FACE="Courier New, Courier">par</FONT> element with <FONT FACE="Courier New, Courier">begin</FONT>
+					attribute at 10 would have to be inserted before the <FONT FACE="Courier New, Courier">ObjectDescriptorUpdate</FONT>
+					command. The command itself contains a list of ObjectDescriptors to be added or updated:
+				</BLOCKQUOTE>
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="63%"><FONT FACE="Courier New, Courier">&lt;ObjectDescriptorUpdate&gt;<BR>
+			&lt;OD&gt;<BR>
+			&lt;ObjectDescriptor objectDescriptorID=&quot;JPEGImage&quot; binaryID=&quot;10&quot;&gt;<BR>
+			&lt;Descr&gt;<BR>
+			&lt;esDescr&gt;<BR>
+			&lt;ES_Descriptor ES_ID=&quot;JPEGStream&quot; binaryID=&quot;3&quot;&gt;<BR>
+			&lt;decConfigDescr&gt;<BR>
+			&lt;DecoderConfigDescriptor objectTypeIndication=&quot;JPEG&quot; streamType=&quot;Visual&quot;/&gt;<BR>
+			&lt;/decConfigDescr&gt;<BR>
+			&lt;slConfigDescr&gt;<BR>
+			&lt;SLConfigDescriptor&gt;&lt;predefined value=&quot;2&quot;/&gt;&lt;/SLConfigDescriptor&gt;<BR>
+			&lt;/slConfigDescr&gt;<BR>
+			&lt;StreamSource url=&quot;logo_enst.jpg&quot;/&gt;<BR>
+			&lt;/ES_Descriptor&gt;<BR>
+			&lt;/esDescr&gt;<BR>
+			&lt;/Descr&gt;<BR>
+			&lt;/ObjectDescriptor&gt;<BR>
+			&lt;/OD&gt;</FONT><BR>
+			<FONT FACE="Courier New, Courier">&lt;/ObjectDescriptorUpdate&gt;</FONT></TD>
+	</TR>
+</TABLE>
+</P>
+
+<BLOCKQUOTE>
+	<P>Note that the <FONT FACE="Courier New, Courier">streamType</FONT> is of type &quot;visual&quot; and the object
+	type is &quot;JPEG&quot;. The <FONT FACE="Courier New, Courier">StreamSource</FONT> element indicates the media
+	location to the encoder.</P>
+	<H4>Step 3 : Apply a texture:</H4>
+</BLOCKQUOTE>
+
+<P>
+<TABLE BORDER="0" WIDTH="100%">
+	<TR>
+		<TD WIDTH="37%">
+			<BLOCKQUOTE>
+				<BLOCKQUOTE>
+					<P>The final step is to declare in the scene where the texture should be used. A texture can be applied to any
+					geometry node except IndexedLineSet and IndexedLineSet2D. In order to add the texture, we must fill the <FONT FACE="Courier New, Courier">Appearance.texture</FONT>
+					field of the target geometry. By default this field is NULL, which means no texture applies. In 2D texture mapping
+					is done by stretching the texture to the enclosing rectangle of the geometry and matching bottom-left corners (then
+					potential texture transformations are applied).</P>
+
+					<P>The XMT syntax used to declare a texture is:
+				</BLOCKQUOTE>
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="63%"><FONT FACE="Courier New, Courier">&lt;Shape&gt;<BR>
+			&lt;geometry&gt;... ... &lt;/geometry&gt;<BR>
+			&lt;appearance&gt;<BR>
+			&lt;Appearance&gt;<BR>
+			&lt;texture&gt;&lt;ImageTexture url=&quot;'10'&quot;/&gt;&lt;/texture&gt;<BR>
+			&lt;material&gt;&lt;Material2D filled=&quot;true&quot;/&gt;&lt;/material&gt;<BR>
+			&lt;/Appearance&gt;<BR>
+			&lt;/appearance&gt;<BR>
+			&lt;/Shape&gt;</FONT></TD>
+	</TR>
+</TABLE>
+</P>
+
+<BLOCKQUOTE>
+	<P>The url field indicates '10' which is the binaryID assigned to the ObjectDescriptor of the image.</P>
+	<P>NOTE: The special geometry node <FONT FACE="Courier New, Courier">Bitmap</FONT> can be used to display the texture;
+	it defines an implicit rectangle whose size is the size of the texture in pixels. It should be used as the prefered
+	way to display images or video since texture mapping is usually a more complex operation than straight pixel blitting.</P>
+</BLOCKQUOTE>
+
+<P>
+<H3>
+<HR ALIGN="CENTER">
+<A NAME="video"></A>Adding a video:</H3>
+
+<BLOCKQUOTE>
+	<P>Let's now add a video in the scene. We will use the NHNT import format used by most MPEG-4 tools available.
+	More information on NHNT is available <A HREF="http://www.comelec.enst.fr/~dufourd/mpeg-4/tools.html#nhntsyntax">here</A>.
+	The following files are needed and shall be placed in the same directory than the XMT document.</P>
+</BLOCKQUOTE>
+
+
+<UL>
+	<UL>
+		<LI><A HREF="samples/stouffer.media">stouffer.media</A> contains the encoded video frames (ElementaryStream),
+		<LI><A HREF="samples/stouffer.nhnt">stouffer.nhnt</A> contains the meta-data needed to parse the .media file and
+		reconstruct MPEG-4 timing informations,
+		<LI><A HREF="samples/stouffer.info">stouffer.info</A> contains the DecSpecInfo needed by an MPEG-4 Visual decoder.
+	</UL>
+</UL>
+
+
+<BLOCKQUOTE>
+	<H4>Step 1 : Adding the OD stream:</H4>
+	<BLOCKQUOTE>
+		<P>See above.</P>
+	</BLOCKQUOTE>
+	<H4>Step 2 : Adding the OD for the video object:</H4>
+</BLOCKQUOTE>
+
+<P>
+<TABLE BORDER="0" WIDTH="100%">
+	<TR>
+		<TD WIDTH="30%">
+			<BLOCKQUOTE>
+				<BLOCKQUOTE>
+					<P>Same as above, the <FONT FACE="Courier New, Courier">ES_Descriptor</FONT> is now:
+				</BLOCKQUOTE>
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="70%"><FONT FACE="Courier New, Courier">&lt;ES_Descriptor ES_ID=&quot;VideoStream&quot; binaryID=&quot;3&quot;&gt;<BR>
+			&lt;decConfigDescr&gt;<BR>
+			&lt;DecoderConfigDescriptor objectTypeIndication=&quot;MPEG4Visual&quot; streamType=&quot;Visual&quot;/&gt;<BR>
+			&lt;/decConfigDescr&gt;<BR>
+			&lt;slConfigDescr&gt;<BR>
+			&lt;SLConfigDescriptor&gt;&lt;predefined value=&quot;2&quot;/&gt;&lt;/SLConfigDescriptor&gt;<BR>
+			&lt;/slConfigDescr&gt;<BR>
+			&lt;StreamSource url=&quot;stouffer.media&quot;/&gt;</FONT><BR>
+			<FONT FACE="Courier New, Courier">&lt;/ES_Descriptor&gt;</FONT></TD>
+	</TR>
+</TABLE>
+</P>
+
+<BLOCKQUOTE>
+	<H4>Step 3 : Apply the texture:</H4>
+</BLOCKQUOTE>
+
+<P>
+<TABLE BORDER="0" WIDTH="100%">
+	<TR>
+		<TD WIDTH="30%">
+			<BLOCKQUOTE>
+				<BLOCKQUOTE>
+					<P>Same as above, except the <FONT FACE="Courier New, Courier">ImageTexture</FONT> node is now a <FONT FACE="Courier New, Courier">MovieTexture</FONT>
+					node.
+				</BLOCKQUOTE>
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="70%"><FONT FACE="Courier New, Courier">&lt;Shape&gt;<BR>
+			&lt;geometry&gt;... ... &lt;/geometry&gt;<BR>
+			&lt;appearance&gt;<BR>
+			&lt;Appearance&gt;<BR>
+			&lt;texture&gt;&lt;MovieTexture url=&quot;'10'&quot;/&gt;&lt;/texture&gt;<BR>
+			&lt;material&gt;&lt;Material2D filled=&quot;true&quot;/&gt;&lt;/material&gt;<BR>
+			&lt;/Appearance&gt;<BR>
+			&lt;/appearance&gt;<BR>
+			&lt;/Shape&gt;</FONT></TD>
+	</TR>
+</TABLE>
+</P>
+
+<BLOCKQUOTE>
+	<P>The final scene is <A HREF="samples/video1.xmt">video1.xmt</A>, <A HREF="samples/video1.bt">video1.bt</A>, <A
+	HREF="samples/video1.mp4">video1.mp4</A>.</P>
+</BLOCKQUOTE>
+
+<H3>
+<HR ALIGN="CENTER">
+<A NAME="sound"></A>Adding sound:</H3>
+
+<BLOCKQUOTE>
+	<P>We will now add some sound to the scene. As above, we will use the NHNT import format and use AAC audio.</P>
+</BLOCKQUOTE>
+
+
+<UL>
+	<UL>
+		<LI><A HREF="samples/audio.media">audio.media</A> contains the encoded audio frames
+		<LI><A HREF="samples/audio.nhnt">audio.nhnt</A> contains the meta-data needed to parse the .media file and reconstruct
+		MPEG-4 timing informations
+		<LI><A HREF="samples/audio.info">audio.info</A> contains the DecSpecInfo needed by an MPEG-4 Audio decoder.
+	</UL>
+</UL>
+
+
+<BLOCKQUOTE>
+	<H4>Step 1 : Adding the OD stream:</H4>
+	<BLOCKQUOTE>
+		<P>See above.</P>
+	</BLOCKQUOTE>
+	<H4>Step 2 : Adding the OD for the audio object:</H4>
+</BLOCKQUOTE>
+
+<P>
+<TABLE BORDER="0" WIDTH="100%">
+	<TR>
+		<TD WIDTH="30%">
+			<BLOCKQUOTE>
+				<BLOCKQUOTE>
+					<P>Same as above, the <FONT FACE="Courier New, Courier">ES_Descriptor</FONT> is now:
+				</BLOCKQUOTE>
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="70%"><FONT FACE="Courier New, Courier">&lt;ES_Descriptor ES_ID=&quot;AudioStream&quot; binaryID=&quot;4&quot;&gt;<BR>
+			&lt;decConfigDescr&gt;<BR>
+			&lt;DecoderConfigDescriptor objectTypeIndication=&quot;MPEG4Audio&quot; streamType=&quot;Audio&quot;/&gt;<BR>
+			&lt;/decConfigDescr&gt;<BR>
+			&lt;slConfigDescr&gt;<BR>
+			&lt;SLConfigDescriptor&gt;&lt;predefined value=&quot;2&quot;/&gt;&lt;/SLConfigDescriptor&gt;<BR>
+			&lt;/slConfigDescr&gt;<BR>
+			&lt;StreamSource url=&quot;audio.media&quot;/&gt;<BR>
+			&lt;/ES_Descriptor&gt;</FONT></TD>
+	</TR>
+</TABLE>
+</P>
+
+<BLOCKQUOTE>
+	<H4>Step 3 : Adding the sound in the scene:</H4>
+</BLOCKQUOTE>
+
+<P>
+<TABLE BORDER="0" WIDTH="100%">
+	<TR>
+		<TD WIDTH="30%">
+			<BLOCKQUOTE>
+				<BLOCKQUOTE>
+					<P>Add the following nodes in the <FONT FACE="Courier New, Courier">OrderedGroup.children</FONT> field:
+				</BLOCKQUOTE>
+			</BLOCKQUOTE>
+		</TD>
+		<TD WIDTH="70%"><FONT FACE="Courier New, Courier">&lt;Sound2D&gt;<BR>
+			&lt;source&gt;&lt;AudioSource url=&quot;'10'&quot;/&gt;&lt;/source&gt;</FONT><BR>
+			<FONT FACE="Courier New, Courier">&lt;/Sound2D&gt;</FONT></TD>
+	</TR>
+</TABLE>
+</P>
+
+<BLOCKQUOTE>
+	<P>The final scene is <A HREF="samples/audio1.xmt">audio1.xmt</A>, <A HREF="samples/audio1.bt">audio1.bt</A>, <A
+	HREF="samples/audio1.mp4">audio1.mp4</A>.</P>
+</BLOCKQUOTE>
+
+<H2>
+<HR ALIGN="CENTER">
+Exercises :</H2>
+<P><U><FONT COLOR="#CC0000">Exercise 12 :</FONT></U> Use the JPEG example and OD commands to replace the image
+with another one.</P>
+<P><U><FONT COLOR="#CC0000">Exercise 13 :</FONT></U> Write a simple scene with a background image instead of a
+background color</P>
+<H2>
+<HR ALIGN="CENTER">
+Conclusion :</H2>
+<P>In this part we have seen how the object descriptor framework is used with the BIFS framework to mix synthetic
+and natural media. We still need to understand how synchronization between objects work to have a richer authoring,
+but you can already author a simple multimedia presentation with sound, images, video and synthetic objects, a
+la DVD :)</P>
+
+<P>
+<HR ALIGN="CENTER">
+
+<TABLE BORDER="0" WIDTH="100%">
+<TBODY>
+  																																							<TR>
+		<TD WIDTH="1228">
+			<P ALIGN="CENTER">[ <A HREF="http://gpac.sourceforge.net"><FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">Home</FONT></A>
+			] [ <A HREF="bifs_part2.htm"><FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">Animation</FONT></A> ]&nbsp;[ <FONT
+			FACE="Verdana, Arial, Helvetica, Sans-Serif">Including Media</FONT> ]&nbsp;[ <A HREF="bifs_part4.htm"><FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">Interactivity</FONT></A>
+			]
+		</TD>
+	</TR>
+</TBODY></TABLE>
+
+<HR ALIGN="CENTER">
+Last Modified: 02/04/2005<BR>
+Cyril Concolato & Jean Le Feuvre &copy; 2002-2005
+
+</BODY>
+
+</HTML>

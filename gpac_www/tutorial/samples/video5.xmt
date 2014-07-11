@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMT-A xmlns="urn:mpeg:mpeg4:xmta:schema:2002" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mpeg:mpeg4:xmta:schema:2002 xmt-a.xsd">
+ <Header>
+ <InitialObjectDescriptor objectDescriptorID="od1" binaryID="1" >
+  <Profiles audioProfileLevelIndication="254" visualProfileLevelIndication="254" sceneProfileLevelIndication="254" graphicsProfileLevelIndication="254" ODProfileLevelIndication="254" />
+  <Descr>
+   <esDescr>
+    <ES_Descriptor ES_ID="es2" binaryID="2" >
+     <decConfigDescr>
+      <DecoderConfigDescriptor streamType="3" >
+       <decSpecificInfo>
+        <BIFSConfig >
+          <commandStream pixelMetric="true" >
+           <size pixelWidth="200" pixelHeight="200" />
+          </commandStream>
+        </BIFSConfig>
+       </decSpecificInfo>
+      </DecoderConfigDescriptor>
+     </decConfigDescr>
+    </ES_Descriptor>
+    <ES_Descriptor ES_ID="es1" binaryID="1" >
+     <decConfigDescr>
+      <DecoderConfigDescriptor streamType="1" >
+      </DecoderConfigDescriptor>
+     </decConfigDescr>
+    </ES_Descriptor>
+   </esDescr>
+  </Descr>
+ </InitialObjectDescriptor>
+ </Header>
+ <Body>
+<Replace>
+<Scene>
+<OrderedGroup>
+<children>
+<Background2D backColor="1 1 1"/>
+<Shape>
+<appearance>
+<Appearance>
+<material>
+<Material2D filled="TRUE"/>
+</material>
+<texture>
+<MovieTexture loop="TRUE" url="&quot;od://od10&quot;"/>
+</texture>
+</Appearance>
+</appearance>
+<geometry>
+<Rectangle size="80 80"/>
+</geometry>
+</Shape>
+<Transform2D translation="0 -75">
+<children>
+<Shape>
+<appearance>
+<Appearance>
+<material>
+<Material2D emissiveColor="0 0 0" filled="TRUE"/>
+</material>
+</Appearance>
+</appearance>
+<geometry>
+<Text DEF="DISPLAYTIME" string="&quot;&quot;">
+<fontStyle>
+<FontStyle justify="&quot;MIDDLE&quot;" size="24"/>
+</fontStyle>
+</Text>
+</geometry>
+</Shape>
+</children>
+</Transform2D>
+<MediaSensor DEF="MS" url="&quot;od://od10&quot;"/>
+<Valuator DEF="VAL"/>
+</children>
+</OrderedGroup>
+<ROUTE fromNode="MS" fromField="mediaCurrentTime" toNode="VAL" toField="inSFTime"/>
+<ROUTE fromNode="VAL" fromField="outMFString" toNode="DISPLAYTIME" toField="string"/>
+</Scene>
+</Replace>
+ <ObjectDescriptorUpdate >
+   <OD>
+    <ObjectDescriptor objectDescriptorID="od10" binaryID="10" >
+     <Descr>
+      <esDescr>
+       <ES_Descriptor ES_ID="es3" binaryID="3" OCR_ES_ID="es3" >
+        <StreamSource url="stouffer.media" >
+         <MP4MuxHints />
+        </StreamSource>
+       </ES_Descriptor>
+      </esDescr>
+     </Descr>
+    </ObjectDescriptor>
+   </OD>
+ </ObjectDescriptorUpdate>
+ </Body>
+</XMT-A>

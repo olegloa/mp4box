@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMT-A xmlns="urn:mpeg:mpeg4:xmta:schema:2002" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mpeg:mpeg4:xmta:schema:2002 xmt-a.xsd">
+ <Header>
+ <InitialObjectDescriptor objectDescriptorID="od1" binaryID="1" >
+  <Profiles audioProfileLevelIndication="254" visualProfileLevelIndication="254" sceneProfileLevelIndication="254" graphicsProfileLevelIndication="254" ODProfileLevelIndication="254" />
+  <Descr>
+   <esDescr>
+    <ES_Descriptor ES_ID="es2" binaryID="2" >
+     <decConfigDescr>
+      <DecoderConfigDescriptor streamType="3" >
+       <decSpecificInfo>
+        <BIFSConfig >
+          <commandStream pixelMetric="true" >
+           <size pixelWidth="100" pixelHeight="100" />
+          </commandStream>
+        </BIFSConfig>
+       </decSpecificInfo>
+      </DecoderConfigDescriptor>
+     </decConfigDescr>
+    </ES_Descriptor>
+    <ES_Descriptor ES_ID="es1" binaryID="1" >
+     <decConfigDescr>
+      <DecoderConfigDescriptor streamType="1" >
+      </DecoderConfigDescriptor>
+     </decConfigDescr>
+    </ES_Descriptor>
+   </esDescr>
+  </Descr>
+ </InitialObjectDescriptor>
+ </Header>
+ <Body>
+<Replace>
+<Scene>
+<OrderedGroup>
+<children>
+<Shape>
+<appearance>
+<Appearance>
+<material>
+<Material2D filled="TRUE"/>
+</material>
+<texture>
+<MovieTexture loop="TRUE" startTime="2" stopTime="30" url="&quot;od://od10&quot;"/>
+</texture>
+</Appearance>
+</appearance>
+<geometry>
+<Rectangle size="80 80"/>
+</geometry>
+</Shape>
+</children>
+</OrderedGroup>
+</Scene>
+</Replace>
+ <ObjectDescriptorUpdate >
+   <OD>
+    <ObjectDescriptor objectDescriptorID="od10" binaryID="10" >
+     <Descr>
+      <esDescr>
+       <ES_Descriptor ES_ID="es3" binaryID="3" >
+        <StreamSource url="stouffer.media" >
+         <MP4MuxHints />
+        </StreamSource>
+       </ES_Descriptor>
+      </esDescr>
+     </Descr>
+    </ObjectDescriptor>
+   </OD>
+ </ObjectDescriptorUpdate>
+ </Body>
+</XMT-A>

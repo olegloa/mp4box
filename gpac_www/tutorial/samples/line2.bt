@@ -1,0 +1,55 @@
+InitialObjectDescriptor {
+ objectDescriptorID 1
+ audioProfileLevelIndication 254
+ visualProfileLevelIndication 254
+ sceneProfileLevelIndication 254
+ graphicsProfileLevelIndication 254
+ ODProfileLevelIndication 254
+ esDescr [
+  ES_Descriptor {
+   ES_ID 1
+   decConfigDescr DecoderConfigDescriptor {
+    streamType 3
+    decSpecificInfo BIFSConfig {
+     isCommandStream true
+     pixelMetric true
+     pixelWidth 100
+     pixelHeight 100
+    }
+   }
+  }
+ ]
+}
+
+OrderedGroup {
+ children [
+  Background2D {
+   backColor 0 0 0.7
+  }
+  Shape {
+   appearance Appearance {
+    material Material2D {
+     lineProps LineProperties {
+      lineColor 1 1 0
+      width 2
+     }
+    }
+   }
+   geometry IndexedLineSet2D {
+    color DEF COL Color {
+     color [1 1 1 0.5 1 1 1 0.5 1 1 1 0.5 0.5 0.5 0.5]
+    }
+    coord DEF COOR Coordinate2D {
+     point [0 0 10 -10 20 33 -30 -20 45 -45]
+    }
+   }
+  }
+ ]
+}
+
+
+AT 3000 {
+ APPEND TO COL.color 0 0 0
+ APPEND TO COOR.point -30 30
+}
+

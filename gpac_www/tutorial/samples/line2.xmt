@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMT-A xmlns="urn:mpeg:mpeg4:xmta:schema:2002" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mpeg:mpeg4:xmta:schema:2002 xmt-a.xsd">
+ <Header>
+ <InitialObjectDescriptor objectDescriptorID="od1" binaryID="1" >
+  <Profiles audioProfileLevelIndication="254" visualProfileLevelIndication="254" sceneProfileLevelIndication="254" graphicsProfileLevelIndication="254" ODProfileLevelIndication="254" />
+  <Descr>
+   <esDescr>
+    <ES_Descriptor ES_ID="es1" binaryID="1" >
+     <decConfigDescr>
+      <DecoderConfigDescriptor streamType="3" >
+       <decSpecificInfo>
+        <BIFSConfig >
+          <commandStream pixelMetric="true" >
+           <size pixelWidth="100" pixelHeight="100" />
+          </commandStream>
+        </BIFSConfig>
+       </decSpecificInfo>
+      </DecoderConfigDescriptor>
+     </decConfigDescr>
+    </ES_Descriptor>
+   </esDescr>
+  </Descr>
+ </InitialObjectDescriptor>
+ </Header>
+ <Body>
+<Replace>
+<Scene>
+<OrderedGroup>
+<children>
+<Background2D backColor="0 0 0.7"/>
+<Shape>
+<appearance>
+<Appearance>
+<material>
+<Material2D>
+<lineProps>
+<LineProperties lineColor="1 1 0" width="2"/>
+</lineProps>
+</Material2D>
+</material>
+</Appearance>
+</appearance>
+<geometry>
+<IndexedLineSet2D>
+<color>
+<Color DEF="COL" color="1 1 1 0.5 1 1 1 0.5 1 1 1 0.5 0.5 0.5 0.5"/>
+</color>
+<coord>
+<Coordinate2D DEF="COOR" point="0 0 10 -10 20 33 -30 -20 45 -45"/>
+</coord>
+</IndexedLineSet2D>
+</geometry>
+</Shape>
+</children>
+</OrderedGroup>
+</Scene>
+</Replace>
+<par begin="3.000">
+<Insert atNode="COL" atField="color" position="END" value="0 0 0"/>
+<Insert atNode="COOR" atField="point" position="END" value="-30 30"/>
+ </par>
+ </Body>
+</XMT-A>

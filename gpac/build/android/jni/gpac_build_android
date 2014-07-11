@@ -1,0 +1,183 @@
+#!/bin/bash -e
+
+echo -e "\n\033[32m If you have problem using this script, read the README in  trunk/gpac/build/android \033[0m\n"
+ 
+NDK=0
+SDK=0
+ANT=0
+REBUILD=0
+
+for i in $*
+do
+
+#! Check for force rebuild
+ if [ "$i" = "-force_rebuild" ] 
+then 
+  echo -e "\033[31m Usage: $0 Force Rebuild : Activated \033[0m" 
+  REBUILD=1  
+fi
+
+#! Check for the NDK path
+ if [ "${i%=*}" = "-ndk" ] 
+then 
+  echo -e "\033[31m Usage: $0 Path to Android NDK : Ok \033[0m"
+  NDK=1 
+  export PATH="$(echo $i | cut -d"=" -f2):$PATH"  
+fi
+
+#! Check for the SDK path
+ if [ "${i%=*}" = "-sdk" ] 
+then 
+  echo -e "\033[31m Usage: $0 Path to Android SDK : Ok \033[0m"
+  SDK=1 
+  export PATH="$(echo $i | cut -d"=" -f2)/tools:$PATH"  
+fi
+
+#! Check for the ANT path
+ if [ "${i%=*}" = "-ant" ] 
+then 
+  echo -e "\033[31m Usage: $0 Path to Ant : Ok \033[0m"
+  ANT=1 
+  export PATH="$(echo $i | cut -d"=" -f2)/bin:$PATH"  
+fi
+
+done
+
+if [ $NDK -eq 0 ]
+then
+  echo "\nUsage: $0 PATH_TO_ANDROID_NDK [ADDITIONAL_NDK-BUILD arguments] : You must give as first argument the directory path of the NDK, add -ndk=PATH_TO_NDK"
+  exit 1
+fi
+
+if [ $SDK -eq 0 ] 
+then 
+  echo -e "\n\033[34m Usage: $0 PATH_TO_ANDROID_SDK : You have not give the directory path of SDK. Auto build of Osmo4.apk not possible. Build it with Eclipse or add -sdk=PATH_TO_SDK\033[0m" 
+fi 
+	 	 
+if [ $ANT -eq 0 ] 
+then 
+  echo -e "\n\033[34m Usage: $0 PATH_TO_ANT : You have not give the directory path of ANT. Auto build of Osmo4.apk not possible. Build it with Eclipse or add -ant=PATH_TO_ANT \033[0m" 
+fi 
+
+if [ $REBUILD -eq 0 ] 
+then 
+  echo -e "\n\033[33m Usage: $0 Force Rebuild : Add -force_rebuild to rebuild the whole solution \033[0m" 
+fi 
+
+echo -e "\n $PATH"
+
+# Be sure to resolve if script not called from its directory
+export BUILDPATH=$(dirname "$0")
+cd $BUILDPATH
+export BUILDPATH=$(pwd)
+echo "Current Dir = $BUILDPATH"
+version=$(svnversion ../../..)
+echo "*** Build path is $BUILDPATH, setting revision number $version"
+if grep "$version" ../../../include/gpac/revision.h >/dev/null 2>&1 ; then
+  echo "Version $version already set"
+else
+  echo "#define GPAC_SVN_REVISION \"$version\"" > ../../../include/gpac/revision.h
+fi
+echo "Building lib gpac ..."
+cd ../../../
+BASEPATH=$(pwd)
+
+#rm -rf $BUILDPATH/../obj/*
+
+cd $BUILDPATH
+echo -n "Buiding all libs from $BUILDPATH..."
+if [ $REBUILD -eq 1 ]
+then
+ndk-build clean
+ndk-build -B
+else
+ndk-build
+fi
+echo "[OK] build successful."
+
+#echo "Copying modules to modules dir..."
+cd ../libs/
+#for i in $(find . -name 'gm*.so')
+#do
+#	echo -n "$i..."
+#	cp "$i" "$BASEPATH/applications/osmo4_android/res/raw/"
+#done
+#echo
+#echo "[OK] success." 
+
+LIBS_DIR="$BASEPATH/applications/osmo4_android/libs"
+mkdir -p $LIBS_DIR
+echo "Copying libs to libs dir $LIBS_DIR ..."
+for i in $(find . -name '*.so')
+do
+	echo -n " Copy $i"
+	TMP_DIR=$(dirname $i)
+	echo $TMP_DIR
+	mkdir -p "$LIBS_DIR/$TMP_DIR"
+	cp "$i" "$LIBS_DIR/$i"
+done
+echo
+echo "[OK] success module for Osmo4."
+
+
+LIBS_DIR="$BASEPATH/applications/mp4box_android/libs"
+mkdir -p $LIBS_DIR
+echo "Copying libs to libs dir $LIBS_DIR ..."
+for i in $(find . \( -name '*.so' \) -a \( -name "*ft2*" -o -name "*edit*" -o -name "*libgpac.so*" -o -name "*jpeg*" -o -name "*js_osmo*" -o -name "*mp4box*" -o -name "*openjpeg*" -o -name "*png*" -o -name "*libz.*" \) )
+do
+	echo " Copy $i"
+	TMP_DIR=$(dirname $i)
+	mkdir -p "$LIBS_DIR/$TMP_DIR"
+	cp "$i" "$LIBS_DIR/$i"
+done
+echo
+echo "[OK] success module for MP4box."
+
+
+LIBS_DIR="$BASEPATH/applications/osmo4_android/libs"
+mkdir -p $LIBS_DIR
+cd "$BASEPATH/extra_lib/lib/android"
+echo "Copying all extra libs to $LIBS_DIR ..."
+for i in $(find . -name '*.so')
+do
+	echo " Copy $i"
+	TMP_DIR=$(dirname $i)
+	mkdir -p "$LIBS_DIR/$TMP_DIR"
+	cp "$i" "$LIBS_DIR/$i"
+done
+echo "[OK] success extra lib for Osmo4."
+
+LIBS_DIR="$BASEPATH/applications/mp4box_android/libs"
+mkdir -p $LIBS_DIR
+cd "$BASEPATH/extra_lib/lib/android"
+echo "Copying all extra libs to $LIBS_DIR ..."
+
+for i in $(find . \( -name '*.so' \) -a \( -name "*ft2*" -o -name "*edit*" -o -name "*libgpac.so*" -o -name "*jpeg*" -o -name "*js_osmo*" -o -name "*mp4box*" -o -name "*openjpeg*" -o -name "*png*" -o -name "*libz.*" \) )
+do
+	echo " Copy $i"
+	TMP_DIR=$(dirname $i)
+	mkdir -p "$LIBS_DIR/$TMP_DIR"
+	cp "$i" "$LIBS_DIR/$i"
+done
+echo "[OK] success extra lib MP4box."
+
+if [ $ANT -eq 1 ]
+then
+echo "\nSelf-updating project"
+android update project -p "$BASEPATH/applications/osmo4_android/"
+
+echo -e "\nBuiding Osmo4.apk" 
+cd $BASEPATH/applications/osmo4_android/
+ant release
+
+if [ -f $BASEPATH/Osmo4-$(grep "\#define GPAC_VERSION " $BASEPATH/include/gpac/version.h | cut -d "\"" -f 2 )-r$version.apk ]
+then
+echo -e "\nOld Osmo4.apk found. Removing it ..." 
+rm $BASEPATH/Osmo4-$(grep "\#define GPAC_VERSION " $BASEPATH/include/gpac/version.h | cut -d "\"" -f 2 )-r$version.apk
+fi  
+
+zipalign -v 4 bin/Osmo4-release-unaligned.apk $BASEPATH/Osmo4-$(grep "\#define GPAC_VERSION " $BASEPATH/include/gpac/version.h | cut -d "\"" -f 2 )-r$version.apk
+rm bin/Osmo4-*
+echo -e "\n[OK] success."
+fi
+

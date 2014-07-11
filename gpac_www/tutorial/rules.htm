@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<TITLE>MPEG-4 Systems Tutorial - Fill and Strike</TITLE>
+</HEAD>
+
+<BODY>
+
+<H4>
+<TABLE BORDER="0" WIDTH="100%" HEIGHT="165">
+	<TR>
+		<TD WIDTH="23%" HEIGHT="157">
+			<P ALIGN="CENTER"><IMG SRC="files/logo1.jpg" WIDTH="100" HEIGHT="100" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+		<TD WIDTH="50%" HEIGHT="157">
+			<H1 ALIGN="CENTER">BIFS Tutorial</H1>
+
+			<H1 ALIGN="CENTER">2D Striking and Filling
+		</TD>
+		<TD WIDTH="27%" HEIGHT="157">
+			<P ALIGN="CENTER"><IMG SRC="files/logo2.jpg" WIDTH="100" HEIGHT="99" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+	</TR>
+</TABLE>
+</H4>
+
+<H4>Rules for shape striking:</H4>
+<P>If <FONT FACE="Courier New, Courier">Shape.material</FONT> is empty, the strike shall be done with a 1 pixel
+width, 0xFFCCCCCC line color (ARGB) without dashing. The shape shall not be filled.<BR>
+If a <FONT FACE="Courier New, Courier">Material2D</FONT> is present in the material field, there are 2 possibilities:
+
+<BLOCKQUOTE>
+	<P>If a <FONT FACE="Courier New, Courier">LineProperties</FONT> is present in the <FONT FACE="Courier New, Courier">Material2D.lineProps</FONT>
+	field:</P>
+	<BLOCKQUOTE>
+		<P>The strike width is <FONT FACE="Courier New, Courier">LineProperties.width</FONT> pixels.<BR>
+		Line color is <FONT FACE="Courier New, Courier">LineProperties.lineColor</FONT>.<BR>
+		If <FONT FACE="Courier New, Courier">LineProperties.lineStyle</FONT> is set, dashing occurs as follows:</P>
+	</BLOCKQUOTE>
+</BLOCKQUOTE>
+
+
+<BLOCKQUOTE ALIGN="CENTER">
+	<BLOCKQUOTE>
+		<P>
+		<TABLE BORDER="1" WIDTH="46%">
+			<TR>
+				<TD WIDTH="50%">
+					<P ALIGN="CENTER"><B>lineStyle value</B>
+				</TD>
+				<TD WIDTH="50%">
+					<P ALIGN="CENTER"><B> Description</B>
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH="50%">
+					<P ALIGN="CENTER">0
+				</TD>
+				<TD WIDTH="50%">
+					<P ALIGN="CENTER">No dashing
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH="50%">
+					<P ALIGN="CENTER">1
+				</TD>
+				<TD WIDTH="50%">
+					<P ALIGN="CENTER">Dash
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH="50%">
+					<P ALIGN="CENTER">2
+				</TD>
+				<TD WIDTH="50%">
+					<P ALIGN="CENTER">Dot
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH="50%">
+					<P ALIGN="CENTER">3
+				</TD>
+				<TD WIDTH="50%">
+					<P ALIGN="CENTER">Dash Dot
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH="50%">
+					<P ALIGN="CENTER">4
+				</TD>
+				<TD WIDTH="50%">
+					<P ALIGN="CENTER">Dash Dash Dot
+				</TD>
+			</TR>
+			<TR>
+				<TD WIDTH="50%">
+					<P ALIGN="CENTER">5
+				</TD>
+				<TD WIDTH="50%">
+					<P ALIGN="CENTER">Dash Dot Dot
+				</TD>
+			</TR>
+		</TABLE>
+</P>
+
+		<P>
+	</BLOCKQUOTE>
+</BLOCKQUOTE>
+
+
+<BLOCKQUOTE>
+	<P>If <FONT FACE="Courier New, Courier">Material2D.lineProps</FONT> is empty (default), striking is done with a
+	width of 1 pixel and line color is <FONT FACE="Courier New, Courier">Material2D.emissiveColor.</FONT></P>
+	<BLOCKQUOTE>
+		<P>
+	</BLOCKQUOTE>
+</BLOCKQUOTE>
+
+<H4>Rules for filling:</H4>
+<P>If a <FONT FACE="Courier New, Courier">Material2D</FONT> is present and the <FONT FACE="Courier New, Courier">Material2D.filled</FONT>
+field is '<FONT FACE="Courier New, Courier">true</FONT>' , the shape is filled with the <FONT FACE="Courier New, Courier">Material2D.emissiveColor</FONT>.
+with a transparency (reverse alpha/opacity) of <FONT FACE="Courier New, Courier">Material2D.transparency</FONT>.
+Otherwise the shape is not filled.</P>
+
+<P></P>
+<P ALIGN="CENTER"><A HREF="bifs_part1.htm#filling">BACK</A>
+
+</BODY>
+
+</HTML>

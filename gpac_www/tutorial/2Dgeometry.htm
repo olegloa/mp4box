@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<TITLE>2D Special Geometry Primitives </TITLE>
+</HEAD>
+
+<BODY>
+
+<H5>
+<TABLE BORDER="0" WIDTH="100%" HEIGHT="165">
+	<TR>
+		<TD WIDTH="23%" HEIGHT="157">
+			<P ALIGN="CENTER"><IMG SRC="files/logo1.jpg" WIDTH="100" HEIGHT="100" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+		<TD WIDTH="50%" HEIGHT="157">
+			<H1 ALIGN="CENTER">BIFS Tutorial</H1>
+
+			<H1 ALIGN="CENTER">Complex 2D Geometry Nodes
+		</TD>
+		<TD WIDTH="27%" HEIGHT="157">
+			<P ALIGN="CENTER"><IMG SRC="files/logo2.jpg" WIDTH="100" HEIGHT="99" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+	</TR>
+</TABLE>
+</H5>
+<H4>PointSet2D primitive:</H4>
+<P>The <FONT FACE="Courier New, Courier">PointSet2D</FONT> primitive is used to display a set of points in the
+2D plane. The color used for the n-th point of the <FONT FACE="Courier New, Courier">Coordinate2D.point</FONT>
+field is the n-th color in the <FONT FACE="Courier New, Courier">Color.color</FONT> field. Therefore there must
+be the same number of coordinates than colors. If the <FONT FACE="Courier New, Courier">Color.color</FONT> field
+is not present or is empty the emissive color of the material of the shape is used.</P>
+<P><U>Example :</U></P>
+<P><FONT FACE="Courier New, Courier">&lt;PointSet2D&gt;</FONT></P>
+
+<BLOCKQUOTE>
+	<P><FONT FACE="Courier New, Courier">&lt;color&gt;&lt;Color color=&quot;1 1 1 0.5 1 1 1 0.5 1 1 1 0.5 0.5 0.5 0.5&quot;/&gt;&lt;/color&gt;<BR>
+	&lt;point&gt;&lt;Coordinate2D point=&quot;0 0 10 -10 20 +33 -30 -20 +50 -60&quot;/&gt;&lt;/point&gt;</FONT></P>
+</BLOCKQUOTE>
+
+<P><FONT FACE="Courier New, Courier">&lt;/PointSet2D&gt;</FONT></P>
+<P ALIGN="CENTER"><A HREF="samples/point.xmt">point.xmt</A>, <A HREF="samples/point.bt">point.bt</A>, <A HREF="samples/point.mp4">point.mp4</A></P>
+<H4>The IndexedLineSet2D and IndexedFaceSet2D primitives:</H4>
+<P>These two primitives are very similar to the PointSet2D one. They have three more common fields: <FONT FACE="Courier New, Courier">colorIndex</FONT>,
+<FONT FACE="Courier New, Courier">colorPerVertex</FONT> and <FONT FACE="Courier New, Courier">coordIndex</FONT>.
+<FONT FACE="Courier New, Courier">coordIndex</FONT> is a list of indexes on the coordinates defined in the <FONT
+FACE="Courier New, Courier">Coordinate2D.point</FONT> field. <FONT FACE="Courier New, Courier">colorIndex</FONT>
+is a list of indexes on the colors defined in the <FONT FACE="Courier New, Courier">Color.color</FONT> field</P>
+<H5>IndexedLineSet2D :</H5>
+<P><FONT FACE="Courier New, Courier">IndexedLineSet2D</FONT> is used to display one or several polylines. A polyline
+is a set of adjacent segments. The <FONT FACE="Courier New, Courier">IndexedLineSet2D.coord</FONT> field represents
+the list of points defining segments. The <FONT FACE="Courier New, Courier">coordIndex</FONT> field gives the ordered
+index of points defining the polylines. An index of '-1'indicates the end of the current polyline. If the <FONT
+FACE="Courier New, Courier">coordIndex</FONT> field is empty, all points in the <FONT FACE="Courier New, Courier">Coordinate2D.point</FONT>
+field define a single polyline.</P>
+<P>The rules for polylines drawing are as follows:<BR>
+The width and transparency of the line are defined as usual.<BR>
+If the <FONT FACE="Courier New, Courier">IndexedLineSet2D.color</FONT> field is not empty, then :
+
+<UL>
+	<P>If <FONT FACE="Courier New, Courier">colorPerVertex</FONT> is '<FONT FACE="Courier New, Courier">false</FONT>'
+	a single color is used for each polyline.
+	<UL>
+		<P>If <FONT FACE="Courier New, Courier">colorIndex</FONT> is not empty, colors are picked according to <FONT FACE="Courier New, Courier">colorIndex</FONT>.
+		This field shall not have negative indexes and shall have as many indexes as there are polylines.If the <FONT FACE="Courier New, Courier">Color</FONT>
+		node has N+1 colors, indexes range from 0 to N. The k-th index in <FONT FACE="Courier New, Courier">colorIndex</FONT>
+		field gives the color of the k-th ployline.</P>
+		<P>If <FONT FACE="Courier New, Courier">colorIndex</FONT> is empty, colors are picked in the order they appear
+		in <FONT FACE="Courier New, Courier">Color.color</FONT>. Hence there shall be as many colors as there are polylines.
+		The k-th color of the Color node gives the color of the k-th polyline.</P>
+	</UL>
+	<P>If <FONT FACE="Courier New, Courier">colorPerVertex</FONT> is '<FONT FACE="Courier New, Courier">true</FONT>'
+	each segment is drawn with a linear gradient between the segment end points colors. These are picked as follows:
+	<UL>
+		<P>If <FONT FACE="Courier New, Courier">colorIndex</FONT> is not empty, then each index in <FONT FACE="Courier New, Courier">colorIndex</FONT>
+		matches an index in <FONT FACE="Courier New, Courier">coordIndex</FONT> or a point in <FONT FACE="Courier New, Courier">Coordinate2D</FONT>.</P>
+		<P>If <FONT FACE="Courier New, Courier">colorIndex</FONT> is empty then each color in <FONT FACE="Courier New, Courier">Color.color</FONT>
+		matches an index in <FONT FACE="Courier New, Courier">coordIndex</FONT> or a point in <FONT FACE="Courier New, Courier">Coordinate2D.point</FONT>.
+	</UL>
+</UL>
+
+<P>If <FONT FACE="Courier New, Courier">IndexedLineSet2D.color</FONT> is empty all polylines are drawn with the
+same color as for generic shapes. Note that <FONT FACE="Courier New, Courier">IndexedLineSet2D</FONT> is never
+filled.</P>
+<P>The <FONT FACE="Courier New, Courier">IndexedLineSet2D</FONT> syntax is :</P>
+<P><FONT FACE="Courier New, Courier">&lt;IndexedLineSet2D colorPerVertex=&quot;true&quot; colorIndex=&quot;0 1
+2 3 4&quot; coordIndex=&quot;0 1 2 3 4 -1&quot;&gt;</FONT>
+
+<BLOCKQUOTE>
+	<P><FONT FACE="Courier New, Courier">&lt;color&gt;&lt;Color color=&quot;1 1 1 0.5 1 1 1 0.5 1 1 1 0.5 0.5 0.5 0.5&quot;/&gt;&lt;/color&gt;<BR>
+	&lt;coord&gt;&lt;Coordinate2D point=&quot;0 0 10 -10 20 +33 -30 -20 +45 -45&quot;/&gt;&lt;/coord&gt;</FONT></P>
+</BLOCKQUOTE>
+
+<P><FONT FACE="Courier New, Courier">&lt;/IndexedLineSet2D&gt;</FONT></P>
+<P ALIGN="CENTER"><A HREF="samples/line.xmt">line.xmt</A>, <A HREF="samples/line.bt">line.bt</A>, <A HREF="samples/line.mp4">line.mp4</A>&nbsp;</P>
+<P>
+<H5>IndexedFaceSet2D :</H5>
+<P>The <FONT FACE="Courier New, Courier">IndexedFaceSet2D</FONT> primitive is used to display polygons. The <FONT
+FACE="Courier New, Courier">IndexedFaceSet2D.coord</FONT> field is the list of points to be used for the polygons.
+The <FONT FACE="Courier New, Courier">IndexedFaceSet2D.coordIndex</FONT> field gives the indexed list of points
+belonging to a single polygon. A value of '-1' indicates the end of a polygon. If the <FONT FACE="Courier New, Courier">coordIndex</FONT>
+field is empty all points in the <FONT FACE="Courier New, Courier">Coordinate2D.point</FONT> field are used to
+build a single polygon.</P>
+<P>The coloring rules are the same as ones of the <FONT FACE="Courier New, Courier">IndexedLineSet2D</FONT> node.
+The <FONT FACE="Courier New, Courier">IndexedFaceSet2D</FONT> can be filled or not, depending on the material node
+of the shape.</P>
+<P>The other fields are ignored in this tutorial.</P>
+<P>The syntax is the same as the <FONT FACE="Courier New, Courier">IndexedLineSet2D</FONT> one.</P>
+<P ALIGN="CENTER"><A HREF="samples/face.xmt">face.xmt</A>, <A HREF="samples/face.bt">face.bt</A>, <A HREF="samples/face.mp4">face.mp4</A></P>
+<P><U><FONT COLOR="#CC0000">Exercice 5 :</FONT></U> Use one of the preceding examples to draw the following scene:</P>
+<P ALIGN="CENTER"><IMG SRC="files/snapshot004.jpg" WIDTH="293" HEIGHT="195" ALIGN="BOTTOM" BORDER="0"></P>
+<H4>Curve2D :</H4>
+<P>The <FONT FACE="Courier New, Courier">Curve2D</FONT> node is used to draw cubic bezier curves and lines. The
+shape is filled, colored and stroke according to the material of the shape.</P>
+<P>The syntax is :</P>
+<P><FONT FACE="Courier New, Courier">&lt;Curve2D type=&quot;2 3 0 1&quot;&gt;</FONT>
+
+<BLOCKQUOTE>
+	<P><FONT FACE="Courier New, Courier">&lt;point&gt;&lt;Coordinate2D point=&quot;0 0 10 -10 20 +33 -30 -20 +45 -45
+	0 0 -30 -30 -30 20&quot;/&gt;&lt;/point&gt;</FONT></P>
+</BLOCKQUOTE>
+
+<P><FONT FACE="Courier New, Courier">&lt;/Curve2D&gt;</FONT></P>
+<P>The <FONT FACE="Courier New, Courier">Curve2D.point</FONT> field holds the list of points to be used. The <FONT
+FACE="Courier New, Courier">Curve2D.type</FONT> field gives the type of curve to use with the points. Each type
+describes a curve constyruction command. Each command starts at the current point and uses a variable number of
+points. Once the command is applied, the final point becomes the current point. Type 0 indicates a move command,
+that is &quot;move the current point to the given point&quot;. The first moveTo is always implicit and uses the
+first point of the Coordinate2D. Type 1 indicates a line command, that is &quot;draw a line to the given point&quot;.
+Type 2 indicates cubic bezier curve and uses 3 points. The first 2 points are the control points of the curve and
+the last one is the final point of the curve. Type 3 indicates a cubic bezier curve after a line or another curve
+and uses 2 points. The start point is the current point, the second control point is the first point used, the
+first control point is the symetric of the second control point with respect to the starting point. The arrival
+point is the second point used.</P>
+<P>Here is the traduction of the above example:</P>
+<P>&quot;Start curve at (0,0). Draw a cubic bezier curve to (-30,-20) with control points (10,-10) and (20,33).
+Draw a cubic bezier curve to (0,0) with control points (-80,-73) and (+45,-45). Move to (-30,-30). Draw a line
+to (-30,20).&quot;</P>
+<P ALIGN="CENTER"><A HREF="samples/curve.xmt">curve.xmt</A>, <A HREF="samples/curve.bt">curve.bt</A>, <A HREF="samples/curve.mp4">curve.mp4</A></P>
+
+<P ALIGN="CENTER"><A HREF="bifs_part1.htm#complex">BACK</A>
+
+</BODY>
+
+</HTML>

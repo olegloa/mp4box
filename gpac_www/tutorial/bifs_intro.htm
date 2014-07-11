@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<TITLE>MPEG-4 Systems Tutorial - Intro</TITLE>
+</HEAD>
+
+<BODY>
+
+<H1>
+<TABLE BORDER="0" WIDTH="100%" HEIGHT="165">
+	<TR>
+		<TD WIDTH="33%" HEIGHT="157">
+			<P ALIGN="CENTER"><IMG SRC="files/logo1.jpg" WIDTH="100" HEIGHT="100" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+		<TD WIDTH="33%" HEIGHT="157">
+			<H1 ALIGN="CENTER">MPEG-4 BIFS </H1>
+
+			<H1 ALIGN="CENTER">and XMT Tutorial
+		</TD>
+		<TD WIDTH="34%" HEIGHT="157">
+			<P ALIGN="CENTER"><IMG SRC="files/logo2.jpg" WIDTH="100" HEIGHT="99" ALIGN="BOTTOM" BORDER="0">
+		</TD>
+	</TR>
+</TABLE>
+</H1>
+<P></P>
+
+<P><BR>
+These pages aim at providing a base understanding of the MPEG-4 scene description language BIFS (BInary Format
+for Scenes). The tutorial you will find here explains base principles of the scene manipulation. It is recommended
+while stepping through this tutorial to keep an eye on the <A HREF="http://www.web3d.org/x3d/specifications/vrml/ISO-IEC-14772-IS-VRML97WithAmendment1/"
+target="_blank">VRML standard</A> to get further explanations, since the MPEG-4 scene graph is based on the VRML one.
+<BR>You may also look at the <A HREF="http://www.web3d.org/x3d/specifications/#x3d" target="_blank">X3D specification</A> for some information on the XMT-A format, but keep in mind that X3D and XMT-A syntaxes are not completely equivalent.</P>
+
+<P>Some things before we get started (as a reminder ...):</P>
+
+<BLOCKQUOTE>
+	<P>BIFS is a binary format, which means that there must be a compilator to translate the scene from text to binary.
+	Of course the authoring will be done through text so have your favorite text editor at hand. The textual format
+	used is the XMT-A format, the official XML low-level MPEG-4 scene description language standardized by MPEG. We
+	will however give examples in another format called 'bt' developped at ENST and based on the original VRML format
+	(.wrl files), which some authors may prefer for readability. 
+	<BR>The 'bt' document architecture is very similar to the XMT-A one 	and its syntax close to VRML
+	one, so that's a perfect step for people not willing to dig into XML documents. XMT-A and BT are exact transcription
+	of the BIFS bitstream. However there is another standard textual format for MPEG-4 called XMT-O, which is a high-level
+	representation of the scene more or less compatible with the SMIL standard: authoring is simpler but you have less
+	controls on objects you're creating, unless using XMT-A in XMT-O.</P>
+	<P>In order to play the presentation, the best thing is to pack everything in MP4, the MPEG-4 file format based
+	on Apple's QuickTime file format.</P>
+	<P>Finally we will need a tool to import any media (MPEG4 video and audio, JPEG, MP3, ...) we wish to integrate
+	in our presentation.</P>
+	<P>Be your choice XMT-A or BT, the best, freely available tool performing all these tasks is of course <A HREF="http://gpac.sourceforge.net/auth_mp4box.php">MP4Box</A>.</P>
+	<P>Finally you will need your favorite MPEG-4 player (not just audio/video player of course) to have a look at
+	what you've done, we won't suggest any of these but some links are available at the <A HREF="http://gpac.sourceforge.net">gpac
+	web site</A>. Be carefull that some players are specialized in 3D scenes while others only do 2D scenes. This
+	tutorial is about 2D scenes only for historical reasons, but many things are
+	common to 2D and 3D scenes. Moreover most of MPEG-4 3D tools are the VRML ones, and there is quite some material
+	discussing VRML on the internet.</P>
+	<P><BR>
+	Questions, suggestions and any other reward are of course welcome - drop us a line on <A HREF="http://sourceforge.net/forum/?group_id=84101">our
+	forums</A> on sourceforge.</P>
+</BLOCKQUOTE>
+
+<P></P>
+
+<P>
+<HR ALIGN="CENTER">
+
+<TABLE BORDER="0" WIDTH="100%">
+<TBODY>
+  																												<TR>
+		<TD WIDTH="100%">
+			<P ALIGN="CENTER">[ <A HREF="http://gpac.sourceforge.net"><FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">Back
+			to GPAC Web Page</FONT></A> ]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ <A HREF="bifs_part1.htm"><FONT FACE="Verdana, Arial, Helvetica, Sans-Serif">BIFS
+			Tutorial Start Page</FONT></A> ]
+		</TD>
+	</TR>
+</TBODY></TABLE>
+
+<HR ALIGN="CENTER">
+Last Modified: 02/04/2005<BR>
+Cyril Concolato & Jean Le Feuvre &copy; 2002-2005
+
+</BODY>
+
+</HTML>

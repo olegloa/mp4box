@@ -1,0 +1,26 @@
+InitialObjectDescriptor {
+ objectDescriptorID 1
+ audioProfileLevelIndication 254
+ visualProfileLevelIndication 254
+ sceneProfileLevelIndication 254
+ graphicsProfileLevelIndication 254
+ ODProfileLevelIndication 254
+ esDescr [
+  ES_Descriptor {
+   ES_ID 1
+   decConfigDescr DecoderConfigDescriptor {
+    streamType 3
+    decSpecificInfo BIFSConfig {
+     isCommandStream true
+     pixelMetric true
+     #modify display size here
+     pixelWidth 100
+     pixelHeight 100
+    }
+   }
+  }
+ ]
+}
+
+#insert scene here
+
