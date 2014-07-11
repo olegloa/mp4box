@@ -9,4 +9,3 @@
 #include <statreg.cpp>
 #endif
 
-#include <atlimpl.cpp>
