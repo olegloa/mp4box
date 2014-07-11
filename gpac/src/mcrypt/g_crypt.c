@@ -25,6 +25,7 @@
 
 /* The GPAC crypto lib is a simplified version of libmcrypt. */
 
+#include <gpac/tools.h>
 #include <gpac/internal/crypt_dev.h>
 
 #if !defined(GPAC_DISABLE_MCRYPT)
@@ -245,6 +246,9 @@ GF_Err gf_crypt_init(GF_Crypt *td, void *key, u32 lenofkey, const void *IV)
 	u32 sizes[MAX_KEY_SIZES];
 	u32 i, num_of_sizes, ok = 0;
 	u32 key_size = gf_crypt_get_key_size(td);
+	u32 IV_size = gf_crypt_get_block_size(td);
+	char *key_dump;
+	char *IV_dump;
 
 	if ((lenofkey > key_size) || (lenofkey==0)) return GF_BAD_PARAM;
 	num_of_sizes = gf_crypt_get_supported_key_sizes(td, sizes);
@@ -304,6 +308,16 @@ GF_Err gf_crypt_init(GF_Crypt *td, void *key, u32 lenofkey, const void *IV)
 	e = gf_crypt_set_key(td, (void *) td->keyword_given, key_size, IV);
 
 	if (e!=GF_OK) internal_end_mcrypt(td);
+
+	key_dump = (char*)gf_malloc(key_size * 2 + 1);
+	IV_dump = (char*)gf_malloc(IV_size * 2 + 1);
+	key_dump[key_size * 2] = IV_dump[IV_size * 2] = 0;
+	for (i=0; i<key_size; i++) sprintf(key_dump + 2*i, "%02X", ((unsigned char*)td->keyword_given)[i]);
+	for (i=0; i<IV_size; i++) sprintf(IV_dump + 2*i, "%02X", ((unsigned char*)IV)[i]);
+	GF_LOG(GF_LOG_DEBUG, GF_LOG_AUTHOR, ("[CENC] Initialize AES (%s) key = %s, IV = %s\n", td->algo_name, key_dump, IV_dump));
+	gf_free(key_dump);
+	gf_free(IV_dump);
+
 	return e;
 }
 

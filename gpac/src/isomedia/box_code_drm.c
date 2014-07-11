@@ -349,9 +349,9 @@ GF_Err schi_Size(GF_Box *s)
 		ptr->size += ptr->adkm->size;
 	}
 	if (ptr->piff_tenc) {
-		e = gf_isom_box_size((GF_Box *) ptr->tenc);
+		e = gf_isom_box_size((GF_Box *) ptr->piff_tenc);
 		if (e) return e;
-		ptr->size += ptr->tenc->size;
+		ptr->size += ptr->piff_tenc->size;
 	}
 	return GF_OK;
 }
@@ -1211,7 +1211,7 @@ GF_Err piff_psec_Size(GF_Box *s)
 		for (i = 0; i < sample_count; i++) {
 			GF_CENCSampleAuxInfo *sai = (GF_CENCSampleAuxInfo *)gf_list_get(ptr->samp_aux_info, i);
 			if (! sai->IV_size) continue;
-			ptr->size += 18 + 6*sai->subsample_count;
+			ptr->size += 2 + sai->IV_size + 6*sai->subsample_count;
 		}
 	}
 	return GF_OK;

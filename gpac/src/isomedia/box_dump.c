@@ -4244,12 +4244,16 @@ GF_Err saio_dump(GF_Box *a, FILE * trace)
 	gf_full_box_dump((GF_Box *)a, trace);
 
 	if (ptr->version==0) {
-		for (i=0; i<ptr->entry_count; i++) {
-			fprintf(trace, "<SAIChunkOffset offset=\"%d\"/>\n", ptr->offsets[i]);
+		if (ptr->offsets) {
+			for (i=0; i<ptr->entry_count; i++) {
+				fprintf(trace, "<SAIChunkOffset offset=\"%d\"/>\n", ptr->offsets[i]);
+			}
 		}
 	} else {
-		for (i=0; i<ptr->entry_count; i++) {
-			fprintf(trace, "<SAIChunkOffset offset=\""LLD"\"/>\n", ptr->offsets_large[i]);
+		if (ptr->offsets_large) {
+			for (i=0; i<ptr->entry_count; i++) {
+				fprintf(trace, "<SAIChunkOffset offset=\""LLD"\"/>\n", ptr->offsets_large[i]);
+			}
 		}
 	}
 	gf_box_dump_done("SampleAuxiliaryInfoOffsetBox", a, trace);
