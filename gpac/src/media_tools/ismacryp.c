@@ -52,7 +52,7 @@ void isma_ea_node_start(void *sax_cbck, const char *node_name, const char *name_
 	GF_CryptInfo *info = (GF_CryptInfo *)sax_cbck;
 
 	if (!strcmp(node_name, "OMATextHeader")) {
-		info->in_text_header = 1;
+		info->in_text_header = GF_TRUE;
 		return;
 	}
 	if (!strcmp(node_name, "GPACDRM")) {
@@ -80,7 +80,7 @@ void isma_ea_node_start(void *sax_cbck, const char *node_name, const char *name_
 		for (i=0; i<nb_attributes; i++) {
 			att = (GF_XMLAttribute *) &attributes[i];
 			if (!stricmp(att->name, "trackID") || !stricmp(att->name, "ID")) {
-				if (!strcmp(att->value, "*")) info->has_common_key = 1;
+				if (!strcmp(att->value, "*")) info->has_common_key = GF_TRUE;
 				else tkc->trackID = atoi(att->value);
 			}
 			else if (!stricmp(att->name, "key")) {
@@ -209,7 +209,7 @@ void isma_ea_node_end(void *sax_cbck, const char *node_name, const char *name_sp
 {
 	GF_CryptInfo *info = (GF_CryptInfo *)sax_cbck;
 	if (!strcmp(node_name, "OMATextHeader")) {
-		info->in_text_header = 0;
+		info->in_text_header = GF_FALSE;
 		return;
 	}
 }
@@ -301,7 +301,7 @@ Bool gf_ismacryp_mpeg4ip_get_info(char *kms_uri, char *key, char *salt)
 	FILE *kms;
 	strcpy(szPath, getenv("HOME"));
 	strcat(szPath , "/.kms_data");
-	got_it = 0;
+	got_it = GF_FALSE;
 	kms = gf_f64_open(szPath, "r");
 	while (kms && !feof(kms)) {
 		if (!fgets(szPath, 1024, kms)) break;
@@ -311,7 +311,7 @@ Bool gf_ismacryp_mpeg4ip_get_info(char *kms_uri, char *key, char *salt)
 			if (!fscanf(kms, "%x", &x)) break;
 			catKey[i] = x;
 		}
-		if (i==24) got_it = 1;
+		if (i==24) got_it = GF_TRUE;
 		break;
 	}
 	if (kms) fclose(kms);
@@ -319,9 +319,9 @@ Bool gf_ismacryp_mpeg4ip_get_info(char *kms_uri, char *key, char *salt)
 		/*watchout, MPEG4IP stores SALT|KEY, NOT KEY|SALT*/
 		memcpy(key, catKey+8, sizeof(char)*16);
 		memcpy(salt, catKey, sizeof(char)*8);
-		return 1;
+		return GF_TRUE;
 	}
-	return 0;
+	return GF_FALSE;
 }
 
 #ifndef GPAC_DISABLE_ISOM_WRITE
@@ -389,7 +389,7 @@ GF_Err gf_ismacryp_decrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (
 	GF_LOG(GF_LOG_INFO, GF_LOG_AUTHOR, ("[CENC/ISMA] Decrypting track ID %d - KMS: %s%s\n", tci->trackID, tci->KMS_URI, use_sel_enc ? " - Selective Decryption" : ""));
 
 	/*start as initialized*/
-	prev_sample_encrypted = 1;
+	prev_sample_encrypted = GF_TRUE;
 	/* decrypt each sample */
 	count = gf_isom_get_sample_count(mp4, track);
 	gf_isom_set_nalu_extract_mode(mp4, track, GF_ISOM_NALU_EXTRACT_INSPECT);
@@ -408,7 +408,7 @@ GF_Err gf_ismacryp_decrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (
 			if (!prev_sample_encrypted) isma_resync_IV(mc, ismasamp->IV, (char *) tci->salt);
 			gf_crypt_decrypt(mc, samp->data, samp->dataLength);
 		}
-		prev_sample_encrypted = (ismasamp->flags & GF_ISOM_ISMA_IS_ENCRYPTED);
+		prev_sample_encrypted = (ismasamp->flags & GF_ISOM_ISMA_IS_ENCRYPTED) ? GF_TRUE : GF_FALSE;
 		gf_isom_ismacryp_delete_sample(ismasamp);
 
 		/*replace AVC start codes (0x00000001) by nalu size*/
@@ -440,7 +440,7 @@ GF_Err gf_ismacryp_decrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (
 			start[3] = (nalu_size)&0xFF;
 		}
 
-		gf_isom_update_sample(mp4, track, i+1, samp, 1);
+		gf_isom_update_sample(mp4, track, i+1, samp, GF_TRUE);
 		gf_isom_sample_del(&samp);
 		gf_set_progress("ISMA Decrypt", i+1, count);
 	}
@@ -488,7 +488,7 @@ GF_Err gf_ismacryp_decrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (
 		gf_odf_codec_encode(cod, 1);
 		gf_odf_codec_get_au(cod, &samp->data, &samp->dataLength);
 		gf_odf_codec_del(cod);
-		gf_isom_update_sample(mp4, i+1, 1, samp, 1);
+		gf_isom_update_sample(mp4, i+1, 1, samp, GF_TRUE);
 		gf_isom_sample_del(&samp);
 
 		/*remove IPMPToolList if any*/
@@ -551,7 +551,7 @@ GF_Err gf_ismacryp_encrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (
 		tci->sel_enc_type = GF_CRYPT_SELENC_NONE;
 	}
 	else if ((tci->sel_enc_type==GF_CRYPT_SELENC_RAND) || (tci->sel_enc_type==GF_CRYPT_SELENC_RAND_RANGE)) {
-		gf_rand_init(1);
+		gf_rand_init(GF_TRUE);
 	}
 
 	BSO = gf_isom_get_media_data_size(mp4, track);
@@ -594,7 +594,7 @@ GF_Err gf_ismacryp_encrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (
 	/*create ISMA protection*/
 	if (tci->enc_type==0) {
 		e = gf_isom_set_ismacryp_protection(mp4, track, 1, GF_ISOM_ISMACRYP_SCHEME, 1,
-		                                    tci->Scheme_URI, tci->KMS_URI, (tci->sel_enc_type!=0) ? 1 : 0, 0, IV_size);
+		                                    tci->Scheme_URI, tci->KMS_URI, (tci->sel_enc_type!=0) ? GF_TRUE : GF_FALSE, 0, IV_size);
 	} else {
 		if ((tci->sel_enc_type==GF_CRYPT_SELENC_PREVIEW) && tci->sel_enc_range) {
 			char *szPreview = tci->TextualHeaders + tci->TextualHeadersLen;
@@ -607,19 +607,19 @@ GF_Err gf_ismacryp_encrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (
 		                               tci->encryption, BSO,
 		                               tci->TextualHeadersLen ? tci->TextualHeaders : NULL,
 		                               tci->TextualHeadersLen,
-		                               (tci->sel_enc_type!=0) ? 1 : 0, 0, IV_size);
+		                               (tci->sel_enc_type!=0) ? GF_TRUE : GF_FALSE, 0, IV_size);
 	}
 	if (e) return e;
 
-	has_crypted_samp = 0;
+	has_crypted_samp = GF_FALSE;
 	BSO = 0;
-	prev_sample_encryped = 1;
+	prev_sample_encryped = GF_TRUE;
 	range_end = 0;
 	if (tci->sel_enc_type==GF_CRYPT_SELENC_PREVIEW) {
 		range_end = gf_isom_get_media_timescale(mp4, track) * tci->sel_enc_range;
 	}
 
-	if (gf_isom_has_time_offset(mp4, track)) gf_isom_set_cts_packing(mp4, track, 1);
+	if (gf_isom_has_time_offset(mp4, track)) gf_isom_set_cts_packing(mp4, track, GF_TRUE);
 
 	count = gf_isom_get_sample_count(mp4, track);
 	gf_isom_set_nalu_extract_mode(mp4, track, GF_ISOM_NALU_EXTRACT_INSPECT);
@@ -644,7 +644,7 @@ GF_Err gf_ismacryp_encrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (
 			break;
 		/*random every sel_freq samples*/
 		case GF_CRYPT_SELENC_RAND_RANGE:
-			if (!(i%tci->sel_enc_range)) has_crypted_samp = 0;
+			if (!(i%tci->sel_enc_range)) has_crypted_samp = GF_FALSE;
 			if (!has_crypted_samp) {
 				rand = gf_rand();
 				if (!(rand%tci->sel_enc_range)) isamp->flags |= GF_ISOM_ISMA_IS_ENCRYPTED;
@@ -652,7 +652,7 @@ GF_Err gf_ismacryp_encrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (
 				if (!(isamp->flags & GF_ISOM_ISMA_IS_ENCRYPTED) && !( (1+i)%tci->sel_enc_range)) {
 					isamp->flags |= GF_ISOM_ISMA_IS_ENCRYPTED;
 				}
-				has_crypted_samp = (isamp->flags & GF_ISOM_ISMA_IS_ENCRYPTED);
+				has_crypted_samp = (isamp->flags & GF_ISOM_ISMA_IS_ENCRYPTED) ? GF_TRUE : GF_FALSE;
 			}
 			break;
 		/*every sel_freq samples*/
@@ -688,9 +688,9 @@ GF_Err gf_ismacryp_encrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (
 			/*resync IV*/
 			if (!prev_sample_encryped) isma_resync_IV(mc, BSO, (char *) tci->salt);
 			gf_crypt_encrypt(mc, samp->data, samp->dataLength);
-			prev_sample_encryped = 1;
+			prev_sample_encryped = GF_TRUE;
 		} else {
-			prev_sample_encryped = 0;
+			prev_sample_encryped = GF_FALSE;
 		}
 
 
@@ -703,11 +703,11 @@ GF_Err gf_ismacryp_encrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (
 
 		gf_isom_ismacryp_sample_to_sample(isamp, samp);
 		gf_isom_ismacryp_delete_sample(isamp);
-		gf_isom_update_sample(mp4, track, i+1, samp, 1);
+		gf_isom_update_sample(mp4, track, i+1, samp, GF_TRUE);
 		gf_isom_sample_del(&samp);
 		gf_set_progress("ISMA Encrypt", i+1, count);
 	}
-	gf_isom_set_cts_packing(mp4, track, 0);
+	gf_isom_set_cts_packing(mp4, track, GF_FALSE);
 	gf_crypt_close(mc);
 
 
@@ -743,7 +743,7 @@ GF_Err gf_ismacryp_encrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (
 		ismac->cryptoSuite = 1;	/*default ISMA AESCTR128*/
 		ismac->IV_length = IV_size;
 		ismac->key_indicator_length = 0;
-		ismac->use_selective_encryption = (tci->sel_enc_type!=0)? 1 : 0;
+		ismac->use_selective_encryption = (tci->sel_enc_type!=0) ? GF_TRUE : GF_FALSE;
 		gf_list_add(ipmpd->ipmpx_data, ismac);
 #endif
 	} else {
@@ -768,7 +768,7 @@ GF_Err gf_ismacryp_encrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (
 		gf_odf_codec_get_au(cod, &samp->data, &samp->dataLength);
 		ipmpdU = NULL;
 		gf_odf_codec_del(cod);
-		gf_isom_update_sample(mp4, i+1, 1, samp, 1);
+		gf_isom_update_sample(mp4, i+1, 1, samp, GF_TRUE);
 		gf_isom_sample_del(&samp);
 
 		if (tci->ipmp_type==2) {
@@ -892,7 +892,7 @@ static GF_Err gf_cenc_encrypt_sample_ctr(GF_Crypt *mc, GF_ISOSample *samp, Bool 
 
 			gf_bs_read_data(pleintext_bs, buffer, size-bytes_in_nalhr);
 			gf_crypt_encrypt(mc, buffer, size-bytes_in_nalhr);
-			BSO += size-1;
+			BSO += size-bytes_in_nalhr;
 
 			/*write clear data and encrypted data to bitstream*/
 			gf_bs_write_int(cyphertext_bs, size, 8*nalu_size_length);
@@ -1158,7 +1158,7 @@ GF_Err gf_cenc_encrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (*pro
 				buf = NULL;
 
 				//already done: memset(tmp, 0, 16);
-				e = gf_isom_set_sample_cenc_group(mp4, track, i+1, 0, 0, NULL);
+				e = gf_isom_set_sample_cenc_group(mp4, track, i+1, GF_FALSE, 0, NULL);
 				if (e) goto exit;
 
 				gf_isom_sample_del(&samp);
@@ -1174,7 +1174,7 @@ GF_Err gf_cenc_encrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (*pro
 
 				//alreaduy done: memset(tmp, 0, 16);
 
-				e = gf_isom_set_sample_cenc_group(mp4, track, i+1, 0, 0, NULL);
+				e = gf_isom_set_sample_cenc_group(mp4, track, i+1, GF_FALSE, 0, NULL);
 				if (e) goto exit;
 
 				gf_isom_sample_del(&samp);
@@ -1224,7 +1224,7 @@ GF_Err gf_cenc_encrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (*pro
 		}
 
 		/*add this sample to sample encryption group*/
-		e = gf_isom_set_sample_cenc_group(mp4, track, i+1, 1, tci->IV_size, tci->KIDs[idx]);
+		e = gf_isom_set_sample_cenc_group(mp4, track, i+1, GF_TRUE, tci->IV_size, tci->KIDs[idx]);
 		if (e) goto exit;
 
 		if (tci->enc_type == 2)
@@ -1235,7 +1235,7 @@ GF_Err gf_cenc_encrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (*pro
 			gf_cenc_encrypt_sample_cbc(mc, samp, is_nalu_video, nalu_size_length, IV, tci->IV_size, &buf, &len, bytes_in_nalhr);
 		}
 
-		gf_isom_update_sample(mp4, track, i+1, samp, 1);
+		gf_isom_update_sample(mp4, track, i+1, samp, GF_TRUE);
 		gf_isom_sample_del(&samp);
 		samp = NULL;
 
@@ -1415,6 +1415,10 @@ GF_Err gf_cenc_decrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (*pro
 		}
 		//full sample encryption
 		else {
+			if (samp->dataLength > max_size) {
+				while (samp->dataLength > max_size) max_size *= 2; 
+				buffer = (char*)gf_realloc(buffer, max_size); 
+			}
 			gf_bs_read_data(cyphertext_bs, buffer,samp->dataLength);
 			gf_crypt_decrypt(mc, buffer, samp->dataLength);
 			gf_bs_write_data(pleintext_bs, buffer, samp->dataLength);
@@ -1433,7 +1437,7 @@ GF_Err gf_cenc_decrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (*pro
 		gf_bs_get_content(pleintext_bs, &samp->data, &samp->dataLength);
 		gf_bs_del(pleintext_bs);
 		pleintext_bs = NULL;
-		gf_isom_update_sample(mp4, track, i+1, samp, 1);
+		gf_isom_update_sample(mp4, track, i+1, samp, GF_TRUE);
 		gf_isom_sample_del(&samp);
 		samp = NULL;
 		nb_samp_decrypted++;
@@ -1577,7 +1581,7 @@ GF_Err gf_adobe_encrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (*pr
 		gf_bs_get_content(bs, &samp->data, &samp->dataLength);
 		gf_bs_del(bs);
 		bs = NULL;
-		gf_isom_update_sample(mp4, track, i+1, samp, 1);
+		gf_isom_update_sample(mp4, track, i+1, samp, GF_TRUE);
 		gf_isom_sample_del(&samp);
 		samp = NULL;
 		gf_free(buf);
@@ -1682,7 +1686,7 @@ GF_Err gf_adobe_decrypt_track(GF_ISOFile *mp4, GF_TrackCryptInfo *tci, void (*pr
 		gf_free(samp->data);
 		samp->dataLength = 0;
 		gf_bs_get_content(bs, &samp->data, &samp->dataLength);
-		gf_isom_update_sample(mp4, track, i+1, samp, 1);
+		gf_isom_update_sample(mp4, track, i+1, samp, GF_TRUE);
 		gf_bs_del(bs);
 		bs = NULL;
 		gf_isom_sample_del(&samp);
@@ -1714,7 +1718,7 @@ GF_Err gf_decrypt_file(GF_ISOFile *mp4, const char *drm_file)
 	Bool is_oma;
 	GF_TrackCryptInfo *a_tci, tci;
 
-	is_oma = 0;
+	is_oma = GF_FALSE;
 	count = 0;
 	info = NULL;
 	if (drm_file) {
@@ -1786,7 +1790,7 @@ GF_Err gf_decrypt_file(GF_ISOFile *mp4, const char *drm_file)
 				continue;
 			}
 			KMS_URI = "OMA DRM";
-			is_oma = 1;
+			is_oma = GF_TRUE;
 		} else if (!gf_isom_is_cenc_media(mp4, i+1, 1) && !gf_isom_is_adobe_protection_media(mp4, i+1, 1)) {
 			GF_LOG(GF_LOG_WARNING, GF_LOG_AUTHOR, ("[CENC/ISMA] TrackID %d encrypted with unknown scheme %s - skipping\n", trackID, gf_4cc_to_str(scheme_type) ));
 			continue;
@@ -1976,7 +1980,7 @@ GF_Err gf_crypt_file(GF_ISOFile *mp4, const char *drm_file)
 	Bool is_oma;
 	GF_TrackCryptInfo *tci;
 
-	is_oma = 0;
+	is_oma = GF_FALSE;
 
 	info = load_crypt_file(drm_file);
 	if (!info) {
@@ -2039,7 +2043,7 @@ GF_Err gf_crypt_file(GF_ISOFile *mp4, const char *drm_file)
 		e = gf_encrypt_track(mp4, tci, NULL, NULL);
 		if (e) break;
 
-		if (tci->enc_type==1) is_oma = 1;
+		if (tci->enc_type==1) is_oma = GF_TRUE;
 	}
 
 	if (is_oma) {
